@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>创建车队</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/luckDraw/css/style.css">
+    <style>
+        .bd{background: #a2040b;}
+        .errDailog .weui_toast{padding: 5px;}
+    </style>
+</head>
+<body>
+
+
+<div class="content errDailog">
+    <div class="page">
+        <div class="hd">
+            <a>
+                <i class="fa fa-angle-left"></i>
+            </a>
+            智油惠
+            <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd absolute hide pt">
+            <img src="../../assets/mobile/images/goods.png" style="width: 100%;" alt="">
+            <div class="luckDraw">
+                <div class="myBox">
+                    <ul class="cj2">
+                        <li>5元</li>
+                    </ul>
+                    <div class="bt bt2">点我抽奖</div>
+
+                </div>
+            </div>
+            
+            <div class="luckScroe">
+                <p>
+                    每抽奖一次消耗
+                    <span class="reduce">50</span>
+                    积分
+                </p>
+                <p>
+                    您当前拥有
+                    <span class="score">6492076</span>
+                    积分
+                </p>
+                <a href="myPrize.html" class="myBtn weuiBtn weui-btn weui-btn_mini weui-btn_primary">我的奖品</a>
+            </div>
+            <div class="luckInfor">
+                <p class="title">
+                    活动时间：
+                </p>
+                <p>
+                    2014年6月20日——2014年12月31日
+
+                </p>
+                <p class="title">
+                    活动规则：
+
+                </p>
+                <p>
+                    1、会员必须登录成功后才可进行转盘抽奖活动；
+
+                </p>
+                <p>
+                    2、每抽奖一次即消耗用户50积分；
+
+                </p>
+                <p>
+                    3、活动中奖结果均以系统自动下发的中奖通知为准；
+
+                </p>
+                <p class="title">
+
+                    奖品发放：
+
+                </p>
+                <p>
+                    中奖以后，现金奖会自动达到用户会员卡账户。
+
+                </p>
+                <p class="title">
+
+                    注意事项：
+
+                </p>
+                <p>
+                    1、禁止任何不正当手段及舞弊行为参与活动，一经发现，活动发起人有权取消用户的获奖资格；
+                </p>
+                <p>
+                    2、本次活动最终解释权归智油惠所有！
+                </p>
+            </div>
+        </div>
+        <!--<div class="notConTip hide">-->
+            <!--<img src="../../assets/mobile/images/notContent.png" alt=""/>-->
+            <!--<p class="notInfor hide">-->
+                <!--活动在2016-10-20号开放<br/>-->
+            <!--</p>-->
+        <!--</div>-->
+        <div class="weui_mask mask hide">
+            <div class='luckon'>
+                <div class='jg jg2'><span></span></div>
+                <div class="sureDiv">
+                    <a class="weuiBtn weui-btn weui-btn_mini weui-btn_primary">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/removeTip.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script src="../../assets/mobile/js/removeTip.js"></script>
+<script src="../../assets/mobile/plugins/luckDraw/js/luckDraw.js"></script>
+<script>
+    $(function(){
+        $('.cj2').myLuckDraw({
+            row : 3, //行
+            column : 3, //列
+            spacing: 5, //空隙
+            click : '.bt2', //点击触发
+            time: 1 ,//匀速运动的时间
+            arr:["5元","谢谢","100元","30元","50元","200元","10元","20元"],
+            nowScore:$(".reduce").text(),
+            totalScore:$(".score").text(),
+            end:function(e){
+                if(e=="谢谢"){
+                    //抽奖执行完毕的回调函数,参数e为获奖编号
+                    //因为这里是指定的，所以e == 12
+                    $('.jg2 span').text('谢谢参与');
+
+                    return
+                }
+                $('.jg2 span').text('恭喜您抽中'+e);
+
+            }
+        });
+
+        $(".sureDiv .weuiBtn").on("click",function(){
+            $(".mask").addClass("hide")
+        })
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" type="text/css" href="../skins/closeaccount/css/accounts.css">
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<script type="text/javascript" src="../closeaccount/account.js"></script>
+
+<title>HC服务号</title>
+<style type='text/css'>
+	.center-words{
+		font-size: 14px;
+	}
+</style>
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+</head>
+<body>
+<header>
+		<span class="header_l" id="backPage"><img src="../skins/salesman/images/nav_return_b.png" class="back"></span>
+		<span>结算信息</span>
+	
+</header>
+<input type="hidden" id="addPro"><!-- 省份 -->
+<input type="hidden" id="addCity"><!-- 城市 -->
+<input type="hidden" id="addCountry"><!-- 县/区 -->
+<input type="hidden" id="addDetails"><!-- 详细地址 -->
+<input type="hidden" id="addUserName"><!-- 收货人姓名 -->
+<input type="hidden" id="addPhone"><!-- 收货人手机号码 -->
+<!--/viewbox整个可视窗口-->
+<div class="viewbox">
+<div class="clear"></div>
+<!--/section内容-->
+<section>
+  <div class="sect1">
+    <ul>
+      <li class='left-ico'><a href='javascript:void(0);'><img src='../skins/closeaccount/img/mapico.png'></a></li>
+      <li class='center-words' id="showMoreAdd"><a href='javascript:void(0);'>添加收货地址</a></li>
+      <li class="right-ico"><a href="javascript:void(0);"><span class="icon-chevron-thin-right"></span></a></li>
+    </ul>
+  </div>
+  <div class="sect2">
+    <ul>
+      <li class="su-li"><span>发票</span></li>
+<!--       <li class="du-li"><input type="text" id="fpType" value="电子发票" ></li> -->
+      <li class="du-li"><span id="fpType">电子发票</span></li>
+      <li class="fu-li">
+      <a href="javascript:void(0);"><span class="icon-chevron-thin-down" name="nice-select" id="fp"></span></a></li>
+    </ul>
+  </div>
+ <div class="pull-list" id="fpList">
+    <ul>
+      <li class="current" data-value="1"><a href="javascript:void(0);">电子发票</a></li>
+      <li data-value="2"><a href="javascript:void(0);">个人发票</a></li>
+      <li data-value="3"><a href="javascript:void(0);">单位发票</a></li>
+    </ul>
+    <span id="compaySpan"><input type="text" id="compayTitle" placeholder="请输入发票抬头" maxLength="125"></span>
+</div>
+
+<div class="sect3">
+    <ul>
+      <li class="su-li"><span>送货时间</span></li>
+<!--       <li class="du-li"><input type="text" id="shType" value="不限送货时间"></li> -->
+      <li class="du-li"><span id="shType">不限送货时间</span></li>
+      <li class="fu-li">
+      <a href="javascript:void(0);"><span class="icon-chevron-thin-down" name="nice-select" id="sh"></span></a></li>
+    </ul>
+  </div>
+ <div class="pull-list" id="shList">
+    <ul>
+      <li class="current" data-value="1"><a href="javascript:void(0);">不限送货时间</a></li>
+      <li data-value="2"><a href="javascript:void(0);">工作日送货</a></li>
+      <li data-value="3"><a href="javascript:void(0);">双休日、假日送货</a></li>
+    </ul>
+</div>
+<div class="share_box">
+     <div class="share_top">
+         
+     </div>
+ </div>
+<div class="sect5">
+    <ul>
+      <li class="prices" style="line-height:6rem;">商品价格</li>
+      <li class="cheaper" style="line-height:6rem;" id="newPrice"></li>
+    </ul>
+    <ul>
+      <li class="prices cash" style="margin-top:1rem;">
+        <h4>购买返现</h4>
+        <h4>运费</h4>
+      </li>
+      <li class="cheaper" style="margin-top:1rem;">
+       <p id="gmfx"></p>
+       <p id="xf"></p>
+      </li>
+    </ul>
+</div>
+
+</section>
+<!--/section内容-->
+<!--/footer底部-->
+  <footer>
+  <div class="floor">
+     <ul>
+     <li class="pay"><p>应付金额：</p></li>
+     <li class="money"><p></p></li>
+     <li class="paymoney"><a href="javascript:void(0);">去付款</a></li>
+<!--      <li class="paymoney" ><a href="../closeaccount/closeaccount.html">去付款</a></li> -->
+     </ul>
+  </div>
+  </footer>
+<!--/footer底部-->
+</div>
+<!--/viewbox整个可视窗口-->
+</body>
+<script type='text/javascript'>
+	$(function(){
+		/*返回并刷新数据*/
+		var isPageHide = false; 
+		window.addEventListener('pageshow', function () { 
+		    if (isPageHide) { 
+		      window.location.reload(); 
+		    } 
+		  }); 
+		  window.addEventListener('pagehide', function () { 
+		    isPageHide = true; 
+		  }); 
+		/*结束*/
+	});
+</script>
+</html>

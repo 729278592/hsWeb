@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>评价中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/personcenter/css/lineoffpost.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/ajaxfileupload1.js"></script>
+    <script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+    <script type="text/javascript" src="../js/jumppage.js"></script>
+    <script type="text/javascript" src="../js/choosestar.js"></script>
+    <script type="text/javascript" src="../personcenter/lineoffpost.js"></script>
+    
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+	<style type="text/css">
+	.bg{
+	/* display: none; */ 
+	background-color: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+
+.tips{
+	/* display: none; */
+	width: 80%;
+	height: auto;
+	background-color: #fff;
+	z-index: 2;
+	position: fixed;
+	left: 10%;
+	top: 30%;
+	padding: 4%;
+	display: none;
+	text-align: center;
+}
+
+.tips p {
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+.tips .ss {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+}
+
+.tips span {
+	color: #ff620d;
+	float: right;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+</style> 
+</head>
+<body onload="getHeight();">
+   		<div class="heads">	
+			<span style="float:left;width:50px;height:50px;line-height:50px;text-align:center;"><img src="../skins/personcenter/img/nav_return_b.png"  class="back"></span>
+			<span>发表评论</span>
+			<span style="float:right;width:50px;height:50px;line-height:50px;text-align:center;" id="list-m"><img src="../skins/personcenter/img/gdetails_list.png">
+			</span>
+   		</div>
+    <section>
+   		<input name="orderId" hidden="true" id="oid"/>
+   		<input name="buyFrom" id="buyFrom" hidden="true"/>
+   		<div class="post_fen">
+   			<div class="fenl"><span style="margin-left:10px;font-size:0.8em;">商品评价</span></div>
+			<div class="fenr">
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(1,'good')" id="good1"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(2,'good')" id="good2"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(3,'good')" id="good3"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(4,'good')" id="good4"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(5,'good')" id="good5"/>
+				<input hidden="true" id="goodfen" name="goodfen" value="0"/>
+			</div>
+   		</div>
+   		<div class="clear"></div>  		
+   	    <div class="post_goodmsg"> 			
+      <span>
+	     <ul>
+	      <li class="message-lt"><div  class="troye"><a href="#"><img src="" class='good_img'/></a></div></li>
+	      <li class="message-rt"><div class="servermsg1" id="gooddes"></div><div class="servermsg2"  id="goodpsrice"></div></li>
+	    </ul>
+       </span>
+   		</div>	
+   		<div class="clear" ></div>
+   		<div class="post_text">
+   			<textarea rows="4" name="post.m_mp_text"  id="neirong" style="width:95%;resize:none;font-size:0.9em;border:0px solid white;padding: 0.5rem;" placeholder="喜欢这款商品就写下使用感受吧，再配上图片就更好了"></textarea>
+   		</div>
+   		<div class="post_showimg">
+   			
+   		</div>
+   		<div class="post_addimg">
+   			<div class="post_addimg_left">
+   				<img src="../skins/personcenter/img/addimg.png" width="50" height="50" style="margin-left:20%;" id="adds"/>
+   				
+				<input id="pic1" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+				<input id="pic2" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+				<input id="pic3" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+				<input id="pic4" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+				<input id="pic5" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+				<input id="pic6" capture="camera" accept="image/*" hidden="true" type="file" class="file" name="files"/>
+   				
+   			</div>
+   			<div class="post_addimg_right">
+   				<span style="margin-right:20px;"><span class="you">0</span>/<span>125</span></span>
+   			</div>   			
+   		</div>
+   		<div class="clear"></div>   		
+   		<div class="post_shop">
+   		 <div class="shopfen">
+   			<div class="fenl"><span style="margin-left:10px;font-size:0.8em;">门店评价</span></div>
+			<div class="fenr">
+				<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(1,'shop')" id="shop1"/>
+				<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(2,'shop')" id="shop2"/>
+				<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(3,'shop')" id="shop3"/>
+				<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(4,'shop')" id="shop4"/>
+				<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(5,'shop')" id="shop5"/>
+				<input hidden="true" id="shopfen" name="shopfen" value="0"/>
+			</div>
+   		</div>
+   		</div>
+   		<div class="clear"></div>  		
+   	    <div class="shopmsg"> 			
+      <span>
+	    <ul>
+	      <li class="shopmsg_left"><div  class="troye"><a href="#" id="shopurl"><img src="" class='shopimg' id="shopimg"/></a></div></li>
+	      <li class="shopmsg_right"><div class="servermsg1" id="shopname"></div><div class="servermsg2" id="shopaddr"></div></li>
+	    </ul>
+       </span>
+   		</div>
+   		<div class="clear"></div>		
+ <div class="post_seller" >	
+			<div class="sellerfen">
+	   			<div class="fenl"><span style="margin-left:10px;">销售代表评价</span></div>
+				<div class="fenr">
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(1,'seller')" id="seller1"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(2,'seller')" id="seller2"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(3,'seller')" id="seller3"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(4,'seller')" id="seller4"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(5,'seller')" id="seller5"/>
+					<input hidden="true" id="sellerfen" name="sellerfen" value="0"/>
+				</div>
+			</div>
+		<div class="sellermsg">
+				<div class="sellermsg_left">
+					<a  id="sellerpage"><img src="" id="sellerimg"/></a>
+				</div>
+				<div class="sellermsg_center">
+					<div class="typlr"><span id="sellername"></span><span class="grade"/></span></div>
+					<div class="hert"><span>产品体验<span id="tiyancount"></span>次</span></div>
+				</div>
+				<div class="sellermsg_right">
+				 <ul>
+				  <!--  <li><a href="#"><img src="../skins/personcenter/img/sales_instant.png"/></a></li> -->
+				   <li><a href="" id="smsseller"><img src="../skins/personcenter/img/sales_messages.png"/></a></li>
+				   <li><a href="" id="telseller"><img src="../skins/personcenter/img/sales_phone.png"/></a></li>
+				   
+				  </ul>
+				</div>
+			</div>
+   		</div>
+   		<div class="clear"></div>
+   		<footer>
+   			<br/><img src="../skins/personcenter/img/select_no.png"  style="cursor: pointer;"  id="chooseNiming"/><input hidden="true"  id="niming" value="本名" name="poster"/><span>匿名评价</span><br/><br/>
+			<span id="bon">提交</span>
+		</footer>
+		<div class="bg" id="bg"></div>
+	
+		<div class="tips" id="show1">
+			<p class="ss"><img src="../skins/goodmainline/img/load.gif"/></p>
+			<p>数据提交中...</p>
+			<span class="hides"></span>
+		</div>
+   </section>
+   						<ul class="menu-list" style="display:none;">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+</body>
+
+</html>

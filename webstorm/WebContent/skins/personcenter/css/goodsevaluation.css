@@ -1,0 +1,326 @@
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+}
+ul,li,p{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+a{text-decoration: none;}
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #e5e5e5;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color:transparent;
+  font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+    max-width: 100%;
+    min-width: 320px;
+    height: 100%;
+    background:#e5e5e5;
+    margin: 0px auto;
+    font-family:'微软雅黑';
+    top: 0;}
+/*
+*****
+ */
+ /*--/section*/
+   section{
+       max-width: 736px;height:auto;min-width: 320px;background: #e5e5e5;position: absolute;left:0px;right:0px;
+       margin-left:auto;margin-right:auto;margin-top:50px;padding-bottom: 60px;}
+/* 评价*/
+   section .evaluate{width:100%;background:#ffffff;top:0;left:0;margin-bottom:1.5rem;}
+   section .evaluate .topdiv{width:100%;height:5rem;border-bottom:1px solid #dad9d9;}
+   section .evaluate .topdiv ul{width: 100%;height: 5rem;}
+   section .evaluate .topdiv ul li{float: left;height: 5rem;line-height: 5rem;}
+   section .evaluate .topdiv ul .appraise{width: 11%;text-align: right;font-size:1.5em;color:#767474;}
+   section .evaluate .topdiv ul .rate{width: 20%;text-align: left;margin-left:5%;color:#e21d1d;font-size: 1.2em;}
+   section .evaluate .topdiv ul .people{width: 50%;text-align: right;font-size:1.5em;color:#767474;}
+   section .evaluate .topdiv ul .topdiv-rt{width: 14%;text-align: center;}
+   section .evaluate .evaluatelist{width: 100%;color:#505050;}
+   section .evaluate .evaluatelist .list1{width: 100%;height: auto;}
+   section .evaluate .evaluatelist .list1 .number1{width: 100%;height: 5rem;line-height: 5rem;}
+  .evaluate .list1 .number1 div{
+    float:left;
+  }
+  .list1 .number1 .profile_images{
+    width:4em;
+    height:90%;
+    border-radius: 50%;
+    margin: 2% auto 1%;
+  }
+  .list1 .number1 .profile_images img{width:4rem;height:4rem;border-radius:50%;}
+  .list1 .number1 .uname{
+    width:55%;
+    height:100%;
+    line-height:2.2em;
+    padding-top:2%;
+    padding-left:2%;
+  }
+  .list1 .number1 .uname p{
+    font-size: 1.5em;
+  }
+  .list1 .number1 .uname span{
+    display:block;
+    width:3em;
+    height:1.3em;
+    background: url(../img/bg_vip.png) no-repeat;
+    background-size: 100% 100%;
+    color:#fff;
+    text-align: center;
+    line-height:1.5em;
+  }
+  .list1 .number1 .fenr{width: 28%;float:right !important;}
+  .list1 .number1 .fenr img{width:15%;}
+.list1 .number2{
+  text-align: left;
+  margin: 1rem 0px;
+}
+.list1 .number2 p{font-size:1.1rem;}
+.list1 .user-picture{width: 100%;height: auto;}
+.list1 .user-picture ul{overflow:hidden;}
+.list1 .user-picture ul li{
+	float:left;
+	width:25%;
+	/* height:auto;
+	margin-bottom:0.4em; */
+	}
+.list1 .user-picture ul li a{
+	display:block;
+	overflow:hidden;
+	}
+	
+.list1 .user-picture ul li img{
+	width:95%;
+	height:7.5rem;
+	border:1px solid #e5e5e5;
+	}
+
+.list1 .number3{
+  overflow: hidden;
+  padding: 3% 0px 1%;
+  padding-right:4%;
+}
+.list1 .number3 span{
+  display:block;
+  float:left;
+  color:#868686;
+}
+.list1 .number3 .date{
+float:right;
+}
+.evaluatelist{padding-left:4%;/* border-bottom:1em solid #f2f2f2; */}
+.evaluatelist .consult{
+  height:5.5rem;
+  width:100%;
+  text-align: center;
+  display:inline-block;
+  line-height: 5rem;
+  color:#505050;
+}
+.evaluatelist .consult span{
+
+  border:1px solid #868686;
+  padding: 1.2em 3.5em;
+  border-radius: 72px;
+  color:#505050;
+  overflow: hidden;
+}
+.evaluatelist .consult span b{
+  display:inline-block;
+  line-height:1.5em;
+  height:2.3em;
+  line-height:2.3em;
+  position:relative;
+  top:0.4em;
+}
+.product{
+  width:100%;
+  overflow: hidden;
+}
+
+.product .tab_tittle{
+  float:left;
+  width:100%;
+  clear:both;
+  background-color:#fff;
+  margin-bottom:1.5rem;
+
+}
+.tab_tittle ul{overflow:hidden;}
+.tab_tittle ul li{
+  float:left;
+  width:20%;
+
+  padding-top: 1em;
+  text-align: center;
+  font-size: 1.4em;
+
+}
+.tab_tittle ul li a{
+  display:block;
+  width:100%;
+  height:100%;
+  color:#505050;
+}
+
+.tab_tittle ul .current a{
+  color:#389ffe;
+  border-bottom: 2px solid #389ffe;
+}
+
+/*tab-content*/
+.product .tab-content{
+  float:left;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+
+}
+.tab-content .item {
+    float: left;
+    overflow: hidden;
+
+}
+
+
+.img_list{
+  width:100%;
+  height:25rem;
+  margin-bottom: 3em
+
+}
+.img_list li{
+  float: left;
+  width:32.8%;
+/*   margin-left:1.5px; */
+
+  margin-right: 0.19em;
+}
+.img_list li.last{
+ margin-right:0px;
+}
+.img_list li img{
+  display:block;
+  width:100%;
+}
+.product_txt{
+  text-align: center;
+  color:#7f7f7f;
+  line-height: 2em;
+  padding-bottom:4em;
+}
+.product_txt .p1{
+  color:#0f9d20;
+  font-size: 1.8em;
+}
+.product_txt .p2{
+  font-size: 0.5em;
+}
+.product_txt .p3{
+  font-size: 0.3em;
+}
+/* 规格参数*/
+.specifications{
+  width:100%;
+  text-align:left;
+}
+.product .specifications>p{
+  font-size: 1.4em;
+  padding:0.8em 0px 1em 0px;
+}
+.product .specifications .basic{
+  font-size: 1.2em;
+  color: #787878;
+  width:100%;
+  border-top:1px dotted #f2f2f2;
+}
+.product .specifications .basic p{
+  padding:1em 0px;
+}
+.specifications .basic ul li{
+  display:block;
+  height:2em;
+  line-height: 2em;
+  width:100%;
+}
+.specifications .basic ul li span,.specifications .basic ul div{
+  display:inline-block;
+  width:100%;
+
+}
+.specifications .basic ul li span{
+  width:30%;
+}
+.specifications .basic ul li div{
+  width:65%;
+}
+   .clear{clear: both;}
+  /*--/section*/
+
+/*返回顶部*/
+#backtoTop{
+  right:10px;
+  text-align:right;
+  bottom: 60px;
+  position: fixed;
+  cursor: pointer;
+
+}
+#backtoTop img{
+  width: 40px;
+  height: 40px;
+}
+
+/*
+*****
+ */
+/*--viewbox整个可视窗口--*/
+/*
+ *Icon图标样式
+*/
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?41u1yj');
+    src:    url('../fonts/icomoon.eot?41u1yj#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?41u1yj') format('truetype'),
+        url('../fonts/icomoon.woff?41u1yj') format('woff'),
+        url('../fonts/icomoon.svg?41u1yj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-arrow_back:before {
+    content: "\e5c4";
+    color: #515151;
+    margin-left: 3%;
+}
+
+/*
+ *Icon图标样式
+*/

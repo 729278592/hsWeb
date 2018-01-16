@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../css/swiper.css"/>
+	<link rel="stylesheet" href="../css/index.css">
+	<script src='../js_new/main.js'></script>
+	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/IScroll/iscroll.js"></script>
+    <script type="text/javascript" src="../getZen4Weixin/shareInfoMission4Weixin.js"></script>
+    <script src="../js/Swiper-3.3.0/dist/js/swiper.min.js"></script>
+    <script src="../js/config.js"></script>
+    <style type='text/css'>
+    	#banner_list{
+    		float: left;
+    		width: 100%;
+    		height: auto;
+    	}
+    	#banner_list>li{
+    		float: left;
+    		width: 100%;
+    		height: auto;
+    		max-height: 150px;
+    		overflow: hidden;
+    	}
+    	#banner_list>li .banner_list_item_image_bk{
+    		float: left;
+    		width: 100%;
+    		height: auto;
+    	}
+    	#banner_list>li .banner_list_item_image_bk img{
+    		width: 100%;
+    		height: auto;
+    	}
+    	.share_info_item_up{
+    		display: flex;
+		    width: 100%;
+		    margin-top: .04rem;
+    	}
+    	.share_info_item_icon{
+    		float: left;
+		    height: .5803rem;
+		    width: .9813rem;
+		    overflow: hidden;
+		    margin-right: .1rem;
+		    position: relative;
+		    z-index: 0;
+    	}
+    	.share_info_item_icon>img{
+    		width: 100%;
+    		height: auto;
+    	}
+    	.share_info_item{
+    		background: #fff;
+    		padding: .06rem .1rem;
+    	}
+    	.share_info_item_content{
+    		flex: 1;
+    	}
+    	.share_info_item_content_title{
+    		float: left;
+		    width: 100%;
+		    font-size: .1365rem;
+		    color: #0c0c0c;
+    	}
+    	.share_info_item_content_main{
+    		float: left;
+    		width: 100%;
+    		margin-top: .02rem;
+    	}
+    	.share_info_item_content_main_text{
+    		display: inline-block;
+		    color: #949494;
+		    font-size: .1195rem;
+    	}
+    	.share_info_item_content_main_point{
+    		display: inline-block;
+		    color: #ffc702;
+		    font-size: .1195rem;
+    	}
+    	.share_info_item_result{
+    		float: right;
+    		width: 64%;
+    		margin-top: -.16rem;
+    		font-size: 0;
+    		border-bottom: 1px solid #d5d5d5;
+    		padding-bottom: .04rem;
+    	}
+    	.share_info_item_result_date{
+    		float: left;
+    		width: auto;
+    		font-size: .1024rem;
+		    color: #adadad;
+    	}
+    	.share_info_item_result_main{
+    		float: right;
+    		font-size: .1024rem;
+		    color: #adadad;
+    	}
+    </style>
+</head>
+<body>
+	<div class='task-bg'>
+		<div id="banner_cover">
+            <ul id="banner_list">
+            </ul>
+        </div>
+		<div class='top-bg'>
+			<div class='flex'>
+				<span class='num' id='personal_zen_count_available'>0</span>
+				<span class='title'>分享总赚积分</span>
+			</div>
+			<div class='flex'>
+				<span class='num' id='personal_zen_count_maked'>0</span>
+				<span class='title'>击败用户占比</span>
+			</div>
+		</div>
+		<ul id="share_info_list">
+		</ul>
+	    <div id="personal_zen_condition_border_bottom"></div>
+	</div>	
+</body>
+</html>

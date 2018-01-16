@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/jquery-spinner/css/jquery.spinner.large.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                智油惠
+                <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="bd absolute pd48">
+                <div class="shopping style">
+                    <ul class="shoppingList pb0">
+                        <li >
+                            <a class="shop_div">
+                                <div class="shop_list_bg" style="background: url(../../assets/mobile/images/shopList2.jpg) no-repeat;background-size: 100% 100%;"></div>
+                                <div class="shop_infor">
+                                    <p class="tile">麦吉士蛋香果仁小酥1500g三斤装</p>
+                                    <p class="smallTile">甘甜爽口 个大味美 经济划算</p>
+                                    <p class="clearfix">
+                                        <span class="left">￥<span class="verdana">19.80</span></span>
+                                        <span class="right"><span class="verdana">200</span>积分</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shopType">
+                    <ul class="clearfix weightClass">
+                        <li>
+                            <span>规格 : </span>
+                        </li>
+                        <li>
+                           <div class="weightDiv active">
+                               500g
+                           </div>
+                        </li>
+                        <li>
+                            <div class="weightDiv">
+                                1kg
+                            </div>
+                        </li>
+                        <li>
+                            <div class="weightDiv">
+                                2kg
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="weui_cells mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <p>
+                                    数量 :
+                                </p>
+                            </div>
+                            <div class="weui_cell_ft">
+                                <input type="text" class="spinnerExample "/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="../../assets/mobile/images/shopInfor1.jpg" alt="" class="w100 shopInfor"/>
+                <img src="../../assets/mobile/images/shopInfor2.jpg" alt="" class="w100 shopInfor"/>
+            </div>
+            <div class="foot">
+                <ul class="optionType clearfix">
+                    <li class="first">
+                        <a href="shoppingCat.html">
+                            <span class="shopCat"></span>
+                            <!--<span class="caret">1</span>-->
+                        </a>
+                    </li>
+                    <li class="second">
+                        <button class="addCart">加入购物车</button>
+                    </li>
+                    <li class="last">
+                        <a href="payChioce.html" style="line-height: normal">
+                            <button class="nowBuy">立刻购买</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function() {
+            $('.spinnerExample').spinner({});
+            /*重量切换*/
+            $(".weightClass li .weightDiv").on("touchend",function(){
+                $(this).addClass("active");
+                $(this).closest("li").siblings("li").find(".weightDiv").removeClass("active");
+            });
+        })
+    </script>
+</body>
+</html>

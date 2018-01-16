@@ -1,0 +1,83 @@
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+/*   -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none; */
+}
+ul,li,p{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+a{text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+  
+}
+*:focus {
+outline: 0;
+}
+body{
+  background:#e5e5e5;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+ /*  -webkit-tap-highlight-color:transparent; */
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+    max-width: 100%;
+    min-width: 320px;
+    height: 100%;
+    background:#e5e5e5;
+    margin: 0px auto;
+    font-family:'微软雅黑';
+    top: 0;}
+/*--/header*/
+  header{
+    width: 100%;height:50px;background:#f8f8f8;margin:0px auto;margin-left:auto;margin-right:auto;box-sizing:border-box;border-bottom: 1px solid #e5e5e5;}
+  header .head-warp{width: 100%; height:50px;margin:0px auto;background-position: 4.5px center;box-sizing:border-box;}
+  header .head-warp ul{width:100%;}
+  header .head-warp .li-lt a{font-size:1.8rem;color: #505050;height: 50px;}
+/*--/header*/
+  section{
+       max-width: 736px;height:auto;min-width: 320px;position: absolute;left:0px;right:0px;
+       margin-left:auto;margin-right:auto;padding-bottom: 5rem;float:left;}
+  .questions{width:100%;height:auto;background:#ffffff;overflow: hidden;margin-top:1rem;}
+  .questions p{padding:1rem;font-size:1.5rem;}
+  .questions .post_text{
+			width:100%;
+			background-color:#ffffff;
+			border-bottom:1px solid #e5e5e5;}
+  .post_text textarea{margin-left:1rem;}
+  .post_text .post_addimg_right{
+			width:100%;
+			height:20%;
+			padding:1rem;
+			background-color: #ffffff;
+			text-align:right;
+		}
+  
+  .phonenumber{width:100%;height:5rem;font-size:1.5rem;border-bottom:1px solid #e5e5e5;}
+  .phonenumber ul .pho{float:left;line-height:4rem;padding:0.5rem;}
+  .phonenumber ul .num{float:right;padding:0.5rem;}
+  .phonenumber ul .num input{height:4rem;font-size:1.5rem;}
+  .questions .butt{width:100%;height:6rem;text-align:center;line-height: 6rem;}
+  .questions .butt span{display: inline-block;width:90%;height:3.6rem;font-size:1.8rem;outline:none;cursor: pointer;text-align:center;line-height:3.6rem;background-color: #389ffe;border-radius:35px;color:#fff;margin-top: 1.2rem;}
+  .list{
+  width:100%;
+  background-color:#ffffff;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.list ul{width:100%;height:auto;}
+.list ul li{width:100%;height:4.5rem;border-bottom:1px solid #e5e5e5;line-height:4.5rem;}
+.list ul li:active{background:#f2f2f2;}
+.list ul li a{color:#474646;padding-left:1em;font-size:1.5rem; display:block;}
+/*--viewbox整个可视窗口--*/
+
+
+ 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../js/Swiper-3.3.0/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="../skins/goodmainline/css/shopmap.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>    
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+    <script type="text/javascript" src="../js/jumppage.js"></script>  
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script> 
+	<script type="text/javascript" src="../personcenter/commlist.js"></script>
+</head>
+<body>
+    
+    <div class="content">
+   		<div class="shopmap" id="container" >
+   			
+   		</div>
+   		<div class="tolist">
+			<img src="../skins/goodmainline/img/store_list.png" width="40px" style="float:left; margin-top:1rem; margin-left:0.6rem;"/>
+		</div>
+		<div class="menu" id="list-m">
+			<img src="../skins/goodmainline/img/map_list.png" width="40px" style="float:right; margin-top:1rem; margin-right:0.6rem;"/>
+			
+			 <ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+		</div>
+   		<!-- 商品展示 -->
+		<div class="activity" style="">
+		   <div class="swiper-wrapper" style="background: none;" id="goodlist">
+		   <div class="swiper-scrollbar"></div>
+		</div>
+		
+
+
+   </div>
+ <!-- 2016.06.14去掉底部菜单栏 <footer>
+	 <div class="flortfoot">
+	<ul>
+		<li id="firstpage"><img class="menu_foot_img" src="../skins/firstpage/img/tab_home.png" />
+		<p>首页</p></li >
+		<li id="zhoubian"><img class="menu_foot_img" src="../skins/firstpage/img/tab_compass_pre.png" /><p>周边</p></li >
+		<li id="wanzhuan"><img class="menu_foot_img" src="../skins/firstpage/img/tab_z.png"/><p>玩赚</p></liz>
+		<li id="mine"><img class="menu_foot_img" src="../skins/firstpage/img/tab_user.png" /><p>我的</p></li>
+     </ul>
+	</div> 
+   </footer> -->
+  </div>
+
+</body>
+<script src="../js/Swiper-3.3.0/dist/js/swiper.min.js"></script>
+<script type="text/javascript" src="../goodmainline/shopmapno.js"></script>
+<script type="text/javascript">
+	/* $(function(){
+		var seeHeight= window.document.body.clientHeight;
+		var divHeight = $("#goodlist").outerHeight()+30;
+		var top = Number(seeHeight)-Number(divHeight);
+		$("#goodlist").css("position","fixed");
+		$("#goodlist").css("top",top);
+	})  */
+</script>
+</html>

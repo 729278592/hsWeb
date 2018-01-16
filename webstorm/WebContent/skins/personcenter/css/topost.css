@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+ 		*{
+	    	margin: 0px;
+		    padding: 0px;
+	    }
+    	html {
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    outline: 0;
+		    
+  		 }
+   
+		body{
+			height:100%;
+			margin: 0; 
+			-webkit-user-select: none; 
+			position: relative; 
+			background-color: #fffff;
+			line-height: 1.2;
+		    font-size: 0.9em;
+		    margin: 0 auto;
+		    max-width: 720px;
+		    min-width: 320px;
+		}
+		section{
+			width:100%;
+			background-color: #e8e8e8;
+		}
+		section .heads{
+			width:100%;
+			background-color: #FF620D;
+			height:50px;
+			font-size:1.6em;
+			color:#ffffff;
+			font-weight: 500;
+		}
+		section .post_text{
+			width:100%;
+			height:160px;
+			background-color: white;
+			border-bottom: 1px solid #6C6C6C;
+		}
+		section .post_text .leftdiv,.rightdiv{
+			float:left;
+		}
+		section .post_text .leftdiv{
+			width:30%;
+			height:150px;
+			padding-top:10px;
+		}
+		section .post_text .rightdiv{
+			width:65%;
+			height:100%;
+			text-align: center;
+			font-size:1.3em;
+		}
+		section .post_text .leftdiv .goodimg{
+			width:90%;
+			max-height: 140px;
+		}
+		section .addphoto{
+			width:100%;
+			height:100px;
+			background-color:white;
+		}
+		section .addphoto .photo_leftdiv,.photo_rightdiv{
+			float:left;
+			width:100%;
+			height:auto;
+		}
+		section .addphoto .photo_leftdiv{
+			width:30%;
+			height:100%;
+			margin-left:20px;
+			background-image: url('../img/addphoto.png');
+			background-repeat: no-repeat;
+			background-size:90px;
+		}
+		section .addphoto .photo_rightdiv{
+			width:60%;
+		}
+		section .dafen{
+			margin-top:10px;
+			width:100%;
+   /*       height:200px;  */
+			background-color:white;
+		}
+		section .dafen div .fenl,.fenr{
+			float:left;
+		}
+		section .dafen div .fenl{
+			width:30%;
+			font-size:1.3em;
+			padding-top:10px;
+			margin-left:10px;
+			height:50px;
+		}
+		section .dafen div .fenr{
+			width:65%;
+			padding-top:10px;
+			height:50px;
+		}
+		section .dafen div .fenr .goodstar,.shopstar,.sellerstar{
+			width:8%;
+			margin-left:5%;
+		}
+		section .dafen div .fenr span{
+			font-size:1.3em;
+			margin-left:5%;
+			color:red;
+		}
+		section .pic{
+			width:100%;
+			min-height:90px;
+			background-color: #e8e8e8;
+		}
+		footer{
+			width:100%;
+			height:60px;
+			font-size:1.5em;
+			text-align: center;
+		}
+		footer .foot_left,.foot_right{
+			float:left;
+			line-height:60px;
+			background-color: white;
+		}
+		footer .foot_left{
+			width:60%;
+			color:#6C6C6C;
+		}
+		footer .foot_right{
+			width:40%;
+			background-color: #FF620D;
+			color:white;
+		}
+		section .dafen .goodpost,.shoppost,.sellerpost{
+			width:100%;
+			height:70px;
+		}

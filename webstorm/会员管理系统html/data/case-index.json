@@ -1,0 +1,42 @@
+{
+  "bannerList":[
+    {
+      "img": "../images/case1.jpg",
+      "url": ""
+    },
+    {
+      "img": "../images/case2.jpg",
+      "url": ""
+    },
+    {
+      "img": "../images/case3.jpg",
+      "url": ""
+    }
+  ],
+  "productsList":[
+    {
+      "id":"1",
+      "img": "../images/case-list1.jpg",
+      "url": "",
+      "title": "现代90平三居室-工业沉静简洁风",
+      "author": "张三",
+      "date": "2017-12-11",
+      "read": "287",
+      "zan": "88",
+      "comment": "88",
+      "status":1
+    },
+    {
+      "id":"2",
+      "img": "../images/case-list1.jpg",
+      "url": "",
+      "title": "现代90平三居室-工业沉静简洁风",
+      "author": "张三",
+      "date": "2017-12-11",
+      "read": "287",
+      "zan": "88",
+      "comment": "88",
+      "status":0
+    }
+  ]
+}

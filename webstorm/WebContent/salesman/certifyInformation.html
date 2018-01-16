@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimun-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link href="../skins/salesman/css/certifyInformation.css" rel="stylesheet" />
+<title>销售代表认证</title>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js" ></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/config.js" ></script>
+<script type="text/javascript" src="../js/jumppage.js"></script>
+<script type="text/javascript" src="../js/ajaxfileupload1.js"></script>
+<script type="text/javascript" src="../salesman/certifyInformation.js"></script>
+<script type="text/javascript" src="../personcenter/commlist.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<style type="text/css">
+	.bg{
+	/* display: none; */ 
+	background-color: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+
+.tips{
+	/* display: none; */
+	width: 80%;
+	height: auto;
+	background-color: #fff;
+	z-index: 2;
+	position: fixed;
+	left: 10%;
+	top: 30%;
+	padding: 4%;
+	display: none;
+	text-align: center;
+}
+
+.tips p {
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+.tips .ss {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+}
+
+.tips span {
+	color: #ff620d;
+	float: right;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<span class="header_l"><img src="../skins/salesman/images/nav_return_b.png" class="back"></span>
+		<span style="font-size: 1.1rem;line-height: 50px;">销售代表认证</span>
+		<span class="header_r" id="list-m"><img src="../skins/salesman/images/gdetails_list.png">
+		 				<ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+		</span>
+	</header>
+<section>
+	<input  id="touxiang" hidden="true"/>
+	<input  id="shenfen"  hidden="true"/>
+	<input  id="gongpai"  hidden="true"/>
+	<div class="sales_infor">
+		<ul>
+			<li class="border">
+				<p>真实姓名</p>
+				<input id="name" name="seller.m_seller_name" readonly="readonly" class="intext"/>
+			</li>
+			<li>
+				<p>身份证号码</p>
+				<input id="idno" name="seller.m_seller_idNo" readonly="readonly" class="intext"/>
+			</li>
+		</ul>
+	</div>
+	<div class="sales_phone">
+		<ul>
+			<li>
+				<p>手机号码</p>
+				<input id="phone" name="seller.m_seller_phone" readonly="readonly" class="intext"/>
+			</li>
+			<li class="code" style="display: none">
+				<p>验证码</p>
+				<input type="text" placeholder="输入验证码" class="text" maxLength="6"id="yanzhengma" name="yan" style="font-size:0.9rem;float:left;text-align: right;margin-top:15px;text-align:center;width:120px;">
+				<!-- <input type="button" value="" class="sub" > -->
+				<span class="sub">获取验证码</span>
+				<span  hidden="true" id="timeshow" style="float:right;"><span id="leftnum" style="font-size:1.2rem;color:#FF620D;float:left;">60</span>秒后再次获取</span>
+			</li>
+		</ul>
+	</div>
+	<div class="sales_select">
+		<ul>
+			<li id="tochooseshop">
+				<p>所在门店</p>
+				<span id="shopname"></span>
+				<input id="shopbian" name="seller.m_seller_shopBian" readonly="readonly" hidden="true"/>
+			</li>
+		</ul>
+	</div>
+	<div class="sales_photo">
+		<p class="title">拍摄照片</p>
+		<div class="photoes">
+			<ul>
+				<li>
+					<span><img src="" id="userimg"></span>
+					<input type="file" name="files" id="files1" hidden="true" class="pic"/>
+					<p>半身照</p>
+				</li>	
+				<li>
+					<span><img src="" id="idimg"></span>
+					<input type="file" name="files" id="files2" hidden="true" class="pic"/>
+					<p>身份证正面</p>
+				</li>
+				<li>
+					<span><img src="" id="workimg"></span>
+					<input type="file" name="files" id="files3" hidden="true" class="pic"/>
+					<p>工牌</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="sales_submit">
+		<span id="bon">编辑</span>	
+		<span id="tijiao" style="background:#FF620D;color:white;display: none;">提交</span>
+		<p>您提交的资料将只会用于认证审核</p>
+	</div>
+	<div class="bg" id="bg"></div>
+	
+	<div class="tips" id="show1">
+		<p class="ss"><img src="../skins/goodmainline/img/load.gif"/></p>
+		<p>数据提交中...</p>
+		<span class="hides"></span>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>评价中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/personcenter/css/lineonpost.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/ajaxfileupload1.js"></script>
+    <script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+    <script type="text/javascript" src="../js/jumppage.js"></script>
+    <script type="text/javascript" src="../js/choosestar.js"></script>
+    <script type="text/javascript" src="../personcenter/lineonpost.js"></script>
+    
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+    <style type="text/css">
+	.bg{
+	/* display: none; */ 
+	background-color: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+
+.tips{
+	/* display: none; */
+	width: 80%;
+	height: auto;
+	background-color: #fff;
+	z-index: 2;
+	position: fixed;
+	left: 10%;
+	top: 30%;
+	padding: 4%;
+	display: none;
+	text-align: center;
+}
+
+.tips p {
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+.tips .ss {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+}
+
+.tips span {
+	color: #ff620d;
+	float: right;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+</style> 
+</head>
+<body onload="getHeight();">
+    
+    
+   		<div class="heads">	
+			<span style="float:left;width:50px;height:50px;line-height:50px;text-align:center;"><img src="../skins/personcenter/img/nav_return_b.png"  class="back"></span>
+			<span>发表评论</span>
+			<span style="float:right;width:50px;height:50px;line-height:50px;text-align:center;" id="list-m"><img src="../skins/personcenter/img/gdetails_list.png">
+			</span>
+   		</div>
+<section>
+   		<input name="orderId" hidden="true" id="oid"/>
+   		<input name="buyFrom" id="buyFrom" hidden="true"/>
+   		<div class="post_fen">
+   			<div class="fenl">商品评价</div>
+			<div class="fenr">
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(1,'good')" id="good1"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(2,'good')" id="good2"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(3,'good')" id="good3"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(4,'good')" id="good4"/>
+				<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(5,'good')" id="good5"/>
+				<input hidden="true" id="goodfen" name="goodfen" value="0"/>
+			</div>
+   		</div>
+   		<div class="clear"></div>
+   	<div class="post_goodmsg"> 			
+     <!--  <span>
+	    <ul>
+	      <li class="message-lt"><div  class="troye"><img src="" class='good_img'/></div></li>
+	      <li class="message-rt"><div class="servermsg1" id="gooddes"></div><div class="servermsg2"  id="goodpsrice">￥0.00</div></li>
+	    </ul>
+       </span> -->
+    <div class="produce">
+     <div class="produce_show"><img src="" class='good_img'/></div>
+      <div class="produce_detail">
+        <p id="gooddes">HC手机电神5000 Zenfone Max((白色)</p>
+        <p class="data" id="goodpsrice">699.00</p>
+      </div>
+      </div>
+   			
+   		</div>
+   		<div class="clear"></div>
+   		<div class="post_text">
+   	        <textarea rows="4" name="post.m_mp_text" id="neirong" style="resize:none;font-size:0.9em;border:0px solid white;padding: 0.5rem;width:95%;" placeholder="喜欢这款商品就写下使用感受吧，再配上图片就更好了"></textarea>
+   		</div>
+   		<div class="post_showimg">
+   			
+   		</div>
+   		<div class="post_addimg">
+   			<div class="post_addimg_left">
+   				<img src="../skins/personcenter/img/addimg.png" width="50" height="50" style="margin-left:10px;" id="adds"/> <span style="margin-left: 1em;color: #aaa;position: relative;top: -0.25em;font-size:13px;">添加图片</span> 				
+   					<input id="pic1" capture="camera" accept="image/*"  hidden="true" type="file" name="files" class="file"/>
+   					<input id="pic2" capture="camera" accept="image/*" hidden="true" type="file" name="files" class="file"/>
+   					<input id="pic3" capture="camera" accept="image/*" hidden="true" type="file" name="files" class="file"/>
+   					<input id="pic4" capture="camera" accept="image/*" hidden="true" type="file" name="files" class="file"/>
+   					<input id="pic5" capture="camera" accept="image/*" hidden="true" type="file" name="files" class="file"/>
+   					<input id="pic6" capture="camera" accept="image/*" hidden="true" type="file" name="files" class="file"/>
+   			</div>
+   			<div class="post_addimg_right">
+   				<span style="margin-right:20px;"><span class="you">0</span>/<span>125</span></span>
+   			</div>
+   			
+   		</div>
+   		<div class="clear"></div>
+   		<footer>
+   			<br/><img src="../skins/personcenter/img/select_no.png" style="cursor: pointer;" id="chooseNiming"/><input hidden="true"  id="niming" value="本名" name="poster"/><span>匿名评价</span><br/><br/>
+			<span id="bon">提交</span>
+		</footer>
+		<div class="bg" id="bg"></div>
+	
+		<div class="tips" id="show1">
+			<p class="ss"><img src="../skins/goodmainline/img/load.gif"/></p>
+			<p>数据提交中...</p>
+			<span class="hides"></span>
+		</div>
+   </section>
+   						<ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+</body>
+
+</html>

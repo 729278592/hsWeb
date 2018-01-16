@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>门店详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/goodmainline/css/shop.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../goodmainline/shop.js"></script>
+</head>
+<body>
+    
+    <section>
+   		<div class="head">
+   			<img style="padding:1em;"src="../skins/goodmainline/img/map_return.png" width="12%" onclick="goback()"/>
+   			<div style="color:white;background-color: #ff620d; padding-left:0.5rem; padding-right:0.5rem;height:2.0em;text-align: center;line-height:2.0em;
+   			-webkit-border-radius:0.4em; /* Safari 和 Chrome */
+   			-moz-border-radius:0.4em;/* Firefox */
+   			-ms-border-radius:0.4em; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+   			float:right;margin-top:40%;margin-right:2em;" id="shoptype"><!-- 直营店 --></div>
+   			<div class="shopfoot" style="position:relative;">
+   				<span style="float:left;margin-left:3%;font-size:1.6rem;position:absolute;top:50%;transform: translate(0%, -50%);" id="shopname"><!-- 闵行吴中路店 --></span>
+   				<span style="float:right;margin-right:3%;line-height:50px;">评价<span style="color:orange;margin-left:1em;margin-right:2px;" class="pingfen"><!-- 4.85 --></span><span id="star"></span></span>
+   			</div>
+   			
+   			
+   		</div>
+   		<div class="clear"></div>
+   		<div class="addr">
+   				<a id="call"><div style="width:17%; background: url('../skins/goodmainline/img/sd_phone.png')no-repeat center;background-size:35px;border-right:1px solid #e8e8e8;cursor: pointer;">
+   					
+   				</div></a>
+   				<div style="width:80%;padding-top:0.7em; overflow:hidden;">
+   					<span style="color:#505050;margin-left:0.7em;float:left;width:80%;" id="addr"><!-- 上海市闵行区吴中路2618号 --></span>
+   					<span style="color:#ff620d;float:right;" id="juli"><img src='../skins/goodmainline/img/load.gif' width='10%'/>定位中</span><br/>
+   					<span style="color:#868686;float:left;margin-left:0.7em; margin-top:0.6em;" id="worktime"><!-- 08:30-19:30 --></span>
+   					<span style="color:#868686;margin-right:1em; margin-top:0.5em;float:right;cursor: pointer;" id="daohang" hidden="true">导航<img src="../skins/personcenter/img/arr_rt1.png" style="width:8px;"></span>
+   				</div>
+   			</div>
+   			<!-- <hr style="border:#6C6C6C 1px solid;"/> -->
+   			<div class="paytype">
+   				<span style="color:#868686;margin-left:3%;" id="paytype"></span>
+   			</div>
+		<div class="recommend">
+   			<div class="title" style="width:100%;height:50px;border-bottom: 1px solid #e5e5e5;"><span style="float:left;margin-left:3%;line-height:50px;">店长推荐</span><span style="float:right;text-align: center;color:#868686;line-height:50px;margin-right:5%;cursor: pointer;" id="allgoods">查看所有商品<img src="../skins/personcenter/img/arr_rt1.png" style="width:12px;"></span></div>
+   			<ul id="goodlist">
+   				<!-- <li>
+		   			<div class="goodmsg">
+		   				<div class="leftdiv">
+		   					<img src="../skins/goodmainline/img/phone.jpg" class="goodimg"/>
+		   				</div>
+		   				<div class="rightdiv">
+		   					<div>HC(ASUS)ZenFone Selfie</div>
+		   					<div>(白色) </div>
+		   					<div><span style="color:red;"> ￥1699.00</span><span style="color:white;width:70%;height:1.7em;line-height:1.7em;text-align: center;background-color: #ff620d;margin-left:3%;">推荐返300元</span></div>
+		   				</div>
+		   			</div>
+	   			</li> -->
+   			</ul>
+   		</div>
+   		
+   		<div class="seller">
+   				<div class="goodmsg2">
+		   				<div class="leftdiv2">
+		   					<img src="../skins/goodmainline/img/phone.jpg" class="goodimg2"/>
+		   				</div>
+		   				<div class="rightdiv2">
+		   					<div id="goodName"></div>
+		   					<div id="gooddes"></div>
+		   					<div><span  class='tiyan'>到店试玩</span><span class='obj'>返 积分</span></div>
+		   					<div><span style="color:red;" id="price_show"></span></div>
+		   				</div>
+		   		</div>
+   				<ul id="sellerlist">
+   					<!-- <li>
+   						<div class="seller_msg">
+   							<div class="seller_img">
+   								<img src="../cashRanking/img.do?imgName=mm01.jpg" class="sellerimg"/>
+   							</div>
+   							<div class="seller_msg_des">
+   								<div class="typlr"><span>小硕</span><input type="button"  value="金牌" class="grade"/></div>
+   								<div class="typlm">
+   									<img src="../skins/personcenter/img/star_orange.png" class="seller_star"/>
+   									<img src="../skins/personcenter/img/star_orange.png" class="seller_star"/>
+   									<img src="../skins/personcenter/img/star_orange.png" class="seller_star"/>
+   									<img src="../skins/personcenter/img/star_orange.png" class="seller_star"/>
+   									<img src="../skins/personcenter/img/star_orange.png" class="seller_star"/>
+   									<span style="color:orange">5.00</span>
+   								</div>
+								<div class="hert"><span>产品体验<span>30</span>次</span></div>
+   							</div>
+   							<div class="seller_act">
+   								<div class="seller_sign">						   
+								   <a href="tel:10086"><img src="../skins/personcenter/img/sales_phone.png" class="sign"/></a>
+								   <a href="sms:10086"><img src="../skins/personcenter/img/sales_messages.png" class="sign"/></a>
+							   </div>
+   							</div>
+   						</div>
+   					</li> -->
+   					
+   				</ul>
+   		</div>
+ 		<div id="bg" class="bg" style="display:none;"></div>
+ 		<div class="clear" style="width:100%;height:50px;"></div>
+   		<div id="showDownInfo"
+		style="width: 100%; height: 100%; position: fixed; top: 0px; display: none;z-index: 99;">
+	</div>
+   </section>
+   <footer>
+   			<div class="footleft" id="shoucang">
+   			 <img src="../skins/personcenter/img/star2null.png" id="s_star">
+   			<h3 id="save">收藏</h3>
+   			</div>
+   			<div class="footmiddle getCloud" id="share">
+   			<img src="../skins/personcenter/img/gdetails_share.png" style="width:16px;">
+   			<h3>分享</h3>
+   			</div>
+   			<div class="footright"  id="yuyue">
+   			<p>预约到店试玩</p>
+   			</div>
+   		</footer>
+</body>
+<script type="text/javascript">
+	$(function(){getCloud();});
+</script>
+</html>

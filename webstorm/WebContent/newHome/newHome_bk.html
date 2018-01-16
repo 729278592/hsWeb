@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=0"
+          charset=utf-8/>
+    <link rel="stylesheet" href="../skins/home/css/common1.css"/>
+    <link rel="stylesheet" href="../skins/home/css/animate.css">
+    <link rel="stylesheet" href="../skins/home/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="../skins/home/css/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="../skins/home/css/jquery.Jcrop.min.css">
+    <link rel="stylesheet" href="../skins/home/css/uicp.css"/>
+    <link rel="stylesheet" href="../skins/home/css/mobile.css"/>
+    <link rel="stylesheet" href="../skins/home/css/theme.css"/>
+    <link rel="stylesheet" href="../skins/home/css/app.css"/>
+    <link rel="stylesheet" href="../skins/newHome/newHome.css"/>
+    <link rel="stylesheet" href="../skins/home/css/common2.css"/>
+    <link rel="stylesheet" href="../skins/home/css/style.css"/>
+    <link rel="stylesheet" href="../skins/home/css/jquery.easy-pie-chart.css"/>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <title>蜂助手个人版</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            window.parent.postMessage(JSON.stringify({
+                "load":"true",
+                "source":"#mobile,unlink",
+                "sourceUrl":"",
+                "isHome": "false",
+                "url": window.location.href
+            }),'*');
+        };
+    </script>
+</head>
+<body oncontextmenu="return(false)" onselectstart="return(false)" style="width:100%" class="theme-green normalWindow"
+      style="-webkit-font-smoothing:antialiased">
+
+<div class="mod wrap wrap-main">
+    <!--主要内容-->
+
+
+
+
+    <div class="home">
+        <div class="modShadow" style="width:1024px; height:48px; position:absolute;z-index: 10"></div>
+        <nav class="mod">
+            <div class="fl-l">主页</div>
+            <div id="search" style="position: absolute;right: 150px">
+                <span id="searchBar" style="position: absolute;right: 20px">
+                    <input id="searchInput"
+                           style="background: transparent;position: absolute;right: 52px;width: 216px;top: 10px;height: 27px;border: none;z-index: 100;outline: medium;text-indent: 10px;color: grey;"
+                           value="HC手机"><img id="searchInputBg"
+                                             style="position: absolute;right: 20px;top: 8px"
+                                             src="../skins/home/img/btn_bg_search_n.png"/>
+                </span>
+                <span id="searchIcon" style="position: absolute;right: 44px;top: 8px">
+                    <input id="searchIconPic" type="image"
+                           style="position: absolute;width: 22px;right: 0px;top: 4px; z-index: 150;background-color: transparent;border: 0;"
+                           src="../skins/home/img/btn_search_n.png"/>
+                </span>
+            </div>
+            <div class="weather fl-r">
+                <span style="position:absolute; right:120px" id="city"></span>
+                <span style="position:absolute; right:90px; top:5px">
+                    <img id="weatherIcon" src=""
+                         style="width:20px"/>
+                </span>
+                <span style="position:absolute; right:70px" id="temperature"></span>
+                <span style="position:absolute; right:46px" id="unit">°C</span>
+            </div>
+        </nav>
+
+        <section>
+                <!--我的资产&ndash-->
+            <div>
+                <div id="userLogin" style="height: 90px;width: 960px;font-family: 微软雅黑;color: white;background-color: #13394f;margin-top: 30px;margin-left: 30px;">
+                    <div id="userLoginPart">
+                        <img id="userLoginPic" src="../skins/newHome/img/Head%20portrait.png" style="position:absolute;margin-left:20px;margin-top:20px"/>
+                    </div>
+
+                    <div id="loginStatusPart" style="position:absolute;margin-left:82px; margin-top:30px;">
+                        <div id="loginStatus" style="font-size:14px">
+                            未登入
+                        </div>
+                        <div id="userName" style="font-size:12px">
+                            游客001
+                        </div>
+                    </div>
+
+                    <div id="task">
+                        <img id="taskPic" src="../skins/newHome/img/task.png" style=" position:absolute ; margin-left: 766px; margin-top: 20px;"/>
+                        <div id="taskWords" style=" position: absolute ; margin-left: 771px; margin-top: 60px; font-size: 12px">
+                            任务
+                        </div>
+                    </div>
+
+                    <div id="coupon">
+                        <img id="couponPic" src="../skins/newHome/img/coupons.png" style=" position: absolute ; margin-left: 825px; margin-top: 20px;"/>
+                        <div id="couponWords" style=" position: absolute; margin-left:830px; margin-top:60px; font-size: 12px;">
+                            卡券
+                        </div>
+                    </div>
+
+                    <div id="change">
+                        <img id="changePic" src="../skins/newHome/img/exchange.png" style=" position:absolute ; margin-left: 884px; margin-top: 20px;"/>
+                        <div id="changeWords" style=" position: absolute; margin-left: 890px; font-size: 12px; margin-top: 60px">
+                            兑换
+                        </div>
+                    </div>
+                </div>
+                <div id="contentPart" style="    margin-top: 10px;margin-left: 30px;width: 920px; color:white;font-family: 微软雅黑">
+                    <div id="bannerPart" style="    position: absolute;width: 540px;height: 330px;">
+                        <div>
+                            <img id="bannerPic" src="../skins/newHome/img/activity.png"/>
+                        </div>
+                    </div>
+                    <div id="mobilePart" style="position: absolute;width: 200px;height: 330px;background-color: #0079d7;margin-left: 550px;">
+                        <div id="mobilePartDes" style="    position: absolute;margin-left: 10px;margin-top: 10px;font-size: 12px;">
+                            连接状态:未链接
+                        </div>
+                        <div>
+                            <img id="mobilePic" src="../skins/newHome/img/Mobile%20service.png" style="    position: absolute;margin-left: 58px;margin-top: 105px;"/>
+                        </div>
+                        <div id="mobilePartName" style="margin-left: 12px;position: absolute;margin-top: 302px;font-size: 14px;">
+                            手机管理
+                        </div>
+                    </div>
+                    <div id="mongoTvPart" style="position: absolute;width: 200px;height: 160px;margin-left: 760px;background-color: #54A91C;">
+                        <div id="mongoTvPartDes" style="    position: absolute;font-size: 12px;margin-left: 10px;margin-top: 10px;">
+                            会员
+                        </div>
+                        <div>
+                            <img id="mongoTvPic" src="../skins/newHome/img/mangguoTV.png"   style="    position: absolute;margin-top: 38px;margin-left: 58px;"/>
+                        </div>
+                        <div id="mongoTvName" style="    position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            芒果TV
+                        </div>
+                    </div>
+                    <div id="zenPart" style="    position: absolute;margin-left: 760px;width: 200px;height: 160px;background-color: #ee7419;margin-top: 170px;">
+                        <div id="zenPartDes" style="position: absolute;font-size: 12px;margin-left: 10px;margin-top: 10px;">
+                            WIFI未连接
+                        </div>
+                        <div>
+                            <img id="zenPartPic" src="../skins/newHome/img/zenbi.png" style="position: absolute;margin-top: 38px;margin-left: 58px;"/>
+                        </div>
+                        <div id="zenPartName" style="    position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            赚积分
+                        </div>
+                    </div>
+                    <div id="storePart" style="    position: absolute;width: 330px;height: 160px;margin-top: 340px;background-color: #009abb;">
+                        <div id="storePartDes">
+
+                        </div>
+                        <div>
+                            <img id="storePartPic" src="../skins/newHome/img/Shopping%20Mall.png" style="    position: absolute;margin-top: 38px;margin-left: 123px;"/>
+                        </div>
+                        <div id="storePartName" style="    position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            HC商城
+                        </div>
+                    </div>
+                    <div id="phonePart" style="position: absolute;width: 200px;height: 160px;margin-top: 340px;margin-left: 340px;background-color: #767676;">
+                        <div id="phonePartDes" style="    position: absolute;font-size: 12px;margin-left: 10px;margin-top: 10px;">
+                            即将上线
+                        </div>
+                        <div>
+                            <img id="phonePartPic" src="../skins/newHome/img/Telephone.png" style="    position: absolute;margin-top: 38px;margin-left: 58px;"/>
+                        </div>
+                        <div id="phonePartName" style="    position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            免费电话
+                        </div>
+                    </div>
+                    <div id="netPart" style="    position: absolute;width: 200px;height: 160px;margin-top: 340px;margin-left: 550px;background-color: #0079d7;">
+                        <div id="netPartDesc">
+
+                        </div>
+                        <div>
+                            <img id="netPartPic" src="../skins/newHome/img/network.png" style="    position: absolute;margin-top: 38px;margin-left: 58px;"/>
+                        </div>
+                        <div id="netPartName" style="position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            网络资源
+                        </div>
+                    </div>
+                    <div id="servicePart" style="position: absolute;width: 200px;height: 160px;margin-top: 340px;margin-left: 760px;background-color: #8765b7;">
+                        <div id="servicePartDesc" style="position: absolute;font-size: 12px;margin-left: 10px;margin-top: 10px;">
+                            客服:400-600-6655
+                        </div>
+                        <div>
+                            <img id="servicePartPic" src="../skins/newHome/img/Customer%20service.png" style="    position: absolute;margin-top: 38px;margin-left: 58px;"/>
+                        </div>
+                        <div id="servicePartName" style="    position: absolute;font-size: 14px;margin-left: 12px;margin-top: 132px;">
+                            HC客服
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--底部页码-->
+</div>
+
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript">
+    $("#percentage canvas").click(function(){
+        console.info("我是图框,我被点拉!");
+    });
+</script>
+<script type="text/javascript" src="../home/excanvas.js"></script>
+<script type="text/javascript" src="../home/html5.js"></script>
+<script type="text/javascript" src="../home/jquery.easy-pie-chart.js"></script>
+<script type="text/javascript" src="../newHome/newHome.js" charset="utf-8"></script>
+<script type="text/javascript" src="../getZen/common.js"></script>
+<script type="text/javascript" src="../js/MD5/md5.js"></script>
+<script src="../js/config.js"></script>
+</body>
+</html>

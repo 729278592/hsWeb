@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>案例</title>
+</head>
+<body>
+    <div class="wrapper style">
+        <!--有案例开始-->
+        <div class="has_case">
+            <div class="swiper-container swiper-container-horizontal" id="swiper-container">
+                <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+                    <div class="swiper-slide">
+                        <a>
+                            <img src="../images/case1.jpg" alt="" class="w100"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a>
+                            <img src="../images/case2.jpg" alt="" class="w100"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a>
+                            <img src="../images/case3.jpg" alt="" class="w100"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!--<div class="swiper-button-next"></div>-->
+                <!--<div class="swiper-button-prev"></div>-->
+            </div>
+            <div class="case">
+                <p class="case_title">
+                    <span></span>
+                    案例欣赏
+                    <span></span>
+                </p>
+
+                <ul class="case_list">
+                    <li>
+                        <a>
+                            <div class="case_con">
+                                <img class="w100" src="../images/case-list1.jpg" alt="">
+                            </div>
+                            <div class="case_info">
+                                <p class="case_name">现代90平三居室-工业沉静简洁风</p>
+                                <p class="clearfix">
+                                    <span class="case_n left"><span class="case_s_n">爱装修的小萝</span> <span class="Verdana">2017-12-11</span> </span>
+                                    <span class="right">
+                                        <span class="icon_span">
+                                            <span class="ion-ios-eye"></span>
+                                            <span class="Verdana">287</span>
+                                        </span>
+                                        <span class="icon_span good" data-flag=false>
+                                            <span class="ion-thumbsup"></span>
+                                            <span>99</span>
+                                        </span>
+                                        <span class="icon_span">
+                                            <span class="ion-chatbox-working"></span>
+                                            <span>99</span>
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--有案例结束-->
+        <!--无案例开始-->
+        <div class="no_case hide">
+            <img src="../images/no_case.png" alt=""><br>
+            正在加班加点做作品...
+        </div>
+        <!--无案例结束-->
+
+        <div class="dot_dialog hide">
+            <div class="dot_text">收藏成功</div>
+        </div>
+    </div>
+
+
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script src="../js_new/swiper1.js"></script>
+    <script>
+        $(function () {
+            /*slider*/
+            var swiper = new Swiper('#swiper-container', {
+                //        prevButton:'.swiper-button-prev',
+                //        nextButton:'.swiper-button-next',
+                slidesPerView: 1,
+                pagination:'.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 0,
+                loop:true,
+                autoplay: 50000000,
+                autoplayDisableOnInteraction: false
+            });
+
+                var good = $(".good");
+
+
+                var $dotDialog = $(".dot_dialog");
+                var $dotText = $(".dot_text");
+
+
+
+                function hideDot(that) {
+                    setTimeout(function () {
+                        $dotDialog.addClass("hide").text();
+                        var flag = that.data("flag");
+                        that.attr({"data-flag":!flag});
+
+                    },1000)
+                }
+
+                function statusChange(cancel,success,obj,flag,that) {
+                    if(flag){
+                        $dotDialog.removeClass("hide");
+                        $dotText.text(cancel);
+                        obj.removeClass("active");
+                        hideDot(that);
+                    }else{
+                        $dotDialog.removeClass("hide");
+                        $dotText.text(success);
+                        obj.addClass("active");
+                        hideDot(that);
+                    }
+                }
+
+                good.on("click",function () {
+                    statusChange("取消点赞","点赞成功",$(this).find(".ion-thumbsup"),$(this).data("flag"),$(this));
+                });
+
+
+
+        })
+    </script>
+</body>
+</html>

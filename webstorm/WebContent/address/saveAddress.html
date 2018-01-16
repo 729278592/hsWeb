@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+   	<link rel="stylesheet" href="../css/index.css">
+   	<link rel="stylesheet" href="../skins/css/util.css">
+	<link rel="stylesheet" href="../skins/address/css/style.css">
+	<link rel="stylesheet" href="../skins/address/css/framework7.min.css">
+	<link rel="stylesheet" href="../skins/address/css/address.css">
+</head>
+<body>
+    <header>
+	<div class="h-head">
+    	<a class="h-return" href="javascript:void(0);" id="backPage"></a>
+        <span class="h-title">添加地址</span>
+        <input type="hidden" id="goodsId">
+        <input type="hidden" id="showDefault"><!-- 是事显示默认地址选项 -->
+    </div>
+</header>
+<form action="" method="post" id="butSubmit">
+	<div class="dz-box" id="showHtml">
+		<div class="dz-ren">收&ensp;货&ensp;人
+	    	<input class="de-ren-in" type="text" placeholder="收货人" name="uname" id="uname" maxlength="5" />
+	    </div>
+	    <div class="dz-ren">手&ensp;机&ensp;号
+	    	<input class="de-ren-in" type="text" placeholder="手机号" id="phone" name="phone" maxlength="11" />
+	    </div>
+	    <div class="dz-ren" >地&emsp;&emsp;址
+	    	<input id="city" class="de-ren-in" type="text" readonly="" placeholder="选择城市"/>
+            <input id="value1" type="hidden"/>
+	    </div>
+	    <div class="dz-ren" >详细地址
+	    	<input class="de-ren-in" type="text" placeholder="地址" name="dizhi" id="dizhi"/>
+	    </div>
+	    <div class="dz-ren defaultIcon selected" style="border-bottom: 0px solid #e4e4e4;">
+	    	<input type="checkbox" id="default" value="0" name="adefault" checked='checked' />
+	    	<i class='input-icon'></i>
+	    	是否为默认地址
+	    </div>
+	</div>
+	<div class='bottomSave'>
+		<input class="dz-bc" type="button" id="enterSave" value="保  存"/>
+	</div>
+</form>
+	<!-- 提示成功 -->
+	<div class='alert-bg alert-bg-shows hide' id='alert'>
+		<div class='alert-content'>
+			<div class='boxBg'>
+				<div class='title'>提示</div>
+				<div class='content'>添加成功!</div>
+				<div class='bottom'>
+					<div class='right right-block' id='sureClick'>确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../skins/address/framework7.min.js"></script>
+<script type="text/javascript" src="../skins/address/regionsObject2.js"></script>
+<script type="text/javascript" src="../skins/address/cityPicker.js"></script>
+<script type="text/javascript" src="../address/saveAddress.js"></script>
+<script type='text/javascript'>
+    	$(function(){
+    		$('.defaultIcon').on('click',function(){
+        		if($(this).hasClass('selected')){
+        			$('#default').prop('checked',false);
+        			$(this).removeClass('selected');
+        		}else{
+        			$('#default').prop('checked',true);	
+        			$(this).addClass('selected');
+        		}
+        	});
+    	});
+    </script>
+</html>

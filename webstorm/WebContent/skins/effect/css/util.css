@@ -1,0 +1,41 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    height: 100%;
+   }
+   
+body{
+	line-height: 1.2;
+    font-size: 0.9em;
+    margin: 0 auto;
+    max-width: 720px;
+    min-width: 320px;
+    height: 100%;
+}  
+:focus{outline:0;}
+.menu_foot {
+	background-color: rgb(67,67,67);
+	height: 10%;
+	color: rgb(165, 165, 165);
+  /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* z-index: 100; */
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+.menu_foot_div{
+  height:100%;
+  width:25%;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.menu_foot_img{
+  height:55%;
+ }

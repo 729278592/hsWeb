@@ -1,0 +1,261 @@
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+}
+ul,li,p{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+a{text-decoration: none;
+color:#505050;}
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #fff;
+
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+   max-width: 100%;
+    min-width: 320px;
+    height: 100%;
+    background:#e5e5e5;
+    margin: 0px auto;
+    font-family:'微软雅黑';
+    top: 0;}
+/*--/header*/
+    .clear{
+      clear:both;
+    }
+  header{
+    max-width:736px;
+    min-width:320px;
+    height: 50px;background:#f8f8f8;margin:0px auto;position:fixed;z-index: 1;
+    left:0px;right:0px;margin-left:auto;margin-right:auto;box-sizing:border-box;border-bottom: 1px solid #dad9d9;}
+  header .head-warp{width: 100%; height:50px;margin:0px auto;background-position: 4.5px center;box-sizing:border-box;}
+  header .head-warp .li-lt{width:50px; height: 50px; float:left; line-height:50px;text-align:center;}
+  header .head-warp .li-lt a{font-size: 1.8em;color:#505050;line-height: 50px;}
+  header .head-warp .li-rt{width:50px;height: 50px;float:right;line-height:50px;text-align:center;}
+  header .head-warp .li-rt a{font-size: 1.8em;color:#505050;line-height: 50px;}
+
+/*--/header*/
+/*section*/
+section{
+  max-width: 736px;
+  height:auto;
+  min-width: 320px;
+  margin: 0px auto;
+  margin-top: 5rem;
+  box-sizing:border-box;
+  position:absolute;
+  left:0px;
+  right:0px;
+  padding-bottom:50px;
+}
+/*section-end*/
+.tab{
+  width:100%;
+  margin-top: 1rem;
+  background-color:#fff;
+  overflow: hidden;
+}
+.tab .tab_top{
+  float:left;
+  width:100%;
+  border-bottom: 1px solid #e5e5e5;
+  clear:both;
+
+}
+.tab_top ul li{
+  float:left;
+  width:33%;
+  height:4rem;
+  line-height:4rem;
+  text-align: center;
+  font-size: 1.4rem;
+
+}
+.tab_top ul li a{
+  display:block;
+  width:100%;
+  height:100%;
+  color:#505050;
+  font-weight: 900;
+}
+.tab_top ul .current a b{
+  display:inline-block;
+  width:0.9rem;
+  height:1.4rem;
+  background:url(../images/updown.png) no-repeat;
+  background-size: 100%;
+  position:relative;
+  top:0.6rem;
+  left:0.4rem;
+}
+
+.tab_top ul .current a{
+  color:#ff620d;
+
+}
+
+/*tab-content*/
+.tab .tab_content{
+  background-color: #fff;
+  float:left;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+
+}
+.tab_content .item {
+    float: left;
+    overflow: hidden;
+    width:100%;
+}
+.tab_content .item1{
+width:100%;
+overflow: hidden;
+}
+.item1 li{
+  width:100%;
+  height:12.5rem;
+  border-bottom:1px solid #e5e5e5;
+}
+.item1 ul li{
+  padding:2% 3%;
+  width:100%;
+  height:10rem;
+}
+.item1 ul li>div{
+  float:left;
+  height:100%;
+}
+.item1 ul li .shop{
+  margin-top:0.4em;
+width:21%;
+max-width: 8rem;
+min-width: 5.6rem;
+height:100%;
+margin-right:4%;
+}
+.item1 ul li .shop img{
+  width:100%;
+  height:90%;
+}
+.item1 .detail{
+  width:73%;
+  color:#505050;
+  padding:0.8em 0px;
+  line-height:1.8em;
+}
+.item1 .detail .shop_name{
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+}
+
+.item1 .detail .zf .gift{
+  background-color:#c30404;
+   margin-right:0.5rem;
+
+}
+.item1 .detail .zf .zen{
+   background-color: #ff620d;
+
+}
+
+.item1 .detail .zf span{
+  height:1.4rem;
+  padding:0.1em 0.5em;
+  border-radius:0.3rem;
+  line-height:1rem;
+  display:inline-block;
+
+}
+.item1 .detail .zf span a{
+  color:#fff;
+  font-size: 1.3em;
+display:block;
+margin-top:0.15em;
+
+}
+.item1 .detail .price{
+  font-size:1.8rem;
+  color:#c30404;
+  font-weight: 900;
+  margin-top:0.3rem;
+
+}
+
+/*
+ *Icon图标样式
+*/
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../../personcenter/fonts/icomoon.eot?41u1yj');
+    src:    url('../../personcenter/fonts/icomoon.eot?41u1yj#iefix') format('embedded-opentype'),
+        url('../../personcenter/fonts/icomoon.ttf?41u1yj') format('truetype'),
+        url('../../personcenter/fonts/icomoon.woff?41u1yj') format('woff'),
+        url('../../personcenter/fonts/icomoon.svg?41u1yj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_back:before {
+    content: "\e5c4";
+    color: #515151;
+/*     margin-left:20%; */
+}
+.icon-border_color:before {
+    content: "\e22b";
+    color: #767474;
+    font-size: 1.9em;
+}
+.icon-dehaze:before {
+    content: "\e3c7";
+     color: #515151;
+    font-size: 1.5em;
+}
+.icon-chevron-thin-down:before {
+    content: "\e907";
+    color: #767474;
+    line-height: 3rem;
+    font-size: 1.9em;
+}
+.icon-chevron-thin-right:before {
+    content: "\e901";
+    color: #767474;
+    line-height: 3rem;
+    font-size: 1.9em;
+}
+.icon-star-empty:before {
+    content: "\e909";
+    font-size: 2em;
+}
+/*
+ *Icon图标样式
+*/

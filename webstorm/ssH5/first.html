@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>随省</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="firstPage">
+    <div class="hd_pic">
+        <img src="images/pic_cover_13.png" alt="">
+        <p class="big_title">华硕省事儿双周报</p>
+        <p class="small_title">2017 12月7日 至 12月20日</p>
+    </div>
+    <div class="news">
+        <img class="news_title" src="images/pic_headline_17.png" alt="">
+        <div class="clearfix news_con">
+            <div class="left">
+                <div class="portrait_f">
+                    <img src="images/portrait.png" alt="">
+                </div>
+                <!--<img src="images/portrait.png" alt="">-->
+                张三
+            </div>
+            <div class="right">
+                <p class="type">
+                    你被评为
+                    <span class="typeSpan">游戏达人！</span>
+                </p>
+                <p class="con_pan">两周内你一共打开王者荣耀108次, 超过50%的省事儿用户。</p>
+            </div>
+        </div>
+    </div>
+    <div class="startBtn">
+        <a href="index.html">
+            <div class="top_right" id="top_right">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="right_bottom" id="right_bottom">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            立刻查看更多周报内容
+            <div class="bottom_left" id="bottom_left">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="left_top" id="left_top">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </a>
+    </div>
+</div>
+    <script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="plugins/kxbdmarquee/js/jquery.kxbdMarquee.js"></script>
+    <script>
+
+        $.ajax({
+            url: "data/animate.json",
+            dataType: 'json',
+            data: '',
+//          jsonp: 'callback',
+            success: function (res) {
+                console.log(JSON.stringify(res));
+            }
+        });
+        $(function () {
+            var $startBtn = $(".startBtn"),
+                $firstPage = $(".firstPage"),
+                $top_right = $("#top_right"),
+                $right_bottom = $("#right_bottom"),
+                $bottom_left = $("#bottom_left"),
+                $left_top = $("#left_top");
+            $top_right.kxbdMarquee({
+                isEqual:true,
+                loop:0,
+                direction:"right",
+                scrollAmount:1,
+                scrollDelay:96
+            });
+            $right_bottom.kxbdMarquee({
+                isEqual:true,
+                loop:0,
+                direction:"down",
+                scrollAmount:1.5,
+                scrollDelay:96
+            });
+            $bottom_left.kxbdMarquee({
+                isEqual:true,
+                loop:0,
+                direction:"left",
+                scrollAmount:1,
+                scrollDelay:96
+            });
+            $left_top.kxbdMarquee({
+                isEqual:true,
+                loop:0,
+                direction:"up",
+                scrollAmount:1.5,
+                scrollDelay:96
+            });
+
+        })
+    </script>
+</body>
+</html>

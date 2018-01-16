@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../skins/personcenter/css/storegoods.css">
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+</head>
+
+     <title>HC服务号</title>
+  <!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+ <!--/header头部-->
+
+  <header>
+   <div class="head-warp">
+   <ul>
+       <li class="li-lt">
+         <a href="javascript:void(0);">
+          <span class="icon-arrow_back">
+               </span>门店商品</a>
+       </li>
+       <li class="li-rt">
+         <a href="javascript:void(0);">
+          <span class="icon-dehaze"></span>
+         </a>
+      </li>
+      </ul>
+ </div>
+</header>
+<section>
+    <div class="tab">
+    <div class="tab_top">
+        <ul>
+            <li class="current"><a href="javascript:void(0)">综合<b></b></a></li>
+            <li><a href="javascript:void(0)">销量<b></b></a></li>
+            <li><a href="javascript:void(0)">价格<b></b></a></li>
+        </ul>
+    </div>
+    <div class="tab_content">
+        <div class="item item1">
+            <ul>
+            <li class="list1">
+            <div class="shop"><img src="../skins/personcenter/img/phone.png" alt=""></div>
+            <div class="detail">
+                 <p class="shop_name">HC手机电神5000 Zenfone max
+                (白色)</p>
+                <div class="zf">
+                    <span class="gift">
+                    <a href="javascript:void(0);">赠品</a>
+                    </span>
+                    <span class="zen">
+                    <a href="javascript:void(0);">返积分</a>
+                    </span>
+                </div>
+                <p class="price">￥699.00</p>
+            </div>
+            </li>
+            </ul>
+
+
+        </div>
+        <div class="item">
+            <div class="item item1">
+            <ul>
+            <li class="list1">
+            <div class="shop"><img src="../skins/personcenter/img/phone.png" alt=""></div>
+            <div class="detail">
+                 <p class="shop_name">HC手机电神5000 Zenfone max
+                (白色)</p>
+                <div class="zf">
+                    <span class="gift">
+                    <a href="javascript:void(0);">赠品</a>
+                    </span>
+                    <span class="zen">
+                    <a href="javascript:void(0);">返积分</a>
+                    </span>
+                </div>
+                <p class="price">￥699.00</p>
+            </div>
+            </li>
+            </ul>
+
+
+        </div>
+        </div>
+        <div class="item">
+            <div class="item item1">
+            <ul>
+            <li class="list1">
+            <div class="shop"><img src="../skins/personcenter/img/phone.png" alt=""></div>
+            <div class="detail">
+                 <p class="shop_name">HC手机电神5000 Zenfone max
+                (白色)</p>
+                <div class="zf">
+                    <span class="gift">
+                    <a href="javascript:void(0);">赠品</a>
+                    </span>
+                    <span class="zen">
+                    <a href="javascript:void(0);">返积分</a>
+                    </span>
+                </div>
+                <p class="price">￥699.00</p>
+            </div>
+            </li>
+            </ul>
+
+
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+<script>
+    $(function(){
+        $ ('.tab_content').children ('div:gt(0)').hide();
+
+     $ ('.tab_top ul li').click (function (){
+         $(this).addClass('current').siblings('.current').removeClass('current');
+         $('div .tab_content').children ('div:eq(' + $ (this).index () + ')').show().siblings('div').hide();
+     });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+html *{
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /*firfox*/
+	-webkit-box-sizing:border-box; /*safari*/
+	-webkit-user-drag:none;
+}
+body{
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 736px;
+	height: 100%;
+	background-color: #fff;
+	font-family: Helvetica;
+	color: #505050;
+}
+p,ul,li,dl,dt,dd {
+	margin: 0;
+}
+:focus {
+	outline: 0;
+}
+ul,li{
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #505050;
+	text-decoration: none;
+}
+img{
+	border:none;
+}
+input{
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+
+header{
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	background-color: #f8f8f8;
+}
+
+.header_l{
+	float: left;
+	width:50px;height: 50px;line-height:50px;text-align:center;
+}
+
+.header_r{
+	float: right;
+	width:50px;height: 50px;line-height:50px;text-align:center;
+}
+
+header img{
+	width: 19px;
+	height: 19px;
+    margin-top:14px;
+}
+
+header span {
+	font-size: 1.1rem;
+	line-height: 50px;
+	color:#505050;
+}
+
+.sales_infor,.sales_phone,.sales_select,.sales_photo,.sales_submit{
+	border-top: 0.8rem #e5e5e5 solid;
+}
+
+.sales_infor ul li ,.sales_phone ul li{
+	overflow: hidden;
+	width: 100%;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	padding: 0 7% 0 4%;
+}
+
+.sales_infor ul .border,.sales_phone ul .border{
+	border-bottom: 0.1rem #e5e5e5 solid;
+}
+
+.sales_infor ul li span,.sales_phone ul li span{
+	float: left;
+}
+
+.sales_infor ul li input,.sales_phone ul .border input{
+	float: right;
+	width: 60%;
+	text-align: right;
+	margin-top:0.85rem; 
+}
+
+.sales_phone ul .code .text{
+	float: left;
+	width: 40%;
+	/* margin:0.88rem 0 0 1.2rem; */
+	line-height: 3rem;
+    margin-left: 1.2rem;
+}
+
+.sales_phone ul .code .sub{
+	float: right;
+	/* margin-top:0.85rem;  */
+	background-color: #fff;
+	color: #ff620d;
+	font-size: 1rem;
+	/* line-height:3rem; */
+	
+}
+
+.sales_select ul li{
+	overflow: hidden;
+	width: 100%;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	padding: 0 0 0 4%;
+}
+
+.sales_select ul li span{
+	float: left;
+}
+
+.sales_select ul li p{
+	float: right;
+	color: #999999;
+	/* background: url("../images/personal_arrow.png") no-repeat right center; */
+	background-size: 1.1rem 1.1rem;
+	padding-right: 6%;
+	margin-right: 2%;
+	line-height: 3rem;
+}
+
+.sales_photo{
+	padding-bottom: 2%;
+}
+
+.sales_photo p {
+	font-size: 0.95rem;
+	margin: 4%;
+}
+
+.sales_photo .photoes{
+	overflow: hidden;
+	width: 100%;
+}
+
+.sales_photo .photoes ul li {
+	width: 25%;
+	height: auto;
+	float: left;
+	margin: 0 4%;
+	text-align: center;
+}
+
+.sales_photo .photoes ul li span {
+	font-size: 0.9rem;
+	color: #999999;
+	line-height: 2.5rem;
+	display:block;
+}
+
+.sales_photo .photoes ul li img{
+	width:90px;
+	height:90px;
+	border: 0.15rem #ccc solid;
+}
+
+.sales_submit{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.sales_submit span{
+	width: 80%;
+	height: auto;
+	background-color: #ff620d;
+	color: #fff;
+	margin:0 auto;
+	font-size: 1.2rem;
+	line-height: 2.8rem;
+	border-radius: 2.5rem;
+	display:block;
+}
+
+.sales_submit p{
+	font-size: 0.9rem;
+	color: #c1c1c1;
+	line-height: 3rem;
+}
+
+.menu-list{
+	width: 130px;
+    position: fixed;
+    height: auto;
+    background: #f8f8f8;
+    right:1rem;
+    top: 3.1rem;
+    box-shadow: 0 0 9px rgba(0,0,0,0.3);
+    z-index:1;
+    display:none;
+    }
+.menu-list li{height:45px;border-bottom:1px solid #e5e5e5;list-style:none;text-align:left;}
+.menu-list li:active{background:#f2f2f2;}
+.menu-list li img{    
+	width: 23px;
+    height: 21.9167px;
+    margin-top: 0.7rem;
+    margin-left: 2rem;}
+.menu-list li p{    
+	text-align: right;
+    margin-right:1.7rem;
+    color: #808080;
+    font-size: 1rem;
+    margin-top: -3.7rem;
+    font-family: 微软雅黑;}
+
+
+

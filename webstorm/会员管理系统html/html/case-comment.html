@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>华绰服务号</title>
+</head>
+<body>
+    <div class="wrapper" style="overflow-y: hidden;">
+
+        <div class="content pb50">
+
+            <div class="comment m0">
+                <div class="com_hd"></div>
+                <!--评论列表开始-->
+                <div class="com_bd ">
+                    <!--无评论列表开始-->
+                    <div class="no_com hide">
+                        沙发还空着，快来抢吧~
+                    </div>
+                    <!--无评论列表结束-->
+
+                    <!--无评论开始-->
+                    <div class="has_com">
+                        <ul class="com_list">
+
+                        </ul>
+
+                    </div>
+                    <!--无评论结束-->
+                </div>
+                <!--评论列表结束-->
+
+            </div>
+
+        </div>
+
+        <div class="ft">
+            <!--评论输入框开始-->
+            <div class="caseInfo_foot style">
+                <div class="com_input">
+                    <input id="input_id" placeholder="我有话要说" type="text">
+                    <img src="../images/clear.png" class="clear hide" alt="">
+                </div>
+                <div class="send">
+                    <span class="ion-forward"></span>
+                </div>
+
+            </div>
+            <!--评论输入框结束-->
+        </div>
+
+        <!--已评论评论提示开始-->
+        <div class="dot_dialog ml15 hide">
+            <div class="dot_text">已留言，正在审核</div>
+        </div>
+        <!--已评论评论提示结束-->
+        <div class='alertBox'>
+            <div class='cont sure'>
+                <div class='title'>提示</div>
+                <div class='content'>亲，确定要删除吗？</div>
+                <div class='btm'>
+                    <div class='left' id="cancel">取消</div>
+                    <div class='right' id="sure">确定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script>
+        $(function () {
+            /*发送不为空的评论内容*/
+            var $input_id = $("#input_id"),
+                $clear = $(".clear"),
+                $send = $(".send");
+            $input_id.on('input',function(){
+                if($.trim($(this).val())!=''){
+                    $send.addClass("active");
+                    $clear.removeClass("hide");
+                }else {
+                    $send.removeClass("active");
+                    $clear.addClass("hide");
+                }
+            });
+
+            $clear.on("click",function () {
+                $input_id.val('');
+                $(this).addClass("hide");
+                $send.removeClass("active");
+            });
+
+            $.ajax({
+                url:"../data/case-comment.json",
+                dataType:'json',
+                data:'',
+                jsonp:'callback',
+                success:function(data) {
+                    var total = data.total,
+                        commentList = data.commentList,
+                        commentLen = commentList.length,
+                        $com_hd = $(".com_hd"),
+                        $no_com = $(".no_com"),
+                        $has_com = $(".has_com"),
+                        $com_list= $(".com_list"),
+                        commentHtml = '';
+
+                    $com_hd.html('全部评论('+commentLen+')');
+                    if(commentLen<1){
+
+                        $no_com.removeClass("hide");
+                        $has_com.addClass("hide");
+                        return;
+                    }
+                    $no_com.addClass("hide");
+                    $has_com.removeClass("hide");
+                    for(var i = 0;i<commentLen;i++){
+                        commentHtml +='<li>'+
+                                        '<div class="com_con_hd">'+
+                                            '<img src="'+commentList[i].img+'" alt="">'+
+                                        '</div>'+
+                                        '<div class="com_con_bd">'+
+                                            '<div class="com_fx">'+
+                                                '<div class="com_left">'+
+                                                    '<p class="com_name">'+commentList[i].author+'</p>'+
+                                                    '<p class="com_time">'+commentList[i].date+' <span>审核中 　　<span class="ion-trash-a remove"></span></span></p>'+
+                                                '</div>'+
+                                                '<div class="com_right">'+
+                                                    '<span class="icon_span good" data-flag=false> '+commentList[i].zan+''+
+                                                        ' <span class="ion-thumbsup" data-status="'+commentList[i].status+'"></span>'+
+                                                    '</span><br>'+
+
+                                                '</div>'+
+                                            '</div>'+
+                                            '<div class="com_con">'+commentList[i].content+'</div>'+
+                                        '</div>'+
+                                    '</li>'
+                    }
+                    $com_list.append(commentHtml);
+
+                    /*筛选自己点赞的评论*/
+                    $(".com_list li .ion-thumbsup").each(function () {
+                        var that = $(this);
+                        if(that.data("status")==1){
+                            that.addClass("active");
+                            that.closest(".good").attr({"data-flag":true});
+                        }
+                    });
+
+                    /*删除自己发布的评论*/
+                    var $remove = $(".remove"),
+                        $alertBox = $(".alertBox"),
+                        $cancel = $alertBox.find("#cancel"),
+                        $sure = $alertBox.find("#sure");
+                    $remove.on('click',function(){
+                        $alertBox.fadeIn();
+                    });
+                    $cancel.on('click',function(){
+                        $alertBox.fadeOut();
+                    });
+                    $sure.on('click',function(){
+                        $alertBox.fadeOut();
+                        $dotDialog.removeClass("hide");
+                        $dotText.text("删除成功");
+                        setTimeout(function () {
+                            $dotDialog.addClass("hide").text();
+                        },1000)
+                    });
+
+                    /*点赞评论*/
+                    var good = $(".good"),
+                        $dotDialog = $(".dot_dialog"),
+                        $dotText = $(".dot_text");
+                    function hideDot(that) {
+                        setTimeout(function () {
+                            $dotDialog.addClass("hide").text();
+                            var flag = that.data("flag");
+                            that.attr({"data-flag":!flag});
+                        },1000)
+                    }
+                    function statusChange(cancel,success,obj,flag,that) {
+                        if(flag){
+                            $dotDialog.removeClass("hide");
+                            $dotText.text(cancel);
+                            obj.removeClass("active");
+                            hideDot(that);
+                        }else{
+                            $dotDialog.removeClass("hide");
+                            $dotText.text(success);
+                            obj.addClass("active");
+                            hideDot(that);
+                        }
+                    }
+                    good.on("click",function () {
+                        statusChange("取消点赞","点赞成功",$(this).find(".ion-thumbsup"),$(this).data("flag"),$(this));
+                    });
+
+                },
+                error:function (err) {
+                    alert(err)
+                }
+            });
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+@CHARSET "UTF-8";
+		*{margin:0px;padding:0px;}
+		.content{
+	    		width:100%;
+	    		/* padding-bottom: 66px; */
+	    	}
+    	 .heads{
+    		width:100%;
+			height:50px;
+			font-size:1.7em;
+			color:#505050;
+			background-color:#f8f8f8;
+			line-height:50px;
+    	}
+    	.title{
+    		width:100%;
+    		cursor: pointer;
+    		height:50px;
+    		background-color:#ffffff;
+    		border-top:1px solid #e5e5e5;
+    		border-bottom: 1px solid #e5e5e5;	
+    	}
+    	.title span{
+    		font-size:0.8rem;
+    	}
+    	.shoplist{
+    		width:100%;
+    		height:auto;
+    	}
+    	.shoplist ul li{border-bottom:1px solid #e5e5e5;padding:3%;list-style:none;overflow:hidden;}
+    	
+    	.heads img{
+    		width:19px;
+    		margin-top:14px;
+    	}   	
+		select{
+			border:none;			
+		}
+    	.area_left{
+    		float:left;
+    		background-color: #ffffff;
+    		width:45%;
+    		text-align: left;
+    		border-bottom:1px solid #e5e5e5;
+    		padding-left:5%;
+    		
+    	}
+    	.area_right{
+    		float:right;
+    		background-color: #ffffff;
+    		width:45%;
+    		text-align: right;
+    		border-bottom:1px solid #e5e5e5;
+    		padding-right:5%;
+    		
+    		
+    	}
+    	.title_left,.title_middle,.title_right{
+    		float:left;
+    		width:32.5%;
+    		text-align: center;
+    		margin-bottom: 10px;
+    		line-height:50px;
+    	}
+    	.content .choose li:hover{
+    		color:orange;
+    	}
+    	.leftdiv,.middlediv{
+    		float:left;
+    	}
+    	.leftdiv{
+    		/* width:28%; */
+    	}
+
+    	.middlediv{
+    		width:57%;
+    		margin-left:3%;
+    		line-height: 21px;
+			/* letter-spacing: 1px; */
+    	}
+    	.rightdiv{
+    		float:right;
+    		width:13%; 
+    	}
+    	.shopimg{
+    		width:4.8rem;
+    		/* height:4rem; */
+    		border:1px solid #dcdcdc;
+    	}
+    	.middlediv div{
+    		width:100%;
+    	}
+    	.rightdiv div{
+    		/* margin-top:15px; */
+    		color:#FF620D;
+        	text-align:right;
+        	font-size:13px;
+    	}
+    	.shopstar{
+    	margin-bottom: 3px;
+    	}
+    	.shopstar .star{
+    		width:13px;
+    		margin-left:3px;
+    		position:relative;
+    		top:4px;
+    	}
+    	.shopstar span{
+    		color:#FF620D;
+    		margin-left:0.5rem;
+    		position: relative;
+    		top: 3px;
+}
+    	
+    	.middlediv .shoptype_msg{
+    		color:white;
+    		width:80px;
+    		background-color: #03bed4;
+    		text-align: center;
+    		border-radius:3px;
+    		padding: 2px 0;
+    		font-size:13px;
+    	}
+    	.middlediv .shopaddr{
+    		margin-top:2px;
+    		color:#868686;
+    		font-size:13px;
+    	}
+    	.shopname{
+    	font-size:16px;
+    	color:#505050;
+    	word-break: break-all;
+    	}
+    	footer{
+    	height:auto;
+    	position:fixed;
+    	bottom:0px;
+    	width:98.5%;
+    	min-width: 320px;
+    	margin:auto;
+    	background-color: #C6C6C6;
+    	display: none;
+    	padding-bottom:13px;
+    	font-size:16px;
+    	padding-left:1.5%;
+    	z-index:999;} 
+    	
+    	footer .goodimg{
+    		width:52px;
+    		float:left;
+    		height:52px;
+    		margin-right:10px;
+    	}
+    	
+    	footer .goodimg #good_img{
+    		height:52px;
+    		/* max-width: 80%; */
+    		/* margin-left:10%; */
+    		margin-top:0.5rem;
+    		width:52px;
+    	}
+    	
+    	footer .goodmsg{
+    		width:50%;
+    		float:left;
+    		height:100%;
+    		    word-wrap: break-word;
+    		    margin-top: 15px;
+    	}
+    	/* footer .goodmsg div{
+    		margin-top:0.5rem;
+    	} */
+    	footer .goodprice{
+    		/* width:20%; */
+    		color:red;
+    		float:right;
+    		height:100%;
+    		margin-right:16px;
+    		font-size: 18px;
+    	}
+    	footer .goodprice div{
+    		margin-top:1.5rem;
+    	}
+    	.clear{
+			clear:both;
+		}
+	/* 	.choose ul{
+			height:100%;overflow:scroll; line-height: 50px;
+		}
+		.choose .com{
+			margin-left:5%;
+		} */
+     .choose{
+   			
+	   		cursor: pointer;
+			clear:both;
+    		display:none;
+			font-size: 12px;
+			z-index:99;
+			width: 100%;
+			height:100%;
+			min-width:320px;
+			margin:auto;
+			position:absolute;/* IE6 */
+			background:rgba(0,0,0,0.6) none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+            filter:Alpha(opacity=80); background:#000;/*实现IE背景透明*/
+			_top:       expression(eval(document.compatMode &&
+		            document.compatMode=='CSS1Compat') ?
+		            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :IE6
+		            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);IE5 IE5.5
+		
+    	}
+    	.bg {
+    	    
+			width: 100%;
+			height: 100%;
+			left:0;
+			/* top:0;FF IE7 */
+			filter:alpha(opacity=50);/* IE */
+			opacity:0.5;/* FF */
+			z-index:2;
+			position:fixed!important;/* FF IE7 */
+			position:absolute;/* IE6 */
+		
+			_top:       expression(eval(document.compatMode &&
+		            document.compatMode=='CSS1Compat') ?
+		            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :IE6
+		            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);IE5 IE5.5
+
+		}
+    	
+        .choose ul{
+			height:auto;
+			background-color: #ffffff;
+		}
+		.choose ul li{line-height:50px;border-bottom: 1px solid #e5e5e5;list-style: none;}
+		/* .choose ul li:last-child{border:none;} */
+		.choose ul li:active{background:#f2f2f2;}
+		.choose ul li P{margin-left:10%;}
+		.choose ul li P:hover{color:#ff620d;}
+		#goodname,#gooddes{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		-o-text-overflow:ellipsis;
+		white-space: nowrap;
+		}

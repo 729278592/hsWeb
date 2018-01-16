@@ -1,0 +1,45 @@
+html {
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+nav{
+	background:#FFE5CE; 
+	color:#ff3d3d;
+	top:0;
+	filter:alpha(opacity=85);  
+    -moz-opacity:0.85;  
+    -khtml-opacity: 0.85;  
+    opacity: 0.85; 
+    padding:1% 0px; 
+    font-size:0; 
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+    text-align:right;
+}
+nav .tip{
+	float: right;
+	overflow:hidden;
+	height:100%;
+	display:inline-block;
+	text-align:center;
+	margin-right: .1rem;
+}
+nav .tip>span{
+	float: left;
+	text-align: right;
+	margin-top: 0;
+	font-size: .1365rem;
+	line-height: .3rem;
+}
+
+nav span img {
+	display:inline-block;
+	height:.2rem;
+}
+
+.arrow{
+	margin-left:.2em;
+}

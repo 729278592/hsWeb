@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>客户申请</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="content errDailog">
+    <div class="page">
+        <div class="hd">
+            <a>
+                <i class="fa fa-angle-left"></i>
+            </a>
+            智油惠
+            <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd absolute pt">
+            <ul class="applyMenu">
+                <li>
+                    请选择消费额度： <span class="chioce">(请点击选择)</span>
+                </li>
+                <li class="chioceApply">
+                    <div class="flex">
+                        一档
+                    </div>
+                    <div class="flex color verdana">
+                        ￥888.00/月
+                    </div>
+                </li>
+                <li class="chioceApply">
+                    <div class="flex">
+                        一档
+                    </div>
+                    <div class="flex color verdana">
+                        ￥888.00/月
+                    </div>
+                </li>
+                <li class="chioceApply">
+                    <div class="flex">
+                        一档
+                    </div>
+                    <div class="flex color verdana">
+                        ￥888.00/月
+                    </div>
+                </li>
+                <li>
+                    温馨提示：请跟进您月实际消费情况选择与您月消费相符的消费总额，以免影响您的月消费总额不达标而无法享受优惠。
+                </li>
+            </ul>
+            <div class="weui_btn_area ">
+                <input type="button" class="weui_btn  weui_btn_primary" id="apply" data-type="false" value="申请">
+            </div>
+        </div>
+
+        <!--激活会员开始-->
+        <div class="weui_dialog_confirm hide" id="dialogRegister">
+            <div class="weui_mask"></div>
+            <div class="weui_dialog style">
+                <div class="weui_dialog_hd">
+                    为了更好地为您服务，请先完善您的联系方式
+                    <span class="closeImg" id="closeImg">×</span>
+                </div>
+                <div class="weui_dialog_con">
+                    <div class="inputGroup">
+                        <input type="number" id="mobile" pattern="[0-9]*" class="weui_input" value="13678478463" placeholder="请输入您的手机号">
+                        <span class="close search_clear hide"></span>
+                    </div>
+                    <div class="weui_cell weui_cell_vcode styles ">
+                        <div class="weui_cell__bd inputGroup ">
+                            <input class="weui_input" type="tel" id="code" value="22" placeholder="请输入验证码">
+                            <span class="close search_clear hide"></span>
+                        </div>
+                        <div class="weui_cell__ft ">
+                            <a href="javascript:;" class="weui_vcode_btn" id="getCode">获取验证码</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weui_btn_area mt0">
+                    <input type="submit" class="weui_btn  weui_btn_primary" value="确定"  id="saveBtn" >
+                </div>
+            </div>
+        </div>
+        <!--激活会员结束-->
+
+    </div>
+</div>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/removeTip.js"></script>
+<script src="../../assets/mobile/js/common-validate.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script>
+    $(function () {
+
+        var $chioce = ".chioceApply";
+        var $applyMenu = $(".applyMenu");
+        var $apply = $("#apply");
+        var type = $apply.data("type");
+        $applyMenu.on("touchend",$chioce,function () {
+            $(this).addClass("on");
+            $(this).siblings($chioce).removeClass("on");
+        });
+        $apply.on("touchend",function () {
+
+            if(!type){
+                dialogRegister.removeClass("hide");
+                return ;
+            }
+
+            if(!$applyMenu.find(".chioceApply").is(".on")){
+                showErrMsg('请选择消费额度');
+                return ;
+            }
+
+            //处理选择消费额度后代码
+
+            window.location = "personCenter.html"
+        });
+
+
+
+        /*提交表单*/
+        var saveBtn = $("#saveBtn");
+        var mobile = $("#mobile");
+        var dialogRegister = $("#dialogRegister");
+        var code = $("#code");
+        saveBtn.on("touchend",function(e){
+            e.preventDefault();
+            if(isEmpty(mobile.val())||!isPhone(mobile.val())){
+                showErrMsg("请输入有效手机号");
+                return ;
+            }
+            if(isEmpty(code.val())){
+                showErrMsg("请输验证码");
+                return ;
+            }
+            dialogRegister.addClass("hide");
+            showErrMsg("绑定成功");
+            $apply.attr({"data-type":true});
+            type = true;
+        });
+
+        /*获取验证码*/
+        var click = true;
+        var getCode = $('#getCode');
+        getCode.on("touchend",function(){
+            if(isEmpty(mobile.val())||!isPhone(mobile.val())){
+                showErrMsg("请输入有效手机号");
+                return ;
+            }
+
+            if(click){
+                click = false;
+                showErrMsg("验证码发送成功");
+                var that = $(this);
+                var count = 60;
+                that.text(count+"秒后重新获取");
+                that.addClass('disabled');
+                that.attr({disabled:"disabled"});
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        that.text(count+"秒后重新获取")
+                    }else {
+                        clearInterval(resend);
+                        that.removeClass('disabled');
+                        that.removeAttr("disabled");
+                        that.text("获取验证码");
+                        click = true;
+                    }
+                }, 1000);
+            }
+        })
+
+        //关闭激活会员弹窗
+        var closeImg = $("#closeImg");
+        closeImg.on("touchend",function(){
+            dialogRegister.addClass("hide")
+        });
+    })
+</script>
+</body>
+</html>
+
+
+

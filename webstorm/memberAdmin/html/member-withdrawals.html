@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>员工提款</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="con_div">
+            <div class="rz_con style">
+                <p class="title">请填写您的提现信息</p>
+                <div class="rz_form">
+                    <form action="">
+                        <div class="rz_input">
+                            <p class="rz_title">金额</p>
+                            <input class="" id="money" placeholder="请输入提现金额 (余额930.3)" type="text">
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_title">开户行</p>
+                            <input style="position: absolute;top: 0;right: 0;width: 1.96rem">
+                            <select name="">
+                                <option selected value="请选择开户行">请选择开户行</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <img src="../images/caretB.png" class="caretB" alt="">
+                        </div>
+
+                        <div class="rz_input">
+                            <p class="rz_title">开户人</p>
+                            <input style="position: absolute;top: 0;right: 0;width: 1.96rem">
+                            <select name="">
+                                <option selected value="请选择开户行">请选择开户人</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <img src="../images/caretB.png" class="caretB" alt="">
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_title">开户账号</p>
+                            <input class="" id="account" placeholder="请输入您的开户账号" type="text">
+                        </div>
+                        <div class="rz_btn">
+                            <button id="saveBtn" type="button">提现</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="details">
+                <p>提现规则 : </p>
+                1、交易完成结算：一般情况下发货后7天内（含7天）给分销员结算佣金，期间发生的退款会自动扣除（微信支付－自有除外）
+                风险提醒 : 若您选择交易完成结算的方式，则交易完成后发生的维权退款不影响已结算的佣金，可能会造成用金亏损。 <br>
+                2、售后维权处理结束后再结算 : 指分销员推广买家下单。
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js_new/main.js"></script>
+<script src="../js_new/jquery-2.2.1.min.js"></script>
+<script src="../js_new/common-validate.js"></script>
+<script src="../js_new/weui.js"></script>
+<script>
+    $(function () {
+        var $saveBtn = $("#saveBtn");
+        var $money = $("#money");
+        var $account = $("#account");
+        $saveBtn.on("touchend",function () {
+            weui.confirmCashBox({
+                content: "提示",
+                html:'<div style="color: #333;font-size: 0.125rem;text-align: left;">请确认您的提现信息 :</div>' +
+            '<div>角色　： <span class="type ">门店销售员</span></div>' +
+            '<div>姓名　： <span class="type ">李四</span></div>' +
+            '<div>手机号： <span class="type Verdana">13678478463</span></div>' +
+            '<div>门店　： <span class="type ">上海</span></div>'
+            })
+        })
+    })
+</script>
+</body>
+</html>
+
+

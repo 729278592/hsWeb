@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="bd">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="span_icon spa_phone"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入手机号" name="mobile" id="mobile"/>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="span_icon spa_code"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input codeInput" type="text" placeholder="请输入验证码" id="code"/>
+                                <button type="button" class="getCode disabled" disabled="disabled"  id="getCode">获取验证码</button>
+                            </div>
+                        </div>
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="span_icon spa_lock"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input class="weui_input" type="text" placeholder="请输入密码" name="mobile" id="password"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area">
+                        <input type="submit" class="weui_btn weui_btn_primary" id="sign_in" value="注册">
+                    </div>
+                    <div class="weui_btn_area mt10 clearfix">
+                        <a class="btn_forget right" href="login.html">立即登录</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function(){
+            /*验证码*/
+            $("#getCode").on("click",function(){
+                var btn = $(this);
+                var count = 60;
+                var resend = setInterval(function(){
+                    count--;
+                    if (count > 0){
+                        btn.addClass("disabled");
+                        btn.text(count+"秒后可重新获取");
+                    }else {
+                        clearInterval(resend);
+                        btn.removeClass("disabled");
+                        btn.text("获取验证码").removeAttr('disabled style');
+                    }
+                }, 1000);
+                showErrMsg('验证码发送成功');
+                btn.attr('disabled',true);
+            });
+
+            /*登陆错误提示*/
+            $("#sign_on").on("touchend",function(){
+
+            })
+        });
+    </script>
+</body>
+</html>

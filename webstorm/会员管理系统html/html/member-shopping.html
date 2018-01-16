@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>华绰服务号</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content pb50">
+        <!--商品列表开始-->
+        <ul class="shopping-list">
+            <li>
+                <div class="shopping-name clearfix">
+                    <span class="s left">商品1</span>
+                    <input class="input-name right" placeholder="请输入商品名称/编码" type="text">
+                </div>
+                <div class="shopping-num">
+                    <span class="s left">单价/数量</span>
+                    <input class="input-num left" placeholder="商品单价" type="text">
+                    <a class="num right">
+                        <span class="minus" ></span>
+                        <input type="tel" class="buycount" value="1" maxlength="3"/>
+                        <span class="plus" ></span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="shopping-name">
+                    <span class="s">商品1</span>
+                    <input class="input-name" placeholder="请输入商品名称/编码" type="text">
+                </div>
+                <div class="shopping-num">
+                    <span class="s left">单价/数量</span>
+                    <input class="input-num left" placeholder="商品单价" type="text">
+                    <a class="num right">
+                        <span class="minus" ></span>
+                        <input type="tel" class="buycount" value="1" maxlength="3"/>
+                        <span class="plus" ></span>
+                    </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="shopping-name">
+                    <span class="s">商品1</span>
+                    <input class="input-name" placeholder="请输入商品名称/编码" type="text">
+                </div>
+                <div class="shopping-num">
+                    <span class="s left">单价/数量</span>
+                    <input class="input-num left" placeholder="商品单价" type="text">
+                    <a class="num right">
+                        <span class="minus" ></span>
+                        <input type="tel" class="buycount" value="1" maxlength="3"/>
+                        <span class="plus" ></span>
+                    </a>
+
+                </div>
+            </li>
+        </ul>
+        <!--商品列表结束-->
+
+        <!--无数据提示开始-->
+        <div class="notConTip hide">
+            <img src="../images/notContent.png" alt=""/>
+            <p class="notInfor">
+                无数据! 请点击下面按钮添加 <br/>
+            </p>
+        </div>
+        <!--无数据提示结束-->
+
+        <div class="add-shopping">
+            <button class="add-btn">添加商品</button>
+        </div>
+        <div class="notes">
+            为方便填写，点击添加商品，一次添加3个商品信息以填写，
+            删除商品请点击“—”进行删除
+        </div>
+    </div>
+    <div class="ft">
+        <a class="apply_btn">保存</a>
+    </div>
+</div>
+<script src="../js_new/main.js"></script>
+<script src="../js_new/zepto.min.js"></script>
+<script src="../js_new/jquery.spinner.js"></script>
+<script src="../js_new/weui.js"></script>
+<script>
+    $('.num').spinner({});
+    $(function () {
+        var $addBtn = $(".add-btn");
+        var $num = 3;
+        var $shoppingList = $(".shopping-list");
+        var shopHtml = '<li>'+
+                            '<div class="shopping-name clearfix">'+
+                                '<span class="s left">商品1</span>'+
+                                '<input class="input-name right" placeholder="请输入商品名称/编码" type="text">'+
+                            '</div>'+
+                            '<div class="shopping-num">'+
+                                '<span class="s left">单价/数量</span>'+
+                                '<input class="input-num left" placeholder="商品单价" type="text">'+
+                                '<a class="num right">'+
+                                    '<span class="minus" ></span>'+
+                                    '<input type="tel" class="buycount" value="1" maxlength="3"/>'+
+                                    '<span class="plus" ></span>'+
+                                '</a>'+
+                            '</div>'+
+                        '</li>';
+        $addBtn.on("click",function () {
+            for (var i = 0;i<$num;i++){
+                $shoppingList.append(shopHtml);
+            }
+            $('.num').spinner({});
+
+        })
+    })
+</script>
+</body>
+</html>

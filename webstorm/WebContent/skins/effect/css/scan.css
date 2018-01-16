@@ -1,0 +1,73 @@
+h1,h2,h3,p,ul,li,b {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.rg {
+    float: right;
+}
+
+.lf {
+    float: left;
+}
+header {
+    width: 100%;
+    background-color:#389ffe;
+    height:12em;
+    position: relative;
+    color: #ffffff;
+}
+/*鎴戠殑閭�璇风爜*/
+  .Invitation_code{
+    border-top:1px solid #c9c9c9;
+    font-size:0.8rem;
+}
+.Invitation_code .mycode{
+    width:7em;
+    height:3em;
+    border-top:1px solid #a5a5a5;
+     padding:0 4px;
+    background:url(../img/mycode.png) no-repeat;
+    background-size: 100% 100%;
+    color:#fff;
+    line-height: 1.6em;
+    font-size:1.2em;
+     margin:5% auto 5%;
+     padding:1%;
+}
+
+.code{
+    font-size:1.6em;
+    line-height:1.2rem;
+    font-weight: bold;
+}
+.Invitation_code{
+    color:#868686;
+    padding-top:3%;
+}
+/* 浜岀淮鐮� */
+.qr_code{
+    position:absolute;
+    top:7em;
+    left:3%;
+    width:94%;
+    height:26em;
+    text-align: center;
+}
+.icon{
+    width:12rem;
+    height:11rem;
+    margin:0 auto;
+    box-shadow:0px 0px 10px #d2d2d2;
+}
+.qr_code .txt{
+    width:85%;
+    margin:5% auto 4%;
+    line-height: 1.5em;
+    font-size:0.9rem;
+}
+.txt p{
+    color:#868686;
+    font-size:0.8rem;
+    margin-top:0.5rem;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>案例</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content pb50">
+            <div class="add_head">
+                <div class="add_head_con">
+                    <div class="add_hfx">
+                        <p class="ad_t">请输入标题</p>
+                        <p class="ad_s">简介</p>
+
+                    </div>
+                    <div class="add_bfx">
+                        <span class="ion-ios-arrow-right"></span>
+                    </div>
+                </div>
+                <div class="pb1">
+                    <div class="no_tag">无标签</div>
+                </div>
+                <ul class="label_list hide clearfix">
+                    <li>工业风</li>
+                    <li>简约风</li>
+                    <li>木地板</li>
+                    <li>LOFT</li>
+                    <li>宜人舒适</li>
+                </ul>
+            </div>
+            <!--无内容提示开始-->
+            <div class="noCon_tip hide">
+                无内容，请选择按钮添加内容
+            </div>
+            <!--无内容提示结束-->
+
+            <!--内容列表提示开始-->
+            <div class="con_con ">
+                <div class="con_head">
+                    <span class="hide remove">删除</span>
+                    <span class="ion-trash-a remove"></span>
+                </div>
+                <div class="con_net p10">
+                    此设计以独特的工业风格来设计，是具有一定程度的 人为性工艺、材料的物体。粗矿的工业设计，斑驳的 铁楼梯，开阔的空间，让人在自己
+                </div>
+            </div>
+            <div class="con_con">
+                <div class="con_head">
+                    <span class="hide remove">删除</span>
+                    <span class="ion-trash-a remove"></span>
+                </div>
+                <div class="con_net">
+                    <ul class="con_pic_list clearfix">
+                        <li>
+                            <div class="case_img">
+                                <img src="../images/pic1.png" alt="">
+                            </div>
+                            <img class="close_img" src="../images/close.png" alt="">
+                        </li>
+                        <li>
+                            <div class="case_img" id="chooseImage">
+                                <img src="../images/upload_img.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--内容列表提示开始-->
+
+        </div>
+        <div class="ft">
+            <div class="clearfix op_con">
+                <div class="left op_btn">
+                    <ul class="op_list clearfix">
+                        <li>
+                            <span class="ion-android-create"></span><br>
+                            写文字
+                        </li>
+                        <li>
+                            <span class="ion-image"></span><br>
+                            加图片
+                        </li>
+                        <li>
+                            <span class="ion-android-clipboard"></span><br>
+                            存草稿
+                        </li>
+                    </ul>
+                </div>
+                <div class="right op_save">
+                    <button type="button">发表作品</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='alertBox'>
+        <div class='cont sure'>
+            <div class='title'>提示</div>
+            <div class='content'>亲，确定要删除吗？</div>
+            <div class='btm'>
+                <div class='left' id="cancel">取消</div>
+                <div class='right' id="sure">确定</div>
+            </div>
+        </div>
+    </div>
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script src="../js_new/jweixin-1.1.0.js"></script>
+    <script>
+        $(function () {
+            var $remove = $(".remove");
+            var $alertBox = $(".alertBox");
+            var $cancel = $alertBox.find("#cancel");
+            var $sure = $alertBox.find("#sure");
+            $remove.on('click',function(){
+                $alertBox.fadeIn();
+            });
+            $cancel.on('click',function(){
+                $alertBox.fadeOut();
+            });
+            $sure.on('click',function(){
+                $alertBox.fadeOut();
+            });
+
+
+            /*微信图像浏览及传图*/
+            wx.config({
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: 'wx037dd043766ab624', // 必填，公众号的唯一标识
+                timestamp: 1515049184, // 必填，生成签名的时间戳
+                nonceStr: 'jx85m5UvvJpcmsXM', // 必填，生成签名的随机串
+                signature: 'db093248602ff95ac92fc638502e47091a6fe6d5',// 必填，签名，见附录1
+                jsApiList: [ // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    'chooseImage',
+                    'previewImage',
+                    'uploadImage',
+                ]
+            });
+
+            var images = {
+                localId: [],
+                serverId: []
+            };
+            $('#chooseImage').on("click",function () {
+                wx.chooseImage({
+                    success: function (res) {
+                        images.localId = res.localIds;
+                        alert('已选择 ' + res.localIds.length + ' 张图片');
+                    },
+                    fail:function () {
+                        alert("失败")
+
+                    }
+                });
+            });
+
+        })
+    </script>
+</body>
+</html>

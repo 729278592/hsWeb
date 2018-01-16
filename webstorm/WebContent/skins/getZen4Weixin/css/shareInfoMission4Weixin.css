@@ -1,0 +1,305 @@
+@charset "utf-8";
+html {
+    margin: 0;
+    padding: 0;
+    height: 667px;
+    /*height: 1105px;*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    /*overflow-x: hidden;*/
+    /*overflow-y: scroll;*/
+    font-family: "Microsoft YaHei", SimSun, Verdana, Arial, Tahoma;
+}
+
+body {
+    /*overflow-y: hidden;*/
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    /*overflow-y: scroll;*/
+    /*height: 1350px;*/
+    bottom: 0;
+    /*background-color: #dfdfdf;*/
+}
+
+.head {
+    height: 30%;
+    overflow: hidden;
+    /*background-image: url(../img/home_bg3.png);*/
+    /*background-size: 100%;*/
+    /*background-repeat: round;*/
+
+}
+
+#back {
+    height: 27%;
+    padding: 1.5%;
+    position: relative;
+    top: -100%;
+    /*padding: auto;*/
+}
+
+#indicator {
+    position: relative;
+    top: -100%;
+}
+
+#back_icon {
+    position: relative;
+    top: 17%;
+    /*height: 100%;*/
+    /*margin-top: auto;*/
+    /*margin-bottom: auto;*/
+    float: left;
+
+}
+
+#back_title {
+    height: 100%;
+    line-height: 2.5em;
+    color: white;
+    float: left;
+    position: relative;
+    left: 1%;
+    font-size: 4em;
+}
+
+/*关键:#personal_income_info容器的宽度要宽于#banner_content容器,否则无法滑动*/
+#banner_cover {
+    width: 100%;
+    height: 100%;
+}
+
+#banner_list {
+    list-style: none;
+    height: 100%;
+    width: 400%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner_list_item {
+
+    /*padding-left: 1%;*/
+    /*padding-right: 1%;*/
+    float: left;
+    height: 100%;
+    width: 25%;
+    /*color: white;*/
+}
+
+.banner_list_item_image_bk {
+    width: 100%;
+    height: 100%;
+}
+
+.banner_list_item_image {
+    width: 100%;
+    height: 100%;
+}
+
+#personal_zen_condition {
+    height: 10%;
+    background-color: white;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+#personal_zen_available {
+    float: left;
+    /*position: relative;*/
+    /*left: -31%;*/
+
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+#personal_zen_maked {
+
+    border-left: solid;
+    border-left-width: 1px;
+    float: left;
+    width: 49%;
+    height: 100%;
+    text-align: center;
+    /*position: relative;*/
+    /*top: -100%;*/
+    /*left: 50%;*/
+
+}
+
+.personal_zen_count {
+    font-size: 3.1em;
+    position: relative;
+    top: 10%;
+}
+
+.personal_zen_description {
+    font-size: 2.1em;
+    position: relative;
+    top: 10%;
+}
+
+#share_info_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 56%;
+    /*overflow-y: auto;*/
+}
+
+.share_info_item {
+    width: 100%;
+    height: 35.7%;
+    background-color: white;
+    border-top: 1.2em;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+}
+
+.share_info_item_up {
+    height: 80%;
+    width: 100%;
+}
+
+.share_info_item_icon {
+    float: left;
+    /* padding-top: 3%; */
+    /* padding-bottom: 3%; */
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 3%;
+    height: 72%;
+    width: 15%;
+}
+
+.share_info_item_icon_image {
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+    /*top: -42%;*/
+}
+
+.share_info_item_content {
+    float: left;
+    height: 100%;
+    display: inline;
+    /* padding-top: 3%; */
+    /* padding-bottom: 3%; */
+    margin-left: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 74%;
+    width: 77%;
+    margin-right: 2%;
+}
+
+.share_info_item_content_title {
+    width: 100%;
+    height: 50%;
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis; /*文字隐藏后添加省略号*/
+    white-space: nowrap; /*强制不换行*/
+    font-size: 2.4em;
+    line-height: 2.1em;
+
+}
+
+.share_info_item_content_main {
+    width: 100%;
+    height: 50%;
+}
+
+.share_info_item_content_main_text {
+    height: 100%;
+    line-height: 2.38em;
+    float: left;
+    font-size: 2.1em;
+    color: #868686;
+}
+
+.share_info_item_content_main_icon {
+    height: 100%;
+    width: 10%;
+    float: left;
+    position: relative;
+    left: 1%;
+    top: 20%;
+}
+
+.share_info_item_content_main_point {
+    height: 100%;
+    line-height: 2.38em;
+    float: left;
+    color: #ff620d;
+    font-size: 2.1em;
+}
+
+.share_info_item_result {
+    /*margin-top: 1px;*/
+    width: 96%;
+    height: 20%;
+    /*padding-top: 1%;*/
+    /*padding-bottom: 1%;*/
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.7em;
+    color: #868686;
+    /* height: 10%; */
+    line-height: 1.7em;
+    /*border-top: 0.05em;*/
+    border-top: 1px;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+}
+
+.share_info_item_result_date {
+    float: left;
+
+}
+
+.share_info_item_result_main {
+    float: right;
+}
+
+#loaddiv {
+    /*display: none;*/
+    height: 8.9%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#load_more_icon {
+    position: relative;
+    left: 42%;
+    top: 23%;
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+#load_more_lable {
+    display: block;
+    height: 100%;
+    line-height: 3.5em;
+    font-size: 1.5em;
+}
+
+#personal_zen_condition_border_bottom {
+    width: 100%;
+    height: 1.2em;
+    position: absolute;
+    top: 42.8%;
+    background: #dfdfdf;
+}
+
+a {
+    text-decoration: none;
+}

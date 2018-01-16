@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <title>分享积分排行</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="../js/Swiper-3.3.0/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../skins/css/util.css">
+    <link rel="stylesheet" href="../skins/shareRank/css/shareRankTemp.css">
+    <!--<link rel="stylesheet" href="../skins/home/css/jquery.easy-pie-chart.css"/>-->
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+    <script type="text/javascript" src="../js/MD5/md5.js"></script>
+    <script type="text/javascript" src="../shareRank/shareRankTemp.js"></script>
+    <script src="../js/Swiper-3.3.0/dist/js/swiper.min.js"></script>
+    <!--<script type="text/javascript" src="../js/D3/d3.js"></script>-->
+    <script src="../js/HighCharts/highcharts.js"></script>
+    <script type="text/javascript" src="../shareRank/common.js"></script>
+    <!--<script type="text/javascript" src="../home/jquery.easy-pie-chart.js"></script>-->
+</head>
+<body id="body">
+<header>
+    <!--<div class="nav">-->
+
+        <!--<span class="title">收益排行榜</span>-->
+
+        <!--<div class="menu_div">-->
+            <!--<div class="share_income_rank_box">-->
+                <!--<div class="share_income_rank_count">-->
+                    <!--0-->
+                <!--</div>-->
+                <!--<div class="share_income_rank_desc">-->
+                    <!--我的排名-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+            <!--<div class="personal_zen_total_box">-->
+                <!--<span class="personal_zen_total_desc">-->
+                   <!--我的积分-->
+                <!--</span>-->
+
+                <!--<img class="personal_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+
+                 <!--<span class="personal_zen_total_count">-->
+                     <!--0-->
+                <!--</span>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="main" style="background: url(../skins/shareRank/img/rank4Pc.png);background-repeat: no-repeat;background-position: center">
+        <span id="default_page">暂无榜单</span>
+        <div id="container"></div>
+        <ul class="share_income_rank_list">
+            <!--<li class="share_income_rank_item item1">-->
+                <!--<span class="rank_num num1">1</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+
+            <!--<li class="share_income_rank_item item2">-->
+                <!--<span class="rank_num num2">2</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+
+            <!--<li class="share_income_rank_item item3">-->
+                <!--<span class="rank_num num3">3</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item4">-->
+                <!--<span class="rank_num">4</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item5">-->
+                <!--<span class="rank_num">5</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item6">-->
+                <!--<span class="rank_num">6</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item7">-->
+                <!--<span class="rank_num">7</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item8">-->
+                <!--<span class="rank_num">8</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item9">-->
+                <!--<span class="rank_num">9</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+            <!--<li class="share_income_rank_item item10">-->
+                <!--<span class="rank_num">10</span>-->
+                <!--<img class="rank_header_icon" src="../skins/shareRank/img/user_header_icon_default.png">-->
+            <!--<span class="rank_detail_box">-->
+            <!--<span class="rank_detail_header">-->
+            <!--<span class="user_name">咖啡香烟</span>-->
+            <!--<span class="user_phoneNum">(13232247311)</span>-->
+            <!--</span>-->
+
+            <!--<span class="user_zen_total">-->
+            <!--<img class="user_zen_total_icon" src="../skins/shareRank/img/icon_zenbi.png">-->
+            <!--<span class="user_zen_total_count">1000</span>-->
+            <!--</span>-->
+            <!--</span>-->
+
+            <!--</li>-->
+
+        </ul>
+
+
+    </div>
+
+
+</header>
+
+
+</body>
+
+
+</html>
+

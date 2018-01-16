@@ -1,0 +1,376 @@
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+  
+}
+html,body{
+	height:100%;
+}
+a{ 
+   text-decoration: none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
+  /* -webkit-tap-highlight-color: #fff;  */
+  -webkit-tap-highlight-color:transparent;
+  outline:none;
+ 
+}
+
+
+li{
+  list-style: none;
+  display:block;
+}
+.list-rt{color:#505050;}
+html{
+  
+  display:block;
+}
+body{
+  background: #ffffff;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+header,section{font-size: 62.5%;}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+    max-width:736px;
+    min-width: 320px;
+    height:auto;
+    background:#e5e5e5;
+    margin: 0px auto;
+    top: 0;}
+    /*--header头部个人中心--*/
+/*header*/
+header{
+  max-width: 100%;
+  min-width: 320px;
+  height: auto;
+  margin: 0px auto;
+  margin:0px;
+  padding:0px;
+  top: 0px;
+  z-index: 1;
+  box-sizing:border-box;
+}
+header .head-warp{
+
+  background:url(../img/personBg.jpg);
+  background-size:100% 100%; 
+}
+header .head-warp .myselfmessage{width: 100%;overflow:hidden;}
+header .head-warp .myselfmessage ul{width: 100%;height: 100%;}
+header .head-warp .myselfmessage ul li{height: 100%;float: left;}
+header .head-warp .myselfmessage ul .li-lt{width: 70%;overflow:hidden;}
+header .head-warp .myselfmessage ul .li-rt{width: 15%;height: 100%;text-align:center;}
+header .head-warp .myselfmessage ul .li-menu{width:15%;height:100%;text-align: center;}
+header .head-warp .myselfmessage a, .head-warp .myselfmessage span{width:100%;height:3rem;padding-left: 5%;font-size: 2em;line-height: 3rem;color: #ffffff;display:inline-block;}
+header .head-warp .myselfmessage ul li img{width:1.1rem;right: 0px;text-align:right;}
+header .head-warp span{width: 100%;height:9rem;}
+header .head-warp span ul{width: 100%;height: 9rem;}
+header .head-warp span ul li{float: left;}
+header .head-warp span ul .headphoto{/* width:25%; */margin-left: 5%;margin-top: 2rem;}
+header .head-warp span ul .headexplian{margin-top: 2.5rem;width:60%;padding-left:1em;}
+header .head-warp span ul .headexplian dd{color: #ffffff;font-size:1.4em;}
+header .head-warp span ul .headexplian dd h1{color:white;font-size:1.6em;}
+header .head-warp nav{width: 100%;left: 0px;bottom: 0px;}
+header .head-warp nav ul{width: 100%; background:rgba(0,0,0,0.3);padding: 0;overflow: hidden;}
+header .head-warp nav ul li{width: 33%;float: left;text-align: center;border-right: 1px solid #e8e8e8;margin:0.4rem 0px;}
+header .head-warp nav ul li:last-child{border-right: none;}
+header .head-warp nav ul li a{display:block;}
+header .head-warp nav ul li span{font-family:"微软雅黑";color:#ffffff;font-size:0.8rem;}
+header .head-warp nav ul li p{color:#ffffff;font-family:"微软雅黑";font-weight: normal;font-size: 1.1em;}
+/*
+ *Icon图标样式
+*/
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?41u1yj');
+    src:    url('../fonts/icomoon.eot?41u1yj#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?41u1yj') format('truetype'),
+        url('../fonts/icomoon.woff?41u1yj') format('woff'),
+        url('../fonts/icomoon.svg?41u1yj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-thin-right:before {
+    content: "\e901";
+    color:#505050;
+    font-size:0.9rem;
+}
+/*
+ *Icon图标样式
+*/
+    /*--/header*/
+/*--/section*/
+section{
+  background: #e5e5e5;
+  max-width: 100%;
+  min-width: 320px;
+  height: auto;
+  margin: 0px auto;
+  top: 0px;
+}
+section .introduce1{
+  width: 100%;
+  height: 3.5rem;
+  background:#ffffff;
+  position: relative;
+  z-index: 0;
+}
+section .introduce1 ul{width: 100%;height: 100%;}
+section .introduce1 ul:active{background:#f2f2f2;}
+section .introduce1 ul li{width:100%;height: 100%;float: left;line-height:3.5rem;}
+section .introduce1 ul .list-lt{width:45%;height:100%;line-height:3.5rem;}
+section .introduce1 ul .list-rt{width:50%;height:100%;line-height:3.5rem;text-align:right;font-size: 1.3em;color: #868686;}
+section .introduce1 ul li h1{font-size: 1.4em;color: #505050;line-height: 3.5rem;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}
+section .introduce2{
+  width: 100%;
+/*   height: 8em; */
+  background:#ffffff;
+  margin-top:0.1em;
+}
+section .introduce2 ul{width: 100%;height: 5rem;}
+section .introduce2 ul li:active{background:#f2f2f2;}
+section .introduce2 ul li{width: 20%;height: 5rem;float: left;text-align:center;}
+section .introduce2 ul li img{width: 30px;margin-top: 0.7rem;}
+section .introduce2 ul li p{color: #868686;margin-top: 0em;}
+section .introduce3{
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  z-index: 0; 
+  background:#ffffff;
+  margin-top:0.5rem;
+  border-bottom:1px solid #e5e5e5;
+}
+section .introduce3 ul{width: 100%;height: 100%;}
+section .introduce3 ul:active{background:#f2f2f2;}
+section .introduce3 ul li{width:100%;height: 100%;float: left;line-height:3.5rem;}
+section .introduce3 ul .list-lt{width:45%;height:100%;line-height:3.5rem;}
+section .introduce3 ul .list-rt{width:50%;height:100%;line-height:3.5rem; text-align:right;font-size: 1.3em;color: #868686;}
+section .introduce3 ul li h1{font-size: 1.4em;color: #505050;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}
+section .introduce4{
+  width: 100%;
+  background:#ffffff;
+}
+section .introduce4 ul{width: 100%;height: 5rem;}
+section .introduce4 ul li{width: 25%;height: 5rem;float: left;text-align:center;}
+section .introduce4 ul li:active{background:#f2f2f2;}
+section .introduce4 ul li img{width: 30px;margin-top:0.7rem;}
+section .introduce4 ul li p{color: #868686;font-weight:400;}
+section .introduce4 ul li a{color: #ff620d;display:inline-block;width:100%;height:100%;}
+
+section .introduce5{ 
+  width: 100%;
+  height: 10.5rem;
+  position: relative;
+  z-index: 0; 
+  background:#ffffff;
+  margin-top:0.5rem;
+ }
+section .introduce5 ul{width: 100%;height:3.5rem;border-bottom: 1px solid #e5e5e5;}
+section .introduce5 ul:active{background:#f2f2f2;}
+section .introduce5 ul li{width:100%;float: left;line-height:3.5rem; line-height:100%;}
+section .introduce5 ul .list-lt{width:58%;height:3.5rem;line-height:3.5rem; }
+section .introduce5 ul .list-rt{width:37%;height:3.5rem;line-height:3.5rem; text-align:right;}
+section .introduce5 ul li p{font-size: 1.4em;color: #505050;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}
+section .introduce5 ul li a{font-size: 1.5em;color: #ff620d;font-family: "微软雅黑";}
+
+section .introduce6{  
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  z-index: 0; 
+  background:#ffffff;
+  margin-top:0.5rem;
+}
+  section .introduce6 ul{width: 100%;height:3.5rem;}
+  section .introduce6 ul:active{background:#f2f2f2;}
+  section .introduce6 ul li{width:100%;height:3.5rem;float: left;line-height:3.5rem; line-height：100%;}
+  section .introduce6 ul .list-lt{width:84%;line-height:3.5rem;}
+  section .introduce6 ul .list-rt{width:11%;line-height:3.5rem; text-align:right;}
+  section .introduce6 ul li p{font-size: 1.4em;color: #505050;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}
+
+  section .introduce7{  
+  width: 100%;
+  height: 3.5rem;
+  background:#ffffff;
+  margin-top:0.5rem;
+}
+  section .introduce7 ul{width: 100%;height:3.5rem;}
+  section .introduce7 ul:active{background:#f2f2f2;}
+  section .introduce7 ul li{width:100%;height:3.5rem;float: left;line-height:3.5rem; line-height：100%;}
+  section .introduce7 ul .list-lt{width:84%;line-height:3.5rem; }
+  section .introduce7 ul .list-rt{width:11%;line-height:3.5rem; text-align:right;}
+  section .introduce7 ul li p{font-size: 1.4em;color: #505050;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}
+
+  section .introduce8{  
+  width: 100%;
+  height: 3.5rem;
+  background:#ffffff;
+  margin-bottom: 60px;
+  border-top: 1px solid #e5e5e5;
+}
+  section .introduce8 ul{width: 100%;height:3.5rem;}
+  section .introduce8 ul:active{background:#f2f2f2;}
+  section .introduce8 ul li{width:100%;height:3.5rem;float: left;line-height:3.5rem; line-height：100%;}
+  section .introduce8 ul .list-lt{width:84%;line-height:3.5rem;}
+  section .introduce8 ul .list-rt{width:11%;line-height:3.5rem; text-align:right;}
+  section .introduce8 ul li p{font-size: 1.4em;color: #505050;font-family: "微软雅黑";margin-left: 1em;font-weight: normal;}  
+  
+.clear{
+  clear: both;
+}
+
+/*--/footer*/
+
+footer{
+	width: 100%;
+	/* background-color: rgb(67,67,67); */
+	height:50px;
+	background: #434343;
+	/* color: rgb(165, 165, 165); */
+    position: fixed;
+    z-index:1;
+    margin-top:0;
+    bottom:0px;
+    left: 0px; 
+    /* z-index: 100; */
+    margin: 0px auto;
+    display: block;    
+}
+footer i{
+	display:inline-block;width:25px;height:25px;background:url(../../firstpage/img/footer3.png) 0px 0px no-repeat;margin-top:0.4rem;
+}
+footer #firstpage i{
+	background:url(../../firstpage/img/footer3.png) 0px -25px no-repeat;
+}
+footer #zhoubian i{
+	background:url(../../firstpage/img/footer3.png) -25px -25px no-repeat;
+}
+footer #wanzhuan i{
+	background:url(../../firstpage/img/footer3.png) -50px -25px no-repeat;
+	
+}
+footer #mine i{
+	background:url(../../firstpage/img/footer3.png)-75px 0px no-repeat;
+}
+footer .flortfoot{
+	width:100%;
+	height:90%;
+	left:0px;
+    
+	text-align: center;
+	}
+footer .flortfoot ul{
+	width:100%;
+	height:100%;
+	margin: 0;
+	left:0px;
+	padding:0;
+	box-sizing:border-box;
+	}
+footer .flortfoot ul li{
+	list-style-type:none;
+	float:left;
+    width:25%;
+    height:100%;
+    left:0;
+    bottom:0;
+    line-height:100%;
+    text-align: center;
+  }
+
+footer .flortfoot ul li .menu_foot_img{
+    width:25px;
+    margin-top:0.4rem;
+    cursor: pointer;
+ }
+footer .flortfoot ul li p{
+    font-size:0.8rem;
+   /*  margin-top:0.2em; */
+    color: #989898;
+    font-weight: 500;
+	cursor: pointer;
+}
+footer .flortfoot ul #mine p{
+	color:#ff620d;
+}
+     
+/*--/footer*/
+/*--viewbox整个可视窗口--*/
+
+.li-rt img{
+	position:relative;
+	top:5px;
+}
+header .head-warp .myselfmessage .menu-list{
+    width: 132px;
+    position: absolute;
+    background: #f8f8f8;
+    top:50px;
+    right:1.3rem;
+    display:block;
+    box-shadow: 0 0 9px rgba(0,0,0,0.3);
+    z-index:1000;
+    display:none;
+    height: auto;}
+header .head-warp .myselfmessage .menu-list li{height:53px;border-bottom:1px solid #e5e5e5;text-align:left;width:100%;}
+header .head-warp .myselfmessage .menu-list li:active{background:#f2f2f2;}
+header .head-warp .myselfmessage .menu-list li img{width:27px;margin-top:12px;margin-left: 30px;}
+header .head-warp .myselfmessage .menu-list li p{float:right;line-height:53px;color:#808080;font-size:16px;
+    margin-right: 19px;}
+
+
+
+.mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 80;
+}
+.message {
+	position: fixed;
+left: 10%;
+top: 26%;
+width: 80%;
+background-color: #fff;
+z-index: 1001;
+}
+.message img{
+	width:100%;
+}
+.message p{
+	height:30px;
+	line-height:25px;
+	text-align:center;
+	color:#505050;
+}
+
+
+

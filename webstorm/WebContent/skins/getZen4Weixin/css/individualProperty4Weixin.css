@@ -1,0 +1,471 @@
+@charset "utf-8";
+html {
+    margin: 0;
+    padding: 0;
+    height: 667px;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    font-family: "Microsoft YaHei", SimSun, Verdana, Arial, Tahoma;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+body {
+    overflow: hidden;
+    /*overflow-y: scroll;*/
+}
+
+.head {
+    height: 30%;
+    background-image: url(../img/home_bg3.png);
+    background-size: 100% 100%;
+    background-repeat: round;
+    overflow: hidden;
+    /*overflow: hidden;*/
+}
+
+#back {
+    height: 27%;
+    padding: 1.5%;
+    /*padding: auto;*/
+}
+
+#back_icon {
+    position: relative;
+    top: 17%;
+    /*height: 100%;*/
+    /*margin-top: auto;*/
+    /*margin-bottom: auto;*/
+    float: left;
+
+}
+
+#back_title {
+    height: 100%;
+    line-height: 2.5em;
+    color: white;
+    float: left;
+    position: relative;
+    left: 1%;
+    font-size: 4em;
+}
+
+/*关键:#personal_income_info容器的宽度要宽于#banner_content容器,否则无法滑动*/
+#banner_content {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 30%;
+}
+
+#personal_income_info {
+    list-style: none;
+    height: 100%;
+    width: 300%;
+    margin: 0;
+    padding: 0;
+}
+
+#personal_income_info_daily {
+
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+    height: 100%;
+    width: 31.33%;
+    color: white;
+}
+
+#personal_income_info_weekly {
+
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+    height: 100%;
+    width: 31.33%;
+    color: white;
+}
+
+#personal_income_info_monthly {
+
+    padding-left: 1%;
+    padding-right: 1%;
+    float: left;
+    height: 100%;
+    width: 31.33%;
+    color: white;
+}
+
+.zen_total {
+    height: 60%;
+}
+
+.zen_total_count {
+    height: 100%;
+    line-height: 1.4em;
+    font-size: 5.6em;
+    float: left;
+}
+
+.zen_total_icon {
+    position: relative;
+    height: 70%;
+    top: 55%;
+    left: 1%;
+    float: left;
+}
+
+.zen_description {
+    font-size: 2em;
+    position: relative;
+    /*top: 10%;*/
+    height: 40%;
+}
+
+#personal_zen_condition {
+    height: 10%;
+    background-color: #E65100;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+}
+
+#personal_zen_available {
+    float: left;
+    /*border-right: 1px;*/
+    /*border-right-color: white;*/
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+#personal_zen_maked {
+    /*margin-top: 2%;*/
+    /*margin-bottom: 2%;*/
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: white;
+    float: left;
+    width: 49%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.personal_zen_count {
+    font-size: 3.1em;
+    position: relative;
+    top: 10%;
+}
+
+.personal_zen_description {
+    font-size: 2.1em;
+    position: relative;
+    top: 10%;
+}
+
+#personal_zen_total_rank {
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    line-height: 3.9em;
+    height: 5.5%;
+    /*position: relative;*/
+    /*bottom: 1px;*/
+    background-color: white;
+    text-align: center;
+}
+
+#personal_zen_total_rank_title {
+    height: 100%;
+    /*line-height: 2.16em;*/
+    float: left;
+    font-size: 2.1em;
+}
+
+#personal_zen_total_rank_all {
+
+    height: 100%;
+    width: 8%;
+    right: 4%;
+    float: right;
+    font-size: 1.7em;
+    /*line-height: 2.7em;*/
+    color: white;
+    background-image: url(../img/btn_date_check.png);
+    background-size: 90%;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+}
+
+#personal_zen_total_rank_monthly {
+    position: relative;
+    width: 8%;
+    /*right: 2%;*/
+    height: 100%;
+    /*line-height: 2.7em;*/
+    float: right;
+    font-size: 1.7em;
+    color: white;
+    background-image: url(../img/btn_date_uncheck.png);
+    background-size: 90%;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+}
+
+#personal_zen_total_rank_weekly {
+    position: relative;
+    width: 8%;
+
+    height: 100%;
+    /*line-height: 2.7em;*/
+    float: right;
+    font-size: 1.7em;
+    color: white;
+    background-image: url(../img/btn_date_uncheck.png);
+    background-size: 90%;
+    background-position-x: 50%;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+}
+
+#personal_zen_total_rank_detail {
+    /*position: relative;*/
+    /*top: 1px;*/
+    border-top: 0.2em;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    height: 19%;
+    width: auto;
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+
+}
+
+#pztrd_list {
+    padding: 0;
+    margin: 0;
+    height: 96%;
+    width: 400%;
+    list-style: none;
+}
+
+.pztrd_item {
+    float: left;
+    width: 6.25%;
+    height: 100%;
+}
+
+.pztrdi_icon {
+    margin-top: 7%;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+.pztrdii_image {
+    height: 90%;
+    /*position: relative;*/
+    /*left: 23%;*/
+    border-radius: 50%;
+}
+
+.pztrdi_title {
+    width: 100%;
+    height: 1em;
+    font-size: 1.4em;
+    margin-top: 5%;
+    /*text-align: center;*/
+    color: #868686;
+
+}
+
+.pztrdit_num {
+    float: left;
+    position: relative;
+    left: 26%;
+}
+
+.num1 {
+    color: #e60012;
+}
+
+.num2 {
+    color: #ffae11
+}
+
+.num3 {
+    color: #15a6ef;
+}
+
+.pztrdit_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 30%;
+    float: left;
+    position: relative;
+    left: 35%;
+}
+
+.pztrdi_zen_count {
+    /*position: relative;*/
+    margin-top: 5%;
+    /*text-align: center;*/
+    /*top: 10%;*/
+    width: 100%;
+    height: 2.8em;
+}
+
+.pztrdizc_num {
+    float: left;
+    position: relative;
+    /*left: 12%;*/
+    color: #505050;
+    font-size: 1.7em;
+    height: 100%;
+    line-height: 1.8em;
+
+}
+
+.pztrdizc_icon {
+    float: left;
+    position: relative;
+    left: 2%;
+    width: 40%;
+    height: 100%;
+
+}
+
+.pztrdizci_image {
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+
+#personal_zen_income_title {
+    /*margin-top: 3%;*/
+    /*position: relative;*/
+    /*top: 3%;*/
+    /*bottom: 1px;*/
+    border-top: 1.5em;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    background-color: white;
+    padding: 2%;
+    height: 5.5%;
+    line-height: 4.1em;
+
+}
+
+#pzit_text {
+    float: left;
+    height: 100%;
+    /*line-height: 2.2em;*/
+    font-size: 2.1em;
+}
+
+#pzit_icon {
+    float: right;
+    height: 100%;
+    width: 20%;
+    position: relative;
+    right: 3%;
+}
+
+#pziti_image {
+    float: left;
+    height: 100%;
+    position: relative;
+    top: 20%;
+
+}
+
+#pziti_num {
+    position: relative;
+    left: 10%;
+    float: left;
+    height: 100%;
+    font-size: 2.1em;
+    color: #ff620d;
+    /*line-height: 2.2em;*/
+}
+
+/*#personal_zen_income_content {*/
+/*position: relative;*/
+/**/
+/*}*/
+#personal_zen_income_record {
+    height: 100%;
+}
+
+.pzic_title {
+    /*position: relative;*/
+    /*top: 1px;*/
+    border-top: 0.1em;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+    background-color: white;
+    height: 3%;
+    font-size: 2em;
+    line-height: 1.8em;
+    padding-left: 2%;
+
+}
+
+.pzic_detail {
+    background-color: white;
+    /*height: 4%;*/
+    height: 4%;
+
+}
+
+.pzicd_title {
+    position: relative;
+    height: 100%;
+    line-height: 1.96em;
+    left: 6%;
+    font-size: 2.5em;
+    float: left;
+    color: #868686;
+
+}
+
+.pzicd_date {
+    font-size: 1.5em;
+    float: left;
+    height: 100%;
+    position: relative;
+    left: 7%;
+    line-height: 4em;
+    color: #868686;
+
+}
+
+.pzicd_point {
+    font-size: 2.5em;
+    float: right;
+    position: relative;
+    right: 2%;
+    color: #ff620d;
+    height: 100%;
+    line-height: 1.92em;
+
+}

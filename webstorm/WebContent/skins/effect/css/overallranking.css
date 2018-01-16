@@ -1,0 +1,205 @@
+@CHARSET "UTF-8";
+html,body,dl,dt,ul,li{ margin: 0;padding: 0;list-style:none; }
+html{height:100%;}
+body{
+	
+	-webkit-user-select: none; 
+	background-color: #ffffff;
+    -webkit-text-size-adjust:none;
+	line-height: 1.2;
+    margin: 0 auto;
+    max-width: 736px;
+    min-width: 320px;
+    font-size:12px;
+     font-family: 'Microsoft Yahei', "微软雅黑", arial, "宋体", sans-serif;
+}
+*{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a{background: transparent;text-decoration: none;border: none;  tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: rgba(0,0,0,0);  -moz-tap-highlight-color: rgba(0,0,0,0);}
+a:active { outline: none; }
+header{
+	
+	width: 90%;
+    height: 78px;
+	background: url("../../cashranking/img/bg_graphic_04.png") no-repeat;
+	background-color: #ff620d;
+	background-size: 100% 100%;
+	color:#fff;
+	padding: 18px 4% 8px 6%;
+
+}
+
+/*返回顶部*/
+#backtoTop{
+  right:10px;
+  text-align:right;
+  bottom: 35px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 20;
+}
+#backtoTop img{
+  width: 40px;
+  height: 40px;
+}
+
+.bigbox{
+	position:relative;
+	bottom:0.4rem;
+	width:100%;
+}
+header b{
+	font-size:52px;
+	font-weight: 400;
+}
+.head_box{width:100%;line-height:2rem;font-size:14px;}
+.myRanking,.myEffect{
+	display:inline-block;
+	height:100%;
+}
+.myRanking{width:25%;}
+.myEffect{text-align:right;float:right;margin-right:2%;}
+.myEffect img{
+	width: 14px;
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    margin-right: 3px;
+}
+section{
+	max-width: 736px;
+    min-width: 320px;
+    position:absolute;
+	top:104px; left:0;
+	z-index:1;
+	bottom:0px; left:0;
+	right:0px;
+	width:100%;
+	overflow:auto;
+	margin:0 auto;
+	overflow-y:hidden;
+}
+.list{
+	width:100%;
+	overflow:hidden;
+	position: relative;
+	padding: 0.5rem 0;
+}
+.list li {
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+}
+.list  .grade {
+    width: 12%;
+    height: auto;
+    line-height: 4rem;
+    font-size:24px;
+}
+.photo{
+	position:relative;
+}
+.photo img{
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+.vip_box {
+    position: absolute;
+    height: 14px;
+    border-radius: 14px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: rgb(255, 98, 13);
+    bottom: 0px;
+    right: 2px;
+    min-width: 30px;
+    padding: 0px 4px;
+    text-align: center;
+     text-align:center; 
+  font-size:0; 
+    }
+    .vip_box span{
+	color: #fff;
+	font-size:11px;	
+	vertical-align:middle; 
+  display:inline-block; 
+  position:relative;
+  top:1px;
+ 
+    }
+
+    .list .content{
+        width: 63%;
+    text-align: left;
+    color: #505050;
+    padding-left: 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+    }
+    .content p{
+    	margin:0.45rem 0px;
+    	margin-top:0px;
+    }
+    .uname{
+    	font-size:16px;
+    	color:#505050;
+    	margin-right:2px;
+    }
+    .phone{
+    color:#868686;
+    font-size:10px;
+    }
+    .progress{
+    height: 16px;
+    border: 1px solid transparent; 
+    border-radius: 10px;
+    
+    
+    }
+    .progress .effectValue{
+    display:inline-block;
+    position:relative;
+    height:16px;
+    left:7px;
+    
+	
+    }
+    .progress span img{
+    position:absolute;
+    top: 50%;
+	transform: translateY(-50%);
+    }
+  .effectValue span{
+  	margin-left:16px;
+  	color:#fff;
+  	font-size:12px;
+  	display:inline;
+  	line-height:18px;
+  }
+  @media screen and (min-width:321px) and (max-width:399px){
+   .list .content{
+   	width:63%;
+   }
+  }
+    @media screen and (min-width:400px) and (max-width:495px){
+   .list .content{
+   	width:67%;
+   }
+  }
+   @media screen and (min-width:496px) and (max-width:520px){
+   .list .content{
+   	width:70%;
+   }
+  }
+   @media screen and (min-width:521px) and (max-width:600px){
+   .list .content{
+   	width:73%;
+   }
+  }
+   @media screen and (min-width:601px){
+   .list .content{
+   	width:74%;
+   }
+  }

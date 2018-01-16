@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" charset=utf-8/>
+    <script type="text/javascript" src="jquery-2.2.1.min.js"></script>
+	<script src="../js/config.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var src = window.location.href;
+        var start = src.indexOf("=");
+        var end = src.lastIndexOf("&");
+        var result = src.substring(start + 1, end);
+        window.location.replace(url_prefix + hs_url + "/mxj/wxlogin/mine.do?code="+result);
+    });
+
+    </script>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=GB2312">
+</head>
+<body>
+    <div>
+      <p></p>
+    </div>
+</body>
+</html>

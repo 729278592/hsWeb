@@ -1,0 +1,354 @@
+/*
+ *	鎶奾tml椤甸潰涓殑css鏍峰紡绉昏繃鏉�
+ */
+@charset "utf-8";
+
+body {
+	font-family: 寰蒋闆呴粦;
+}
+
+li {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	height: 50px;
+	width: 100%;
+	background: #f7f7f7;
+	overflow: hidden;
+}
+
+.h-head {
+	width: 90.625%;
+	height: 50px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.h-return {
+	float: left;
+	width: 26px;
+	height: 22px;
+	background: url(../../../images/arrow-left.png) no-repeat;
+	background-size: contain;
+	margin-top: 14px;
+}
+
+.h-title {
+	display: block;
+	font-size: 17px;
+	line-height: 50px;
+	color: #505050;
+	margin: 0 auto;
+	width: 68px;
+	width: 80%;
+	float: left;
+	text-align: left;
+	text-indent: 4px;
+}
+.right-title{
+	float: right;
+	line-height: 50px;
+	font-size: 17px;
+	color: #505050;
+}
+
+.h-pic {
+	height: 23px;
+	width: 22px;
+	float: right;
+	display: block;
+	margin: 7px 0 0 0;
+}
+
+.h-bj {
+	font-size: 14px;
+	height: auto;
+	margin: 0;
+	color: #fff;
+	width: auto;
+	line-height: 40px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none
+}
+
+section {
+	width: 100%;
+	height: auto;
+}
+
+.
+h-sh {
+	background: 
+}
+
+.sh-dizi {
+	height: auto;
+	width: 100%;
+}
+
+.sh-dizi {
+	height: auto;
+	width: 100%;
+}
+
+.sh-box {
+	width: 90.625%;
+	height: 59px;
+	margin: 0 auto;
+}
+
+.sh-ico {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 20px 0 0 0;
+	float: left;
+	border-radius: 50%;
+	border: 1px solid #e4e4e4;
+	box-sizing: border-box;
+}
+
+.active2 {
+	background: url(../img/duig_03.png) no-repeat center;
+	background-size: 21px 20px;
+	border: none
+}
+
+.sh-boxo {
+	width: 90%;
+	height: 59px;
+	float: right;
+}
+
+.sh-icoo {
+	width: 9px;
+	height: 15px;
+	float: right;
+	display: block;
+}
+
+.sh-boxotext {
+	display: block;
+	font-size: 14px;
+	color: #333;
+	margin: 10px 0 0 0;
+}
+
+.sh-boxotexto {
+	display: block;
+	font-size: 12px;
+	margin-top: 4px;
+}
+
+.sh-boxt {
+	font-size: 13px;
+	padding-right: 15px;
+	margin-top: 10px;
+	display: block
+}
+
+.sh-boxotexto-ico,.sh-boxotexto-ico-o {
+	height: 15px;
+	width: 9px;
+	display: block;
+	float: right;
+	background: url(../images/you_03.png) no-repeat right;
+	background-size: 9px 15px;
+	margin: -3px 0 0 0;
+}
+
+.bor {
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.tian {
+	display: block;
+	height: 45px;
+	width: 90.625%;
+	background: #54911f;
+	margin: 5px auto 0;
+	text-align: center;
+	line-height: 45px;
+	font-size: 17px;
+	color: #fff;
+	border-radius: 5px;
+	outline: none;
+	border: none
+}
+
+.sh-boxotexto-ico-o {
+	width: 16px;
+	height: 15px;
+	background: url(../img/shanchu_03.png) no-repeat center;
+	background-size: 16px 15px;
+}
+
+/***鏀惰揣鍦板潃淇敼***/
+.dz-box {
+	width: 100%;
+    height: auto;
+    border-top: 1px solid #e4e4e4;
+    overflow: hide;
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 80px;
+}
+
+.dz-ren {
+	height: 48px;
+	border-bottom: 1px solid #ebebeb;
+	width: 94.625%;
+	margin: 0 auto 0;
+	line-height: 48px;
+	padding-left: 16px;
+	font-size: 14px;
+	color: #000;
+	margin-right: 0;
+}
+.dz-ren-checkbox .checkbox{
+	left: -9999px;
+	position: absolute;
+}
+.dz-ren-checkbox .checkbox-bg{
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	box-sizing: border-box;
+	float: left;
+	margin-top: 22px;
+	margin-right: 6px;
+}
+.dz-ren-checkbox .checkbox:checked + .checkbox-bg{
+	background: none;
+	border: 1px solid #389ffe;
+	box-sizing: border-box;
+}
+.dz-ren-checkbox .checkbox:checked + .checkbox-bg:before{
+	font-size: 0;
+	display: block;
+	content:'\EA06';
+    width: 10px;
+    height: 10px;
+    background: #389ffe;
+    border-radius: 10px;
+	margin-left: 4px;
+	margin-top: 4px;
+}
+.de-ren-in {
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	width: 75%;
+	height: 30px;
+	font-size: 14px;
+	background: none;
+	color: #9e9e9e;
+}
+
+.dz-bc {
+	height: 44px;
+	line-height: 44px;
+	border-radius: 44px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	background: #389ffe;
+	width: 90.625%;
+	border: none;
+	outline: none;
+	margin: 1px auto 0;
+	display: block;
+	font-family: "microsoft yahei" !important;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.bottomSave{
+	position: fixed;
+	bottom: 0;
+	height: 80px;
+	width: 100%;
+}
+select{
+	background: none !important;
+	color: #9e9e9e;
+}
+select {
+		  border: none;
+		  appearance:none;
+		  -moz-appearance:none;
+		  -webkit-appearance:none;
+		  padding-right: 14px;
+		  width:80%;
+		  margin-left:14px;
+		  height:30px;
+		  background-color:#fff;
+		}
+		/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+		select::-ms-expand { display: none; }
+		.dz-ren span{
+		    display: inline-block; width: 36px;
+		}
+		.dz-ren .title{
+			width: auto;
+		}
+		.defaultIcon{
+			position: relative;
+		}
+		.defaultIcon #default{
+			position: absolute;
+			left: -9999px;
+		}
+		.input-icon:before{
+			float: left;
+			width: 20px;
+		    height: 20px;
+		    line-height: 20px;
+		    text-align: center;
+		    border: 1px solid #ddd;
+		    border-radius: 20px;
+		    box-sizing: border-box;
+		    content:'';
+		    margin-top: 14px;
+		    margin-right: 6px;
+		}
+		.defaultIcon #default:checked + .input-icon:before{
+			font-family: 'Ionicons';
+			content: "\f121";
+		    color: #fff;
+		    border: 0;
+		    background: #389ffe;
+		    text-indent: -2px;
+		    font-size: 12px;
+		    font-weight: normal;
+		}
+		.defaultIcon.selected #default + .input-icon:before{
+			font-family: 'Ionicons';
+			content: "\f121";
+		    color: #fff;
+		    border: 0;
+		    background: #389ffe;
+		    text-indent: -2px;
+		    font-size: 12px;
+		    font-weight: normal;
+		}
+
+
+
+
+
+
+
+
+

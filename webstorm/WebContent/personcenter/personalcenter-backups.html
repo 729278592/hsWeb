@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<link rel="stylesheet" type="text/css" href="../skins/personcenter/css/style.css">
+	<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="../personcenter/center.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+	<script type="text/javascript" src="../personcenter/commlist.js"></script>
+<title>HC服务号</title>
+</head>
+<body>
+<!--/可视窗口-->
+<div class="viewbox">
+ <!--/header-->
+<header>
+   <div class="head-warp">
+    <div class="myselfmessage">
+     <ul>
+      <li class="li-lt"><span>个人中心</span></li>
+      <li class="li-rt"><a href="../person/news.do"><img src="../skins/personcenter/img/personal_tips.png"><b id="message" style="display:none;width:6px;height:6px;border-radius:50%;background:red;position: relative;top: -11px;left: -6px;"></b></a></li>
+    <li class="li-menu" id="list-m"><a href="javascript:void(0);">
+						<span><img src="../skins/personcenter/img/gdetails_list_b.png" width="18px"></span>
+						  <ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+						</a>
+					</li>
+    </ul>
+    </div>
+<span>
+      <ul>
+             <li class="headphoto"><a href="../person/personInformation.do"><img id="userimg" src="../skins/firstpage/img/body_default.png" style="border-radius: 50%;line-height: 7em;width:4rem;height:4rem;cursor: pointer;background:#fff;border:2px solid #fff;background-clip: padding-box;"></a></li>
+          <li class="headexplian">
+        <dd style="margin-bottom:3px;">
+          <h2 style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;color:#ffffff;font-weight:normal;" id="name"></h2>
+        </dd>
+        <dd>
+       <img style="width:15px; height:15px;" src="../skins/personcenter/img/myeffect_icon_white.png">
+       <span class="yingxiangli"></span>&nbsp;&nbsp;VIP<span id="vip"></span>
+         </dd>
+          </li>
+          <li style="width:10%;float:right;margin-right:6px;"><a href="../effect/goToNewScan.do"><img alt="" src="../skins/personcenter/img/home_namecard.png" style="width:25px;margin-top:3.5rem;"></a></li>
+      </ul>
+    </span>
+   <nav>
+     <ul>
+       <li><a href="../person/myshare.do"><span  id="sharecount"></span><!-- 101 --><p>分享</p></a></li>
+       <li><a href="../person/mycollection.do"><span id="mccount"></span><!-- 45 --><p>收藏</p></a></li>
+       <li><a href="../person/mycomment.do" ><span id="postcount"></span><!-- 20 --><p>评价</p></a></li>
+     </ul>
+   </nav>
+   </div>
+    </header>
+<!--/header-->
+<!--/section-->
+<section>
+
+<div class="introduce1">
+<a href="../person/orderlist.do?place=8">
+  <ul>
+    <li class="list-lt"><h1>我的订单</h1></li>
+        <li class="list-rt">查看全部订单&nbsp;<span class="icon-chevron-thin-right">
+                
+                </span></li>
+  </ul>
+</a>
+</div>
+<div class="introduce2">
+  <ul>
+  <a href="../person/orderlist.do?place=1">
+   <li>
+              <img src="../skins/personcenter/img/personal_pay.png">
+                <p>待付款</p></li>
+</a>
+<a href="../person/orderlist.do?place=2,1.1">
+   <li>
+                <img src="../skins/personcenter/img/personal_receive.png">
+                <p>待收货</p></li>
+</a>
+<a href="../person/orderlist.do?place=3">
+    <li>
+                <img src="../skins/personcenter/img/personal_evaluate.png">
+                <p>待评价</p></li>
+</a>
+<a href="../orderService/page.do">
+    <li>
+                <img src="../skins/personcenter/img/personal_customer.png">
+                <p>售后</p></li>
+</a>
+<a href="../person/buyxulie.do">
+    <li>
+                <img src="../skins/personcenter/img/personal_store.png">
+                <p>门店购</p></li>
+</a>                            
+  </ul>
+</div>
+<div class="introduce3">
+<a href="../zenRanking/page.do">
+  <ul>
+    <li class="list-lt"><h1>我的积分</h1></li>
+        <li class="list-rt">查看积分资产&nbsp;<span class="icon-chevron-thin-right">
+                
+                </span></li>
+  </ul>
+  </a>
+</div>
+<div class="introduce4">
+  <ul>
+   <li style="padding-top:1rem;"><a onclick="tonewpage(2)"><!-- 1000 --><span id="points" style="font-size:1.5rem;"></span><p>可用积分</p></a></li>
+   <li onclick="tonewpage(1)">
+                <img src="../skins/personcenter/img/personal_record.png">
+                <p>兑换记录</p></li>
+    <li onclick="tonewpage(2)">
+                <img src="../skins/personcenter/img/personal_mall.png">
+                <p>积分商城</p></li>
+    <li onclick="tonewpage(3)">
+                <img src="../skins/personcenter/img/personal_activity.png">
+                <p>活动</p></li>                        
+  </ul>
+</div>
+<div class="introduce5">
+<!-- <a href="../cashRanking/page.do">  现金机制尚未开通-->
+<a href="javascript:void(0)" id="cashtip">
+   <ul>
+     <li class="list-lt"><p>我的现金</p></li>
+     <li class="list-rt"><span id="cash" style="font-size:1rem;color: #ff620d;font-weight: bold;"></span><span class="icon-chevron-thin-right">
+                
+                </span></li>
+   </ul>
+</a>
+<a href="../effect/effect.do">
+   <ul>
+     <li class="list-lt"><p>我的影响力</p></li>
+     <li class="list-rt"><img style="width:18px" src="../skins/personcenter/img/personal_effect.png">
+                
+                <span class="yingxiangli" style="font-size:1rem;color: #ff620d;font-weight: bold;">0</span><span class="icon-chevron-thin-right">
+                
+                </span></li>
+   </ul>
+</a>
+<a href="../effect/goToRanking.do">
+   <ul>
+     <li class="list-lt"><p>我的合伙人</p></li>
+     <li class="list-rt"><img style="width:18px" src="../skins/personcenter/img/personal_partner.png">
+              <span id="hehuo" style="font-size:1rem;color: #ff620d;font-weight: bold;">0</span><span class="icon-chevron-thin-right">
+                
+                </span></li>
+   </ul>
+</a>
+</div>
+
+
+<div class="introduce6">
+<a id="toseller">
+
+    <ul>
+       <li class="list-lt"><p>我是销售代表</p></li>
+       <li class="list-rt"><span class="icon-chevron-thin-right">                
+                </span></li>
+    </ul>
+    </a>
+</div>
+<div class="introduce7">
+<a href="../person/help.do">
+  <ul>
+     <li class="list-lt"><p>帮助与反馈</p></li>
+     <li class="list-rt"><span class="icon-chevron-thin-right">
+                
+                </span></li>
+  </ul>
+  </a>
+</div>
+<!-- <div class="introduce8">
+<a href="#">
+<ul>
+     <li class="list-lt"><p>设置</p></li>
+     <li class="list-rt"><span class="icon-chevron-thin-right">
+                
+                </span></li>
+</ul>
+</a>
+</div> -->
+</section>
+ <!--/section-->
+ 
+
+<!--/footer-->
+<!--
+  <footer>
+		<div class="flortfoot">
+			<ul>
+				<li id="firstpage"> <img style="width:25px;height:25px;" class="menu_foot_img" class="menu_foot_img"
+					src="../skins/personcenter/img/tab_home.png" />
+					
+					<p>首页</p></li>
+				<li id="zhoubian"><img style="width:25px;height:25px;" class="menu_foot_img" class="menu_foot_img"
+					src="../skins/personcenter/img/tab_compass.png"/> 
+					
+					<p>周边</p></li>
+				<li id="wanzhuan"><img style="width:25px;height:25px;" class="menu_foot_img" class="menu_foot_img"
+					src="../skins/firstpage/img/tab_z.png" />
+					
+					<p>玩赚</p></li>
+				<li id="mine"> <img style="width:25px;height:25px;" class="menu_foot_img" class="menu_foot_img"
+					src="../skins/personcenter/img/tab_user_pre.png"/> 
+					
+					<p>我的</p></li>
+			</ul>
+		</div>
+	</footer>
+-->
+<!--/footer-->
+
+</div>
+<!--/可视窗口-->
+
+</body>
+<div id="showhide" style="display:none; height:100%;">
+<div class="mask"></div>
+<div class="message">
+	<img src="../skins/personcenter/img/cashtip.png">
+	<p>我知道了</p>
+
+</div>
+</div>
+</html>

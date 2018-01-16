@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+.bg{
+	/* display: none; */ 
+	background-color: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: none;
+}
+
+.tips{
+	/* display: none; */
+	width: 80%;
+	height: auto;
+	background-color: #fff;
+	z-index: 2;
+	position: fixed;
+	left: 10%;
+	top: 30%;
+	padding: 4%;
+	display: none;
+}
+
+.tips p {
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+}
+
+.tips .ss {
+	font-size: 1.2rem;
+	margin-bottom: 0.8rem;
+}
+
+.tips span {
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+#fou{
+	margin-left:50px;
+}
+#tishi{
+	color: #ff620d;
+}
+#xuanze{
+	margin-top:30px;
+	float:right;
+}

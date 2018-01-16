@@ -1,0 +1,231 @@
+html *{
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /*firfox*/
+	-webkit-box-sizing:border-box; /*safari*/
+	-webkit-user-drag:none;
+	
+}
+body{
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 736px;
+	height: 100%;
+	background-color: #e5e5e5;
+	font-family: Helvetica;
+	color: #505050;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+*:focus {outline: none;} 
+p,ul,li,dl,dt,dd {
+	margin: 0;
+}
+ul,li{
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #505050;
+	text-decoration: none;
+}
+a:focus{
+text-decoration:none;
+outline:none;
+}
+img{
+	border:none;
+}
+input{
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+
+header{
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	background-color: #ff620d;
+}
+
+.header_l{
+	float: left;
+	width:50px;height:50px;
+	text-align:center;
+	line-height:50px;
+}
+
+.header_r{
+	float: right;
+    width:50px;height:50px;
+	text-align:center;
+	line-height:50px;
+}
+
+header img{
+	height: 19px;
+	margin-top:14px;
+/* 	vertical-align: middle; */
+
+}
+
+header span {
+	color: #ffffff;
+	font-size: 1.1rem;
+	line-height: 50px;
+}
+.menu-list {
+	width: 132px;
+	position: absolute;
+	background: #f8f8f8;
+	top: 50px;
+	right: 1.3rem;
+	display: block;
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	display: none;
+	height: auto;
+}
+
+header .menu-list li {
+	height: 53px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: left;
+	width: 100%;
+}
+
+header  .menu-list li:active {
+	background: #f2f2f2;
+}
+
+header .menu-list li img {
+	width: 27px;
+	margin-top: 12px;
+	margin-left: 30px;
+	height:auto;
+}
+
+.menu-list li p {
+	float: right;
+	line-height: 53px;
+	color: #808080;
+	font-size: 16px;
+	margin-right: 19px;
+}
+.sales_title{
+	width: 100%;
+	height: auto;
+	background-color: #ff620d;
+	overflow: hidden;
+	padding: 4% 0 4% 6%;
+}
+
+.sales_title .touxiang{
+	float: left;
+	width: 20%;
+	height: auto;
+}
+
+.sales_title .touxiang img {
+	width: 5rem;
+	height:5rem;
+	margin: 0 auto;
+	border-radius:50%;
+	border:2px solid #fff;
+	background-color:#fff;
+}
+
+.title_inf{
+	width: 80%;
+	float: left;
+	padding-left: 1.5rem;
+	padding-top: 1%;
+}
+
+.title_inf p,.title_inf span {
+	color: #fff;
+	font-size: 0.9rem;
+	line-height: 1.5rem;	
+}
+
+.title_inf .name {
+	font-size: 1.1rem;
+}
+
+.sales_link{
+	width: 100%;
+	overflow: hidden;
+	background-color: #fff;
+	margin-bottom: 0.8rem;
+	padding: 0 2%;
+}
+
+.sales_link ul li{
+	width: 25%;
+	height: auto;
+	float: left;
+	text-align: center;
+	padding: 4% 3%;
+}
+
+.sales_link ul li img{
+	width: 100%;
+	height: auto;
+}
+
+.sales_link ul li span{
+	font-size: 0.8rem;
+	line-height: 1.8rem;
+}
+
+.sales_search{
+	padding: 4% 4% 0 4%;
+	background-color: #fff;
+	position:relative;
+}
+
+.sales_search p {
+	font-size: 1rem;
+	margin-bottom: 0.8rem;
+}
+
+.sales_search input{
+	width: 100%;
+	border: 0.1rem #a0a0a0 solid;
+	font-size: 1rem;
+	padding: 0.6rem 0 0.6rem 0.5rem;
+}
+
+.sales_search img{
+	width:1.4rem;
+	height:1.4rem;
+	position:absolute;
+	right:6%;
+	bottom:9%;
+	z-index:99;
+}
+
+.sales_sub{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	padding: 5% 0;
+	background-color: #fff;
+}
+
+.sales_sub span{
+	width: 80%;
+	height: auto;
+	background-color: #ff620d;
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 2.6rem;
+	border-radius: 2.5rem;
+	display: block;
+	margin: 0 auto;
+}
+
+

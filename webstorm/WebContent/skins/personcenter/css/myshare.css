@@ -1,0 +1,243 @@
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+}
+ul,li,p{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+a{text-decoration: none;color:#505050;}
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #e5e5e5;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+   	max-width: 736px;
+    min-width: 320px;
+    height: 100%;
+    background:#e5e5e5;
+    margin: 0px auto;
+    font-family:'微软雅黑';
+    top: 0;}
+/*--/header*/
+    .clear{
+      clear:both;
+    }
+header{
+			width:100%;
+			height:50px;
+			position:fixed;
+			background-color:#f8f8f8;
+			z-index: 1;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			margin: 0px auto;
+			background-position: 4.5px center;
+			box-sizing: border-box;
+			border-bottom:1px solid #e5e5e5;
+}
+  
+.header_l{
+	float: left;
+    width:50px;height:50px;line-height:50px;text-align:center;	
+}
+
+.header_r{
+	float: right;
+	width:50px;height:50px;line-height:50px;text-align:center;	
+}
+
+header img{
+	width: 19px;
+	margin-top:14px;
+}
+
+header span {
+	color: #505050;
+	font-size: 1.8rem;
+	line-height: 50px;
+}
+.menu-list{
+	width: 132px;
+    position: fixed;
+    height: auto;
+    background: #f8f8f8;
+    top:4.9rem;
+    box-shadow: 0 0 9px rgba(0,0,0,0.3);
+    z-index:120;
+    right: 1.3rem;
+    display:none;}
+.menu-list li{height:4.5rem;border-bottom:1px solid #e5e5e5;text-align:left;}
+.menu-list li:active{background:#f2f2f2;}
+.menu-list li img{width:2.3rem;margin-top:1rem;margin-left: 3rem;}
+.menu-list li p{float:right;margin-right:3rem;line-height:4.5rem;color:#808080;font-size:1.6rem;}
+/*--/header*/
+/*section*/
+section{
+  max-width: 736px;
+  height:auto;
+  min-width: 320px;
+  margin: 0px auto;
+  margin-top: 0.8rem;
+  box-sizing:border-box;
+  position:absolute;
+  margin-top:6rem;
+  left:0px;
+  right:0px;
+  padding-bottom:50px;
+}
+.share_box{
+  width:100%;
+  background-color: #ffffff;
+  margin-bottom:1rem;
+
+}
+.share_top{
+  padding:3%;
+  overflow: hidden;
+/*    height:11rem; */
+}
+.share_top>div{
+  float:left;
+
+
+}
+.share_box .share_img{
+  width:7.5rem;
+  height:7.5rem;
+ /*  height:85%; */
+  background: url(../img/phone.png) no-repeat;
+  background-size: 100% 100%;
+  margin-right:4%;
+  border:1px solid #dcdcdc;
+}
+.share_top .share_content{
+  width:65%;
+  line-height:1.3em;
+  font-size:13px;
+  margin-top: 0.1rem;
+  word-wrap: break-word;
+}
+.share_top .share_content p{
+  color:#505050;
+  font-weight: 600;
+  margin-bottom:4px;
+}
+.share_top .share_content .zf span{
+  display:inline-block;
+  padding: 0 0.8em;
+/*   height:1.5em;
+  line-height: 1.5em; */
+  background-color:#ff620d;
+  font-size:1.2rem;
+  border-radius:2px;
+  text-align: center;	
+
+}
+.share_top .share_content .zf span a{
+  color:#ffffff;
+  display:block;
+  width:100%;
+  height:100%;
+}
+.share_top .share_content .zf .gift{
+  background: #c30404;
+  margin-top:0.5rem;
+  width:4em;
+}
+.share_top .share_content .price{
+  margin-top:0.5rem;
+  color:#c30404;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.share_box .share{
+  width:100%;
+  height:3em;
+  line-height: 3em;
+  border-top:1px solid #e5e5e5;
+  padding:0 3%;
+  line-height: 3em;
+  color: #505050;
+  font-size: 1.3rem;
+}
+.share_box .share span{
+  margin-right:3%;
+  color:#505050;
+}
+.share_box .share .date{
+  float:right;
+  color:#505050;
+}
+/*门店share_store*/
+.share_store .share_img{
+  background: url(../img/store.png) no-repeat;
+  background-size: 100% 100%;
+}
+.share_store .share_content>p>span{
+  float: right;
+  color:#ff620d;
+  width:30%;
+}
+.share_store .share_content .star{
+
+  color:#ff620d;
+}
+.share_store .share_content .star .icon_star{
+  display:inline-block;
+  width:1em;
+  height:1em;
+  background: url(../img/gdetails_star_orange.png) no-repeat;
+  background-size: 100% 100%;
+}
+.share_store .share_content div .gift{
+  display:inline-block;
+  padding-right:0.2em;
+  padding-left:0.2em;
+  height:1.5em;
+  line-height: 1.5em;
+  background-color:#03bed4;
+  border-radius:2px;
+  text-align: center;
+}
+
+.share_store .share_content div .gift a{
+  display:block;
+  width:100%;
+  height:100%;
+  color:#fff;
+}
+.share_store .share_content .ads{
+  color:#868686;
+  font-weight: 400;
+  margin-top:1%;
+  line-height: 1.3em;
+}
+
+
+.share_pub .share_img{
+ /*  width:15%;
+  height:90%; */
+  background: url(../img/share3.png) no-repeat;
+  background-size: 100% 100%;
+}
+.share_pub .share_content .content>p{
+  font-weight: 400;
+  color:#868686;
+  font-size: 1.2em;
+}
+.share img{width:1.25rem;margin-right:4px;}

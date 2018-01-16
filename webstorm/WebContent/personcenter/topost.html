@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>评价中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/personcenter/css/topost.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+    <script type="text/javascript" src="../js/jumppage.js"></script>
+    <script type="text/javascript" src="../personcenter/topost.js"></script>
+    <script type="text/javascript" src="../js/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+    
+</head>
+<body>
+    
+    <section>
+   		<div class="heads">	
+			<span style="float:left;width:50px;height:50px;line-height:50px;text-align:center;"><img  src="../skins/effect/img/nav_return.png" style="width:19px;margin-to:14px;" class="back">评价晒单</span>
+   		</div>
+   		<div class="post_text">
+   			<div class="leftdiv">
+   				<img src="" class="goodimg"/>
+   			</div>
+   			<div class="rightdiv">
+   				<textarea rows="3" cols="10" style="width:100%;height:50%;font-size:1.2em;margin-top:10px;resize: none;" placeholder="请输入您的评价" id="neirong" ></textarea><br/>
+   				<span style="float:left;"><span class="you" >0</span>/15</span><span style="float:right;">还需<span class="left" style="color:#FF620D;">15</span>个字即可发表</span>
+   			</div>
+   		</div>
+   		<div class="addphoto">
+   			<div class="photo_leftdiv">
+   				
+   			</div>
+   			<div class="photo_rightdiv">
+   			<br/>
+   				<span style="font-size:1.3em;">添加图片</span><br/><br/>
+   				<span style="font-size:1em;color:#6C6C6C;">钱都花了为什么不拍几张图片秀一秀呢</span>
+   				<input hidden="true" id="pic1"/><input hidden="true" id="pic2"/><input hidden="true" id="pic3"/>
+   				<form action="../post/upload.do" method="post" enctype="multipart/form-data" id="upPic">
+   			
+   				</form>
+   			</div>
+   		</div>
+		<div class="dafen">
+			<div class="goodpost">
+				<div class="fenl">商品评价</div>
+				<div class="fenr">
+					<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(1,'good')" id="good1"/>
+					<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(2,'good')" id="good2"/>
+					<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(3,'good')" id="good3"/>
+					<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(4,'good')" id="good4"/>
+					<img src="../skins/personcenter/img/star_white.png" class="goodstar" onclick="changeStar(5,'good')" id="good5"/>
+					<input hidden="true" id="goodfen" name="" value="0"/><span id="goodget">0分</span>
+				</div>
+			</div>
+			
+			
+			<div class="shoppost">
+				<div class="fenl">门店评价</div>
+				<div class="fenr">
+					<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(1,'shop')" id="shop1"/>
+					<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(2,'shop')" id="shop2"/>
+					<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(3,'shop')" id="shop3"/>
+					<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(4,'shop')" id="shop4"/>
+					<img src="../skins/personcenter/img/star_white.png" class="shopstar" onclick="changeStar(5,'shop')" id="shop5"/>
+					<input hidden="true" id="shopfen" name="" value="0"/><span id="shopget">0分</span>
+				</div>
+			</div>
+			
+			<div class="sellerpost">
+				<div class="fenl">销售代表评价</div>
+				<div class="fenr">
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(1,'seller')" id="seller1"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(2,'seller')" id="seller2"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(3,'seller')" id="seller3"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(4,'seller')" id="seller4"/>
+					<img src="../skins/personcenter/img/star_white.png" class="sellerstar" onclick="changeStar(5,'seller')" id="seller5"/>
+					<input hidden="true" id="sellerfen" name="" value="0"/><span id="sellerget">0分</span>
+				</div>
+			</div>
+		</div>
+		<div class="pic">
+			
+		</div>
+		<footer>
+			<div class="foot_left"><input type="checkbox" id="niming" value="匿名"/> 匿名评价</div>
+			<div class="foot_right">发表评价</div>
+		</footer>
+   </section>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>门店列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/css/util.css">
+	<link rel="stylesheet" href="../skins/goodmainline/css/shoplist.css">
+	<link rel="stylesheet" href="../skins/css/nomsg.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jumppage.js"></script>
+    <script type="text/javascript" src="../goodmainline/shoplist.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+</head>
+<body>
+    
+    <div class="content">
+   		<div class="heads">	
+   			<span style="float: left;width:50px;height:50px;line-height:50px;text-align:center;"><img  src="../skins/personcenter/img/nav_return_b.png" class="back"></span>
+			<span>HC门店</span>
+			<span style="float: right;width:50px;height:50px;line-height:50px;text-align:center;"><img src="../skins/personcenter/img/icon_map.png"  id="zhoubian"></span>
+   		</div>
+   		<!--
+   			2016.06.14-wgd
+   			无搜索条件栏
+   			<div class="title">
+	   			<div class="title_left">
+	   				<span id="area">区域选择</span><img src="../skins/goodmainline/img/icon_arrow_down.png" width="10" style="margin-left:10px;"/>
+	   			</div>
+	   			<div class="title_middle">
+	   				<span id="shop">全部门店</span><img src="../skins/goodmainline/img/icon_arrow_down.png" width="10" style="margin-left:10px;"/>
+	  			</div>
+	   			<div class="title_right">
+	   				<span id="orderby">默认排序</span><img src="../skins/goodmainline/img/icon_arrow_down.png" width="10" style="margin-left:10px;"/>
+	   			</div>
+   			</div> 
+   		-->
+   		<div class="choose" id="choosearea">
+   			<ul id="arealist" >
+   				<li class="area_left">
+   					<p>重庆市</p>
+   					</li>
+   					<li class="area_right">
+   					<p>20</p>
+   					</li>
+   				
+   			</ul>
+   		</div>
+   		<div class="choose" id="chooseshop">
+   			<ul id="shoplist">
+   				<li>
+   					<p class="com">全部门店</p>
+   					
+   				</li>
+   				<li>
+   					<p class="com">综合店</p>
+   					
+   				</li>
+   				<li >
+   					<p class="com">体验店</p>
+   					
+   				</li>
+   				<li>
+   					<p class="com">专卖店</p>
+   					
+   				</li>
+   				<li>
+   					<p class="com">自有营业厅</p>
+   					
+   				</li>
+   				<li>
+   					<p class="com">合作营业厅</p>
+   					
+   				</li>
+   			</ul>
+   		</div>
+   		<div class="choose" id="chooseorderby">
+   			<ul id="orderbylist">
+   				<li>
+   					<p class="com">默认排序</p>
+   				</li>
+   				<li>
+   					<p class="com">附近优先</p>
+   				</li>
+   				<li>
+   					<p class="com">好评率优先</p>
+   				</li>
+   			</ul>
+   		</div>
+   		<div id="bg" class="bg" style="display:none;"></div>
+   		<div class="shoplist">
+   			<ul class="showshop">
+   				<!-- <li>
+   					<div class="leftdiv">
+   						<img src="../good/shopdown.do?filename=shop1.jpg" class="shopimg"/>
+   					</div>
+   					<div class="middlediv">
+   						<div class="shopname">闵行区吴中路店</div>
+   						<div class="shopstar">
+   							<img src="../skins/goodmainline/img/wujiaoxing.png" class="star"/>
+   							<img src="../skins/goodmainline/img/wujiaoxing.png" class="star"/>
+   							<img src="../skins/goodmainline/img/wujiaoxing.png" class="star"/>
+   							<img src="../skins/goodmainline/img/wujiaoxing.png" class="star"/>
+   							<span>4.86</span>
+   						</div>
+   						<div class="shoptype">
+   							<div class="shoptype_msg">体验店</div>
+   						</div>
+   						<div class="shopaddr">
+   							上海市闵行区吴中路55号
+   						</div>
+   					</div>
+   					<div class="rightdiv">
+   						<div>4.74km</div>
+   					</div>	
+   					
+   				</li> -->
+   				
+   			</ul>
+   		</div>
+
+   </div>
+   <div class="clear" style="width:100%;height:5rem;"></div>
+   <footer>
+   		<div class="goodimg">
+   			<img src="" id="good_img"/>
+   		</div>
+   		<div class="goodmsg">
+   			<div id="goodname"></div>
+   			<div id="gooddes"></div>
+   		</div>
+   		<div class="goodprice">
+   			<div id="price"></div>
+   		</div>
+   </footer>
+</body>
+
+</html>

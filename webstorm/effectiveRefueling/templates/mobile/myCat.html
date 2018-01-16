@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的车队</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+    <style>
+        .card{overflow: hidden;position: relative;width: 94%;height: 11rem;background: url(../../assets/mobile/images/car.png) no-repeat;background-size: 100% 100%;margin: 0.625rem 3%;}
+        .card_infor{margin: 2rem 0 0 0.5rem;display: table;}
+        .card_img>img{width: 5rem;height: 5rem;border-radius: 100%;margin-right: 0.6rem;}
+        .cardInfor{}
+        .cardInfor p{font-size: 1rem;color: #fff;line-height: 1.25rem;}
+        .cardInfor p.name{margin-bottom: 10px;}
+        .cardInfor p.phone{}
+        .pay_list li .payInfoy{border-right: 0;}
+
+        .pay_list li.right{float: right;position: relative;right: 15px;}
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="page">
+        <div class="hd">
+            <a>
+                <i class="fa fa-angle-left"></i>
+            </a>
+            智油惠
+            <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd absolute pd48">
+            <div>
+                <div class="person_infor">
+                    <div class="card">
+                        <div class="card_infor">
+                            <div class="cardInfor">
+                                <p class="name">易优弧车队</p>
+                                <p class="phone">NO：<span class="verdana">245758475</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pay_list clearfix">
+                        <li>
+                            <div class="payInfoy">
+                                <span class="spanIcon moneyIcon"></span>
+                                <span>账户余额</span><br/>
+                                <span class="color">￥<span class="verdana">900.00</span></span>
+                            </div>
+                        </li>
+
+                        <li class="right">
+                            <a href="moneyRechaged.html" style="margin-top: 0.5rem" class="right weuiBtn weui-btn weui-btn_mini weui-btn_primary">充值</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="weui_cells weui_cells_access">
+                    <a class="weui_cell" href="consumerDetails.html">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>
+                                <span class="span_icon carIcon1"></span>
+                            <span class="text">
+                                消费明细
+                            </span>
+                            </p>
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+                    <a class="weui_cell" href="carTeam.html">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>
+                                <span class="span_icon carIcon2"></span>
+                            <span class="text">
+                                车队成员
+                            </span>
+                            </p>
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+                    <a class="weui_cell" href="modifyPayPassword.html">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>
+                                <span class="span_icon carIcon3"></span>
+                            <span class="text">
+                                修改支付密码
+                            </span>
+                            </p>
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="notConTip hide">
+                <img src="../../assets/mobile/images/notContent.png" alt=""/>
+                <p class="notInfor">
+                    <a href="creatCarTeam.html">去创建车队</a>
+                </p>
+            </div>
+        </div>
+        <div class="weui_btn_area fixed">
+            <input type="submit" class="weui_btn b0 weui_btn_primary" value="解散车队">
+        </div>
+    </div>
+</div>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+</body>
+</html>

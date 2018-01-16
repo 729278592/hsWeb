@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>地址修改</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/mobile-plugins/css/sm.min.css">
+    <link rel="stylesheet" href="../../assets/mobile/plugins/mobile-plugins/css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                智油惠
+                <div class="right nav_block">
+                    <a href="shoppingCat.html" class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="index.html">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shopMall.html">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gasStationInfor.html">
+                                马上加油
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personCenter.html">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd absolute pd48">
+                <form action="#" id="form" onsubmit="return false">
+                    <div class="weui_cells weui_cells_form mt0">
+                        <div class="weui_cell">
+                            <div class="weui_cell_hd">
+                                <label class="weui_label">
+                                    <span class="span_icon spa_user"></span>
+                                </label>
+                            </div>
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <input type="text" id='city-picker' class="weui_input" value="浙江 杭州 拱墅区" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui_btn_area fixed">
+                        <input type="submit" class="weui_btn b0 weui_btn_primary" value="保存">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/mobile/plugins/zepto/zepto.min.js"></script>
+    <script src='../../assets/mobile/plugins/mobile-plugins/js/sm.js' charset='utf-8'></script>
+    <script src='../../assets/mobile/plugins/mobile-plugins/js/sm-extend.js' charset='utf-8'></script>
+    <script src='../../assets/mobile/plugins/mobile-plugins/js/sm-city-picker.js' charset='utf-8'></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+            $("#city-picker").cityPicker({
+                toolbarTemplate: '<header class="bar bar-nav">\
+                                      <button class="button button-link pull-right close-picker">确定</button>\
+                                      <h1 class="title">选择收货地址</h1>\
+                                  </header>'
+            });
+
+            $.post('modifyBinding.html', {}, function(response){
+                // ...
+            })
+        })
+    </script>
+    <script>
+        $(function(){
+            $("#saveBtn").on("touchend",function(){
+                if($.trim($("#personName").val())== '') {
+                    showErrMsg('姓名不能为空');
+                    return false;
+                }
+                else{
+                    window.location.href = "personCenter.html";
+                }
+                return true;
+            })
+        })
+    </script>
+</body>
+</html>

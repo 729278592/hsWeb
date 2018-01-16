@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/core.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/secondbkAll.js" charset="utf-8"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/jquery.qrcode-0.12.0.min.js"></script>
+    <script type='text/javascript'>
+		/*function iFrameHeight() {
+		　　var ifm= document.getElementById("second_iframe");
+		　　var subWeb = document.frames ? document.frames["second_iframe"].document : ifm.contentDocument;
+		　　if(ifm != null && subWeb != null) {
+		　　　　ifm.height = subWeb.body.scrollHeight;
+		　　}
+		}*/
+		document.domain = 'http://mxj.huachuo.com.cn';
+	</script>
+</head>
+<body style="margin:0;padding:0;">
+<div id="mask" style="width: 101%;height: 101%;margin-left: -1%;margin-top: -1%;position: fixed;z-index: 50;background-color: #3e3e3e;opacity: 0.6;display:none">
+</div>
+<div id="person_qr"></div>
+<iframe id="second_iframe" name='second_iframe' src="../../../goodml/goToShareGoodsImg.do?goodsId=2" scrolling="no" width="100%" style='min-height: 800px;' frameborder= "no" border ="0"></iframe>
+</div>
+<div id="bubble" style="position: fixed;margin-left: 3%;width: 92%;z-index: 100;display:none">
+    <img id="bubbleImg" src="../img/cloud.png" style="width:67%;margin-left:32%">
+</div>
+<div id="bubbleWord" style="position: fixed;z-index: 100;margin-left: 15%;margin-top: 20%;font-family: 微软雅黑;text-align: center;display:none">
+    <span id="bubbleWord1" style="position: fixed;font-size: 2.4em;color: #ff7d3a;font-weight: 100;font-family: 微软雅黑;margin-left: 32%;top: 12%;">发送或分享给好友</span>
+    <span id="bubbleWord2" style="position: fixed;font-size: 2.4em;color: #ff7d3a;font-weight: 100;font-family: 微软雅黑;margin-left: 21%;margin-top: 5%;top: 14%;">即获积分奖励，扩大影响力，</span>
+    <span id="bubbleWord3" style="position: fixed;font-size: 2.4em;color: #ff7d3a;font-weight: 100;font-family: 微软雅黑;margin-top: 14%;margin-left: 26%;top: 14%;">享受更多特权和现金受益。</span>
+    <!--<span id="bubbleWord4" style="position: fixed;font-size: 2.8em;color: #cfcfcf;font-weight: 100;font-family: 微软雅黑;margin-top: 17%;top: 20%;">更多邀请方式请下载“赚＋”APP</span>
+    <span id="buddleWord5" style="position: fixed;font-size: 2.8em;color: #ff6c1c;font-weight: 100;font-family: 微软雅黑;margin-top: 17%;margin-left: 26%;top: 28.5%;z-index:500">立即下载</span>-->
+    <!--<span id="nowDown" style="color: #FF6C1C;width: 46%;height: 6%;border-radius: 90px;border: 4px solid #FF6C1C;position: fixed;margin-top: 10%;margin-left: 12%;top: 31%;z-index:500"></span>-->
+</div>
+<hr id="split" style=" height:1px;border:none;border-top:2px solid #C0C0C0;width:95%" />
+<div id="qrContent" style="width: 93%;margin: 0 auto;text-align: center;font-size: 38px;">
+</div>
+<div id="scanWord" style="position: absolute;margin-left: 227px;margin-top: 485px;font-size: 2rem;font-family: 微软雅黑;">
+    长按或扫描二维码关注
+</div>
+<div id="invitePart" style="width: 93%;margin: 0 auto;text-align: center;">
+    <img src="../img/share.png" id="invitePic" style="width:100%;margin-bottom:200px">
+    <img id="qrImg" src="../img/ajax-loader.gif" style="">
+</div>
+<div>
+    <div id="storeAndShare" style="height: 140px;position: fixed;bottom: 0;width: 100%;background-color: #389ffe;">
+        <div id="storeMask" style="position: absolute;height: 140px;width: 49%;z-index: 100;"></div>
+        <span id="storeWord" style="color: white;font-family: 微软雅黑; position: absolute; margin-left: 18%;margin-top: 4%;">收藏</span>
+        <span id="storedWord" style="color: white;font-family: 微软雅黑; position: absolute; margin-left: 16%;margin-top: 4%; display:none">已收藏</span>
+        <table style="height: 140px;border-color: white;bottom: 0;border-left-style: solid;border-width: 2%;position: absolute;margin-left: 49%;"><tr><td valign="top"></td></tr></table>
+        <div id="shareMask" style="position: absolute;margin-left: 49.5%;height: 140px;width: 49%;z-index: 100;"></div>
+        <span id="shareWord" style="color: white;font-family: 微软雅黑; position: absolute; margin-left: 69%;margin-top: 4%;">分享</span>
+    </div>
+</div>
+</body>
+</html>

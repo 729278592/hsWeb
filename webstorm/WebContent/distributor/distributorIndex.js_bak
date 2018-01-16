@@ -1,0 +1,267 @@
+
+//y坐标范围
+var heightArray = [100, 100, 100];
+var minValueArray = [0,0,0];
+
+var monthArray = ["7月","8月","9月","10月","11月","12月"];//展示的月份
+var activePhoneArray = [0, 0, 0, 0, 0, 0];
+var activePhonePointsArray = [0, 0, 0, 0, 0, 0];
+var activePhonePointsRankArray = [1, 1, 1, 1, 1, 1];//数据
+var showLabel = [true,true,false];
+
+var date = new Date;
+var year = date.getFullYear();
+var month = date.getMonth()+1;
+
+$(function(){
+	
+	//查询企业号信息
+	$.post("../distributor/getUserInfo.do",function(obj){
+		if(obj && obj.data){
+			$("#name").html(obj.data.name);
+			$("#mobile").html(obj.data.mobile);
+			$("#enterpriseName").html(obj.data.enterpriseName);
+			$("#activePhonePointsRank").html(obj.pointRank);
+		}
+		
+		if(obj && obj.user){
+			if(obj.user.head_img.substr(0,7)=="http://"){
+				$("#head_img").attr("src",obj.user.head_img);
+			}else{
+				$("#head_img").attr("src","../cashRanking/img.do?imgName="+obj.user.head_img);
+			}
+		}
+		
+	},'json'); 
+	
+	
+	//查询激活手机
+	$.post("../distributor/getactivePhoneInfo.do?type=0",function(obj){
+		if(obj && obj.data){
+			$("#activePhoneNum").html(obj.data.activePhoneNum);
+			$("#activePhonePoints").html(obj.data.activePhonePoints);
+		}
+	},'json'); 
+	
+	//加载今年的数据
+	loadAnnualDate(year);
+	
+});
+
+function loadAnnualDate(pYear){
+	//查询年度激活手机
+	$.post("../distributor/getactivePhoneInfo.do?type=1&year="+pYear,function(obj){
+		if(obj && obj.data){
+			$("#annualactivePhoneNum").html(obj.data.activePhoneNum);
+			$("#annualactivePhonePoints").html(obj.data.activePhonePoints);
+			$("#annualactivePhonePointsRnak").html(obj.activePhonePointsRank);
+		}
+	},'json'); 
+	
+	//加载月度数据
+	$.post("../distributor/getactivePhoneInfo.do?type=2&year="+pYear,function(obj){
+		if(obj && obj.data){
+ 
+			heightArray[0] = obj.maxPhoneNum;
+			heightArray[1] = obj.maxPhonePoints;
+			
+			//排名要+1，防止最后一名显示为0 的情况
+			maxRank = obj.maxRank+1; 
+			heightArray[2] = maxRank; 
+			
+			monthArray = obj.data.monthArray;
+			activePhoneArray = obj.data.activePhoneNum;
+			activePhonePointsArray = obj.data.activePhonePoints;
+			activePhonePointsRankArray = obj.data.activePhonePointsRank;
+			
+			if(activePhonePointsRankArray){
+				for(var i = 0;i < activePhonePointsRankArray.length;i ++){
+					activePhonePointsRankArray[i] = maxRank - activePhonePointsRankArray[i];
+				}
+			}
+			
+			//排名要取反显示
+			loadReport();
+		}
+	},'json'); 
+}
+
+//加载图表
+function loadReport(){
+
+	var dataArray = [activePhoneArray,activePhonePointsArray,activePhonePointsRankArray]
+	
+	// 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById('main1'));
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    var myChart3 = echarts.init(document.getElementById('main3'));
+
+    //柱状图颜色
+    var colorArray = ["#88E0EB","#FFB58D","#FF8787"];
+    
+    //字体颜色
+    var fontArray = ["#02B0C5","#FF7124","#FF0000"];
+    
+    //报表对象
+    var chartArray = [myChart1,myChart2,myChart3];
+    
+    
+    for(var i = 0;i < chartArray.length;i ++){
+    	
+    	 // 指定图表的配置项和数据
+    	   var option = {
+    		    grid: {
+    		        borderColor : "#fff",
+    		        containLabel: true,
+    		        bottom:0,
+    		        left:-40,
+    		        right:0,
+    		    },
+    		    xAxis: {
+    		        type : 'category',
+    		        axisLine : {
+    		         	show : false
+    		        },
+    		        splitLine: {
+    		            show : false
+    		        },
+    		        axisTick : {
+    		            show : false
+    		        },
+    		        data: monthArray
+    		    },
+    		    yAxis: {
+    		        type : 'value',
+    		        axisLine : {
+    		            show : false
+    		        },
+    		        splitLine :  {
+    		            show : false
+    		        },
+    		        axisTick : {
+    		            show : false
+    		        },
+    		        axisLabel : {
+    		            show : false
+    		        },
+    		        max : heightArray[i],
+    		        min : minValueArray[i]
+    		    },
+    		    series: [{
+    		            type: 'bar',
+    		            label: {
+    		                normal: {
+    		                    show: showLabel[i],
+    		                    position: 'top',
+    		                    textStyle : {
+    		                    	color:fontArray[i],
+    		                        fontWeight : 800,
+    		                        fontSize : 15
+    		                    }
+    		                }
+    		            },
+    		            itemStyle : {
+    		                normal : {
+    		                    //color : '#88E0EB'
+    		                	color : colorArray[i]
+    		                }
+    		             },
+    		            data: dataArray[i]
+    		        }]
+    		
+        	};
+    	
+    	// 使用刚指定的配置项和数据显示图表。
+		chartArray[i].setOption(option);
+    	
+    }
+    //绘制排名
+    mychart();
+}//end chart
+
+	function mychart(){
+		var option = {
+		
+		xAxis : [
+		    {
+		        type : 'category',
+		        data : monthArray
+		    }
+		],
+		yAxis : [
+		    {
+		        type : 'value',
+		        boundaryGap: [0, 0.1],
+		        max : heightArray[2],
+		        min : minValueArray[2]
+		    }
+		],
+		series : [
+		    {
+		        name:'Acutal',
+		        type:'bar',
+		        stack: 'sum',
+		        //barCategoryGap: '50%',
+		        itemStyle: {
+		            normal: {
+		                color: '#FF8787',
+		                barBorderColor: 'gray',
+		                barBorderWidth: 0,
+		                barBorderRadius:0,
+		                label : {
+		                    show: true, position: 'insideTop',
+							textStyle: {
+		                        color: '#FF0000'
+		                    }
+		                }
+		            }
+		        },
+		        data:dataArray[2]
+		    },
+		    {
+		        name:'Forecast',
+		        type:'bar',
+		        stack: 'sum',
+		        itemStyle: {
+		            normal: {
+		                color: '#DBDBDB',
+		                barBorderColor: '#DBDBDB',
+		                barBorderWidth: 1,
+		                barBorderRadius:0,
+		                label : {
+		                    show: true, 
+		                    position: 'top',
+		                    formatter: function (params) {
+		                        for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
+		                            if (option.xAxis[0].data[i] == params.name) {
+		                                return option.series[0].data[i] + params.value;
+		                            }
+		                        }
+		                    },
+		                    textStyle: {
+				                fontSize : 15,
+								fontWeight : 800,
+		                        color: 'tomato'
+		                    }
+		                }
+		            }
+		        },
+		        data:dataArray[3]
+		    }
+		]
+	};
+	chartArray[2].setOption(option);
+}
+
+//下一年度
+function previous(){
+	//year = year +1;
+	//loadAnnualDate(year);
+	Message.showNotify("暂无数据!",3000);
+}
+//前一年度
+function next(){
+	//year = year -1;
+	//loadAnnualDate(year);
+	Message.showNotify("暂无数据!",3000);
+}

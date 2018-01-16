@@ -1,0 +1,78 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    width:360px;
+    height:590px;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    /*overflow: hidden;*/
+}
+html *{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /*firfox*/
+    -webkit-box-sizing:border-box; /*safari*/
+    -webkit-user-drag:none;
+}
+body{
+    margin: 0 auto;
+    width: 360px;
+    height: 590px;
+    background-color: #e5e5e5;
+    font-family: Helvetica;
+}
+
+.pay_list_c1 {
+    width: 24px;
+    height: 18px;
+    padding-top: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: -24px 0;
+}
+.radioclass {
+    opacity: 0;
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+.on {
+    background-image: url(img/H5_select_text_check.png);
+    background-size: 15px;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.off{
+    background-image: url(img/H5_select_text.png);
+    background-size: 15px;
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.subcontent {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.subcontent span {
+    margin-left:15px;
+    height:200px;
+}
+
+.cover {
+    margin-left: 93px;
+    margin-top: 22.6px;
+    width: 178px;
+    height: 178px;
+    border-radius: 92px;
+    overflow: hidden;
+}

@@ -1,0 +1,65 @@
+html {
+    background-color:#002b41;
+}
+
+#big-focus {
+    width: 535px;
+    height: 353px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#big-focus ul {
+    height: 353px;
+    position: absolute;
+}
+
+#big-focus ul li {
+    float: left;
+    width: 535px;
+    height: 353px;
+    overflow: hidden;
+    position: relative;
+}
+
+#focus {
+    width: 172px;
+    height: 172px;
+    overflow: hidden;
+    position: relative;
+}
+
+#focus ul {
+    height: 172px;
+    position: absolute;
+}
+
+#focus ul li {
+    float: left;
+    width: 172px;
+    height: 172px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+#focus .btn span {
+    display: inline-block;
+    _display: inline;
+    _zoom: 1;
+    width: 25px;
+    height: 10px;
+    _font-size: 0;
+    margin-left: 5px;
+    cursor: pointer;
+    background: #fff;
+}
+
+#mobile_manage_box {
+    width: 172px;
+    height: 353px;
+    top: 0px;
+    overflow: hidden;
+    position: relative;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>   
+	<link rel="stylesheet" type="text/css" href="../skins/personcenter/css/orderfollow.css">
+	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jumppage.js"></script>
+	<script type="text/javascript" src="../personcenter/orderfollow.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<title>HC服务号</title>
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+
+
+</head>
+<body>
+<!--/viewbox整个可视窗口-->
+<div class="viewbox">
+ <!--/header头部-->
+
+<header>
+			<div class="head-warp">
+				<ul>
+					<li class="li-lt">
+						<a href="javascript:void(0);" id="backPage">
+							<span>
+<!-- wgd 2016.07.28要求返回为全部订单页面 	<img  src="../skins/personcenter/img/nav_return_b.png" style="width:19px;margin-top:14px;" class="back"/> -->
+								<img  src="../skins/personcenter/img/nav_return_b.png" style="width:19px;margin-top:14px;"/>
+							</span>
+						</a>
+					</li>
+					<li><span style="font-size:1.8rem; line-height:50px;color:#505050;">订单跟踪</span></li>
+				</ul>
+			</div>
+		</header>
+<!--/header头部-->
+<div class="clear"></div>
+<!--/section内容-->
+<section>
+<div class="logistics">
+  <div class="process">
+    <div class="cost"><p class="stepText"  id="t1">下单</p><img src="../skins/personcenter/img/yuan1.png" class="yuan" id="quan1"></div>
+    <div class="line"><img src="../skins/personcenter/img/line1_03.png" id="xian2"></div>
+    <div class="cost"><p class="stepText"  id="t2">付款</p><img src="../skins/personcenter/img/yuan1.png" class="yuan" id="quan2"></div>
+    <div class="line"><img src="../skins/personcenter/img/line1_03.png" id="xian3"></div>
+    <div class="cost"><p class="stepText"  id="t3">配货</p><img src="../skins/personcenter/img/yuan1.png" class="yuan" id="quan3"></div>
+    <div class="line"><img src="../skins/personcenter/img/line1_03.png" id="xian4"></div>
+    <div class="cost"><p class="stepText"  id="t4">出库</p><img src="../skins/personcenter/img/yuan1.png" class="yuan" id="quan4"></div>
+    <div class="line"><img src="../skins/personcenter/img/line1_03.png" id="xian5"></div>
+    <div class="cost"><p class="stepText"  id="t5">完成</p><img src="../skins/personcenter/img/yuan1.png" class="yuan" id="quan5"></div>
+  </div>
+</div>
+<div class="followmsg">
+<ul>
+  <li class="followmsg-lt">跟踪信息：</li>
+  <li class="followmsg-rt" id="wlcontent"></li>
+</ul> 
+</div>
+<div class="message">
+<span>
+  <ul>
+    <li class="message-lt"><div  class="troye"><img src="img/icon_user_grae.png" id="goodimg"></div></li>
+    <li class="message-rt"><div class="servermsg1" id="goodmsg"></div><div class="servermsg2"><span id="goodprice">0.00</span></div></li>
+  </ul>
+</span>
+<div class="explian">
+	  <ul>
+	    <li><p>下单日期&nbsp;:</p>&nbsp;<p  id="createdate"></p></li>
+	    <li><p>订单号&nbsp;:</p>&nbsp;<p id="ordernum"></p></li>
+	    <li><p>收件地址&nbsp;:</p>&nbsp;<p id="addr_get"></p></li>
+	    <li><p>收件人&nbsp;:</p>&nbsp;<p id="name"></p></li>
+	    <li><p>发票类型&nbsp;:</p>&nbsp;<p id="fapiaotype"></p></li>
+	    <li><p>发票抬头&nbsp;:</p>&nbsp;<p id="taitou">个人</p></li>
+	    <li><p>订单金额&nbsp;:</p>&nbsp;<p>￥<p id="zonge"></p></li>
+	    <li><p>返现&nbsp;:</p>&nbsp;<p>￥0.00</p></li>
+	    <li><p>运费&nbsp;:</p>&nbsp;<p>￥<p id="yun">0.00</p></p></li>
+	    <li><p>实付金额&nbsp;:</p>&nbsp;<p>￥<p id="shipay"></p></li>
+	  </ul>
+	</div>
+</div>
+</section>
+<!--/section内容-->
+</div>
+<!--/viewbox整个可视窗口-->
+</body>
+
+</html>

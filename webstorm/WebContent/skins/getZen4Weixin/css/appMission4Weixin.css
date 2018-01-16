@@ -1,0 +1,167 @@
+@charset "utf-8";
+html {
+    margin: 0;
+    padding: 0;
+    height: 667px;
+    /*height: 1350px;*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    /*height: 1350px;*/
+    overflow-x: hidden;
+    bottom: 0;
+    /*background-color: #dfdfdf;*/
+}
+
+#mainDiv {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    /*border: solid 1px #f00;*/
+    /*padding: 10px;*/
+    background-color: white;
+}
+
+.item {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 92%;
+    height: 7%;
+    border-bottom: solid 1px #dfdfdf;
+    /*font-size: 12px;*/
+    /*margin: 10px;*/
+}
+
+.title {
+    /*font-size: 16px;*/
+    /*line-height: 20px;*/
+    font-size: 1.4em;
+    height: 40%;
+    line-height: 1.5em;
+    color: black;
+}
+
+.content {
+    /*line-height: 14px;*/
+    float: left;
+    height: 100%;
+    width: 60%;
+    position: relative;
+    left: 10%;
+}
+
+.alink {
+    display: none;
+    text-decoration: none;
+}
+
+#loaddiv {
+    /*display: none;*/
+    height: 5%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#load_more_icon {
+    position: relative;
+    left: 42%;
+    top: 23%;
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+#load_more_lable {
+    display: block;
+    height: 100%;
+    line-height: 3.5em;
+    font-size: 1.5em;
+}
+
+.icon {
+    float: left;
+    height: 100%;
+    width: 14%;
+}
+
+.icon_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+}
+
+.app_info {
+    position: relative;
+    top: 10%;
+    height: 25%;
+    width: 100%;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
+.size {
+    height: 100%;
+    float: left;
+}
+
+.download_total {
+    height: 100%;
+    float: left;
+    position: relative;
+    left: 2%;
+}
+
+.sub_title {
+    height: 25%;
+    width: 100%;
+    position: relative;
+    top: 8%;
+    line-height: 1.5em;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.button {
+    float: left;
+    position: relative;
+    left: 14%;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+}
+
+.button_redirect {
+    text-decoration: none;
+}
+
+.button_text {
+    height: 60%;
+    width: 50%;
+    margin-top: 20%;
+    margin-left: 15%;
+    background-image: url(../img/zl_btn_green_n.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*background-position:;*/
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #1FBED9;
+}
+
+
+
+

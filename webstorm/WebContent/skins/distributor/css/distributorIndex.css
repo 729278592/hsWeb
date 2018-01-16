@@ -1,0 +1,211 @@
+@CHARSET "UTF-8";
+body {
+	font-family: 'Microsoft Yahei', "微软雅黑", arial, "宋体", sans-serif;
+	-webkit-user-select: none;
+	background-color: #e5e5e5;
+	position:relative;
+	overflow:auto !important;
+	font-size:0.9rem;
+	-webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+
+ul,li,p,img,dl,dd,dt,b {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lf {
+	float: left;
+}
+
+.rg {
+	float: right;
+}
+:focus{outline:0;}
+/*标头*/
+header {
+	width: 100%;
+	background: url(../images/myeffect_bg.png);
+	background-size: 100% 100%;
+	overflow:hidden;
+	padding:4% 0 0 0;
+}
+
+/*标头里面内容*/
+header .mypartner {
+	overflow:hidden;
+	width: 98%;
+	height: auto;
+	font-size: 1.1rem;
+	color: #fff;
+	position:relative;	
+}
+#tixian{
+    position: absolute; 
+     font-size: 13px; 
+     transform: translate(0%, -50%);
+    top: 50%;
+    right: 6px;
+
+}
+.getCloud{font-size:0.9rem;}
+
+/*返回箭头*/
+header .mypartner .return {
+	margin:0 3%;
+}
+header .mypartner .return img{
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2rem;
+    position: relative;
+    bottom: 0.2rem;
+}
+/*end*/
+
+/*头像begin*/
+.detail {
+	width:100%;
+	overflow:hidden;
+	height:auto;
+	padding:5% 0 5% 6%;
+	color: #fff;
+}
+.tx {
+	/* width:20%; */
+	height:auto;
+	position:relative;
+}
+.tx img {
+	width:4rem;
+	height:4rem;
+	border-radius:50%;
+	margin:0 auto;
+	border:2px solid #fff;
+	background:#fff;
+	background-clip: padding-box;
+}
+
+/*头像end*/
+
+
+/*用户昵称*/
+.vip {
+	width: 60%;
+	height:auto;
+	float:left;
+	margin-left:5%;	
+}
+.vip p{
+	font-size:1.05em;
+	line-height:1.3rem;
+}
+.vip #uname {
+	margin-top:4px;
+	font-size:1.2em;
+	
+}
+/* .address{
+	width: 100%;
+overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+} */
+.total span {
+	color: #fff;
+	
+	line-height:2em;
+	margin-right:8%;
+	
+}
+.total span span{
+	display:inline-block;
+	position:relative;
+	top:-0.25em;
+	
+}
+
+
+section {
+	width: 100%;
+	overflow: hidden;
+}
+
+section .top {
+	background-color: #e65100;
+}
+
+section .main {
+	height: 70%;
+	font-size:0.9rem;
+}
+.top {
+	color: #fff;
+	font-size: 1.2em;
+	text-align: center;	
+	padding:2% 0;
+}
+.top div{
+	
+}
+.top div span{
+	font-size:1.5em;	
+}
+.top .vip1 {
+	width: 49%;	
+	display: inline-block;	
+}
+.ttop {
+	border-right: 1.5px solid #ff620d;
+}
+.vip1 p {
+	font-size: 0.8em;
+}
+.num_box{
+	background:#fff;
+	width:100%;
+}
+.Time {
+    text-align: center;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #505050;
+    
+}
+
+.Time b {
+    display: inline-block;
+    position: relative;
+    width:30px;
+}
+.Time b img {
+    width: 22px;
+    position:relative;
+    top:6px;
+}
+.left_button {
+    margin-right: 10px;
+}
+.right_button {
+    margin-left: 10px;
+}
+.num_list li{
+	line-height:3rem;
+	padding:0px 3%;
+	border-top:1px solid #e5e5e5;
+	color:#0c0c0c;
+	font-size:14px;
+} 
+.num_list li span{
+	float:right;
+	color:#ff620d;
+	font-size:16px;
+}
+.num_list,.show_box1,.show_box2,.show_box3{
+	margin-bottom:0.6em;
+}
+.show_box1,.show_box2,.show_box3{
+	background:#fff;
+	padding:0.5em 3%;
+}

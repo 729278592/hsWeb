@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>V客中心</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                智油惠
+                <div class="right nav_block">
+                    <a href="shoppingCat.html" class="shop_cat"></a>
+                    <a class="dot_block"></a>
+                    <ul class="nav_link">
+                        <li>
+                            <a href="index.html">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="shopMall.html">
+                                精选商城
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gasStationInfor.html">
+                                马上加油
+                            </a>
+                        </li>
+                        <li>
+                            <a href="personCenter.html">
+                                会员中心
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bd">
+                <div class="vkHead">
+                    <div class="vhh">您选择的消费额度为</div>
+                    <div class="vhc">￥1000.00/月</div>
+                    <div class="vhb hide">
+                        本月还差
+                        <span class="color">￥1222</span>
+                        获得红包
+                    </div>
+                    <div class="vhb">
+
+
+
+                        恭喜您已获得
+                        <span class="color">￥1222</span>
+                        元的红包 <br>
+
+                        <span class="fs14">
+                            温馨提示：红包于下月初统一发放，请在发放日注意查收！
+                        </span>
+                    </div>
+                </div>
+                <div id="pullrefresh">
+                    <div class="invoice style" id="invoice">
+                        <ul class="invoiceList bg style">
+
+                          <li>
+                              <a class="clearfix invoiceHead style" href="orderList.html">
+                                  <div class="inline_block style pl15">
+                                      <span class="left">本月 </span>
+                                      <span class="right"><i class="fa fa-angle-right"></i></span>
+                                  </div>
+                              </a>
+                          </li>
+                            <li>
+                                <a class="clearfix invoiceHead style" href="orderList.html">
+                                    <div class="inline_block style pl15">
+                                        <span class="left">上月 </span>
+                                        <span class="right"><i class="fa fa-angle-right"></i></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script>
+        $(function(){
+
+            $("#invoice").delegate(".invoiceHead","click",function(){
+                var invoiceCon = $(this).closest("li").find(".invoiceCon");
+                if(invoiceCon.css("display")=="none"){
+                    invoiceCon.slideDown();
+                    $(this).closest("li").siblings("li").find(".invoiceCon").slideUp();
+                    $(this).find(".fa-angle-right").removeClass("fa-angle-right").addClass("fa-angle-down");
+                    $(this).closest("li").siblings("li").find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
+                }else{
+                    invoiceCon.slideUp();
+                    $(this).find(".fa-angle-down").removeClass("fa-angle-down").addClass("fa-angle-right");
+                }
+            });
+
+        })
+    </script>
+</body>
+</html>

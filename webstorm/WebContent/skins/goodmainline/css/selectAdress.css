@@ -1,0 +1,79 @@
+html *{
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /*firfox*/
+	-webkit-box-sizing:border-box; /*safari*/
+	-webkit-user-drag:none;
+}
+body{
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 736px;
+	height: 100%;
+	background-color: #f8f8f8;
+	font-family: Helvetica;
+	color: #505050;
+}
+p,ul,li,dl,dt,dd {
+	margin: 0;
+}
+ul,li{
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border:none;
+}
+
+.adress_title{
+	overflow: hidden;
+	border-bottom: 0.1rem #e5e5e5 solid;
+	padding: 1.1rem 0 1.1rem 1rem;
+}
+.adress_title img,.adress_title span{
+	float: left;
+}
+.adress_title img{
+	width: 1.5rem;
+	height: auto;
+	margin-right: 2%;
+}
+.adress_title span{
+	font-size: 1.2rem;
+}
+
+.adress_name{
+	background-color: #fff;
+	text-align: center;
+	overflow: hidden;
+	border-bottom: 0.1rem #e5e5e5 solid;
+}
+.adress_name ul li {
+	width: 33.33%;
+	float: left;
+	font-size: 0.9rem;
+	padding: 1.2rem 0 1.1rem 0;
+}
+
+.adress_list ul li {
+	font-size: 0.9rem;
+	padding: 1rem 0 1rem 1rem;
+	border-bottom: 0.1rem #e5e5e5 solid;
+}
+
+.current1{
+	color: #ff620d;
+	border-bottom: 0.2rem #ff620d solid;
+}
+
+.current2{
+	color: #ff620d;
+	background-color: #e5e5e5;
+}
+
+

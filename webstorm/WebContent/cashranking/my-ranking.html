@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../css/swiper.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src='../js_new/main.js'></script>
+</head>
+<body>
+	<div class='my-ranking-bg money-bg'>
+		<div class='top'>
+			<div class='icon icon-arrow'></div>我的排行
+		</div>
+		<div class='container content'>
+			<div class='son'>
+				<ul id='shows'>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type='text/javascript'>
+	//排行
+	$.ajax({
+		url : '../user/loadUserRanking.do',
+		type : 'POSt',
+		dataType : 'JSON',
+		async : true,
+		success: function(d){
+			$('#shows').html('');
+			var _li ='';
+			for(var i=0; i<d.firstObj.length; i++){
+				var origin2 = d.firstObj[i][1];
+				if (origin2.substring(0,7) == 'http://') {
+				} else {
+					origin2 = "../user/rankingDown.do?filename=" + origin2;
+				}
+				_li += '<li>'
+							+'<span class="li-number">'+(i+1)+'</span>'
+							+'<div class="head">'
+								+'<span class="img-box">'
+									+'<img src="'+origin2+'"/>'
+								+'</span>'
+								+'<span class="grade">VIP'+d.firstObj[i][4]+'</span>'
+							+'</div>'
+							+'<div class="head-content">'
+								+'<span class="name">'+d.firstObj[i][2]+'</span>'
+								+'<span class="name-num">一级帮赚'+d.firstObj[i][3]+'枚</span>'
+							+'</div>'
+							+'<span class="li-num">+￥'+d.firstObj[i][5]+'</span>'
+						+'</li>';
+			}
+			$('#shows').append(_li);
+		}
+	});
+	$('.icon').click(function(){
+		history.go(-1);
+	});
+</script>
+</html>

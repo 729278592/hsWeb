@@ -1,0 +1,81 @@
+.slick-prev, .slick-next {
+    width: 28px;
+    height: 153px;
+    top: 10px;
+    background: rgba(0, 0, 0, .2);
+    color: #232323;
+    display: none !important;
+    text-align: left;
+}
+
+.slick-prev {
+    left: 0px;
+
+}
+
+.slick-next {
+    right: 0px;
+}
+
+.slider:hover .slick-prev, .slider:hover .slick-next {
+    display: block !important;
+}
+
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
+    background: rgba(0, 0, 0, .2);
+}
+
+.slick-prev:before, .slick-next:before {
+    font-weight: 900;
+    font-family: simsun;
+    font-size: 22px;
+    color: #232323;
+    text-align: center;
+    padding: 0px 8px;
+}
+
+.slick-prev:before {
+    content: "\003C";
+}
+
+.slick-next:before {
+    content: "\003E";
+}
+
+.slick-dots {
+    bottom: -7px;
+}
+
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+}
+
+.slick-dots li:first-child {
+    margin-left: 0px;
+}
+
+.slick-dots li:last-child {
+    margin-right: 0px;
+}
+
+.slick-dots li button:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    color: #5a5a5a;
+    font-size: 0px;
+    opacity: 1;
+    background: #5a5a5a;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    background: #fff;
+    opacity: 1;
+}
+
+.slick-slider {
+	margin-bottom: 0px;
+}
+

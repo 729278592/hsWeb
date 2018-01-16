@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../css/index.css">
+	<script src='../js_new/main.js'></script>
+</head>
+<body>
+	<div class='address-bg addressList-bg'>
+		<div class='address-top'>
+			<span class='icon' id='return'></span>地址管理
+		</div>
+		<div class='address-list'>
+			<ul class='list' id='addList'>
+				
+			</ul>
+		</div>
+		<div class='address-btm'>
+			<div class='address-ipt'>新增地址</div>
+		</div>
+	</div>
+	<!-- 确认删除 -->
+	<div class='alert-bg hide'>
+		<div class='alert-content'>
+			<div class='title'>提示</div>
+			<div class='content'>您确定要删除该地址吗？</div>
+			<div class='bottom'>
+				<div class='left' id='cancle'>取消</div>
+				<div class='right' id='sure'>确定</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src='../js_new/zepto.min.js'></script>
+<script type='text/javascript'>
+	$(function(){
+		/*$(document).on('click','#default',function(){
+			if($(this).hasClass('selected')){
+				return false;
+			}else{
+				$('.default').removeClass('selected');
+				$(this).addClass('selected');
+				$('.default-ipt').prop('checked',false);
+				$(this).find('.default-ipt').prop('checked',true);
+			}
+		});*/
+		//返回
+		/*返回并刷新数据*/
+		var isPageHide = false; 
+		window.addEventListener('pageshow', function () { 
+		    if (isPageHide) { 
+		      window.location.reload(); 
+		    } 
+		  }); 
+		  window.addEventListener('pagehide', function () { 
+		    isPageHide = true; 
+		  }); 
+		/*结束*/
+		$('#return').on('click',function(){
+			history.go(-1);
+			return false;
+		});
+		//删除
+		var idds='';
+		$(document).on('touchstart','.delete',function(){
+			idds = $(this).attr('ids');
+			$('.alert-bg').removeClass('hide');
+		});
+		//确认删除地址
+		function sureAddress(id){
+			$.ajax({
+				url : '../address/delAddress.do',
+				data : {"addId":id},
+				type : 'POST',
+				dataType : 'json',
+				success: function(e){
+					getAddress();
+				}
+			});
+		}
+		//取消
+		$(document).on('touchstart','#cancle',function(){
+			$('.alert-bg').addClass('hide');
+		});
+		//确定
+		$(document).on('touchstart','#sure',function(){
+			sureAddress(idds);
+			idds='';
+			$('.alert-bg').addClass('hide');
+		});
+		//新增地址
+		$('.address-ipt').on('touchstart',function(){
+			window.location="../address/saveAddress.html";
+		});
+		//编辑地址
+		$(document).on('touchstart','.edit',function(){
+			var ids = $(this).attr('ids');
+			window.location="../address/editAddress.html?ids="+ids;
+		});
+		//设置默认地址
+		$(document).on('touchstart','#default',function(){
+			if($(this).hasClass('selected')){
+				return false;
+			}
+			var mid = $(this).attr('ids');
+			$.ajax({
+				url : '../address/completeAddress.do',
+				data : {"addId":mid,"defStatus":"0"},
+				type : 'POST',
+				dataType : 'JSON',
+				success : function(result){
+					getAddress();
+				}
+			});
+		});
+		//得到地址
+		function getAddress(){
+			$('#addList').html('');
+			$.ajax({
+				url : '../address/loadAddress.do',
+				type : 'POST',
+				dataType : 'JSON',
+				async : false,
+		       	success: function (d) {
+		       		d = JSON.parse(d);
+		       		//alert(JSON.stringify(d));
+		       		//return false;
+		    	   //数据列表
+		    	   var length = d.length;
+		    	   var li='';
+		    	   for(var i=0; i<length; i++){
+		    		   //是否为默认地址
+		    		   var j = d[i].m_default;
+		    		   if(j==0){
+		    			   li+= "<li>"
+								+"<span class='name'>"+d[i].m_user_name+"</span>"
+								+"<span class='tel'>"+d[i].m_phone+"</span>"
+								+"<span class='address'>"+d[i].m_address+"</span>"
+								+"<div class='bottom'>"
+									+"<span class='default selected' id='default' ids="+d[i].m_id+">"
+										+"<input type='checkbox' class='default-ipt' checked='checked'/>"
+										+"<i class='icon'></i>默认地址"
+									+"</span>"
+									+"<span class='right'>"
+									+"<span class='edit' ids="+d[i].m_id+">编辑</span>"
+										+"<span class='delete' ids="+d[i].m_id+">删除</span>"
+									+"</span>"
+								+"</div>"
+							+"</li>";
+		    		   }else{
+		    			   li+= "<li>"
+								+"<span class='name'>"+d[i].m_user_name+"</span>"
+								+"<span class='tel'>"+d[i].m_phone+"</span>"
+								+"<span class='address'>"+d[i].m_address+"</span>"
+								+"<div class='bottom'>"
+									+"<span class='default' id='default' ids="+d[i].m_id+">"
+										+"<input type='checkbox' class='default-ipt'/>"
+										+"<i class='icon'></i>默认地址"
+									+"</span>"
+									+"<span class='right'>"
+										+"<span class='edit' ids="+d[i].m_id+">编辑</span>"
+										+"<span class='delete' ids="+d[i].m_id+">删除</span>"
+									+"</span>"
+								+"</div>"
+							+"</li>";
+		    		   }
+		    	   }
+		    	   $('#addList').html(li);
+		        }
+			});
+		}
+		getAddress();
+	});
+</script>
+</html>

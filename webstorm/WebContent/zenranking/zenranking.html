@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+   	<link rel="stylesheet" href="../css/swiper.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src='../js_new/main.js'></script>
+</head>
+<body>
+	<div class='money-bg jfzc-bg'>
+		<div class='money-top'>
+			<div class='top-title'>
+				<span class='icon return1'></span>
+				<span class='left'>积分资产</span>
+				<span class="li-rt" id="list-m" style='margin-top: -14px;'><a href="javascript:void(0);">
+					<span><img src="../skins/personcenter/img/gdetails_list_b.png" width="18px"></span>
+					  <ul class="menu-list">
+					    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+					    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+					    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+					    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+					 </ul>						  
+					</a>
+				</span>
+				<span class='right' id="zenshop" style='margin-right: 0;'>积分商城</span>
+			</div>
+			<div class='swiper swiper-container'>
+				<div class="swiper-wrapper">
+					<div class='top-cont swiper-slide'>
+						<span class='num' id="day_money">0</span>
+						<span class='title'>今天收益/积分</span>
+					</div>
+					<div class='top-cont swiper-slide'>
+						<span class='num' id="week_money">0</span>
+						<span class='title'>本周收益/积分</span>
+					</div>
+					<div class='top-cont swiper-slide'>
+						<span class='num' id="month_money">0</span>
+						<span class='title'>本月收益/积分</span>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			</div>
+			<div class='top-btm' id="available">
+				<div class='left'>
+				<span class='num' id="cash">0</span>
+				<span class='title'>可用积分</span>
+			</div>
+			<div class='line'></div>
+			<div class='right' id="has">
+				<span class='num' id="cashing">0</span>
+				<span class='title'>已兑积分</span>
+			</div>
+			</div>
+		</div>
+		<div class='share'>
+		
+		</div>
+		<section style='overflow: auto; margin-bottom: .3584rem;'>
+		<div class='content'>
+			<div class='container'>
+				<div class='son'>
+					<div class='nav-title'>
+						<span class='title'>累计收益</span>
+						<span class='num count_num'></span>
+					</div>
+					<!-- <ul>
+						<li>
+							<div class='head-content'>
+								<span class='name'>签到</span>
+								<span class='name-num'>解冻日期：2017-03-21</span>
+							</div>
+							<span class='li-num'>+2.00</span>
+						</li>
+						<li>
+							<div class='head-content'>
+								<span class='name'>签到</span>
+								<span class='name-num'>解冻日期：2017-03-21</span>
+							</div>
+							<span class='li-num'>+2.00</span>
+						</li>
+						<li>
+							<div class='head-content'>
+								<span class='name'>签到</span>
+								<span class='name-num'>解冻日期：2017-03-21</span>
+							</div>
+							<span class='li-num'>+2.00</span>
+						</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+		</section>
+	</div>
+	<div class='jf-btm'>
+		<span class='blueBg' id='adds'>增加收益</span>
+	</div>	
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../zenranking/zenranking.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../personcenter/commlist.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<script type='text/javascript' src="../js_new/swiper.js"></script>
+<script type='text/javascript'>
+	/*var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		autoplay: 3000 
+	});*/
+	loadQrcode();
+</script>
+</html>

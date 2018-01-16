@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" type="text/css" href="../skins/closeaccount/css/comm.css">
+<link rel="stylesheet" type="text/css" href="../skins/css/util.css">
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../closeaccount/closeaccount.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<title>HC服务号</title>
+</head>
+<body>
+	<div class="viewbox">
+	
+		<!-- 隐藏信息 -->
+		<input type="hidden" id="addressId"><!-- 地址ID -->
+		<input type="hidden" id="goodsId"><!-- 商品ID -->
+		<input type="hidden" id="buyNum" value="1"><!-- 购买商品数量-暂时默认为1 -->
+	
+		<section style="max-width: 700px; height: 35rem; min-width: 320px; background: #e5e5e5; position: absolute; left: 0px; right: 0px; margin-left: auto; margin-right: auto; margin-top: 0.2rem;">
+		
+			<div class="toptit" style="width: 100%; height: auto; background: #ffffff; top: 0; left: 0; margin-top: -1.3rem;">
+				<ul style="width: 100%; height: 5rem; margin-left: 1em;">
+					<li style="width: 82%; height: 5rem; float: left; border-bottom: 1px solid #dcdcdc;">
+						<p style="font-size: 1.9em; color: #1a2026; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: center; margin-top: 1em; margin-left: 0.2em;">配送方式</p>
+					</li>
+					<li style="width: 17%; height: 5rem; float: left; border-bottom: 1px solid #dcdcdc; text-aline: right;"><h2
+							style="font-size: 2em; color: #909090; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; margin-top: 1em; text-aline: right;">配送</h2>
+					</li>
+				</ul>
+				<!-- 动态地址显示 -->
+				<div class="toptwo" style="width: 100%; height: 7rem; background: #ffffff;">
+					<ul id="addList">
+
+					</ul>
+				</div>
+			</div>
+			<nav style="width: 100%; height: 6rem; background: #ffffff; margin-top: 1.5rem;">
+				<ul style="width: 100%; height: 6rem; background: #ffffff;">
+					<li
+						style="width: 30%; height: 6rem; float: left; line-height: 6rem;">
+						<label for="invoice" style="font-size: 1.9em; color: #1a2026; font-family: '微软雅黑'; margin-left: 0.5em;">发票抬头</label>
+					</li>
+					<li style="width: 70%; height: 6rem; float: left; line-height: 6rem;">
+						<input type="text" id="fapiao" name="invoice" style="width: 85%; height: 50%; margin-left: 1em; border: 1px solid #dcdcdc;" />
+					</li>
+				</ul>
+			</nav>
+
+			<div class="toptit2" style="width: 100%; height: 13rem; background: #ffffff; top: 0; left: 0; margin-top: 2rem;">
+				<ul
+					style="width: 100%; height: 5rem; border-bottom: 1px solid #dcdcdc;">
+					<li style="width: 5%; height: 2.0rem; float: left; margin-top: 1.5em; margin-left: 1rem;">
+						<nav style="width: 90%; height: 2.0rem;">
+							<img style="width: 18px; height: 20px;" alt="" src="../skins/closeaccount/img/oppo.png">
+						</nav>
+					</li>
+					<li style="width: 72%; height: 5rem; float: left;">
+						<p style="font-size: 1.9em; color: #1a2026; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; margin-top: 1em; margin-left: 0.7em;">HC自营</p>
+					</li>
+
+					<li style="width: 15%; height: 5rem; float: left; text-aline: right;">
+						<h2 style="font-size: 1.6em; color: #909090; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; margin-top: 1.3em; text-aline: right;" id="mxf"></h2>
+					</li>
+				</ul>
+				
+				<div class="produce" style="width: 90%; height: 8rem;">
+					<ul style="width: 100%; height: 8rem;" id="goodsContent">
+					</ul>
+				</div>
+			</div>
+			<div class="prices"
+				style="width: 100%; height: 12rem; background: #ffffff; top: 0; left: 0; margin-top: 1.5rem;">
+				<ul style="width: 100%; height: 5rem;">
+					<li style="width: 70%; height: 5rem; float: left; border-bottom: 1px solid #dcdcdc;">
+						<p style="font-size: 1.9em; color: #1a2026; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: center; margin-top: 0.5em; margin-left: 0.5em;">商品价格</p>
+					</li>
+					<li style="width: 30%; height: 5rem; float: left; border-bottom: 1px solid #dcdcdc; text-aline: right;">
+						<h2 style="font-size: 2em; color: #ff0000; font-family: '微软雅黑'; font-weight: 500; line-hight: 5rem; margin-top: 0.5em; margin-left: 0.5em; text-aline: right;" id="syjg"></h2>
+					</li>
+				</ul>
+				<div class="toptwo2"
+					style="width: 100%; height: 7rem; background: #ffffff;">
+					<ul>
+						<li style="width: 70%; height: 7rem; float: left; line-height: 7rem;">
+							<ul style="width: 100%; height: 5rem; margin-top: -1em; margin-left: 1em;">
+								<li style="width: 100%; height: 2rem; float: left;">
+									<p style="font-size: 1.5em; color: #787575; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: center; margin-left: 0.2em;">购买返现</p>
+								</li>
+								<li style="width: 100%; height: 2rem; float: left;">
+									<p style="font-size: 1.5em; color: #787575; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: center; margin-left: 0.2em;">运费</p>
+								</li>
+							</ul>
+						</li>
+						<li style="width: 30%; height: 7rem; float: left; text-aline: right; line-height: 7rem;">
+							<ul style="width: 100%; height: 7rem; margin-top: -1em; margin-left: 1em;">
+								<li style="width: 100%; height: 2rem; float: left;">
+									<p style="font-size: 1.7em; color: #ff0000; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: right; margin-left: 0.2em;" id="gmfx"></p>
+								</li>
+								<li style="width: 100%; height: 2rem; float: left;">
+									<p style="font-size: 1.5em; color: #ff0000; font-family: '微软雅黑'; font-weight: normal; line-hight: 5rem; text-aline: right; margin-left: 1.5em;" id="xf"></p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<ul>
+				<li style="width: 60%; height: 5em; float: left;">
+					<p style="line-height: 2.5em; font-size: 2em; color: #8d8d8d; margin-left: 1em;">
+						应付金额:<a style="color: #ff0000; font-family: '微软雅黑'; font-weight: 500;" id="yfje"></a>
+					</p>
+				</li>
+				<li style="width: 40%; height: 5em; float: left; line-height: 5.5em;" id="subOrder">
+					<a href="javascript:void(0);">
+						<input type="submit" style="width: 70%; height: 80%; line-height: 1.5em; background: #e21d1d; border-radius: 5px; font-size: 2em; color: #fff; margin-left: 1em;" value="提交订单" class="butSub">
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+
+</html>

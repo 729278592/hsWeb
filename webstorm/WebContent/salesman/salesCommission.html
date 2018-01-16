@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  	<link rel="stylesheet" type="text/css" href="../skins/css/util.css">
+  	<link rel="stylesheet" type="text/css" href="../skins/salesman/css/salesCommission.css">
+  	
+  	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="../salesman/salesCommission.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+	<script type="text/javascript" src="../personcenter/commlist.js"></script>
+  <title>促销专员</title>
+</head>
+<body>
+<header>
+<div class="head-warp">
+				<ul>
+					<li class="li-lt" id="backPage">
+							<span>
+								<img  src="../skins/personcenter/img/nav_return_b.png" class="back"/>
+							</span></a>
+					</li>
+					<span style="font-size:18px; line-height:50px; float:left;color:#505050;">销售代表详情</span>
+					<li class="li-rt" id="list-m">
+						<span><img src="../skins/personcenter/img/gdetails_list.png"></span>
+						  <ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+					</li>
+				</ul>
+			</div>
+
+<div class="sales_title">
+		<div class="touxiang"><img src="../skins/personcenter/img/icon_user_gray.png" id="headimg"/></div>
+		<div class="title_inf">
+			<p  id="name"><span class="name" id="sellername"></span>
+			<span class="grade"></span></p>
+			<p><span class="star">
+			</span><span></span></p>
+			<p class="hao">好评率 <span id="haoping"></span></p>
+		</div>
+	</div>
+	<div class="ads">
+		<span>所属门店</span>
+		<p id="shopmsg"></p>
+		<span><a id="toshop"><img src="../skins/personcenter/img/arr_rt.png"></a></span>
+	</div>
+</header>
+<section>
+<p class="store">推荐商品</p>
+<ul id="goodlist">
+	
+</ul>
+</section>
+<footer>
+	<div class="flortfoot">
+	<ul>
+	<li>
+	<a id="tel">
+	<img src="../skins/salesman/images/icon_phone.png" style="margin-top:0.4em;">
+	<p>电话</p></li>
+	</a>
+	<li>
+	<a id="sms">
+	<img src="../skins/salesman/images/msg2.png" style="margin-top:1em;">
+	<p>短信</p>
+	</a></li>
+	</ul>
+	</div>
+</footer>
+</body>
+</html>

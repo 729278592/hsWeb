@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+  	<link rel="stylesheet" href="../skins/personcenter/css/venobox.css" type="text/css" media="screen" />
+	<script src="../js/jquery-2.2.1.min.js"></script>
+  	<script type="text/javascript" src="../js/venobox.min.js"></script>
+  	<script type="text/javascript" src="../js/jumppage.js"></script>
+  	<script type="text/javascript" src="../salesman/sevaluation.js"></script>
+  	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+  	<title>我是销售代表</title>
+  	<style type="text/css">
+  	 .pictures{margin-top:1rem;}
+  	 .thumbs li{width: 22%;}
+  	 @charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+}
+ul,li,p{
+  margin:0px;
+  padding:0px;
+  list-style: none;
+}
+a{text-decoration: none;}
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #e8e8e8;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.thumbs li{
+	float:left;
+	width:25%;
+	height:auto;
+	margin-bottom:0.4em;
+	height:7.5rem;
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+    max-width: 100%;
+    min-width: 320px;
+    height: 100%;
+    background:#e5e5e5;
+    margin: 0px auto;
+    font-family:'微软雅黑';
+    top: 0;}
+/*--/header*/
+  header{
+    width: 100%;height: 50px;background:#f8f8f8;margin:0px auto;position:fixed;z-index: 1;
+    left:0px;right:0px;margin-left:auto;margin-right:auto;box-sizing:border-box;border-bottom: 1px solid #dad9d9;}
+  header .head-warp{width: 100%; height: 50px;margin:0px auto;background-position: 4.5px center;box-sizing:border-box;}
+  header .head-warp ul{width:100%;}
+  header .head-warp .li-lt{float:left; height:50px;width:50px;line-height: 50px;text-align:center;}
+  header .head-warp .li-lt a{color: #505050;line-height:50px}
+/*--/header*/
+
+
+/*
+*****
+ */
+ /*--/section*/
+   section{
+       max-width: 736px;height:auto;min-width: 320px;background: #e5e5e5;position: absolute;left:0px;right:0px;
+       margin-left:auto;margin-right:auto;margin-top:2.6rem;padding-bottom: 5rem;}
+/* 评价*/
+   section .evaluate{width:100%;background:#ffffff;top:0;left:0;margin-top:1.0rem;}
+   section .evaluate .topdiv{width:100%;height:5rem;border-bottom:1px solid #dad9d9;}
+   section .evaluate .topdiv ul{width: 100%;height: 5rem;}
+   section .evaluate .topdiv ul li{float: left;height: 5rem;line-height: 5rem;}
+   section .evaluate .topdiv ul .appraise{width: 11%;text-align: right;font-size:1.5em;color:#767474;}
+   section .evaluate .topdiv ul .rate{width: 20%;text-align: left;margin-left:5%;color:#e21d1d;font-size: 1.2em;}
+   section .evaluate .topdiv ul .people{width: 50%;text-align: right;font-size:1.5em;color:#767474;}
+   section .evaluate .topdiv ul .topdiv-rt{width: 14%;text-align: center;}
+   section .evaluate .evaluatelist{width: 100%;color:#505050;}
+   section .evaluate .evaluatelist .list1{width: 100%;height: auto;}
+   section .evaluate .evaluatelist .list1 .number1{width: 100%;height: 5rem;line-height: 5rem;}
+  .evaluate .list1 .number1 div{
+    float:left;
+  }
+  .list1 .number1 .profile_images{
+    width:4em;
+    height:90%;
+    border-radius: 50%;
+    margin: 2% auto 1%;
+  }
+  .list1 .number1 .profile_images img{width:100%;border-radius:50%;}
+  .list1 .number1 .uname{
+    width: 55%;
+	height: 100%;
+	line-height: 2em;
+	padding-top: 2%;
+	padding-left: 2%;
+  }
+  .list1 .number1 .uname p{
+    font-size: 1.5em;
+  }
+  .list1 .number1 .uname span{
+    display:block;
+    width:3em;
+    height:1.3em;
+    background: url(../skins/personcenter/img/bg_vip.png) no-repeat;
+    background-size: 100% 100%;
+    color:#fff;
+    text-align: center;
+    line-height:1.5em;
+  }
+  .list1 .number1 .fenr{width: 28%;}
+  .list1 .number1 .fenr img{width:15%;}
+
+.list1 .number2{
+  text-align: left;
+}
+.list1 .user-picture{width: 100%;height: auto;}
+.list1 .user-picture ul li{float: left;width: 25%;padding: 1.5em 0.5em 0.5em 0.5em;}
+.list1 .user-picture ul li img{width: 100%;}
+
+.list1 .number3{
+   padding: 3% 0px 1%;
+  overflow: hidden;
+}
+.list1 .number3 span{
+  display:block;
+  float:left;
+  color:#868686;
+}
+.list1 .number3 .date{
+float:right;
+}
+.evaluatelist{padding:0px 4%;/* border-bottom:1em solid #f2f2f2; */}
+.specifications .basic ul li span,div{
+  display:inline-block;
+  width:100%;
+
+}
+   .clear{clear: both;}
+  /*--/section*/
+
+/*返回顶部*/
+#backtoTop{
+  right:10px;
+  text-align:right;
+  bottom: 60px;
+  position: fixed;
+  cursor: pointer;
+
+}
+#backtoTop img{
+  width: 40px;
+  height: 40px;
+}
+
+/*--viewbox整个可视窗口--*/
+  	 
+  	</style>
+</head>
+<body>
+<!--/viewbox整个可视窗口-->
+<div class="viewbox">
+
+<header>
+    <div class="head-warp">
+   <ul>
+        <li class="li-lt">
+          <a href="javascript:void(0);" id="backPage" class="back">
+           <span><img src="../skins/salesman/images/nav_return_b.png" style="width:1.9rem;margin-top:14px;"></span></a>          
+        </li>
+        <li><span style="font-size:1.8rem; color: #505050;line-height:50px;">我的评论</span></li>
+      </ul>
+  </div>
+</header>
+<!--/header头部-->
+<div class="clear"></div>
+<!--/section内容-->
+<section>
+        <!-- <div  class="evaluate">
+           <div class="evaluatelist">
+             <div class="list1">
+               <div class="number1">
+                 <div class="profile_images"><img src="../skins/personcenter/img/touxiang.png"></div>
+                  <div class="uname">
+                  <p>咖啡香烟</p>
+                  <span>VIP2</span>
+                  </div>
+                    <div class="fenr">
+                    <img src="../skins/personcenter/img/gdetails_star_gray.png" class="goodstar" onclick="changeStar(1,'good')" id="good1"/>
+                    <img src="../skins/personcenter/img/gdetails_star_gray.png" class="goodstar" onclick="changeStar(2,'good')" id="good2"/>
+                    <img src="../skins/personcenter/img/gdetails_star_gray.png" class="goodstar" onclick="changeStar(3,'good')" id="good3"/>
+                    <img src="../skins/personcenter/img/gdetails_star_gray.png" class="goodstar" onclick="changeStar(4,'good')" id="good4"/>
+                    <img src="../skins/personcenter/img/gdetails_star_gray.png" class="goodstar" onclick="changeStar(5,'good')" id="good5"/>
+                    <input hidden="true" id="goodfen" name="" value="0"/>
+                  </div>
+               </div>
+               <div class="number2">
+                 <p>手机用了两天还不错，就是软件太多，没事就让你升级更新。不过手机通话真不错。</p>
+               </div>
+               <div class="number3">
+                 <span>商品：HC手机电神 5000 Zenfone Max</span>
+                 <span class="date">2016-03-10</span>
+               </div>
+             </div>
+           </div>
+        </div> -->
+</section>
+<!--/section内容-->
+<div id="backtoTop"><img src="../skins/personcenter/img/icon_toTop.png"></div>
+</div>
+<!--/viewbox整个可视窗口-->
+</body>
+<script type="text/javascript" src="../js/stepBar.js"></script>
+<script type="text/javascript">
+		 $(document).ready(function(){
+			$('.venobox').venobox({
+				numeratio: true,
+				border: '20px'
+			});
+			$('.venoboxvid').venobox({
+				bgcolor: '#000'
+			});
+			$('.venoboxframe').venobox({
+				border: '6px'
+			});
+			$('.venoboxinline').venobox({
+				framewidth: '300px',
+				frameheight: '250px',
+				border: '6px',
+				bgcolor: '#f46f00'
+			});
+			$('.venoboxajax').venobox({
+				border: '30px;',
+				frameheight: '220px'
+			});
+		})
+		$(function(){
+	stepBar.init("stepBar", {
+		step : 4,
+		change : true,
+		animation : true
+	});
+});
+	</script>
+</html>
+
+ 

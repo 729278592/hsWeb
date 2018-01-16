@@ -1,0 +1,506 @@
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	height: 100%;
+}
+
+body {
+	height: auto;
+	-webkit-user-select: none;
+	position: relative;
+	background-color: #eee;
+	line-height: 1.2;
+	font-size: 0.9em;
+	font-family: Helvetica;
+	margin: 0 auto;
+	max-width: 736px;
+	min-width: 320px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/* overflow-y:hidden; */
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none
+}
+
+:focus {
+	outline: 0;
+}
+
+img {
+	border-style: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+ol,ul,dl {
+	list-style: none
+}
+
+li {
+	list-style: none
+}
+
+input,button {
+	vertical-align: middle
+}
+
+.clear {
+	display: block;
+	height: 0;
+	clear: both;
+	content: "";
+	overflow: hidden;
+	visibility: hidden
+}
+
+.ehead {
+	width: 100%;
+	height: 50%;
+	background: url(../img/myeffect_bg1.png)
+}
+
+.menu_title { /* height: 40%; */
+	overflow: hidden;
+	position: relative;
+	background-color: #ff620d;
+	background: url(../img/myeffect_bg1.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 24%;
+	padding-bottom: 15%;
+}
+
+.headtitle {
+	position: absolute;
+	left: 3%;
+	top: 6%;
+	z-index: 99;
+}
+
+.headtitle span {
+	float: left;
+	/* margin-left:3%; */
+	color: white;
+	font-size: 1rem;
+}
+
+.effectcount {
+	position: absolute;
+	left: 20%;
+	top: 36%;
+	font-size: 1.3rem;
+	color: white;
+	width: 60%;
+	height: 20%;
+}
+
+#effectnum {
+	font-size: 1.5em;
+}
+
+.effectcount span {
+	display: block;
+	/*margin-left:20%;*/
+	/*margin-top:2%;*/
+	color: white;
+	line-height: 0;
+	/*width:60%;*/
+	/*font-size:2em;*/
+	text-align: center;
+}
+
+.btn {
+	display: block;
+	position: absolute;
+	left: 23%;
+	top: 78%;
+	/* font-size: 1.3rem; */
+	width: 20%;
+	height: 15%;
+	color: #fff;
+	float: left;
+}
+
+.btn1 {
+	display: block;
+	position: absolute;
+	left: 56%;
+	top: 78%;
+	/* font-size: 1.3rem; */
+	width: 20%;
+	height: 15%;
+	color: #fff;
+	float: left;
+}
+
+#vipl,#vipr {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.vip {
+	width: 100%;
+}
+
+#min,#max {
+	position: relative;
+	top: -1.8em;
+}
+
+.btn1 span,.btn span {
+	display: block;
+	line-height: 1.8rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+.div_radar {
+	width: 12rem;
+}
+
+.radar_top {
+	position: absolute;
+	top: -20%;
+	left: 140%;
+	color: white;
+	font-size: 0.7rem;
+	width: 20%;
+}
+
+.radar_left_top {
+	top: 33%;
+	left: 108%;
+	color: white;
+	font-size: 0.7rem;
+	position: absolute;
+	width: 20%;
+}
+
+.radar_left_bottom {
+	top: 85%;
+	left: 119%;
+	color: white;
+	font-size: 0.7rem;
+	position: absolute;
+	width: 20%;
+}
+
+.radar_right_top {
+	top: 33%;
+	left: 172%;
+	color: white;
+	font-size: 0.7rem;
+	position: absolute;
+	width: 20%;
+}
+
+.radar_right_bottom {
+	top: 85%;
+	left: 161%;
+	color: white;
+	font-size: 0.7rem;
+	position: absolute;
+	width: 20%;
+}
+
+.radar_top img,.radar_left_top img,.radar_left_bottom img,.radar_right_top img,.radar_right_bottom img
+	{
+	width: 2rem;
+	height: 2rem;
+}
+
+.radar_top span,.radar_left_top span,.radar_left_bottom span,.radar_right_top span,.radar_right_bottom span
+	{
+	display: block;
+	line-height: 1;
+	width: 100%;
+	text-align: center;
+}
+
+.effectrank {
+	overflow: hidden;
+	padding: 0 3%;
+	color: #505050;
+	background-color: white;
+	border-bottom: 0.1rem #e5e5e5 solid;
+}
+
+.effect_left,.effect_middle,.effect_right {
+	line-height: 3rem;
+}
+
+.effect_left {
+	float: left;
+	font-size: 1rem;
+}
+
+.effect_middle {
+	float: left;
+	font-size: 0.8rem;
+	margin-top: 0.1rem;
+}
+
+.effect_right {
+	float: right;
+	color: #868686;
+	font-size: 0.8rem;
+	margin-top: 0.1rem;
+}
+
+.swiper-container {
+	background-color: #fff;
+	padding: 4% 0;
+	margin-bottom: 0.8rem;
+}
+
+.partner {
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	background-color: white;
+}
+
+.partner_top {
+	position: relative;
+}
+
+.partner_top img {
+	width: 70px;
+	height: 70px;
+	top: 0;
+	margin: 0 auto;
+	display: block;
+	border-radius: 50%;
+}
+
+.partner_vip {
+	position: absolute;
+	right: 20%;
+	bottom: 0;
+	height: 14px;
+	line-height: 14px;
+	border-radius: 0.7rem;
+	padding: 0 5%;
+	border: 1px solid #FF620D;
+	font-size: 12px;
+	background-color: #FF620D;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.partner_foot {
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.partner_foot_top {
+	margin: 0 auto;
+	font-size: 0.9rem;
+	color: #868686
+}
+
+.partner_foot img {
+	margin-left: 1%;
+	height: 1rem;
+	position: relative;
+	top: 0.2rem;
+}
+
+}
+.partner_foot {
+	margin-top: 0.5rem;
+}
+
+.desc_why {
+	background-color: white;
+	padding: 0 3%;
+	color: #868686;
+	line-height: 3rem;
+	border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.main_main_css_01 {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	opacity: 0.4;
+	filter: alpha(opacity = 40)
+}
+
+.mydiv {
+	background-color: white;
+	font-size: 1rem;
+	z-index: 99;
+	width: 80%;
+	left: 10%; /*FF IE7*/
+	top: 12%; /*FF IE7*/
+	position: fixed !important; /*FF IE7*/
+}
+
+@media screen and (min-width:480px) {
+	.mydiv {
+		width: 40%;
+		left: 30%;
+		top: 10px;
+	}
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin-top: 0;
+	/* 删除上边距可以解决边距会超出其包含的 div 的问题。剩余的下边距可以使 div 与后面的任何元素保持一定距离。 */
+	/* padding-right: 15px;
+	padding-left: 15px; */
+	/* 向 div 内的元素侧边（而不是 div 自身）添加填充可避免使用任何方框模型数学。此外，也可将具有侧边填充的嵌套 div 用作替代方法。 */
+}
+
+.bg {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0; /*FF IE7*/
+	filter: alpha(opacity =                     80); /*IE*/
+	opacity: 0.5; /*FF*/
+	z-index: 99;
+	position: fixed !important; /*FF IE7*/
+	position: absolute; /*IE6*/
+	_top: expression(eval(document.compatMode &&           
+                       document.compatMode ==                   
+		 'CSS1Compat') ?   
+		
+		      
+                       documentElement.scrollTop +                      
+		(  
+		       
+		          document.documentElement.clientHeight-this.offsetHeight )/2
+		: 
+		
+		  
+		     
+		         /*IE6*/           
+                       document.body.scrollTop +                       (
+		 
+		        
+		         document.body.clientHeight -          
+		            this.clientHeight )/2 ); /*IE5 IE5.5*/
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 23;
+	background-color: #a9a9a9;
+	overflow: hidden;
+}
+
+footer .footleft,.footmiddle,.footright {
+	float: left;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*firfox*/
+	-webkit-box-sizing: border-box; /*safari*/
+}
+
+footer .footleft,.footmiddle,.footright a {
+	color: #ffffff;
+}
+
+footer .footleft {
+	width: 25%;
+	line-height: 1.0rem;
+	font-size: 0.8rem;
+	background-color: #535353;
+	border-right: 0.1rem #a9a9a9 solid;
+}
+
+footer .footleft img {
+	width: 1.4rem;
+	margin-top: 0.5em;
+}
+
+footer .footmiddle {
+	width: 25%;
+	line-height: 1.0rem;
+	font-size: 0.8rem;
+	background-color: #535353;
+	background-size: 100% 100%;
+}
+
+footer .footmiddle img {
+	width: 1.4rem;
+	margin-top: 0.5em;
+}
+
+footer .footright div {
+	display: inline-block;
+}
+
+footer .footright {
+	width: 100%;
+	background-color: #ff620d;
+	line-height: 50px;
+}
+
+footer .footright span {
+	color: #ffffff;
+	font-size: 1.3em;
+}
+
+@media screen and (max-width: 400px) {
+	.partner_top img {
+		width: 70px;
+		height: 70px;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width:500px) {
+	.partner_top img {
+		width: 90px;
+		height: 90px;
+	}
+}
+
+@media screen and (min-width: 501px) {
+	.partner_top img {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+/*       
+.weixinchuxiao {
+	background-color: #535353;
+	width: 23%;
+	background: url(../img/line_white.png) right top repeat-y;
+}
+
+.copylink {
+	background-color: #535353;
+	width: 27%
+}
+
+.invation {
+	background-color: #ff620d;
+	width: 50%;
+	line-height: 45px;
+	font-size: 1.5em;
+}
+
+.invation dl {
+	color: #FFF
+} */

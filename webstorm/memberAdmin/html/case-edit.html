@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>案例编辑</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content pb50">
+            <div class="edit">
+                <div class="edit_head">
+                    作品标题
+                </div>
+                <div class="edit_body">
+                    <input type="text" id="title" placeholder="请输入标题，可以输入4~32个字">
+                </div>
+            </div>
+            <div class="edit">
+                <div class="edit_head">
+                    房型
+                </div>
+                <div class="edit_body">
+                    <input type="text" id="apartment" placeholder="请输入房型，如住宅、公寓、别墅">
+                </div>
+            </div>
+            <div class="edit">
+                <div class="edit_head">
+                    大小
+                </div>
+                <div class="edit_body">
+                    <input type="text" id="size" placeholder="请输入房屋大小，如45m²">
+                </div>
+            </div>
+            <div class="edit">
+                <div class="edit_head">
+                    预算
+                </div>
+                <div class="edit_body">
+                    <input type="text" id="budget" placeholder="请输入预算，如45W">
+                </div>
+            </div>
+        </div>
+        <div class="ft">
+            <a class="apply_btn" id="saveBtn">保存</a>
+        </div>
+    </div>
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script src="../js_new/common-validate.js"></script>
+    <script src="../js_new/weui.js"></script>
+    <script>
+        $(function () {
+            /*表单提交*/
+            var $saveBtn = $("#saveBtn");
+            var $title = $("#title");
+            var $apartment = $("#apartment");
+            var $size = $("#size");
+            var $budget = $("#budget");
+            $saveBtn.on("touchend",function(){
+
+                if(isEmpty($title.val())){
+                    weui.showMsg("请输入作品标题");
+                    return ;
+                }
+
+                if(isEmpty($apartment.val())) {
+                    weui.showMsg("请输入房型");
+                    return;
+                }
+
+                if(isEmpty($size.val())){
+                    weui.showMsg("请输入大小");
+                    return ;
+                }
+
+                if(isEmpty($budget.val())){
+                    weui.showMsg("请输入预算");
+                    return ;
+                }
+
+            });
+
+        })
+    </script>
+</body>
+</html>

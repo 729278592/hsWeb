@@ -1,0 +1,154 @@
+html *{
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /*firfox*/
+	-webkit-box-sizing:border-box; /*safari*/
+	-webkit-user-drag:none;
+}
+body{
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 736px;
+	height: 100%;
+	background-color: #e5e5e5;
+	font-family: Helvetica;
+	color: #505050;
+}
+p,ul,li,dl,dt,dd {
+	margin: 0;
+}
+ul,li{
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #ff620d;
+	text-decoration: none;
+}
+img{
+	border:none;
+}
+input{
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+
+header{
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	background-color: #f8f8f8;
+}
+
+.header_l{
+	float: left;
+	width:50px;height:50px;line-height:50px;text-align:center;		
+}
+
+.header_r{
+	float: right;
+	width:50px;height:50px;line-height:50px;text-align:center;	
+}
+
+header img{
+	width: 19px;
+	margin-top: 14px;
+	/* vertical-align: middle; */
+}
+
+header span {
+	font-size: 1.1rem;
+	line-height: 50px;
+	color:505050;
+}
+.menu-list{
+	width: 130px;
+    position: fixed;
+    height: auto;
+    background: #f8f8f8;
+    right:0.9rem;
+    top:3.1rem;
+    box-shadow: 0 0 9px rgba(0,0,0,0.3);
+    z-index:1;
+    display:none;
+    }
+.menu-list li{height:45px;border-bottom:1px solid #e5e5e5;list-style:none;text-align:left;}
+.menu-list li:active{background:#f2f2f2;}
+.menu-list li img{    
+	width: 23px;
+    margin-top: 0.7rem;
+    margin-left: 2rem;}
+.menu-list li p{    
+	text-align: right;
+	margin-right: 1.7rem;
+	color: #808080;
+	margin-top: -3.6rem;
+	font-size: 1rem;
+	font-family: 微软雅黑;}
+
+.tips{
+	margin-bottom: 0rem;
+	overflow: hidden;
+	padding: 3% 2%;
+}
+
+.tips_l{
+	width: 4%;
+	float: left;
+}
+
+.tips_l img{
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.tips_r{
+	width: 88%;
+	float: left;
+	margin-top: 0.5rem;
+	margin-left: 1.5rem;
+}
+
+.tips_r p{
+	font-size: 0.8rem;
+	color: #868686;
+}
+
+.tips_r .words{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+
+.tips_r .words img{
+	clear: both;
+	float: left;
+	width: 0.4rem;
+	height: auto;
+}
+
+.tips_r .words p{
+	float: left;
+	color: #505050;
+	background-color: #fff;
+	border-radius:0 0.2rem 0.2rem 0.2rem;
+	width: 96%;
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+	padding: 2.5% 2.5% 2.5% 4%;
+
+}
+
+.tips_r .words a{
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+}
+
+
+
+
+
+

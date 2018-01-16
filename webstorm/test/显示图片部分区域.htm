@@ -1,0 +1,63 @@
+﻿<style>
+    .width{
+        position: absolute !important;
+        width: 100% !important;
+        min-height: 100% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        -ms-transform: translateY(-50%) !important;
+        -moz-transform: translateY(-50%) !important;
+        -webkit-transform: translateY(-50%) !important;
+        -o-transform: translateY(-50%) !important;
+        display: block;
+    }
+    .height{
+        position: absolute !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        -ms-transform: translateX(-50%) !important;
+        -moz-transform: translateX(-50%) !important;
+        -webkit-transform: translateX(-50%) !important;
+        -o-transform: translateX(-50%) !important;
+        display: block;
+    }
+    .img-box{
+        position: relative;
+        width: 53.33%;
+        height: 0;
+        padding-bottom: 37.33%;
+        overflow: hidden;
+        background-color: #eee;
+    }
+</style>
+
+<div id="list">
+    <div class="img-box">
+        <img src="17_05.jpg"/>
+    </div>
+</div>
+<script>
+    var list = document.getElementById('list');
+    getImgWH ( list );
+    //执行宽高比对并设置img类名
+    function getImgWH ( Obj ) {
+        var img = Obj.getElementsByTagName('img');
+        for( var i=0 ; i<img.length ; i++ ){
+            img[i].onload = function(){
+                var width  = this.width;
+                var height = this.height;
+                if ( width > height ) {
+                    this.classList.add('height');
+                } else if ( width < height ) {
+                    this.classList.add('width');
+                } else {
+                    this.style.width  = '100%';
+                    this.style.height = '100%';
+                }
+            }
+        }
+    }
+
+</script>

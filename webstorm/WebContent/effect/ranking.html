@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../skins/effect/css/ranking.css">
+	<script src='../js_new/main.js'></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+</head>
+<body>
+	<div class='zhuan-bg my-grade-bg partner-bg'>
+		<div class='top-content'>
+			<div class='top-title2'>
+				<span class='icon icon-arrow' id='backPage'></span>我的合伙人
+			</div>
+			<div class='head-flex'>
+				<div class='head'>
+					<span class='img-box' id="defEft">
+						<img id="headPic" src='../skins/personcenter/img/personal_head.png'/>
+					</span>
+					<span class='grade' id="vipLevel">Vip1</span>
+				</div>
+				<div class='head-right'>
+					<span class='name' id='uname'></span>
+					<span class='btm'>
+						<span class='icon1'></span>
+						<span class='num' id='effectVal'>0</span>
+						<span class='icon2'></span>
+						<span class='num' id='otCount'>0</span>
+					</span>
+				</div>
+			</div>
+			<div class='btm-flex'>
+				<div class='flex'>
+					<span class='icon'></span>
+					<span class='num' id='one'>0</span>
+					<span class='title'>一级合伙人/位</span>
+				</div>
+				<div class='line'></div>
+				<div class='flex flex2'>
+					<span class='icon'></span>
+					<span class='num' id='two'></span>
+					<span class='title'>二级合伙人/位</span>
+				</div>
+			</div>
+		</div>
+		<div class='my-partner'>
+			<div class='son'>
+				<ul class='main'>
+				</ul>
+			</div>
+			<!--遮罩层 -->
+			 <div id="showUserInfo" style="display: none;">
+			     <div class="mask"></div>
+			     <div class="message">
+			        
+			     </div>
+		     </div>
+		     <div id="showDownInfo" style="width: 100%; height: 100%; position: fixed; top: 0px; display: none;z-index: 99;"></div>
+				</div>
+			</div>
+</body>
+<style type='text/css'>
+	#showUserInfo{ font-size: 0;}
+	.message .message_detail dl dt{ padding-top: .1rem;}
+	dl dd p{ font-size: .1365rem;}
+	dl dd div span{ font-size: .1365rem; margin-left: 4px;}
+	.mes p{ font-size: .1365rem;}
+	.send{ font-size: .1707rem; color: #389ffe;}
+	.message .message_detail{ background: #389ffe;}
+	.mes span{ color: #389ffe;}
+	.message .message_detail dl dt span{
+		display: inline-block;
+	    margin-left: -.2rem;
+	    margin-top: .1rem;
+	    height: .1365rem;
+	    line-height: .1365rem;
+	    border-radius: .1365rem;
+	    background: #ffb900;
+	    color: #fff;
+	    font-family: arial;
+	    padding: 0 .1rem;
+	    font-size: .1195rem;
+	    bordeR: 1px solid #fdf0ce;
+	}
+	#tixian{
+		position: static;
+		transform: none;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../effect/ranking.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+</html>

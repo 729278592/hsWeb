@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>HC服务号</title>
+	<link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+	<script src="../js_new/main.js"></script><!--分辨率-->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no">
+	<meta content="telephone=no" name="format-detection" />
+	<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+</head>
+<body>
+	<div class='max'>
+		<div class='index-top'>
+			<div class='index-top-search'>
+				<input type='text' class='serach-input' placeholder='请输入商品名称' id='goodname'/>
+				<a style='float: right;' id='search'><span class='search-icon'></span></a>
+			</div>
+			<a href='../person/news.do'><span class='index-top-locking'></span></a>
+		</div>
+		<div class='banner'>
+			<div class='banner-bg'>
+				<div class="swiper-container topslide">
+			        <div class="swiper-wrapper" id='banner_show'>
+			            
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			    </div>
+			</div>
+			<div class='banner-news'>
+				<span class='icon'></span>
+				<marquee class='title' align='left' id='bannerTitle' scrollamount='5'></marquee>
+			</div>
+		</div>
+		<div class='index-content' id='contents'>
+		</div>
+	</div>  
+	<div class='max-bottom'>
+		<a class='flex selected' href='../goodml/firstpage.do'>
+			<span class='icon icon1'></span>
+			<span class='title'>首页</span>
+		</a>
+		<a class='flex' href='../haoxz/zhuan2.html'>
+			<span class='icon icon2'></span>
+			<span class='title'>精选</span>
+		</a>
+		<a class='flex' href='../person/orderlist.do?place=8'>
+			<span class='icon icon3'></span>
+			<span class='title'>订单</span>
+		</a>
+		<a class='flex' href='../goodml/mine.do'>
+			<span class='icon icon4'></span>
+			<span class='title'>个人中心</span>
+		</a>
+	</div>
+	<div id="showhide" style="display:none; height:100%;">
+		<div class="mask"></div>
+		<div class="message">
+			<img src="../skins/personcenter/img/cashtip.png" width="100%"><p>我知道了</p>
+		</div>
+	</div>
+	<!-- 提示成功 -->
+	<div class='alert-bg alert-bg-shows hide' id='alert'>
+		<div class='alert-content'>
+			<div class='boxBg'>
+				<div class='title'>提示</div>
+				<div class='content'>没有更多了!</div>
+				<div class='bottom'>
+					<div class='right right-block' id='sureClick'>确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script type="text/javascript" src="../js/index.js"></script>   -->
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script src="../js/Swiper-3.3.0/dist/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+	<script type="text/javascript">loadQrcode();</script>
+    <script src="../js_new/zepto.min.js"></script>
+	<script src="../js_new/swiper.js"></script>
+	<script type='text/javascript'>
+	    //页面跳转问题
+		function toGoodPage(from, goodId) {
+			if (from == 0) {
+				//modify by zhangzhen：屏蔽无用的参数
+				window.location = "../goodml/goToGoodsDetails.do?goodsId=" + goodId;//+ "&openId=" + GetQueryString("openId");
+			} else if (from == 1) {
+				//	2016.06.14		window.location = "../goodml/shopmap.do?gd=" + goodId;
+				window.location = "../goodml/shopmapno.do?gd=" + goodId;
+			}
+		}
+		//新接口
+	    function _showall() {
+			$.ajaxSetup({
+				async : true
+			});
+			
+			//查询兑吧入口URL
+			$.post("../mine/zenpage.do?act=2",function(data){
+				if(data && data.url){
+					zen_url=data.url;
+				}
+			},'json');
+			$.post("../index/showall.do",function(d) {
+				//console.log(d);
+				//alert(JSON.stringify(d.floorList[2]));
+				//虚拟数据
+				if(d){
+					//搜索
+					//banner消息
+					$('#bannerTitle').html('公告：'+d.radiolist[0].m_radio_text);
+					//banner
+					var _ss = '';
+					var _src ='http://localhost:8080/mxj/images/';
+					for(var i =0; i<d.guanggao.length; i++){
+						_ss +="<div class='swiper-slide'>"
+								+'<a href="'+d.guanggao[i].m_ad_url+'">'
+									+'<span class="pic"><img src="../guanggao/down.do?filename='+d.guanggao[i].m_ad_pic+'" />'
+									+'</span>'
+								+'</a>'
+							 +'</div>' ;
+					}
+					$('#banner_show').append(_ss);
+					_swiper();
+					//商品列表-默认显示1个
+					var _toals = 2; //显示的大分类
+					var _numbers=0;
+					var _more="<div class='index-more'>已经到底了</div>";
+					function show_list(number){
+						try{
+							var list_data = d.floorList;
+							_numbers = d.floorList.length;
+							var list_1 = list_data[number]; 
+							var list_li='';
+							if(list_1.goodsList.length>4){
+								list_1.goodsList.length = 4;
+							}
+							for(var i=0; i<list_1.goodsList.length; i++){
+								//是否有返现
+								var _f = list_1.goodsList[i].m_good_buyBack;
+								var _show = '';
+								if(_f>0){
+									_show = '<b class="orange">返现</b>'; 
+								}
+								//是否有积分
+								var _j = list_1.goodsList[i].m_buy_sendPoints;
+								if(_j>0){
+									_show += '<b class="green">返积分</b>'; 
+								}
+								list_li += '<li onclick="toGoodPage(0,'+list_1.goodsList[i].m_good_id+');">'
+										  	+'<div class="images-box">'
+											  	+'<div class="images-cell">'
+											  		+'<img src="../good/down.do?filename='+list_1.goodsList[i].m_good_pic+'"/>'
+											  	+'</div>'
+										  	+'</div>'
+										  	+'<div class="images-title">'
+										  		+'<span class="title">'+list_1.goodsList[i].m_good_des_more+'</span>'
+										  		+'<span class="discount">'
+										  			+_show
+										  		+'</span>'
+										  		+'<span class="btm">'
+										  			+'<span class="money">￥'+list_1.goodsList[i].m_good_price+'</span>'
+										  			+'<span class="money-lose">￥'+list_1.goodsList[i].m_good_del_price+'</span>'
+										  		+'</span>'
+										  	+'</div>'
+										  +'</li>';
+							}
+							//判断当总条数为奇数,并且总条数小于4,并且为第一个楼层分类
+							if(list_1.goodsList.length%2==1&&list_1.goodsList.length){
+								list_li+= '<li class="more_li">'
+								  	+'<div class="images-box">'
+									  	+'<div class="images-cell">'
+								  			+'<img src="../images/default_pro.png"/>'
+								  		+'</div>'
+							  		+'</div>'
+							  		+'<div class="images-title"></div>'
+								 +'</li>';
+							}
+							var _hrefs = list_1.bannerUrl;
+							var _http = _hrefs.substring(0,4);
+							if(_http!=='http'){
+								_hrefs = '..'+_hrefs;
+							}
+							var list = '<div class="index-list">'
+											+'<div class="list-top">'
+												+'<span class="icon"></span>'+list_1.name
+												+'<span class="more" id="moreList"><a class="moreFloor" louceng="'+list_1.code+'">更多<strong class="icon2"></strong></a></span>'
+											+'</div>'
+											+'<div class="list-imgs">'
+												+'<a href="'+_hrefs+'"><img src=http://file.huachuo.com.cn/mxj/data/guanggao/'+list_1.bannerImage+'></a>'
+											+'</div>'
+											+'<ul class="list-ul">'
+												+list_li
+											+'</ul>'
+										'</div>';
+							$('#contents').append(list);
+						}catch(e){
+							
+						}
+						
+					}
+					//加载一次显示
+					function _ONce(number){
+						if(number<=2){
+							show_list(parseInt(number-2));
+							show_list(parseInt(number-1));
+						}else{
+							show_list(parseInt(number-1));
+						}						
+					}
+					_ONce(_toals);
+					//上啦加载更多
+					var fla=false;
+					$(window).scroll(function() {
+						var srollPos = $(window).scrollTop(); // 滚动条距顶部距离(页面超出窗口的高度)
+					    var range=20;
+						totalheight = parseFloat($(window).height()) + parseFloat(srollPos);
+						if (($(document).height() - range) <= totalheight&&!fla) {
+							_toals+=1;
+							_ONce(_toals);
+							if(_toals>(_numbers+1)){
+								$('#contents').append(_more);
+								fla=true;
+							}
+						}
+					});
+				}
+			});
+		}
+	    $(function(){
+	    	_showall();
+	    	//搜索
+	    	var goodName;
+	    	$("#search").click(function(){
+	    		var _search = $('#goodname').val();
+	    		if(_search==''){
+	    			return false;
+	    		}
+	    		window.location.href='../goodml/goodsofall.do?search='+_search;
+	    	});
+	    	//楼层点击更多
+	    	$(document).on('touchstart','#moreList',function(){
+	    		var _num = $(this).find('.moreFloor').attr('louceng');
+	    		window.location.href='../goodml/goodsofall.do?floorCode='+_num;
+	    	});
+	    });
+	    function _swiper(){
+	    	var swiper = new Swiper('.swiper-container', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true,
+		        autoplayDisableOnInteraction : false,
+		        autoplay: 3000 
+		    });
+	    }
+	    //底部跳转
+	    $('.max-bottom .flex').on('click',function(){
+	    	$(this).addClass('selected').siblings().removeClass('selected');
+	    });
+	</script>
+</body>
+</html>

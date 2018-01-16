@@ -1,0 +1,54 @@
+html {
+    width:360px;
+    height:540px;
+    overflow: hidden;
+}
+html *{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /*firfox*/
+    -webkit-box-sizing:border-box; /*safari*/
+    -webkit-user-drag:none;
+}
+body{
+    margin: 0 auto;
+    width: 360px;
+    height: 540px;
+    background-color: #e5e5e5;
+    font-family: Helvetica;
+}
+
+.testImg1 {
+    z-index: -10;
+    background-size: 100%;
+    overflow: hidden;
+    margin-left: 59px;
+}
+.blanket {
+    width:100%;
+    z-index: 10
+}
+.confirm {
+    position: absolute;
+    width:60px;
+    height:60px;
+    z-index:20
+}
+
+.comment1Content {
+    margin-left: 190px;
+    margin-top: -53.6px;
+    position: absolute;
+    font-family: 微软雅黑;
+    font-size: 10px;
+}
+
+.comment2Content {
+    margin-left: 190px;
+    position: absolute;
+    font-size: 10px;
+    margin-top: -39px;
+    font-family: 微软雅黑;
+}

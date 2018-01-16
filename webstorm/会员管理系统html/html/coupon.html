@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>会员管理系统</title>
+    <link rel="stylesheet" href="../css/vip.css"/>
+	<script src="../js_new/main.js"></script><!--分辨率-->
+</head>
+<body>
+	<div class='member-max member-bg-ea coupon'>
+		<div class='coupon-top'>
+			<span class='title'>优惠券</span>
+			<span class='inputBox'>
+				<input type='text' class='search-ipt' placeholder='请输入优惠券编码' /><span class='search'></span>
+			</span>
+			<span class='code'></span>
+		</div>
+		<div class='coupon-content'>
+			<div class='noList hide'>
+				<img src='../images/coupon-no.png'/>
+				<span class='title'>无优惠券</span>
+				<span class='show'>请在优惠券处输入优惠券编码或扫一扫二维码</span>
+			</div>
+			<ul class='member-juan-ul'>
+				<li class='violet active'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>礼品券</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'>￥<strong>120</strong>满2000可用</span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='juan-radius'>
+							<div class='title2'>抢光了</div>
+						</div>
+					</div>
+				</li>
+				<li class='violet'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>代金券</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'>￥<strong>120</strong>满2000可用</span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='radius'>
+							<div class='radius-left'>
+								<div class="clip_left"></div>
+							</div>
+							<div class='radius-right'>
+								<div class="clip_right"></div>
+							</div>
+							<div class="mask"><strong>剩余</strong><span>70%</span></div>
+						</div>
+					</div>
+				</li>
+				<li class='yellow active'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>折扣卷</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'><strong>棉拖</strong></span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='juan-radius'>
+							<div class='title2'>已失效</div>
+						</div>
+					</div>
+				</li>
+				<li class='red active'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>折扣卷</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'><strong>棉拖</strong></span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='juan-radius'>
+							<div class='title2'>已失效</div>
+						</div>
+					</div>
+				</li>
+				<li class='gray'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>折扣卷</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'><strong>棉拖</strong></span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='juan-radius'>
+							<div class='title2'>已失效</div>
+						</div>
+					</div>
+				</li>
+				<li class='gray'>
+					<div class='left'>
+						<div class='left-top'>
+							<span class='juan-box'>
+								<strong>折扣卷</strong>
+							</span>
+							<div class='juan-flex'>
+								<span class='juan-title'><strong>棉拖</strong></span>
+								<span class='juan-content'>适用于：上海xxxx装修公司</span>
+							</div>
+						</div>
+						<div class='left-btm'>
+							<span class='time-title'>有效期至：</span>
+							<span class='time'>2017-10-21</span></div>
+					</div>
+					<div class='right'>
+						<div class='juan-radius'>
+							<div class='title2'>已失效</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class='btmShow'>在优惠券处输入优惠券编码活扫一扫二维码可继续添加</div>
+		<div class='coupon-btn' id='cancel'>核销卡卷</div>
+	</div>
+	<div class='alertBox' style='display: block;'>
+		<div class='cont sure'>
+			<div class='title'>提示</div>
+			<div class='content'>确定要核销所选择的卡圈吗？</div>
+			<div class='btm'>
+				<div class='left'>取消</div>
+				<div class='right'>确定</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type='text/javascript' src='../js_new/zepto.min.js'></script>
+<script>
+$(function(){
+	$('.mask>span').each(function(i,v){
+		var _text = $(v).text();
+		var _n = _text.indexOf('%');
+		_text = parseInt(_text.substring(0,_n));
+		if(_text<= 50 ){
+			var num = _text*3.6-180;
+			$(v).parent().parent().find('.radius-right').css('transform','rotate('+num+'deg)');
+		}else{
+			$(v).parent().parent().find('.radius-right').css({
+				'transform':'rotate(-180deg)',
+			}).addClass('radiusRightBg');
+			$(v).parent().parent().find('.radius-left').css('transform','rotate('+(((_text-50)*3.6) -180) +'deg)');
+		}
+	});
+	//核销卡圈
+	$('#cancel').on('click',function(){
+		$('.alertBox').show();
+	});
+	$('.alertBox .left').on('click',function(){
+		$('.alertBox').hide();
+	});
+	$('.alertBox .right').on('click',function(){
+		$('.alertBox').hide();
+	});
+});
+</script>
+</html>

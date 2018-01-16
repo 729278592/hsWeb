@@ -1,0 +1,41 @@
+/*
+	把html页面中的css样式移过来
+*/
+@charset "utf-8";
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  border:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none;
+}
+li{
+  list-style: none;
+}
+a{text-decoration: none;}
+html{
+  font-size: 62.5%;
+}
+body{
+  background: #e8e8e8;
+}
+/*--viewbox整个可视窗口--*/
+ .viewbox{
+    max-width: 100%;
+    min-width: 320px;
+    height:700px;
+    background:#e5e5e5;
+    margin: 0px auto;
+    top: 0;}
+
+/*--/footer*/
+ .viewbox footer{
+    width: 100%;
+    height:5em;
+    background:rgba(0,0,0,0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+}

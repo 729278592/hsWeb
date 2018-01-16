@@ -1,0 +1,59 @@
+{
+  "total":6,
+  "commentList":[
+    {
+      "id":"1",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝1爱装修的小萝1爱装修的小萝1爱装修的小萝1",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":1
+    },
+    {
+      "id":"2",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":0
+    },
+    {
+      "id":"3",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":0
+    },
+    {
+      "id":"4",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":0
+    },
+    {
+      "id":"5",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":0
+    },
+    {
+      "id":"6",
+      "img": "../images/com_hd.png",
+      "author": "爱装修的小萝",
+      "date": "2017-12-11 21.21",
+      "content": "好，秒变木屋！",
+      "zan": "88",
+      "status":0
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+.dialog {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #888;
+    cursor: default;
+    z-index: 999;
+    position: fixed;
+}
+
+.dialog > .title {
+    line-height: 30px;
+    text-indent: 12px;
+    color: #353535;
+    font-size: 15px;
+    position: initial;
+}
+
+.dialog .title span.close {
+    display: block;
+    z-index: 9999;
+    width: 25px;
+    height: 30px;
+    background: url(../img/icon_close.png) no-repeat center;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.dialog .btn-row {
+    text-align: right;
+    font-size: 0px;
+    bottom: 25px;
+    position: absolute;
+    right: 0px;
+}
+
+.dialog .btn-row .btn {
+    border: 1px solid #15a6ef;
+    border-radius: 15px;
+    font-size: 1em;
+    padding: 4px 10px;
+    min-width: 75px;
+    margin: 0px 10px;
+}
+
+.dialog .btn-row .btn,
+.dialog .btn-row .btn.commit {
+    color: #15a6ef !important;
+    border: solid 1px #15a6ef !important;
+}
+
+.dialog .btn-row .btn.commit {
+    margin-right: 23px;
+}
+
+.dialog .btn-row .btn.cancel {
+    margin-right: 6px;
+}
+
+.dialog .btn-row .btn {
+    color: #15a6ef;
+    border: solid 1px #15a6ef;
+    border: 1px solid #15a6ef;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 4px 10px;
+    min-width: 85px;
+    margin: 0px;
+}
+
+.dialog .btn-row .btn:not(.disabled):hover {
+    opacity: 1;
+    background-color: #15a6ef !important;
+    border: solid 1px #15a6ef !important;
+    color: #fff !important;
+}
+
+.dialog .btn-row .btn:not(.disabled):active {
+    opacity: 1;
+    background-color: #1286c1 !important;
+    border: solid 1px #1286c1 !important;
+    color: #fff !important;
+}
+
+.mt30-auto-txt-l {
+    margin: 30px 23px 0 23px;
+    text-align: left !important;
+}
+
+/*.dialog > .title .title {*/
+    /*line-height: initial;*/
+    /*color: #353535;*/
+    /*position: initial;*/
+    /*display: block;*/
+/*}*/

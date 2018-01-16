@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN" id="index">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<title>图片裁剪</title>
+<style>
+body {
+	margin: 0;
+	text-align: center;
+}
+#clipArea {
+	margin-bottom: 20px;
+	height: 300px;
+}
+#file,
+#clipBtn {
+	margin: 20px;
+}
+#view {
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+}
+button{
+	line-height: 2.4rem;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 7rem;
+    height: 2.5rem;
+    border: 1px solid #389ffe;
+    background: #389ffe;
+    border-radius: 35px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+</style>
+</head>
+<body ontouchstart="">
+<div id="loding" style="display: none;position: fixed; width: 100%;height: 100%;z-index: 1;background-color: white;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;">
+	<img alt="" src="../skins/effect/img/loading.gif" style="margin-top: 50%;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;"">
+</div>
+<div id="clipArea"></div>
+<div id="userImg"></div>
+<button onclick="selectImg();">选择</button><button id="clipBtn">完成</button>
+<div style="width: 100%;padding: 5px;"><span style="text-align: center;color: gray;">请选择 JPEG，JPG，PNG 格式的图片</span></div>
+<input type="file" id="file" style="display: none;">
+
+
+<script src="../js/jQuery-photoClip/iscroll-zoom.js"></script>
+<script src="../js/jQuery-photoClip/hammer.js"></script>
+<script src="../js/jQuery-photoClip/lrz.all.bundle.js"></script>
+<script src="../js/jQuery-photoClip/jquery.photoClip.js"></script>
+<script>
+function selectImg(){
+	$("#file").click();
+}
+var clipArea = new bjj.PhotoClip("#clipArea", {
+	size: [260, 260],
+	outputSize: [260,260],
+	file: "#file",
+	ok: "#clipBtn",
+	clipFinish: function(dataURL) {
+		$.ajax({
+			url : '../user/uodateUserImg.do',
+			data : {"userImg":dataURL},
+			type : 'POST',
+			dataType : 'json',
+			async : false,
+			success :function(result){
+				if(result.code=="success"){
+					window.location.href="../person/personInformation.do"; 
+				}else{
+					alert("图片上传失败,请检查网络或刷新页面");
+				}
+			}
+		});
+	}, 
+	loadStart: function(file) {$("#loding").show();}, 
+    loadComplete: function(src) {$("#loding").hide();}, 
+    loadError: function(event) {}
+});
+$(function(){
+	$.post("../mine/user.do",function(obj){
+		$(".photo-clip-rotateLayer").html("<img style='width:260px; hieght:260px' id='temp' >");
+		if(obj && obj.user){
+			if(obj.user.head_img!=null && obj.user.head_img!=""){
+				if(obj.user.head_img.substr(0,7)=="http://"){
+					$("#temp").attr("src",obj.user.head_img);
+				}else{
+					$("#temp").attr("src","../cashRanking/img.do?imgName="+obj.user.head_img);
+				}
+			}
+		}
+	},'json');
+	
+})
+//clipArea.destroy();
+</script>
+
+</body>
+</html>

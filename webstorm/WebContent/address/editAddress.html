@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+   	<link rel="stylesheet" href="../skins/address/css/style.css">
+	<link rel="stylesheet" href="../skins/address/css/framework7.min.css">
+   	<link rel="stylesheet" href="../css/index.css">
+   	<link rel="stylesheet" href="../skins/css/util.css">
+	<link rel="stylesheet" href="../skins/address/css/address.css">
+</head>
+<body>
+    <header>
+	<div class="h-head">
+    	<a class="h-return" href="javascript:void(0);" id="backPage"></a>
+        <span class="h-title">编辑地址</span>
+        <input type="hidden" id="goodsId">
+        <input type="hidden" id="showDefault"><!-- 是事显示默认地址选项 -->
+    </div>
+</header>
+<form action="" method="post" id="butSubmit">
+	<div class="dz-box" id="showHtml">
+		<div class="dz-ren">收&ensp;货&ensp;人
+	    	<input class="de-ren-in" type="text" placeholder="收货人" name="uname" id="uname" maxlength="5" />
+	    </div>
+	    <div class="dz-ren">手&ensp;机&ensp;号
+	    	<input class="de-ren-in" type="text" placeholder="手机号" id="phone" name="phone" maxlength="11" />
+	    </div>
+	    <div class="dz-ren" >地&emsp;&emsp;址
+	    	<input id="city" class="de-ren-in" type="text" readonly="" placeholder="选择城市"/>
+            <input id="value1" type="hidden"/>
+	    </div>
+	    <div class="dz-ren" >详细地址
+	    	<input class="de-ren-in" type="text" placeholder="地址" name="dizhi" id="dizhi"/>
+	    </div>
+	    <div class="dz-ren defaultIcon" style="border-bottom: 0px solid #e4e4e4;">
+	    	<input type="checkbox" id="default" value="0" name="adefault" />
+	    	<i class='input-icon'></i>
+	    	是否为默认地址
+	    </div>
+	</div>
+	<div class='bottomSave'>
+		<input class="dz-bc" type="button" id="enterSave" value="保  存"/>
+	</div>
+</form>
+	<!-- 提示成功 -->
+	<div class='alert-bg alert-bg-shows hide' id='alert'>
+		<div class='alert-content'>
+			<div class='boxBg'>
+				<div class='title'>提示</div>
+				<div class='content'>修改成功!</div>
+				<div class='bottom'>
+					<div class='right right-block' id='sureClick'>确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../skins/address/framework7.min.js"></script>
+<script type="text/javascript" src="../skins/address/regionsObject2.js"></script>
+<script type="text/javascript" src="../skins/address/cityPicker.js"></script>
+<script type='text/javascript'>
+    	$(function(){
+    		$('.defaultIcon').on('click',function(){
+        		if($(this).hasClass('selected')){
+        			$('#default').prop('checked',false);
+        			$(this).removeClass('selected');
+        		}else{
+        			$('#default').prop('checked',true);	
+        			$(this).addClass('selected');
+        		}
+        	});
+        	//得到编辑地址信息
+        	//得到ids
+        	var href = location.href;
+        	var nums = href.indexOf('?ids=');
+        	var ids = parseInt(href.substring(nums+5));
+        	$.ajax({
+				url : '../address/getOneAddress.do',
+				data : {"addId":ids},
+				type : 'POST',
+				dataType : 'JSON',
+				async : false,
+				success: function(data){
+					//赋值
+					var d = data.objs;
+					//alert(JSON.stringify(d));
+					$('#uname').val(d.m_user_name);
+					$('#phone').val(d.m_phone);
+					$('#dizhi').val(d.m_address);
+					if(d.m_county==undefined){
+						$('#city').val(d.m_province+'-'+d.m_city);
+					}else{
+						$('#city').val(d.m_province+'-'+d.m_city+'-'+d.m_county);
+					}
+					//判断默认
+					var _defa = d.m_default;
+					if(_defa==0){
+						$('.defaultIcon').addClass('selected');
+					}
+				},
+				error: function(e){
+					console.log(e);
+				}
+			});
+    	    //返回
+    	    $('#backPage').on('click',function(){
+    	    	history.go(-1);
+    	    	return false;
+    	    });
+    	    //提交修改的信息
+    	    $("#enterSave").click(function(){
+				if(check()){
+					//var data = $('#butSubmit').serialize(); //得到form的值
+					//得到 data
+					var uname = $('#uname').val();
+					var phone = $('#phone').val();
+					var dizhi = $('#dizhi').val();
+					var adefault;
+					var showDefault;
+					//是否为默认地址
+					var _check = $('.defaultIcon').hasClass('selected');
+					if(_check){
+						adefault=0;
+						showDefault=0;
+					}else{
+						adefault=1;
+						showDefault=1;
+					}
+					var city = $('#city').val().split('-');
+					var proName = city[0];
+					var cityName = city[1];
+					var countryName;
+					if(city[2]==undefined){
+						countryName=null;
+					}else{
+						countryName=city[2];
+					}
+					var data= {
+							"m_id":ids,
+							"addId":ids,
+							"uname": uname,
+							"phone": phone,
+							"proName": proName,
+							"cityName": cityName,
+							"countyName": countryName,
+							"dizhi": dizhi,
+							"adefault": adefault,
+							"showDefault": showDefault //是否显示为默认地址
+					};
+					/*var data= {
+							"m_id":50,
+							"uname": '小喜哥2',
+							"phone": '18423013466',
+							"proName": '重庆市',
+							"cityName": '开县',
+							"countryName": null,
+							"dizhi": '重庆市九龙坡区石桥铺',
+							"adefault": 0,
+							"showDefault": 0 
+					}*/
+					//alert(JSON.stringify(data));
+					//console.log(data);
+					$.ajax({
+						url : '../address/updateAddressInfo.do',
+						data : data,
+						type : 'POST',
+						dataType : 'json',
+						success : function(result){
+							if(result.code=='error'){
+								console.log(result.message);
+								//alert(result.message);
+							}else{
+								//alert(JSON.stringify(result));
+								//var goodsId = $("#goodsId").val();
+								//window.location.href = "../account/goToSubmitOrder.do?goodsColor="+encodeURI(encodeURI(gsc))+"&goodsNum="+gsn+"&goodsId="+goodsId;
+								$('#alert').removeClass('hide');
+								//自动消失
+								//点击消失
+								$(document).on('click','#sureClick',function(){
+									$('#alert').addClass('hide');
+								});
+								setTimeout(function(){
+									$('#alert').addClass('hide');
+									history.go(-1);
+									return false;
+								},1200);
+							}
+						}
+					});
+				}
+			});
+    	    //验证信息
+    	    function check() {
+				var flag = true;
+				if (!/^\d{11,11}$/.test($("#phone").val())) {
+					$("#phone").val("");
+					$("#phone").attr("placeholder","请输入11位手机号码!");
+					flag = false;
+				} 
+				
+				if($("#uname").val() == "" || $("#uname").val().length > 5){
+					$("#uname").val("");
+					$("#uname").attr("placeholder","请填写收货人姓名!");
+					flag = false;
+				}
+				
+				if($("#dizhi").val() == ""){
+					$("#dizhi").attr("placeholder","请填写收货地址信息!");
+					flag = false;
+				}
+				if($("#city").val() == ""){
+					$("#city").attr("placeholder","请填写您的地址!");
+					flag = false;
+				}
+				return flag;
+			}
+    	});
+    </script>
+</html>

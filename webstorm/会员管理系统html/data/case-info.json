@@ -1,0 +1,35 @@
+{
+  "productDetail":{
+    "id":"1",
+    "author": "爱装修的小萝1",
+    "authorHead": "../images/case-head.png",
+    "homeType": "LOFT 90",
+    "Money": "30",
+    "title": "现代90平三居室-工业沉静简洁风",
+    "date": "2017-12-03",
+    "read": "300",
+    "zan": "100",
+    "comment": "90",
+    "content": "",
+    "commentList":[
+      {
+        "id":"1",
+        "img": "../images/com_hd.png",
+        "author": "爱装修的小萝",
+        "date": "2017-12-11 21.21",
+        "content": "好，秒变木屋！",
+        "zan": "88",
+        "status":1
+      },
+      {
+        "id":"1",
+        "img": "../images/com_hd.png",
+        "author": "爱装修的小萝",
+        "date": "2017-12-11 21.21",
+        "content": "好，秒变木屋！",
+        "zan": "88",
+        "status":0
+      }
+    ]
+  }
+}

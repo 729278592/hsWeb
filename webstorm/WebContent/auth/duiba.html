@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" charset=utf-8/>
+    <script type="text/javascript" src="jquery-2.2.1.min.js"></script>
+	<script src="../js/config.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $.post("../mine/zenpage.do?act=2",function(data){
+            if(data && data.url){
+                window.location.replace(data.url);
+            }
+        },'json');
+    });
+
+    </script>
+    <title></title>
+    <meta http-equiv=Content-Type content="text/html; charset=GB2312">
+</head>
+<body>
+    <div>
+      <p></p>
+    </div>
+</body>
+</html>

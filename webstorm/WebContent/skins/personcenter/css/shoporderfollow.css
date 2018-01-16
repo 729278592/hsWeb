@@ -1,0 +1,149 @@
+@CHARSET "UTF-8";
+		*{
+	    	margin: 0px;
+		    padding: 0px;
+	    }
+    	html {
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    outline: 0;
+		    background-color: #e8e8e8;	   
+  		 }
+   
+		body{
+			height:100%;
+			margin: 0; 
+			-webkit-user-select: none; 
+			position: relative; 
+			background-color: #e8e8e8;
+			line-height: 1.2;
+		    font-size: 0.9em;
+		    margin: 0 auto;
+		    max-width: 736px;
+		    min-width: 320px;
+		}
+		section{
+			width:100%;
+			background-color: #e8e8e8;
+		}
+		section .heads{
+			width:100%;
+			height:50px;			
+			background-color:#f8f8f8;			
+		}
+		section .heads span{
+			font-size:1.1rem;
+			color:#505050;
+			line-height:50px;
+		}
+		.goodmsg{
+			width:100%;
+			overflow:hidden;
+			background-color: white;
+			margin-top:10px;
+		}
+		.goodmsg_left,.goodmsg_right{
+			background-color:white;
+			float:left;
+		}
+		.goodmsg_left{
+			width:25%;
+			
+		}
+		.goodmsg_right{
+			width:73%;
+			margin-left:2%;
+		}
+		#goodimg{
+			width:4.5rem;
+			height:4.5rem;
+			margin-top:10px;
+			margin-bottom: 10px;
+			margin-left: 10%;
+		}
+		.goodmsg_right div{
+			margin-top:8px;
+			font-size:1em;
+		}
+		.goodmsg_right #gooddes{
+			font-size:1.1em;
+			margin-top:15px;
+		}
+		.buyaddr{
+			width:100%;
+			background-color: white;
+			font-size:1em;
+			margin-top:10px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		.buyaddr div span{
+			margin-right:5px;
+		}
+		.clear{
+			clear: both;
+		}
+		.buyaddr div{
+			margin-top:10px;
+		}
+		.seller{
+			width:100%;
+			background-color: white;
+			height:auto;
+			overflow:hidden;
+			padding:3%;
+			box-sizing: border-box;
+			-moz-box-sizing:border-box; /*firfox*/
+			-webkit-box-sizing:border-box; /*safari*/
+		}
+		.seller_left,.seller_right{
+			float:left;
+		}
+		.seller_left{
+			width:20%;
+		}
+		.seller_right{
+			width:80%;
+		}
+		#sellerimg{
+			width:80%;
+			height:auto;
+			border-radius:50%;
+		}
+		.star{
+			width:5%;
+		}
+		.grade{
+			margin-left:10px;
+			/* width:50px; */
+			height:20px;
+			line-height:19.8px;
+			border: 0px solid white;
+			border-radius:2em;
+			color:white;
+			background-color: #e0b065;
+			display:inline-block;
+			padding:0px 10px;
+			font-size:0.8rem;
+		}
+		.seller_right div{
+			margin-top:2px;
+		}
+		footer{height:50px;position:fixed;bottom:0px;left:0px;width:100%;} 
+		.foot_left,.foot_right{
+			width:50%;
+			height:100%;
+			color:white;
+			float:left;
+			text-align: center;
+			font-size:1.2em;
+			line-height:50px;
+		}
+		.foot_left{
+			background-color: #03bed4;
+			
+		}
+		.foot_right{
+			background-color: #FF620D;
+		}
+		

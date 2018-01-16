@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../skins/css/util.css">
+	<link rel="stylesheet" href="../skins/address/css/address.css">
+    <script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../address/address.js"></script>
+</head>
+<body>
+    <header>
+	<div class="h-head">
+    	<a class="h-return h-sh" href="javascript:void(0);" id="backPage"></a>
+        <span class="h-title" style="width:86%;">收货地址</span>
+        <a href="javascript:void(0);" class="h-pic h-bj" id="complete">完成</a>
+        <input type="hidden" id="mdeId"><!-- 默认ID地址 -->
+        <input type="hidden" id="goodsId"><!-- 商品主键 -->
+    </div>
+</header>
+<section>
+	<div class="sh-dizi">
+    	<ul style="margin:0px; padding:0px;" id="addressList">
+    	
+        </ul>
+    </div>
+    
+    <div style="padding-top: 10px;">
+		<input class="dz-bc" type="button" id="newAdd" value="新增地址"/>
+	</div>
+    
+</section>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>华绰服务号</title>
+</head>
+<body>
+    <div class="wrapper style">
+
+        <!--有案例开始-->
+        <div class="has_case">
+            <div class="swiper-container swiper-container-horizontal" id="swiper-container">
+
+            </div>
+            <div class="case">
+                <p class="case_title">
+                    <span></span>
+                    案例欣赏
+                    <span></span>
+                </p>
+
+                <!--案例列表开始-->
+                <ul class="case_list" id="case_list">
+
+                </ul>
+                <!--案例列表结束-->
+
+            </div>
+        </div>
+        <!--有案例结束-->
+
+        <!--无案例开始-->
+        <div class="no_case hide">
+            <img src="../images/no_case.png" alt=""><br>
+            正在加班加点做作品...
+        </div>
+        <!--无案例结束-->
+
+    </div>
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script src="../js_new/swiper.js"></script>
+    <script src="../js_new/weui.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:"../data/case-index.json",
+                dataType:'json',
+                data:'',
+                jsonp:'callback',
+                success:function(data) {
+                    var banner = data.bannerList,
+                        banLen = banner.length,
+                        $swiperCon = $("#swiper-container"),
+                        $swiperHtml = '<div class="swiper-wrapper">',
+                        $caseList = $("#case_list"),
+                        $has_case = $(".has_case"),
+                        $no_case = $(".no_case"),
+                        product= data.productsList,
+                        productLen = product.length,
+                        productHtml = '';
+
+                    /*页面顶部切换*/
+                    for(var i=0; i<banLen; i++){
+                        $swiperHtml +=   '<div class="swiper-slide">'+
+                                            '<a href="'+banner[i].url+'">'+
+                                                '<img src="'+banner[i].img+'" alt="" class="w100"/>'+
+                                            '</a>'+
+                                        '</div>'
+                    }
+                    $swiperHtml += '</div><div class="swiper-pagination"></div>';
+                    $swiperCon.append($swiperHtml);
+
+                    new Swiper('#swiper-container', {
+                        //        prevButton:'.swiper-button-prev',
+                        //        nextButton:'.swiper-button-next',
+                        slidesPerView: 1,
+                        pagination:'.swiper-pagination',
+                        paginationClickable: true,
+                        spaceBetween: 0,
+                        loop:true,
+                        autoplay: 5000,
+                        autoplayDisableOnInteraction: false
+                    });
+
+                    /*案例列表结构*/
+                    if(productLen<1){
+                        $has_case.addClass("hide");
+                        $no_case.removeClass("hide");
+                        return;
+                    }
+                    $has_case.removeClass("hide");
+                    $no_case.addClass("hide");
+
+                    for(var i=0; i<productLen; i++){
+                        productHtml +=   '<li>'+
+                                            '<a href="'+product[i].url+'">'+
+                                                '<div class="case_con">'+
+                                                    '<img class="w100" src="'+product[i].img+'" alt="">'+
+                                                '</div>'+
+                                                '<p class="case_name">'+product[i].title+'</p>'+
+                                            '</a>'+
+                                            '<div class="case_info">'+
+                                                '<p class="clearfix">'+
+                                                    '<span class="case_n left"><span class="case_s_n">'+product[i].author+'</span> <span class="Verdana">'+product[i].date+'</span> </span>'+
+                                                    '<span class="right">'+
+                                                        '<span class="icon_span">'+
+                                                            '<span class="ion-ios-eye"></span>'+
+                                                            '<span class="Verdana"> '+product[i].read+'</span>'+
+                                                        '</span>'+
+                                                        '<span class="icon_span good"  data-id="'+product[i].id+'" data-flag=false>'+
+                                                            '<span class="ion-thumbsup" data-status="'+product[i].status+'"></span>'+
+                                                            '<span> '+product[i].zan+'</span>'+
+                                                        '</span>'+
+                                                        '<span class="icon_span">'+
+                                                            '<span class="ion-chatbox-working"></span>'+
+                                                            '<span> '+product[i].comment+'</span>'+
+                                                        '</span>'+
+                                                    '</span>'+
+                                                '</p>'+
+                                            '</div>'+
+                                        '</li>'
+                    }
+                    $caseList.append(productHtml);
+
+                    /*点赞--立即自行函数为避免swiper.js的影响*/
+                    (function ($) {
+                        $(".case_list li .ion-thumbsup ").each(function (i) {
+                            var that = $(this);
+                            if(that.data("status")==1){
+                                that.addClass("active");
+                                that.closest(".good").attr({"data-flag":true});
+                            }
+                        });
+
+                        var good = $(".good");
+                        function hideDot(that) {
+                            setTimeout(function () {
+
+                                var flag = that.data("flag");
+                                that.attr({"data-flag":!flag});
+                            },1000)
+                        }
+
+                        function statusChange(cancel,success,obj,flag,that) {
+                            if(flag){
+                                weui.toast(cancel);
+                                obj.removeClass("active");
+                                hideDot(that);
+                            }else{
+                                weui.toast(success);
+                                obj.addClass("active");
+                                hideDot(that);
+                            }
+                        }
+
+                        good.on("click",function () {
+                            statusChange("取消点赞","点赞成功",$(this).find(".ion-thumbsup"),$(this).data("flag"),$(this));
+                        });
+                    })(Zepto)
+
+                },
+                error:function (err) {
+                    alert(err)
+                }
+            });
+        })
+    </script>
+</body>
+</html>

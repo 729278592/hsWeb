@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" charset='utf-8' />
+    <link rel="stylesheet" href="../skins/newHome/newHome.css"/>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <title>蜂助手个人版</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			window.parent.postMessage(JSON.stringify({
+				"load":"true",
+				"source":"#mobile,unlink",
+				"sourceUrl":"",
+				"isHome": "false",
+				"url": window.location.href
+			}),'*');
+		};
+	</script>
+</head>
+<body>
+	<div class="maxbg">
+		<div class='top'>
+			<span class='title'>主页</span>
+			<div class='top-right'>
+				<div class='search'>
+					<input class='search-input' placeholder='飞马点神5000' type='text'/>
+					<span class='search-icon'></span>
+				</div>
+				<div class='top-cont'>
+					<span class='top-cont-title' id="city">上海市</span>
+					<span class='top-cont-title' id="temperature">10℃</span>
+				</div>
+			</div>
+		</div>
+		<div class='container'>
+			<div class='content'>
+				<div class='content-left'>
+					<div class='center-top'>
+						<div class='top-left'>
+							<span class='top-man'><img src='../skins/newHome/img/Headportrait.png' id="headImg"/></span>
+							<span class='top-titleBox'>
+								<span class='top-title'>未登入</span>
+								<span class='top-title top-title2'>游客001</span>
+							</span>
+						</div>
+						<ul class='top-right'>
+							<li id="task">
+								<span class='icon'>
+									<img src='../skins/newHome/img/task.png'/>
+								</span>
+								<span class='title'>任务</span>
+							</li>
+							<li id="coupon">
+								<span class='icon'>
+									<img src='../skins/newHome/img/coupons.png'/>
+								</span>
+								<span class='title'>卡券</span>
+							</li>
+							<li id="exchange">
+								<span class='icon'>
+									<img src='../skins/newHome/img/exchange.png'/>
+								</span>
+								<span class='title'>兑换</span>
+							</li>
+						</ul>
+					</div>
+					
+					<div class='content-center'>
+						<div class='content-center-top' >
+							<div class='content1' id="lifeService">
+								<img src='../skins/newHome/img/activity.png' />
+							</div>
+							<div class='content2' id="mobileManager">
+								<span class='name' id="mobileConnected">连接状态：未连接</span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/Mobile_service.png' id="connectPic"/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>手机管理</span>
+							</div>
+							
+							<div class='content2 content3' id="crew">
+								<span class='name'>会员</span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/mangguoTV.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>芒果TV</span>
+							</div>
+							
+							<div class='content2 content4' id="zen">
+								<span class='name'>WIFI未连接</span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/zenbi.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>赚积分</span>
+							</div>
+							
+						</div>
+						<div class='content-center-bottom'>
+							<div class='content2 content5' id="store">
+								<span class='name'></span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/Shopping_Mall.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>HC商城</span>
+							</div>
+							
+							<div class='content2 content6' id="phone">
+								<span class='name'>即将上线</span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/Telephone.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>免费电话</span>
+							</div>
+							
+							<div class='content2 content7' id="net">
+								<span class='name'></span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/network.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>网络资源</span>
+							</div>
+							
+							<div class='content2 content8' id="service">
+								<span class='name'>客服电话：400-600-6655</span>
+								<span class='icon'>
+									<span class='icon-table'>
+										<span class='icon-cell'>
+											<img src='../skins/newHome/img/Customer_service.png'/>
+										</span>
+									</span>
+								</span>
+								<span class='title'>HC客服</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class='content-bottom'>
+						<span class='icon'></span>
+						<span class='title'>登录省事可以免费拨打电话哦！</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../home/excanvas.js"></script>
+<script type="text/javascript" src="../home/html5.js"></script>
+<script type="text/javascript" src="../home/jquery.easy-pie-chart.js"></script>
+<script type="text/javascript" src="../newHome/newHome.js" charset="utf-8"></script>
+<script type="text/javascript" src="../getZen/common.js"></script>
+<script type="text/javascript" src="../js/MD5/md5.js"></script>
+<script src="../js/config.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>V客中心</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/plugins/mui/css/muiPull.css">
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="page">
+        <div class="hd">
+            <a>
+                <i class="fa fa-angle-left"></i>
+            </a>
+            智油惠
+            <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd absolute pt" id="pullrefresh" style="overflow: hidden;">
+            <div class="invoice style" id="">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/plugins/mui/js/mui.js"></script>
+<script src="../../assets/mobile/js/pullRefresh.js"></script><!--上滑加载-->
+<script src="../../assets/mobile/js/global.js"></script>
+<script>
+    $(function(){
+
+        /*滚动加载*/
+        var invoice = $('.invoice');
+        invoice.scrollLoad({
+            interface:"../../assets/mobile/data/vhtml.json" ,//接口
+            pullrefresh:"#pullrefresh",
+            firstLoad:true,
+            ajaxRecord:function(obj,wajxHtml){
+                //模板片段
+
+                var payWay = obj.payMethod;
+                if(payWay == '0') payWay = '会员卡';
+                if(payWay == '1') payWay = '微信支付';
+                if(payWay == '2') payWay = '红包抵扣';
+                if(payWay == '3') payWay = '车队余额';
+                var num = Number(obj.num).toFixed(2);
+                var totalFee = Number(obj.totalFee).toFixed(2);
+                var beforeDisFee = Number(obj.beforeDisFee).toFixed(2);
+                var payFee = Number(obj.payFee).toFixed(2);
+
+
+                wajxHtml+= '<div class="vcList">'+
+                    '<div class="vcLihead">'+
+                    '<div>'+
+                    '<div>订单号 : '+obj.id+'</div>'+
+                    '<div class="wauto">'+payWay+'</div>'+
+                    '</div>'+
+                    '<div>'+
+                    '<div class="colors">'+
+                    ''+num+'# <span class="c999">(油枪 : '+obj.oilGun+')</span>'+
+                    '</div>'+
+                    '<div class="colors">￥'+totalFee+'</div>'+
+                    '</div>'+
+                    '<div>'+
+                    '<div>'+obj.gasStationName+'</div>'+
+                    '<div>'+obj.createTime+'</div>'+
+                    '</div>'+
+                    '</div>'+
+                    '<div class="vcLibottom">'+
+                    '<div>应付'+beforeDisFee+'</div>'+
+                    '<div><span class="block">实付</span>￥'+payFee+'</div>'+
+                    '</div>'+
+                    '</div>';
+                return wajxHtml;
+
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body{
+	font-family:  Helvetica;
+	overflow-y:auto !important;
+}
+
+/*鏍囧ご閮ㄥ垎*/
+.content{
+	width:100%;
+	height:100%;
+	background-color:#e5e5e5;
+	padding-bottom:20px;
+}
+header{ 
+	height:50px; 
+	width:100%; 
+	background:#f8f8f8; 
+	overflow:hidden;
+}
+.h-head{
+	 height:auto;  
+	 margin:0 auto;
+	 overflow:hidden; 
+}
+
+.h-return{ 
+	 display:block;
+	 width:50px;
+	 height:50px;  
+	 float:left;
+	 text-align:center;
+}
+
+.h-return img{
+	width:19px;
+	margin-top:14px;	
+}
+
+.h-title{ 
+	display:block; 
+	font-size:1.5em; 
+	line-height:50px; 
+	color:#505050; 
+	float:left;
+}
+
+.h-help{ 
+	color:#505050;
+	float:right;
+	font-size: 0.9em;
+	line-height: 50px;
+}
+
+/*鍐呭閮ㄥ垎*/
+section{
+	width:100%;
+	background:none;
+}
+#congame{
+	width:100%;
+	height:auto;
+}
+.fhdiv{	float: left;}
+.zwcdiv{
+	width: 100%;
+	padding-top: 15px;
+	overflow:hidden;
+}
+.days,.minutes,.second{
+	width: 25px;height: 22px;background: #389ffe;border-radius:3px;text-align: center;float: left;margin-left: 3px;line-height: 23px;margin-top:-4px;
+}
+.decdiv{
+	width: 95%;
+	overflow:hidden;
+	background: #FFF;
+	margin: 0 auto;
+	padding-bottom:1%;
+}
+.dscdiv,.dsscdiv{
+	padding-top: 12px;
+	background: #FFF;
+}
+.dscdiv{
+	width: 100%;float: left; line-height: 0;
+}
+
+.dsscdiv{
+	width: 60%;float: left;
+	margin-left: 14px;
+	font-size: 14px;
+}
+
+.imgdiv{
+	text-align: center;
+}
+
+.imgwh{
+	width: 100%;
+}
+
+li{ list-style:none}
+
+/*A鏍囩涓嬪垝绾�*/
+a{
+	text-decoration: none;
+}
+
+.sd{
+	background: url(../img/icon_arrow.png) no-repeat left;
+	display: block;
+	margin-top: -12px;
+	margin-left: 72px;
+	background-size : 12px 12px;
+	width: 18px;
+	height: 22px;
+}
+
+.scfont{
+	padding-left: 15px;
+	color: #868686;
+	font-size:0.8rem;
+}
+
+.syfont{
+	color: #868686;
+	float: left;
+	font-size:0.8rem;
+}
+
+.gameInfo{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-size:0.8rem;
+	color:#868686;
+	/* line-height:1.2rem; */
+	padding: 1px 15px 1%;
+	text-indent: 0 !important;
+}
+
+
+

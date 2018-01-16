@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>车队成员</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+<div class="content errDailog">
+    <div class="page">
+        <div class="hd">
+            <a>
+                <i class="fa fa-angle-left"></i>
+            </a>
+            智油惠
+            <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd absolute pd48">
+            <ul class="carTeamMenu">
+                <li>
+                    <div>
+                        <p class="title">陈小洁</p>
+                        <p>150866677756</p>
+                        <p>NO.23544444</p>
+                    </div>
+                    <div>
+                        <a class="weui-btn weui-btn_mini weui-btn_primary weuiBtn">删除</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="notConTip hide">
+                <img src="../../assets/mobile/images/notContent.png" alt=""/>
+                <p class="notInfor">
+                    暂无数据
+                </p>
+            </div>
+        </div>
+        <div class="weui_btn_area fixed">
+            <a href="addCarPeople.html" class="weui_btn b0 weui_btn_primary">添加成员</a>
+        </div>
+    </div>
+</div>
+<script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+<script src="../../assets/mobile/js/confirm.js"></script>
+<script src="../../assets/mobile/js/removeTip.js"></script>
+<script src="../../assets/mobile/js/global.js"></script>
+<script>
+    $(function () {
+        /*成员删除弹框*/
+        var page = $(".page");
+        $(".carTeamMenu").delegate(".weuiBtn","touchend",function(){
+            confirmTip("是否删除该成员?");
+            $("#dialogConfirm").removeClass("hide");
+            $(this).closest("li").addClass("remove");
+            $("#signCancel").addClass("signCancel");
+            $("#signSure").addClass("signSure");
+            $(".weui_dialog").css({display:"inline-block"});
+            $(".weui_dialog").removeClass("vux-dialog-leave")
+        });
+
+        /*取消商品删除*/
+        page.delegate(".signCancel","touchend",function(){
+            $(".orderList li.remove").removeClass("remove");
+            $("#dialogConfirm").addClass("hide");
+            $(".weui_dialog").addClass("vux-dialog-leave")
+
+        });
+
+        /*确定商品删除*/
+        page.delegate(".signSure","touchend",function(){
+            $(".carTeamMenu li.remove").remove();
+            $("#dialogConfirm").addClass("hide");
+            showErrMsg("成员删除成功");
+        });
+    })
+</script>
+</body>
+</html>

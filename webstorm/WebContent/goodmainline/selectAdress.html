@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="../skins/goodmainline/css/selectAdress.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../goodmainline/selectAdress.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<title>选择地址</title>
+</head>
+
+<body>
+	<div class="adress_title">
+		<a href="javascript:void(0);" id="backPage"><img src="../skins/personcenter/img/nav_return_b.png" alt=""></a>
+		<span>选择地址</span>
+	</div>
+	<div class="adress_name">
+		<ul>
+			<li class="current1">江苏</li>
+			<li>南京市</li>
+			<li>玄武区</li>
+		</ul>
+	</div>
+	<div class="adress_list">
+		<ul>
+			<li class="current2">北京</li>
+			<li>上海</li>
+			<li>天津</li>
+			<li>重庆</li>
+			<li>江苏</li>
+			<li>山西</li>
+			<li>内蒙古</li>
+			<li>辽宁</li>
+			<li>吉林</li>
+			<li>黑龙江</li>
+		</ul>
+	</div>
+
+	<script>
+	$(".adress_list ul li").hover(function(){
+		$(this).addClass("current2");
+	},function(){
+		$(this).removeClass("current2");
+	})
+	</script>
+</body>
+</html>

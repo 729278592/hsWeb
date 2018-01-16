@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+html * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	/*   -webkit-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-drag:none; */
+}
+
+ul,li,p {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+:focus{outline:0;}
+body {
+	background: #f8f8f8;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/*  -webkit-tap-highlight-color:transparent; */
+}
+/*--viewbox整个可视窗口--*/
+.viewbox {
+	max-width: 100%;
+	min-width: 320px;
+	height: 100%;
+	background: #f8f8f8;
+	margin: 0px auto;
+	font-family: '微软雅黑';
+	top: 0;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px #d9d9d9 solid;
+	color: #505050;
+}
+/*--/section*/
+section {
+	max-width: 736px;
+	height: auto;
+	min-width: 320px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5rem;
+	float: left;
+	margin-top:50px;
+}
+
+.product {
+	width: 100%;
+	background-color: #f8f8f8;
+	overflow: hidden;
+}
+
+.product ul {
+	width: 100%;
+	height: auto;
+}
+
+.product ul li {
+	width: 100%;
+	height: 4.5rem;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 4.5rem;
+}
+
+.product ul li:active {
+	background: #f2f2f2;
+}
+
+.product ul li a {
+	color: #505050;
+	padding-left: 1em;
+	font-size: 1.5rem;
+	display: block;
+}
+/*--/section*/
+
+/*--viewbox整个可视窗口--*/

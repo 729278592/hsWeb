@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>华绰服务号</title>
+    <link rel="stylesheet" href="../css/vip.css"/>
+	<script src="../js_new/main.js"></script><!--分辨率-->
+</head>
+<body>
+<div class='member-max member-bg-ea'>
+	<div class='fx-top'>
+		<div class='fx-top-content'>
+			<div class='head-box'>
+				<img src='../images/defaultHead.png'/>
+			</div>
+			<div class='title'>
+				<span class='name'>钱红红</span>
+				<span class='address'>上海XX装饰有限公司</span>
+			</div>
+			<div class='right'>
+				<span class='gride'>中级店员</span>
+			</div>
+		</div>
+	</div>
+	<ul class='fx-iconBox'>
+		<li>
+			<span class='icon-box'>
+				<img src='../images/fx-kehu.png'/>
+			</span>
+			<span class='title'>客户</span>
+			<span class='num'>102人</span>
+		</li>
+		<li>
+			<span class='icon-box'>
+				<img src='../images/fx-dingdan.png'/>
+			</span>
+			<span class='title'>推广订单</span>
+			<span class='num'>12个</span>
+		</li>
+		<li>
+			<span class='icon-box'>
+				<img src='../images/fx-haibao.png'/>
+			</span>
+			<span class='title'>推广海报</span>
+			<span class='num'>二维码拉客户</span>
+		</li>
+		<li>
+			<span class='icon-box'>
+				<img src='../images/order.png'/>
+			</span>
+			<span class='title'>下单</span>
+			<span class='num'>快速便捷</span>
+		</li>
+		<li>
+			<span class='icon-box'>
+				<img src='../images/juan.png'/>
+			</span>
+			<span class='title'>扫礼卷</span>
+			<span class='num'>扫礼卷核销</span>
+		</li>
+	</ul>
+</div>
+<div class='alertBox'>
+	<div class='cont'>
+		<div class='img'>
+			<img src='../images/fx-man.png'/>
+		</div>
+		<div class='title'>分销员介绍</div>
+		<p>分销员可以直接获取推广订单的分红，不同等级的推广员分红比例不同。分销员等级和分红比例如下：<br/>
+		初级推广员：<strong>分销业绩为0~10000元，此时分红1%</strong><br/>
+		中级推广员：<strong>分销业绩为10001~100000元，此时分红3%</strong><br/>
+		高级推广员：<strong>分销业绩为100001~1000000元，此时分红5%</strong><br/>
+		</p>
+		<div class='btm' id='alertBtn'>知道了</div>
+	</div>
+</div>
+</body>
+<script type='text/javascript' src='../js_new/zepto.min.js'></script>
+<script>
+$('#fxShow').on('click',function(){
+	$('.alertBox').show();
+	return false;
+});
+$('#alertBtn').on('click',function(){
+	$('.alertBox').hide();
+	return false;
+});
+
+</script>
+</html>

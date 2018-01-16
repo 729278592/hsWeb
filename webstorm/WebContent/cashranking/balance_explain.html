@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="../skins/cashranking/css/explain.css" rel="stylesheet">
+<script src="../js/jquery-2.2.1.min.js" ></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+<title>HC服务号</title>
+</head>
+
+<body>
+	<header>
+		<span class="header_l" id="return1">
+			<img src="../skins/cashranking/img/nav_return_b.png">
+		</span>
+		<span>说明</span>
+	</header>
+	<div class="content">
+		<section>
+			<h1>账号余额：</h1>
+			<p>账号余额是由“可提现金”和“冻结现金”组成。</p>
+		</section>
+		<section>
+			<h1>什么是“可提现金”</h1>
+			<p>“可提现金”即为解冻金额，用户可以申请提现该状态下的金额。</p>
+		</section>
+		<section>
+			<h1>什么是“冻结现金”</h1>
+			<p>“冻结现金”即为不可提金额，用户没有申请提现的权限。</p>
+		</section>
+		<section>
+			<h1>如何解冻“冻结现金”？</h1>
+			<p>冻结现金由“购买返现”和“推荐返现”这两部分赚取的现金组成。</p>
+			<p>1、购买返现：收到购买商品后，在订单管理中点击“确认收货”后的7个工作日之后即自动解冻</p>
+			<p>	2、推荐返现：在你合伙人获得的购买返现到账后的15分钟后即自动解冻</p>
+		</section>
+		
+	</div>
+</body>
+<script>
+$("#return1").click(function(){
+	history.go(-1);
+	return false;
+});
+</script>
+</html>

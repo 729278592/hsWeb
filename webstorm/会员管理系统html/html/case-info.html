@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>华绰服务号</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!--案例进行步骤开始-->
+        <div class="case_step">
+            <div class="case_s">
+                <img src="../images/case_step1.png" alt="">
+                <ul class="case_step_list clearfix">
+                    <li class="active">提交</li>
+                    <li>审核</li>
+                    <li>完成</li>
+                </ul>
+            </div>
+            <div class="case_fx">
+                <div class="case_fx_h">进度信息</div>
+                <div class="case_fx_b">
+                    <p class="title">您的作品已提交给系统，审核通过后会自动 为您您发布。</p>
+                    <p class="time">2017-09-28 12:12:12</p>
+                </div>
+            </div>
+        </div>
+        <!--案例进行步骤结束-->
+        <!--案例头部开始-->
+        <div class="caseInfo_head">
+
+        </div>
+        <!--案例头部结束-->
+
+        <!--案例身体开始-->
+        <div class="caseInfo_body">
+            <div class="albd_hd">
+                <p class="ab_hd">
+                    现代90平三居室-工业沉静简洁风
+                </p>
+                <div class="ab_prs">
+                    <span>户型： LOFT 90m²</span>　　　　　　　　
+                    <span>　预算：30W</span>
+                </div>
+                <p class="ab_in clearfix">
+                    <span class="Verdana left">2017-12-03 </span>
+                    <span class="right">
+                        <span class="icon_span">
+                            <span class="ion-ios-eye"></span>
+                            <span class="Verdana">287</span>
+                        </span>
+                        <span class="icon_span good" data-flag=false>
+                            <span class="ion-thumbsup"></span>
+                            <span>99</span>
+                        </span>
+                        <span class="icon_span">
+                            <span class="ion-chatbox-working"></span>
+                            <span>99</span>
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="al_con">
+                <div class="al_html">
+                    <p>此设计以独特的工业风格来设计，是具有一定程度的 人为性工艺、材料的物体。粗矿的工业设计，斑驳的 铁楼梯，开阔的空间，让人在自己</p>
+                    <div>
+                        <img src="../images/case-info1.jpg" class="w100" alt="">
+                    </div>
+                    <p>刚开始的时候，是有的人家装修后很多木地板，想着 将这些多余的材料利用一番，便将它做成了电视背景 墙，但是没想到效果非常好！</p>
+                    <div>
+                        <img src="../images/case-info2.jpg" class="w100" alt="">
+                    </div>
+                    <p>用木地板还可以在工业风的基础上有更多的宜人性和 舒适性，既有工业的沉静，又有自然的温和。</p>
+                </div>
+                <ul class="label_list clearfix">
+                    <li>工业风</li>
+                    <li>简约风</li>
+                    <li>木地板</li>
+                    <li>LOFT</li>
+                    <li>宜人舒适</li>
+                </ul>
+            </div>
+
+        </div>
+        <!--案例身体结束-->
+
+        <!--评论开始-->
+        <div class="comment">
+            <div class="com_hd">热门评论</div>
+            <div class="com_bd">
+                <!--无评论列表开始-->
+                <div class="no_com hide">
+                    沙发还空着，快来抢吧~
+                </div>
+                <!--无评论列表结束-->
+
+                <!--评论列表开始-->
+                <div class="has_com">
+                    <ul class="com_list">
+
+                    </ul>
+                    <div class="look_comment ">
+                        <button class="com_btn left" type="button">查看全部评论(6)></button>
+                    </div>
+                </div>
+                <!--评论列表结束-->
+            </div>
+        </div>
+        <!--评论结束-->
+
+        <!--评论输入框开始-->
+        <div class="caseInfo_foot">
+            <a class="com_input">
+                <input placeholder="我有话要说" id="input_id" disabled type="text">
+                <span class="ion-forward save"></span>
+                <!--<img src="../images/clear.png" class="clear hide" alt="">-->
+            </a>
+            <div class="cllot" data-flag=false>
+                <span class="ion-ios-star"></span><br>
+                收藏
+            </div>
+            <div class="good" data-flag=false>
+                <span class="ion-thumbsup"></span><br>
+                点赞
+            </div>
+
+        </div>
+        <!--评论输入框结束-->
+
+    </div>
+    <script src="../js_new/main.js"></script>
+    <script src="../js_new/zepto.min.js"></script>
+    <script src="../js_new/weui.js"></script>
+    <script>
+        $(function () {
+            var $good = $(".caseInfo_foot .good,.ab_in .good");
+            var $cllot = $(".cllot");
+
+            function hideDot(that) {
+                setTimeout(function () {
+                    var flag = that.data("flag");
+                    if(that.is(".good")){
+                        that.attr({"data-flag":!flag});
+                        return;
+                    }
+                    if(that.is(".cllot")){
+                        that.attr({"data-flag":!flag});
+                        return;
+                    }
+                },1000)
+            }
+
+            function statusChange(cancel,success,obj,flag,that) {
+                if(flag){
+                    weui.toast(cancel);
+                    obj.removeClass("active");
+                    hideDot(that);
+                }else{
+
+                    weui.toast(success);
+                    obj.addClass("active");
+                    hideDot(that);
+                }
+            }
+            $cllot.on("click",function () {
+                statusChange("取消收藏","收藏成功",$(this).find(".ion-ios-star"),$(this).data("flag"),$(this))
+            });
+            $good.on("click",function () {
+                statusChange("取消点赞","点赞成功",$(this).find(".ion-thumbsup"),$(this).data("flag"),$(this));
+            });
+
+            $.ajax({
+                url: "../data/case-info.json",
+                dataType: 'json',
+                data: '',
+                jsonp: 'callback',
+                success: function (data) {
+
+                    var $caseInfo_head = $(".caseInfo_head"),
+                        productDetail= data.productDetail,
+                        commentList = productDetail.commentList,
+                        commentLen = commentList.length,
+                        $com_hd = $(".com_hd"),
+                        $no_com = $(".no_com"),
+                        $has_com = $(".has_com"),
+                        $com_list= $(".com_list"),
+                        commentHtml = '';
+
+                        $caseInfo_head.html('<div class="al_hd">'+
+                                            '<img src="'+productDetail.authorHead+'" alt="">'+
+                                        '</div>'+
+                                        '<div class="al_bd">'+
+                                            '<p class="al_name">'+productDetail.author+'</p>'+
+                                            '<p class="an_job">设计师</p>'+
+                                        '</div>')
+
+                    $com_hd.html('全部评论('+commentLen+')');
+                    if(commentLen<1){
+
+                        $no_com.removeClass("hide");
+                        $has_com.addClass("hide");
+                        return;
+                    }
+                    $no_com.addClass("hide");
+                    $has_com.removeClass("hide");
+                    for(var i = 0;i<2;i++){
+                        commentHtml +='<li>'+
+                            '<div class="com_con_hd">'+
+                            '<img src="'+commentList[i].img+'" alt="">'+
+                            '</div>'+
+                            '<div class="com_con_bd">'+
+                            '<div class="com_fx">'+
+                            '<div class="com_left">'+
+                            '<p class="com_name">'+commentList[i].author+'</p>'+
+                            '<p class="com_time">'+commentList[i].date+'</p>'+
+                            '</div>'+
+                            '<div class="com_right">'+
+                            '<span class="icon_span good" data-flag=false> '+commentList[i].zan+''+
+                            ' <span class="ion-thumbsup" data-status="'+commentList[i].status+'"></span>'+
+                            '</span>'+
+                            '</div>'+
+                            '</div>'+
+                            '<div class="com_con">'+commentList[i].content+'</div>'+
+                            '</div>'+
+                            '</li>'
+                    }
+                    $com_list.append(commentHtml);
+                    $(".com_list li .ion-thumbsup").each(function () {
+                        var that = $(this);
+                        if(that.data("status")==1){
+                            that.addClass("active");
+                            that.closest(".good").attr({"data-flag":true});
+                        }
+                    });
+
+                    var $good = $(".com_list li .good");
+
+                    $good.on("click",function () {
+                        statusChange("取消点赞","点赞成功",$(this).find(".ion-thumbsup"),$(this).data("flag"),$(this));
+                    });
+                }
+            })
+
+            /*去评论*/
+            var $input_id = $(".com_input");
+            $input_id.on('click',function(){
+                alert(0)
+            });
+
+
+        })
+    </script>
+</body>
+</html>

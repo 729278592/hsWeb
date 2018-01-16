@@ -1,0 +1,200 @@
+@CHARSET "UTF-8";
+		*{
+	    	margin: 0px;
+		    padding: 0px;
+	    }
+    	html {
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    outline: 0;
+		    background-color: #e5e5e5;
+		    
+  		 }
+        :focus{outline:0;}
+		body{
+			height:100%;
+			margin: 0; 
+			-webkit-user-select: none; 
+			position: relative; 
+			background-color: #ffffff;
+			line-height: 1.2;
+		    font-size: 0.9em;
+		    margin: 0 auto;
+		    max-width: 720px;
+		    min-width: 320px;
+		    -webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+		img{cursor: pointer;}
+		.clear{
+			clear: both;;
+		}
+		section{
+			width:100%;
+			background-color: #e5e5e5;
+		    margin: 0 auto;
+		    max-width: 720px;
+		    min-width: 320px;
+		    margin-top:4rem;
+		}
+		.heads{
+			width:100%;
+			height:50px;
+			position:fixed;
+			background-color:#f8f8f8;
+			z-index: 1;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			margin: 0px auto;
+			background-position: 4.5px center;
+			box-sizing: border-box;
+			border-bottom: 1px solid #e5e5e5;
+		}
+        .heads span{
+			font-size: 1.1rem;
+			line-height: 50px;
+            color: #505050;
+            cursor: pointer;
+            font-family: '微软雅黑';
+		}
+		.heads span img{
+    		width: 19px;
+			margin-top: 14px;
+		}
+.menu-list{
+	width: 130px;
+    position: fixed;
+    height: auto;
+    background: #f8f8f8;
+    right:0.9rem;
+    top:3.1rem;
+    box-shadow: 0 0 9px rgba(0,0,0,0.3);
+    z-index:1;
+    display:none;
+    }
+.menu-list li{height:44px;border-bottom:1px solid #e5e5e5;list-style:none;text-align:left;}
+.menu-list li:active{background:#f2f2f2;}
+.menu-list li img{    
+	width: 23px;
+    margin-top: 0.6rem;
+    margin-left: 2rem;}
+.menu-list li p{    
+	text-align: right;
+	margin-right: 1.7rem;
+	color: #808080;
+	margin-top: -1.4rem;
+	font-size: 1rem;
+	font-family: 微软雅黑;}
+		.post_fen{
+			width:100%;
+			height:4rem;
+			border-bottom: 1px solid #E0E0E0;
+			background-color:#ffffff;
+			margin-top:10px;
+			font-size:1.5em;
+			font-weight:500;
+		}
+		.fenl,.fenr{
+			float:left;
+		}
+		.fenl{
+			width:30%;
+			margin-left:5%;
+			font-size: 0.8em;
+            color: #505050;
+            font-family: '微软雅黑';
+			height:4rem;
+			line-height:4rem;
+		}
+		.fenr{
+			 width:60%;
+             height:4rem;
+			 line-height:4rem;
+			 cursor: pointer;
+		}
+		.goodstar{
+			width:20px;
+			margin-left:5%;
+			position:relative;
+			top:0.05em;
+		}
+		.post_goodmsg{
+			width:100%;
+			/* height:8rem; */
+			background-color: #ffffff;
+		}
+  section .produce{padding: 2% 3%;overflow: hidden;height: auto;background:#ffffff;top:0;left:0;margin-top:0em;border-bottom: 1px solid #e5e5e5;}
+  section .produce .produce_show{float:left;width:5.5rem;height:5.5rem;}
+  section .produce .produce_show img{display:block;width:100%;height:100%;border:1px solid #dcdcdc;}
+  section .produce .produce_detail{float:left;height:100%;width:65%;margin-left: 2%;margin-top:0.5em;font-family: '微软雅黑';color: #505050;font-size: 1em;}
+  section .produce .produce_detail .data{font-size: 1.2em;display:inline-block;margin-top: 8%;}
+		.post_text{
+			width:100%;
+			height:100px;
+			background-color: white;
+		}
+		.post_showimg{
+			min-height:10px;
+			background-color: white;
+		}
+		.post_showimg img{
+			margin-left:2%;
+			
+			height:80px;
+		}
+		.post_addimg{
+			width:100%;
+			height:60px;
+			background: white;
+		}
+		.post_addimg_left,.post_addimg_right{
+			float:left;
+		}
+		.post_addimg_left{
+			/* width:20%; */
+			height:100%;
+			cursor:pointer;
+		}
+		.post_addimg_right{
+			/* width:80%; */
+			height:100%;
+			background-color: #ffffff;
+			float: right;
+		}
+		
+		footer{
+		    width:100%;
+		    height:8rem;
+			margin-top:10px;
+			background-color: #ffffff;
+			font-size:1.2em;	
+		}
+		.clear{
+			clear: both;
+		}
+		footer span{margin-left:1em;font-family: '微软雅黑';color: #505050;}
+		#bon{
+			width:70%;
+			height:35px;
+			background-color: #FF620D;
+			margin-left:15%;
+			margin-top:-3rem;
+			color:#fff;
+			font-size:1.2em;
+			font-weight:500;
+			border:0px solid white;
+			border-radius:1em;
+			-moz-border-radius: 1em; /* Firefox */
+	        -webkit-border-radius: 1em; /* Safari 和 Chrome */
+	        -ms-border-radius: 1em; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+			display:inline-block;
+			text-align: center;
+			line-height: 35px;
+		}
+		#chooseNiming{
+			width:1.2em;
+			margin-left:20px;
+		}

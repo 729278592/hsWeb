@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HC服务号</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<link rel="stylesheet" href="../css/swiper.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+	<script src='../js_new/main.js'></script>
+	<style type='text/css'>
+		.bg{
+		    display: block;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    background: rgba(0,0,0,0.4);
+		    z-index: 99;
+    	}
+    	.mydiv{
+    		background-color: white;
+			font-size: 1rem;
+			z-index: 99;
+			width: 80%;
+			left: 10%;
+			top: 12%;
+			position: fixed;
+    	}
+    	.margker_top .btm{
+    		float: left;
+    		width: 100%;
+    		border-top: 1px solid #e6e6e6;
+		    margin-top: 8px;
+		    padding-top: 5px;
+		    padding-left: .1rem;
+		    border-bottom: 1px solid #e6e6e6;
+    		padding-bottom: .08rem;
+    	}
+    	.margker_top .img_box{
+    		float: left;
+    		width: 24px;
+    		height: 24px;
+    		margin-top: -2px;
+    		margin-left: .1rem;
+    	}
+    	.margker_top .img_box>img{
+    		width: 100%;
+    		height: auto;
+    	}
+    	.margker_top>p{
+    		float: left;
+    		margin-left: 10px;
+    		font-size: .1365rem;
+    		color: #0c0c0c;
+    	}
+    	.margker_top .btm>span{
+    		font-size: .1195rem;
+    		color: #9c9c9c;
+    	}
+    	.margker_bottom{
+    		float: left;
+    		width: 100%;
+    		margin-top: 8px;
+    	}
+    	.margker_bottom .img_box{
+    		float: left;
+    		width: 24px;
+    		height: 24px;
+    		margin-left: .1rem;
+    		margin-top: -2px;
+    	}
+    	.margker_bottom .img_box>img{
+    		width: 100%;
+    		height: auto;
+    	}
+    	.margker_bottom >p{
+    		float: left;
+    		margin-left: 8px;
+    		font-size: .1365rem;
+    		color: #0c0c0c;
+    	}
+    	.margker_bottom >span{
+    		float: left;
+		    font-size: .1195rem;
+		    color: #9c9c9c;
+		    width: 100%;
+		    border-top: 1px solid #e6e6e6;
+		    margin-top: 10px;
+		    padding-top: 6px;
+		    padding-left: .1rem;
+    	}
+	</style>
+</head>
+<body>
+	<div class='money-bg effect-bg'>
+		<div class='money-top'>
+			<div class='top-title'>
+				<span class='icon' id='return2'></span>
+				<span class='left'>我的影响力</span>
+				<span class="li-rt" id="list-m"><a href="javascript:void(0);">
+					<span><img src="../skins/personcenter/img/gdetails_list_b.png" width="18px"></span>
+					  <ul class="menu-list">
+					    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+					    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+					    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+					    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+					 </ul>						  
+					</a>
+				</span>
+			</div>
+			<div class='container swiper-container'>
+				<div class="swiper-wrapper">
+					<div class='list swiper-slide'>
+						<a href='../effect/goToLevel.do'>
+							<div class='top-cont'>
+								<div class='top'>
+									<span class='icon'></span>
+									<span class='num' id='effectnum'>0</span>
+								</div>
+								<span class='title'>影响力</span>
+							</div>
+							<div class='top-bottom'>
+								<div class='flex'>
+									<span class='title' id="vipl">vip</span>
+									<span class='icon'></span>
+									<span class='num' id='min'>0</span>
+								</div>
+								<div class='line'>
+									<span class='line-blue' style='width: 80%;'></span>
+								</div>
+								<div class='flex flex2'>
+									<span class='title' id='vipr'>vip</span>
+									<span class='icon'></span>
+									<span class='num' id='max'>0</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class='list swiper-slide'>
+						<div class='list-relative'>
+							<div id="main" style='float: left; width: 100%; height: 100%;'></div>
+							<div class='absolute icon1' id="img1">
+								<img src='../images/Partner5.png'/>
+								<span class='title'>合伙人数量</span>
+							</div>
+							<div class='absolute icon2' id="img2">
+								<img src='../images/Chart2.png'/>
+								<span class='title'>分享点击率</span>
+							</div>
+							<div class='absolute icon3' id="img3">
+								<img src='../images/Chart4.png'/>
+								<span class='title'>积分数量</span>
+							</div>
+							<div class='absolute icon4' id="img4">
+								<img src='../images/Chart5.png'/>
+								<span class='title'>现金数量</span>
+							</div>
+							<div class='absolute icon5' id="img5">
+								<img src='../images/Chart3.png'/>
+								<span class='title'>签到率</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class='top-asc'>
+			<span class='title'>我的合伙人（按影响力排名）</span>
+			<a class='right-title ui-more' href='../effect/goToRanking.do'>全部合伙人<strong class='icon'></strong></a>
+		</div>
+		<div class='top-man'>
+			<ul id='shows'>
+				
+			</ul>
+		</div>
+		<div class='content effect-content'>
+			<div class="orbit_box"></div>
+		</div>
+	</div>	
+	<!-- end -->
+	<div id="bg" class="bg" style="display: none;"></div>
+	<div id="pop1" class="mydiv" style="display: none;"></div>
+	<div id="pop2" class="mydiv" style="display: none;"></div>
+	<div id="pop3" class="mydiv" style="display: none;"></div>
+	<div id="pop4" class="mydiv" style="display: none;"></div>
+	<div id="pop5" class="mydiv" style="display: none;"></div>
+	<div id="showDownInfo" style="width: 100%; height: 100%; position: fixed; top: 0px; display: none;z-index: 99;"></div>
+	<div class='effect-btm'>
+		<div class='flex' id='saoma'>
+			<span class='icon icon-code'></span>
+			<span class='title'>微信扫码</span>
+		</div>
+		<div class='flex' id='copy'>
+			<span class='icon icon-link'></span>
+			<span class='title'>复制链接</span>
+		</div>
+		<div class='flex2' id='invation'>立刻邀请</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../js/jumppage.js"></script>
+<script type="text/javascript" src="../js/echarts_old.js"></script>
+<script type="text/javascript" src="../effect/effect.js"></script>
+<script src="../js_new/swiper.js"></script>
+<script type="text/javascript" src="../personcenter/commlist.js"></script>
+<script type='text/javascript'>
+	/*var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		loop: true,
+        paginationClickable: true,
+        autoplayDisableOnInteraction : false,
+        autoplay: 3000 
+	});*/
+	//我的合伙人
+	//alert(window.location.href);
+	$.ajax({
+		url : '../user/loadUserRanking.do',
+		type : 'POSt',
+		dataType : 'JSON',
+		async : true,
+		success: function(d){
+			$('#shows').html('');
+			var _li ='';
+			if(d.firstObj.length==0){
+				$('#shows').html('<span style="float: left; width: 100%; height: 100%; text-align: center;"><img style="display: inline-block; width: 36px; height: 36px; margin-top: .2rem;" src="../images/icon-01.png" /><strong style="float: left;text-align: center;height: auto;line-height: 0;width: 100%;height: auto;color: #9e9e9e;font-size: .1365rem;margin-top: .14rem;font-weight: normal;">还没有合伙人</strong></span>');
+				return false;
+			}
+			for(var i=0; i<d.firstObj.length; i++){
+				var origin2 = d.firstObj[i][1];
+				if (origin2.substring(0,7) == 'http://') {
+				} else {
+					origin2 = "../user/rankingDown.do?filename=" + origin2;
+				}
+				/*_li += "<li>"
+						+"<span class='head'><img src="+origin2+"/></span>"
+						+"<span class='title'><strong class='number'>"+(i+1)+"</strong>"+d.firstObj[i][2]+"</span>"
+					+"</li>";*/
+				_li += '<li>'
+							+'<div class="head">'
+							+'<span class="img-box">'
+								+'<img src="'+origin2+'">'
+							+'</span>'
+							+'<span class="grade">VIP'+d.firstObj[i][4]+'</span>'
+						+'</div>'
+						+'<span class="title">'
+							+'<strong class="number">'+(i+1)+'</strong>'+d.firstObj[i][2]
+						+'</span>'
+						+'<span class="btm">'
+							+'<span class="icon"></span>'+d.firstObj[i][3]
+						+'</span>'
+					+'</li>';
+			}
+			$('#shows').append(_li);
+		}
+	});
+	//复制
+	$('#copy').on('click',function(){
+		var clipBoardContent=window.location.href;
+		copyTextToClipboard(clipBoardContent);
+	});
+	function copyTextToClipboard(text) {  
+		  var textArea = document.createElement("textarea");   
+		  textArea.style.background = 'transparent';  
+		  textArea.value = text;  
+		  document.body.appendChild(textArea);  
+		  textArea.select();  
+		  try {    
+		    var successful = document.execCommand('copy');    
+		    var msg = successful ? 'successful' : 'unsuccessful';          
+		  } catch (err) {  
+		   console.log('Oops, unable to copy');  
+		  }  
+		 document.body.removeChild(textArea);
+	}
+</script>
+</html>

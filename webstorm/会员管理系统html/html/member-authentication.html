@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>华绰服务号</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="con_div">
+            <div class="rz_con">
+                <div class="rz_tx">
+                    <img src="../images/role_m.png" alt="">
+                </div>
+                <p class="title">请填写您的认证信息</p>
+                <div class="rz_form">
+                    <form action="">
+                        <div class="rz_input">
+                            <p class="rz_title">姓名</p>
+                            <input class="" id="personName" placeholder="请输入您的姓名" type="text">
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_title">手机号</p>
+                            <input class="" id="mobile" placeholder="请输入您的手机号" type="text">
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_title">验证码</p>
+                            <input class="" id="code" placeholder="请输入验证码" type="text">
+                            <button class="rz_fs">发送验证码</button>
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_title">门店</p>
+                            <input class="" id="storeName" placeholder="请输入您门店名" type="text">
+                        </div>
+                        <div class="rz_input">
+                            <p class="rz_name">内部设计师</p>
+                            <div class="weui-cells_checkbox">
+                                <label for="s11">
+                                    <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked">
+                                    <i class="weui-icon-checked"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="rz_btn">
+                            <button id="saveBtn" type="button">认证提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js_new/main.js"></script>
+<script src="../js_new/zepto.min.js"></script>
+<script src="../js_new/common-validate.js"></script>
+<script src="../js_new/weui.js"></script>
+<script>
+    $(function () {
+        /*表单提交*/
+        var saveBtn = $("#saveBtn");
+        var personName = $("#personName");
+        var mobile = $("#mobile");
+        var code = $("#code");
+        var storeName = $("#storeName");
+        var storeAddress = $("#storeAddress");
+        saveBtn.on("touchend",function(){
+
+            if(isEmpty(personName.val())){
+                weui.showMsg("请输入姓名");
+                return ;
+            }
+
+            if(isEmpty(mobile.val())||!isPhone(mobile.val())) {
+                weui.showMsg("请输入有效手机号");
+                return;
+            }
+
+            if(isEmpty(code.val())){
+                weui.showMsg("请输入账号");
+                return ;
+            }
+
+            if(isEmpty(storeName.val())){
+                weui.showMsg("请输入门店名");
+                return ;
+            }
+
+            if(isEmpty(storeAddress.val())){
+                weui.showMsg("请输入门店地址");
+                return ;
+            }
+
+        });
+
+    })
+</script>
+</body>
+</html>
+
+

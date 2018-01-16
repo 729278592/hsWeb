@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>HC服务号</title>
+<link rel="stylesheet" type="text/css" href="../skins/effect/css/scrollbar.css">
+<link rel="stylesheet" href="../skins/effect/css/overallranking.css"> 
+<link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="application/javascript" src="../js/iscroll.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="application/javascript" src="../effect/strongranking.js"></script>
+<style>
+
+#wrapper {
+	position:absolute; z-index:1;
+	top:2px; bottom:48px; left:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+
+#scroller {
+	position:relative;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	float:left;
+	width:100%;
+	padding:0;
+}
+
+#scroller>ul {
+	position:relative;
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	text-align:left;
+}
+
+#scroller>li {
+	padding:0 10px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+}
+
+#scroller li > a {
+	display:block;
+}
+
+/**
+ * 下拉样式 Pull down styles
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:24px;
+	line-height:24px;
+	padding:4px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:24px; height:24px;
+	background:url(../skins/effect/img/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:24px 48px; background-size:24px 48px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+</style>
+
+<body>
+
+	<header>
+		<div class="bigbox">
+			<b class="number"></b>
+			<a href="javascript:void(0);" id="ifSeller" style="position: absolute;right: 1%;height: 30px;color:#fff;line-height: 30px;font-size: 14px;width: 100px;text-align: center;top: 4px;"><span>查看销售代表</span></a>
+			<div class="head_box">
+				<span class="myRanking">我的排名&nbsp;&gt;</span>
+
+				<div class="myEffect" id="goToMyEffect">
+					我的影响力<img src="../skins/effect/img/myeffect_icon_white.png"><span id="myEffectId">256</span>&nbsp;&gt;
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section>
+		<div id="wrapper">
+			<div id="scroller">
+			
+				<div id="pullDown">
+					<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+				</div>
+		
+					<ul id="thelist">
+						<!-- <li>
+							<ul class="list">
+								<li class="grade"><span style="color: #ff3131;">1</span></li>
+								<li class="photo">
+									<img src="../skins/firstpage/img/body_default.png">
+									<div class="vip_box">
+										<span>VIP1</span>
+									</div>
+								</li>
+								<li class="content">
+									<p>
+										<span class="uname">咖啡香烟</span><span class="phone">(139****5688)</span>
+									</p>
+									<div class="progress" style="width: 100%; background: #ff3131;">
+										<span class="effectValue"><img
+											src="../skins/effect/img/myeffect_icon_white.png" width="14px"><span>3600</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</li> -->
+					</ul>
+						
+				<div id="pullUp">
+					<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+				</div>
+				
+			</div>
+		</div>
+		<div id="backtoTop"><img src="../skins/personcenter/img/icon_toTop.png"></div>
+	</section>
+</body>
+</html>

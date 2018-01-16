@@ -1,0 +1,2171 @@
+/*会员中心*/
+/*header*/
+.MemberCenter .mainContent {
+    height: 428px;
+}
+
+.MemberCenter header {
+    height: 95px;
+    width: 100%;
+    position: relative;
+}
+
+.MemberCenter header div.basicInfor {
+    height: 61px;
+    border-bottom: 2px solid #4DA408;
+    padding-left: 130px;
+    color: #3E5222;
+}
+
+.MemberCenter header div.basicInfor .userName {
+    color: #111C0B;
+    font-size: 1.5em;
+}
+
+.MemberCenter header div.basicInfor ul li {
+    height: 28px;
+    line-height: 28px;
+}
+
+.MemberCenter header div.logo {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    z-index: 2;
+    width: 88px;
+    height: 88px;
+}
+
+.MemberCenter header div.headNav {
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    padding-left: 130px;
+    padding-top: 2px;
+}
+
+.MemberCenter header div.headNav ul li {
+    float: left;
+    list-style-type: none;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.MemberCenter header div.headNav ul li a span {
+    color: #fff;
+}
+
+.MemberCenter header .logo span.headIcon:hover + .changeBtn, .MemberCenter header .logo span.changeBtn:hover {
+    display: block;
+}
+
+.MemberCenter header div.headNav ul li:not(.active):hover {
+    opacity: .6;
+}
+
+.MemberCenter header .logo span.headIcon {
+    overflow: hidden;
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 50%; /*background:url(../../../img/PC/FZS/memberCenter.png) no-repeat -4px -4px;*/
+}
+
+.MemberCenter header .logo span.headIcon img {
+    width: 100%;
+    height: 100%;
+}
+
+.MemberCenter header .logo span.changeBtn {
+    border: none;
+    text-align: center;
+    height: 30px;
+    width: 86px;
+    background: url(../../../img/PC/FZS/memberCenter.png) no-repeat 1px -108px;
+    position: absolute;
+    left: 3%;
+    bottom: -3%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.MemberCenter header span.progress {
+    background: #96EF33;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    bottom: 32px;
+    width: 114px;
+}
+
+.MemberCenter header span.proBar {
+    background: #96EF33;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    left: 114px;
+    bottom: 32px;
+}
+
+.MemberCenter header span.expPoint {
+    background: url(../../../img/PC/FZS/memberCenter.png) no-repeat -171px -526px;
+    height: 13px;
+    width: 30px; /* bottom: 14px; */
+    display: inline-block;
+    text-align: center;
+    padding: 1px 1px 1px 2px;
+    position: absolute;
+    right: -24px;
+    top: -4px;
+    cursor: pointer;
+    color: #248100;
+    font-family: "arial regular" ! important;
+}
+
+.MemberCenter header span.expPoint:hover span {
+    display: block;
+}
+
+.MemberCenter header span.expPoint span {
+    display: none;
+    position: absolute;
+    padding: 3px;
+    background: #B1F881;
+    bottom: 20px;
+    border-radius: 4px;
+    opacity: 0.9;
+    box-shadow: 1px 1px 3px #7C7C7C;
+    min-width: 22px;
+    z-index: 3;
+}
+
+.MemberCenter header span.expPoint span:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    border: 5px #B1F881 solid;
+    border-color: #B1F881 transparent transparent transparent;
+    display: block;
+    position: absolute;
+    left: 9px;
+    bottom: -10px;
+    color: transparent;
+}
+
+.MemberCenter span.icon, .MemberCenter span.bicon, .MemberCenter input.dataInput {
+    background: url(../../../img/PC/FZS/memberCenter.png) no-repeat;
+}
+
+.MemberCenter .headNav span.icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+}
+
+.MemberCenter .basicInfor .goldCoin span.icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+}
+
+.MemberCenter a.my-homePage span.icon {
+    background-position: 0px -207px;
+}
+
+.MemberCenter a.my-goldCoin span.icon {
+    background-position: 0px -249px;
+}
+
+.MemberCenter a.my-privilege span.icon {
+    background-position: 0px -297px;
+}
+
+.MemberCenter a.lucky-draw span.icon {
+    background-position: -2px -358px;
+}
+
+.MemberCenter a.set-up span.icon { /*background-position: -2px -418px;*/
+    background-position: 0px -418px;
+    padding-right: 3px;
+}
+
+.MemberCenter span.goldCoin span.icon {
+    background-position: -2px -164px;
+}
+
+.mg130-r {
+    margin-right: 130px;
+}
+
+.appExperience .bg-w {
+    background-color: transparent;
+}
+
+/*我的首页*/
+.mainContent .navbar {
+    height: 32px;
+    width: 100%;
+    background-color: #F7F7F7;
+    line-height: 32px;
+    border-bottom: 1px solid #E5E5E5;
+    display: inline-block;
+}
+
+.mainContent .myHomePage .curPrivilege span.navbar a {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 55px;
+}
+
+.mainContent .myHomePage .rewardTask nav.navbar a.refresh {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 60px;
+}
+
+.mainContent .myHomePage .curPrivilege ul li, .mainContent .myHomePage .rewardTask .taskContent ul li {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px #E5E5E5 dashed;
+    margin: 0 3%;
+}
+
+.mainContent .myHomePage .rewardTask .taskContent ul li:last-child {
+    border-bottom: none !important;
+}
+
+.mainContent .myHomePage .rewardTask .taskContent {
+    overflow-y: auto;
+    height: 258px;
+}
+
+.MemberCenter span.bicon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+}
+
+.MemberCenter span.bicon.luckWheel {
+    background-position: -175px 0px;
+}
+
+.MemberCenter span.bicon.scratch {
+    background-position: -175px -62px;
+}
+
+.MemberCenter span.bicon.conLogin {
+    background-position: -172px -123px;
+}
+
+.MemberCenter span.bicon.wheelSurf {
+    background-position: -172px -179px;
+}
+
+.MemberCenter span.bicon.appInstall {
+    background-position: -170px -239px;
+}
+
+.MemberCenter span.bicon.appUpgrade {
+    background-position: -170px -298px;
+}
+
+.MemberCenter span.bicon.download {
+    background-position: -176px -366px;
+}
+
+.MemberCenter span.bicon.appGame {
+    background-position: -172px -433px;
+}
+
+.MemberCenter span.bicon.shareApp {
+    background-position: -91px -228px;
+}
+
+.MemberCenter span.bicon.perDatas {
+    background-position: -87px -339px;
+}
+
+.MemberCenter span.bicon.searchGame {
+    background-position: -90px -125px;
+}
+
+.MemberCenter span.bicon.searchApp {
+    background-position: -90px -175px;
+}
+
+.MemberCenter span.bicon.linkPC {
+    background-position: -90px -279px;
+}
+
+.MemberCenter span.bicon.dataBckUp {
+    background-position: -89px -401px;
+}
+
+.MemberCenter span.bicon.bindMobile {
+    background-position: -93px -467px;
+}
+
+.MemberCenter span.bicon.loginMobile {
+    background-position: -172px -179px;
+}
+
+.rewardTask ul li span div.infotips {
+    display: none;
+}
+
+.rewardTask .unreceived ul li span.ta20-l {
+    position: relative;
+}
+
+.rewardTask .unreceived ul li span.ta20-l:hover > div.infotips {
+    display: block;
+}
+
+.rewardTask .unreceived ul li span.ta20-l:hover > a {
+    color: orange;
+}
+
+.rewardTask .unreceived ul li span.oprate span {
+    display: none;
+}
+
+.rewardTask .received ul li span.oprate span {
+    display: block;
+}
+
+.rewardTask .received ul li span.oprate button {
+    display: none;
+}
+
+.rewardTask .unreceived ul li div.infotips span.arr {
+    background: #FEFFCC;
+    border: 1px solid #FCF19E;
+    border-bottom: 0 none;
+    border-right: 0 none;
+}
+
+.rewardTask .unreceived ul li div.infotips span.arr {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    top: -6px;
+    left: 58px;
+}
+
+.rewardTask .unreceived ul li div.infotips {
+    background: #FEFFCC;
+    border: 1px solid #FCF19E;
+    border-radius: 3px;
+    display: none;
+    z-index: 99;
+    min-width: 382px;
+    padding: 5px 10px;
+    line-height: 25px;
+    left: 20px;
+    top: 35px;
+    text-align: left;
+}
+
+.rewardTask .unreceived ul li div.infotips.bottom {
+    bottom: 38px;
+    top: -35px;
+}
+
+.rewardTask .unreceived ul li div.infotips.bottom span.arr {
+    top: 30px;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid #FCF19E;
+    border-right: 1px solid #FCF19E;
+}
+
+.wd33 {
+    width: 33%;
+    display: inline-block;
+}
+
+.wd29 {
+    width: 29.6%;
+}
+
+.wd3 {
+    width: 33%;
+}
+
+.wd30 {
+    width: 30%;
+    display: inline-block;
+}
+
+.ta20-l {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.ta30-r {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.ta55-r {
+    text-align: right;
+    padding-right: 55px;
+}
+
+.mg8-r {
+    margin-right: 8px;
+}
+
+.span0 {
+    width: 2%;
+    height: 1em;
+}
+
+.span1 {
+    margin-right: 2%;
+    width: 3%;
+}
+
+.span2 {
+    margin-right: 2%;
+    width: 8%;
+}
+
+.span3 {
+    margin-right: 2%;
+    width: 13%;
+}
+
+.span4 {
+    margin-right: 2%;
+    width: 18%;
+}
+
+.span5 {
+    margin-right: 2%;
+    width: 23%;
+}
+
+.span6 {
+    margin-right: 2%;
+    width: 28%;
+}
+
+.span7 {
+    margin-right: 2%;
+    width: 33%;
+}
+
+.span8 {
+    margin-right: 2%;
+    width: 38%;
+}
+
+.span9 {
+    margin-right: 2%;
+    width: 33%;
+}
+
+.span10 {
+    margin-right: 2%;
+    width: 38%;
+}
+
+.span11 {
+    margin-right: 2%;
+    width: 43%;
+}
+
+.span12 {
+    margin-right: 2%;
+    width: 48%;
+}
+
+.span13 {
+    margin-right: 2%;
+    width: 53%;
+}
+
+.span14 {
+    margin-right: 2%;
+    width: 58%;
+}
+
+.span15 {
+    margin-right: 2%;
+    width: 63%;
+}
+
+.span16 {
+    margin-right: 2%;
+    width: 78%;
+}
+
+.span17 {
+    margin-right: 2%;
+    width: 83%;
+}
+
+.span18 {
+    margin-right: 2%;
+    width: 88%;
+}
+
+.span19 {
+    margin-right: 2%;
+    width: 93%;
+}
+
+.mainContent .myHomePage .curPrivilege ul li button.btn {
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    width: 72px;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+.MemberCenter em.orange {
+    color: orange;
+    padding: 0 4px;
+}
+
+.orange {
+    color: orange;
+}
+
+.mainContent .navbar ul {
+    padding: 2px 2%;
+}
+
+.mainContent .myHomePage .navbar ul li {
+    float: left;
+    width: 145px;
+    height: 31px;
+    text-align: center;
+    border: 1px solid #F7F7F7;
+    border-bottom: 1px solid #E5E5E5;
+    color: #6ec112;
+    box-sizing: border-box;
+}
+
+.mainContent .navbar ul li.active, .mainContent .navbar ul li:hover {
+    background-color: #FFF;
+    border: 1px solid #E5E5E5;
+    border-bottom: 1px solid #fff;
+    color: #515151;
+}
+
+.mainContent .navbar ul li.active a, .mainContent .navbar ul li:hover a {
+    color: #515151 !important;
+}
+
+.mainContent .navbar ul li a {
+    color: #6ec112 !important;
+}
+
+.MemberCenter .rewardTask .taskContent ul p {
+    text-align: center !important;
+    margin-top: 110px !important;
+}
+
+.MemberCenter .errors {
+    left: 38%;
+    top: 26%;
+    height: 180px;
+    width: 185px;
+    text-align: center;
+}
+
+.MemberCenter .errors span {
+    background: url(../../../img/base/PC/FZS/icon/icon_i.png) no-repeat;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+/*我的金币*/
+.mainContent .myGoldCoin .navbar ul li {
+    float: left;
+    width: 100px;
+    text-align: center;
+    color: #6ec112;
+    font-size: 1.2em;
+    height: 30px;
+}
+
+.mainContent .datePicker {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #E5E5E5;
+    margin-top: -3px;
+}
+
+.mainContent .myGoldCoin .goldContent {
+    padding: 0 3%;
+}
+
+.mainContent .myGoldCoin .goldContent input[type='text'] {
+    height: 23px;
+    margin-bottom: 2px;
+    width: 100px;
+    border: 1px solid #E5E5E5;
+    margin-right: 12px;
+    padding: 0px 8px;
+    color: #7C7F78;
+}
+
+.mainContent .myGoldCoin button.query {
+    height: 25px;
+    border: none;
+    width: 56px !important;
+}
+
+.mg12-l {
+    margin-left: 12px;
+}
+
+.mainContent .myGoldCoin .loading-wrap {
+    left: 43%;
+    top: 56%;
+}
+
+.mainContent .myGoldCoin .goldContent ul {
+    width: 100%;
+    text-align: center;
+    height: 300px;
+    overflow-y: auto
+}
+
+.mainContent .myGoldCoin .goldContent ul li {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+.mainContent .myGoldCoin .goldContent ul li span {
+    display: inline-block;
+}
+
+.mainContent .myGoldCoin .goldContent table {
+    width: 100%;
+    text-align: center;
+}
+
+.mainContent .myGoldCoin .goldContent table tr {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+.mainContent .myGoldCoin .goldContent input[type='text'].begin {
+    background-position: 96px -473px;
+}
+
+.mainContent .myGoldCoin .goldContent input[type='text'].end {
+    background-position: 96px -526px;
+}
+
+.mainContent .myGoldCoin .goldContent ul p {
+    text-align: center !important;
+    margin-top: 130px !important;
+}
+
+/*我的特权*/
+.mainContent .myPrivilege .info {
+    padding: 20px 0px 10px 30px;
+}
+
+.mainContent .myPrivilege table {
+    width: 100%;
+    text-align: center;
+}
+
+.mainContent .myPrivilege table tr {
+    height: 36px;
+    line-height: 36px;
+}
+
+.mainContent .myPrivilege table thead tr {
+    background-color: #E5E5E5;
+}
+
+.mainContent .myPrivilege table tbody tr td {
+    border: 1px solid #E5E5E5;
+}
+
+.mainContent .myPrivilege table thead tr td.bgGreen {
+    border-left: 1px solid #FFF;
+}
+
+.mainContent .myPrivilege .errorTip {
+    height: 237px;
+    overflow: hidden;
+}
+
+.mainContent .myPrivilege .errorTip span {
+    width: 100%;
+    height: 200px;
+    background: url(../../../img/base/PC/FZS/icon/icon_i.png) no-repeat center bottom;
+    display: inline-block;
+    opacity: 1;
+}
+
+.mainContent .myPrivilege .errorTip p a:hover {
+    text-decoration: underline;
+}
+
+.wd16 {
+    width: 16%;
+}
+
+.wd12 {
+    width: 12%;
+}
+
+.bgGreen {
+    color: #3C9A08;
+}
+
+.udl {
+    text-decoration: underline;
+}
+
+.bgPrivilege {
+    background-color: #FEDF75;
+}
+
+.ui-datepicker-header .ui-datepicker-title span {
+    font: 12px/1.5 tahoma, arial, 宋体b8b\4f53;
+    font-weight: bold;
+}
+
+.mainContent .myGoldCoin .goldContent table tr {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #E5E5E5;
+}
+
+/*修改头像*/
+.editHeadPicture {
+    background: #f6f6f6;
+    height: 100%;
+}
+
+.editHeadPicture .preview {
+    padding: 14px 0px 0px 14px;
+}
+
+.editHeadPicture .preview .title {
+    color: #333;
+    font-size: 12px;
+}
+
+.editHeadPicture .preview .picture.big {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.editHeadPicture .preview .picture.small {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.editHeadPicture .preview .picture, .recommend li {
+    padding: 2px;
+    border: 1px solid #e7e5e8;
+    box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.55);
+}
+
+.editHeadPicture .preview .picture_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.editHeadPicture .preview .picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.editHeadPicture .preview .size {
+    color: #333;
+}
+
+.editHeadPicture .white {
+    background: #fff;
+    width: 440px;
+    height: 336px;
+}
+
+.editHeadPicture .crop {
+    padding: 18px;
+}
+
+.editHeadPicture .crop .picture {
+    width: 404px;
+    height: 300px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.editHeadPicture .crop .picture img {
+    max-height: 300px;
+    max-width: 404px;
+    margin: auto auto;
+}
+
+.crop .picture > .jcrop-holder {
+    display: inline-block;
+}
+
+input.jcrop-keymgr {
+    width: 0px;
+    height: 0px;
+}
+
+.editHeadPicture .btns {
+    padding: 8px 18px 0px 0px;
+}
+
+.editHeadPicture .btns button {
+    width: 64px;
+    height: 26px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.editHeadPicture .btns button.cancel {
+    background: #e4e4e4;
+    color: #737373;
+}
+
+.editHeadPicture .btns button.confirm {
+    background: #61b404;
+    color: #fff;
+}
+
+.editHeadPicture .errorTip {
+    margin: 15px 20px 0px 0px;
+}
+
+.editHeadPicture .white .title {
+    color: #333;
+    font-size: 12px;
+    padding: 15px 0px 0px 16px;
+}
+
+.editHeadPicture .white .tip {
+    color: #333;
+    left: 20px;
+    bottom: 10px;
+}
+
+.editHeadPicture .white .tip span.icon {
+    background: url(../../../img/PC/FZS/editHeadPicture.png) 0px -20px no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    margin: -4px 5px 0 0;
+}
+
+.editHeadPicture .uploadBtn {
+    width: 102px;
+    height: 27px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    line-height: 27px;
+    color: #0097c2;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.editHeadPicture .uploadBtn span {
+    width: 14px;
+    height: 14px;
+    margin: 5px 4px 0px 6px;
+    background: url(../../../img/PC/FZS/editHeadPicture.png) 0px 0px no-repeat;
+}
+
+.editHeadPicture .recommend {
+    margin: 12px 0px 0px 18px;
+}
+
+.editHeadPicture .recommend li {
+    float: left;
+    cursor: pointer;
+    margin-right: 18px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 2px 1px rgba(211, 204, 204, 0.33);
+}
+
+.editHeadPicture .recommend li:last-child {
+    margin-right: 0px;
+}
+
+.editHeadPicture .recommend li.selected {
+    border: 1px solid #f6403d;
+}
+
+.editHeadPicture .recommend li img {
+    width: 100%;
+    height: 100%;
+}
+
+/*group 金币抽奖*/
+.member-center-nav {
+    width: 70px;
+    background: #f2f2f2;
+    font-size: 14px;
+    height: 100%;
+    border-right: 1px solid #eee;
+    box-shadow: inset -1px 0 3px rgba(0, 0, 0, .1)
+}
+
+.member-center-nav a {
+    display: block;
+    text-align: center;
+    border-bottom: 1px dashed #e1e5e8;
+    height: 60px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.member-center-nav a.active:before {
+    content: "";
+    float: right;
+    width: 0;
+    height: 0;
+    border: solid transparent 9px;
+    border-right: solid #fff 9px;
+    margin: 16px -1px 0 -8px;
+}
+
+.member-center-nav .icon {
+    display: block;
+    margin: 0 auto 3px;
+}
+
+.lottery-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url(../../../img/base/PC/FZS/icon/icon_lottery.png);
+}
+
+.lottery-icon.active, .active .lottery-icon, a:hover .lottery-icon {
+    background-position-x: -32px;
+}
+
+.icon-turnplate {
+    background-position-y: 0;
+}
+
+.icon-scratch {
+    background-position-y: -32px;
+}
+
+.icon-drawingrecord {
+    background-position-y: -64px;
+}
+
+.lotterywrapper {
+    height: 430px;
+    margin-left: 71px;
+}
+
+.lotterywrapper iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.lotterywrapper.loading,
+.prompt-window .loading {
+    background: url(../../../img/common/gif/loading.gif) no-repeat center center;
+}
+
+.lotterywrapper.loading iframe {
+    display: none;
+}
+
+.prompt-window .loading * {
+    visibility: hidden;
+}
+
+.prizelist li {
+    border-bottom: 1px #E5E5E5 dashed;
+    display: table;
+    width: 100%;
+}
+
+.prizelist li > div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1em;
+    padding-left: 0;
+}
+
+.prizelist li > div:first-child {
+    padding-left: 1em;
+}
+
+.prizelist li > div.date {
+    width: 70px;
+}
+
+.prizelist li > div.img {
+    width: 46px;
+    height: 46px;
+    vertical-align: top;
+}
+
+.prizelist li > div.img img {
+    width: 46px;
+    height: 46px;
+    background: url(../../../img/common/icon/icon_fbs.png);
+    background-size: cover;
+    display: block;
+}
+
+.prizelist li h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.prizelist li .desc {
+    line-height: 14px;
+    min-height: 28px;
+}
+
+.prizelist li .btns {
+    width: 6em;
+    text-align: center;
+}
+
+.prizelist li .btns .btn {
+    margin-bottom: .5em;
+}
+
+.prize-empty {
+    margin-top: 170px;
+}
+
+.prompt-window .formrow {
+    line-height: 2;
+    margin-bottom: 1em
+}
+
+.prompt-window .formrow label {
+    float: left;
+    width: 6em;
+    text-align: right;
+}
+
+.prompt-window .formrow > div {
+    margin-left: 6em;
+}
+
+.prompt-window .formrow input[type=text],
+.prompt-window .formrow input[type=tel],
+.prompt-window .formrow select {
+    height: 25px;
+    width: 200px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 1px 2px #ccc;
+    padding: 0 .5em;
+    box-sizing: border-box;
+}
+
+.prompt-window .formrow select {
+    padding: 0;
+}
+
+/*end*/
+/*group 收货地址*/
+.MemberCenter .setup-window .content.edit-address {
+    padding-left: 1em;
+    width: 656px;
+}
+
+.address-list {
+    margin-bottom: 2em;
+}
+
+.address-list a {
+    cursor: pointer;
+}
+
+.address-list span.float {
+    padding: 1em 0;
+}
+
+.address-list span.hasBtn {
+    padding: 5px 0;
+}
+
+/*end*/
+.aboutus-window div.info {
+    padding: 0px;
+}
+
+.aboutus-window div.info div {
+    width: 50%;
+}
+
+.aboutus-window div.info .aboutus-wx {
+    height: 140px;
+    width: 120px;
+    margin-top: 15px;
+}
+
+.aboutus-window div.info .aboutus-wx .ewmIcon {
+    background: url(../../../img/PC/FZS/theme/user/FZS/about_wx.jpg) no-repeat;
+    height: 114px;
+    width: 114px;
+    display: inline-block;
+    background-size: 100%;
+}
+
+.aboutus-window div.info .aboutus-wx p {
+    font-size: 1em ! important;
+    margin: -2px 22px;
+}
+
+.aboutus-window div.info .title-img {
+    background: url(../../../img/PC/FZS/theme/user/FZS/about_title.png) no-repeat;
+    display: inline-block;
+    width: 162px;
+    height: 46px;
+    background-size: 100%;
+    margin-left: 23px;
+}
+
+.aboutus-window footer {
+    width: 100%;
+    text-align: center;
+    color: #B6B1B1;
+    top: 85% !important;
+}
+
+.aboutus-window div.img {
+    background: url(../../../img/base/PC/FZS/bg_about.png) no-repeat;
+    width: 100%;
+    height: 80px !important;
+    background-size: 100%;
+    background-color: #B8FCAF;
+}
+
+/*登录窗*/
+.login-window .logo-img {
+    display: inline-block;
+    background: url(../../../img/PC/FZS/icon_logo.png) no-repeat;
+    padding: 8px 24px 8px 26px;
+}
+
+.login-window .form div.account input.input,
+.login-window .form div.password input.input {
+    width: 160px;
+}
+
+.login-window .btn-row .btn.commit {
+    margin-right: 89px;
+    width: 192px;
+}
+
+.login-window .form .enterprise.mod span.arr {
+    right: 163px;
+}
+
+.login-window .form .enterprise.mod span.btnmask {
+    right: 154px;
+    height: 33px;
+}
+
+/*-------------会员中心设置--------------*/
+.MemberCenter .setup-window .nav {
+    width: 70px;
+    height: 430px;
+    background: #f2f2f2;
+    box-shadow: inset 0 0px 3px #ccc;
+    border-right: 1px solid #d9d9d9;
+    overflow: inherit;
+}
+
+.MemberCenter .setup-window .nav ul {
+    width: 100%;
+    text-align: center;
+    top: 0px;
+}
+
+.MemberCenter .setup-window .nav ul li {
+    width: 65px;
+    height: 70px;
+    border-bottom: 1px dashed #e1e5e8;
+    margin: auto;
+    position: relative;
+}
+
+.MemberCenter .setup-window .nav ul li span.icon {
+    background: url(../../../img/PC/FZS/icon_set.png) no-repeat;
+    display: inline-block;
+    height: 45px;
+    width: 30px;
+}
+
+.MemberCenter .setup-window .nav ul li a {
+    text-indent: 0px;
+    border: none;
+    background: none;
+}
+
+.MemberCenter .setup-window .nav ul li.active span.arrow, .MemberCenter .setup-window .nav ul li:hover span.arrow {
+    display: inline-block;
+}
+
+.MemberCenter .setup-window .nav ul li span.arrow {
+    width: 0px;
+    height: 0px;
+    border: 7px solid;
+    border-color: transparent #fff transparent transparent;
+    -webkit-transform-origin: 86%;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    position: absolute;
+    top: 25px;
+    left: 54px;
+}
+
+.MemberCenter .setup-window .nav ul li span.arrow {
+    display: none;
+}
+
+.MemberCenter .setup-window .nav ul li:not(.disabled) a:hover, body.isLogin .MemberCenter .setup-window .nav ul li a:hover, .MemberCenter .setup-window .nav ul li.active:not(.disabled) a, body.isLogin .MemberCenter .setup-window .nav ul li.active a {
+    background: none;
+    color: #515151;
+}
+
+.MemberCenter .setup-window .nav ul li span.edit,
+.MemberCenter .setup-window .nav ul li:hover span.edit,
+.MemberCenter .setup-window .nav ul li.active span.edit {
+    background-position: 0px 18px;
+}
+
+.MemberCenter .setup-window .nav ul li span.base,
+.MemberCenter .setup-window .nav ul li:hover span.base,
+.MemberCenter .setup-window .nav ul li.active span.base {
+    background-position: 0px -52px;
+}
+
+.MemberCenter .setup-window .nav ul li span.user {
+    background-position: 0px -127px;
+}
+
+.MemberCenter .setup-window .nav ul li span.download {
+    background-position: 0px -197px;
+}
+
+.MemberCenter .setup-window .nav ul li span.install {
+    background-position: 0px -268px;
+}
+
+.MemberCenter .setup-window .nav ul li span.winstartmanager {
+    background-position: 0px -335px;
+}
+
+.MemberCenter .setup-window .nav ul li span.address,
+.MemberCenter .setup-window .nav ul li:hover span.address,
+.MemberCenter .setup-window .nav ul li.active span.address {
+    background-position: 0px -400px;
+}
+
+.MemberCenter .setup-window .content {
+    width: 634px;
+    padding: 0;
+    padding-left: 40px;
+}
+
+.MemberCenter .setup-window .edit-password label {
+    vertical-align: top;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.MemberCenter .setup-window .edit-password > div:not(.btn-row) {
+    margin: 20px 90px;
+}
+
+.MemberCenter .setup-window .edit-password > div:not(.btn-row) input {
+    padding: 3px 0;
+    width: 200px;
+}
+
+.MemberCenter .setup-window .edit-password p.msg {
+    bottom: 10%;
+    width: 599px;
+}
+
+/*-----设置里的基本资料------*/
+.MemberCenter .setup-window .base-info > div:not(.btn-row) {
+    height: 35px;
+    margin: 5px 0px 5px 125px;
+    line-height: 35px;
+}
+
+.MemberCenter .setup-window .base-info > div label {
+    font-size: 12px;
+    margin-top: 0px;
+    height: 100%;
+}
+
+.MemberCenter .setup-window .base-info input[type='text'] {
+    padding: 3px 0 3px 5px;
+    border-radius: 3px;
+}
+
+.MemberCenter .setup-window .base-info input[type='text'].phone {
+    width: 130px;
+}
+
+.setup-window .base-info a.binding,
+.setup-window .base-info a.verify {
+    text-decoration: underline;
+    color: #0097c2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.setup-window .base-info a.binding.disabled,
+.setup-window .base-info a.verify.disabled {
+    color: #ccc;
+}
+
+.MemberCenter .setup-window .base-info .btn-row {
+    bottom: 50px;
+}
+
+.MemberCenter .setup-window .base-info p.msg {
+    bottom: 10%;
+    width: 100%;
+}
+
+.MemberCenter .setup-window .loading {
+    width: 91%;
+    height: 100%;
+    left: 9%;
+}
+
+.login-window .form .mod div.selectUsername {
+    width: 190px;
+}
+
+/*修改左侧菜单*/
+aside.nav {
+    border-right: 1px solid #cdced1 !important;
+    background: #f7f7f7 !important;
+}
+
+aside.nav nav.nav-main > ul > li nav.nav-sub ul li a {
+    padding: 8px 0;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.mobile {
+    margin: 0px;
+}
+
+body.isIconMenu aside.nav nav.nav-main > ul > li a span.icon.mobile {
+    margin: 10px;
+}
+
+aside.nav span.icon {
+    background: url(../../../img/PC/FZS/icon_tab.png) no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.resource,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.resource {
+    background-position: 0px 0px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.recommend,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.recommend {
+    background-position: 0px -37px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.hotapp,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.hotapp {
+    background-position: 0 -182px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.hotgame,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.hotgame {
+    background-position: -1px -135px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.package,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.package {
+    background-position: 1px -89px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.firmware,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.firmware {
+    background-position: 1px -232px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.mobile,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.mobile {
+    background-position: 0px -275px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.mobilelink,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.mobilelink {
+    background-position: 0px -324px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.appadmini,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.appadmini {
+    background-position: 0px -372px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.backup,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.backup {
+    background-position: 0px -469px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.filemgr,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.filemgr {
+    background-position: 0px -422px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.communication,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.communication {
+    background-position: 0px -515px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.speedup,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.allempty {
+    background-position: 0px -596px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.repair,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.repair {
+    background-position: -3px -636px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.photo,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.photo {
+    background-position: 0px -672px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.music,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.music {
+    background-position: 0px -709px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.onekeyservice,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.onekeyservice {
+    background-position: 1px -756px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.bmfw,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.bmfw {
+    background-position: 0px -560px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.resource,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.resource {
+    background-position: -42px 0px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.recommend,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.recommend {
+    background-position: -40px -37px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.hotapp,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.hotapp {
+    background-position: -40px -182px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.hotgame,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.hotgame {
+    background-position: -41px -135px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.package,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.package {
+    background-position: -41px -89px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.firmware,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.firmware {
+    background-position: -39px -232px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.mobile,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.mobile {
+    background-position: -40px -275px !important;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.mobilelink,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.mobilelink {
+    background-position: -40px -324px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.appadmini,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.appadmini {
+    background-position: -40px -372px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.backup,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.backup {
+    background-position: -40px -469px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.filemgr,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.filemgr {
+    background-position: -40px -422px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.communication,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.communication {
+    background-position: -40px -515px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.speedup,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.speedup {
+    background-position: -40px -560px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.repair,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.repair {
+    background-position: -42px -636px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.photo,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.photo {
+    background-position: -40px -672px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.music,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.music {
+    background-position: -40px -709px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.onekeyservice,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.onekeyservice {
+    background-position: -39px -756px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.bmfw,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.bmfw {
+    background-position: -38px -560px;
+}
+
+body.isIconMenu aside.nav nav.nav-main > ul > li a span.icon.tabimg {
+    display: none;
+}
+
+aside.nav span.icon.tabimg {
+    background-image: url(../../../img/PC/FZS/icon_mobile.png);
+    margin-left: 0px;
+}
+
+aside.nav nav.nav-main > ul > li nav.nav-sub span.model {
+    width: 80px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.tabimg.unlink,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.tabimg.unlink {
+    background-position: 0px 2px;
+    width: 28px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.tabimg.unlink,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.tabimg.unlink {
+    background-position: 0px -30px !important;
+    width: 28px;
+}
+
+body.isLink aside.nav nav.nav-main > ul > li nav.nav-sub ul li[type="link"] a span.icon.tabimg.link {
+    margin-left: 0px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.tabimg.link.andr,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.tabimg.link.andr {
+    background-position: 4px -63px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.tabimg.link.andr,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.tabimg.link.andr {
+    background-position: 4px -29px;
+}
+
+aside.nav nav.nav-main > ul > li a span.icon.tabimg.link.ios,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.main:not(.active) a span.icon.tabimg.link.ios {
+    background-position: -12px -63px;
+}
+
+aside.nav nav.nav-main > ul > li a:hover span.icon.tabimg.link.ios,
+aside.nav nav.nav-main > ul > li.active nav.nav-sub ul li.active a span.icon.tabimg.link.ios {
+    background-position: -12px -29px;
+}
+
+/*-----------精品体验---------*/
+.wrap-app .good ul li figure > span.info {
+    display: none;
+}
+
+.wrap-app .good ul li.task-data-bind {
+    padding: 19px 0px;
+}
+
+.wrap-app .good ul li figure div.info.extend > span.info {
+    display: inline-block;
+}
+
+.wrap-app .good ul li figure .info span.hover:nth-of-type(1) {
+    display: block;
+}
+
+.wrap-app .good ul li div.extend p {
+    display: none;
+}
+
+.wrap-app .good ul li figure .info span.hover {
+    float: left;
+    font-size: 1em;
+}
+
+.wrap-app .good ul li div.extend {
+    top: -17px;
+}
+
+.wrap-app .good ul li figure figcaption {
+    position: inherit;
+}
+
+.wrap-app .good ul li .info .exper {
+    background: none;
+    border: 1px solid #7dc31f;
+    box-shadow: none;
+    border-radius: 4px;
+    height: 24px;
+    width: 58px;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.wrap-app .good ul li figure div.info button.install, .wrap-app .good ul li figure div.info button.complete {
+    box-shadow: none;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.wrap-app .good ul li figure div.info button.tasking, .wrap-app .good ul li figure div.info button.upgrade {
+    background: none;
+    height: 23px;
+    width: 58px;
+}
+
+.wrap-app .good ul li figure div.info button.tasking {
+    border: 1px solid #EE9D0A;
+}
+
+.wrap-app .good ul li figure div.info button.tasking em {
+    color: #EE9D0A;
+}
+
+.wrap-app .good ul li figure div.info button.upgrade {
+    border: 1px solid #009edb;
+}
+
+.wrap-app .good ul li figure div.info button.upgrade em {
+    color: #009edb;
+}
+
+.wrap-app .good ul li figure div.info button.complete {
+    background: #ffa200;
+}
+
+/*-------热门应用热门游戏------*/
+body.isIconMenu .wrap-app .grid ul li .appGold {
+    left: 33px;
+}
+
+/*---------一键下载的-------------*/
+.wrap-app .slider ul li.selected dl {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(.01, #fff), color-stop(1, #FAE855));
+}
+
+/*-----------应用详情--------------*/
+.wrap-app.detail header {
+    background-color: #f5f5f5;
+    z-index: 111;
+    height: 130px;
+    width: 100% !important;
+    padding-left: 0;
+}
+
+.wrap-app.detail header > div.img {
+}
+
+.wrap-app.detail header > div.img img {
+    width: 84px;
+    height: 84px;
+    padding: 21px 26px;
+}
+
+.wrap-app.detail header > div.info {
+    margin-top: 23px;
+    width: 470px;
+}
+
+.wrap-app.detail header > div.info figcaption {
+    font-size: 16px;
+}
+
+.wrap-app.detail header > div.info ul {
+    padding: 0px;
+}
+
+.wrap-app.detail header > div.info ul li:first-child {
+    margin-left: 0px;
+}
+
+.wrap-app.detail header.list div.info li.d-ib {
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.wrap-app.detail header.list figure figcaption {
+    left: 129px;
+    font-size: 1.1em;
+}
+
+.wrap-app.detail article {
+    height: 550px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.wrap-app.detail article dd.list ul li {
+    margin-top: 18px;
+}
+
+.wrap-app.detail section.box dl dt.title,
+.wrap-app.detail section.box dl dd.list {
+    margin-left: 10px;
+}
+
+.wrap-app.detail section.box dl dt {
+    background-color: #fff;
+    border: none;
+    padding: 0px;
+}
+
+.wrap-app.detail section.box dl dt span {
+    border: none;
+    padding: 0px;
+}
+
+.wrap-app.detail section.box dl dd {
+    border-bottom: solid 1px #ccc;
+    min-height: 80px;
+    padding: 0 0 10px 0;
+}
+
+.wrap-app.detail span.info figcaption {
+    margin-top: 2px;
+}
+
+.wrap-app.detail section.box dl dd span.info span.hover {
+    margin-top: 8px;
+}
+
+.wrap-app.detail section.detail {
+    padding-left: 10px;
+}
+
+.wrap-app.detail header.list div.appraisestr {
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 255px;
+    height: 130px;
+}
+
+.wrap-app.detail header.list div.appraisestr img {
+    width: 90px;
+    height: 90px;
+    padding: 20px 0px;
+}
+
+.wrap-app.detail header.list div.download > div.btnblock {
+    width: 140px;
+}
+
+.wrap-app.detail header.list div.download button {
+    min-width: 90px;
+}
+
+.wrap-app.detail header.list .appGold {
+    top: 21px;
+    left: 26px;
+}
+
+.wrap-app.detail .related .grid ul li .appGold {
+    left: 4px;
+    top: 0px;
+}
+
+/* 应用管理 */
+.wrap-app .grid .youlike ul li {
+    border: 0 none;
+    border-radius: 0;
+    width: auto;
+    height: 14%;
+    padding: 0 5px;
+    text-align: center;
+    zoom: 1;
+    margin: 0px;
+    float: none;
+    position: relative;
+}
+
+.youlike .scrolls {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 520px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* 优化加速 */
+#optimize_speedup .speedinit, #optimize_speedup .speedComplete {
+    background: url(../../../img/base/PC/FZS/mobile/speedup.png) no-repeat 20px 9px;
+    height: 100%;
+    padding: 30px 0px 10px 125px;
+}
+
+#optimize_speedup .speedinit {
+    background-position: 10px 9px;
+}
+
+#optimize_speedup .speedComplete {
+    background-position: 10px 9px;
+}
+
+#optimize_speedup .speeding {
+    background: url(../../../img/base/PC/FZS/mobile/speedup.gif) no-repeat 10px 8px;
+    height: 100%;
+    padding: 20px 0px 10px 125px;
+}
+
+#optimize_speedup .speedup {
+    width: 110px;
+    height: 31px;
+    line-height: 31px;
+    margin-right: 31px;
+    text-align: center;
+    color: #fff;
+    padding: 0px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 22px;
+}
+
+#optimize_speedup .progress-bar {
+    height: 12px;
+    width: 560px;
+    background: #DADADA;
+    border-radius: 10px;
+    margin: 0;
+}
+
+#optimize_speedup div.progress-bar div.progress-val {
+    width: 0%;
+    background-color: #6ec112;
+    border-radius: 10px;
+}
+
+#optimize_speedup .task-window .scroll {
+    height: 498px;
+    margin-top: 36px;
+}
+
+/*备份还原*/
+.mobile-backupRestore div.backup.back, .mobile-backupRestore div.restore {
+    height: 475px;
+    background-position: 288px 168px;
+}
+
+.mobile-backupRestore div.restore {
+    background-position: 352px 221px;
+}
+
+.mobile-backupRestore div.backup.back .select-items {
+    margin: 50px 100px 0px;
+}
+
+.mobile-backupRestore div.backup.back .computer {
+    margin: 120px 0px 0px 60px;
+}
+
+.mobile-backupRestore div.remind {
+    padding-top: 20px;
+}
+
+.mobile-backupRestore div.restore .mobile {
+    margin: 65px 0px 0px 60px;
+}
+
+.new-function div {
+    background: url(../../../img/PC/FZS/new_function.png) no-repeat;
+    position: absolute;
+}
+
+#new-function-login div.lottery {
+    width: 180px;
+    height: 100px;
+    left: 610px;
+    top: 10px;
+}
+
+#new-function-login div.usercenter {
+    width: 200px;
+    height: 108px;
+    top: 24px;
+    background-position: 0px -120px;
+    left: 804px;
+}
+
+#new-function-picture div {
+    width: 253px;
+    height: 100px;
+    background-position: 0px -254px;
+    top: 161px;
+    left: 278px;
+}
+
+body[data-device="iphone"] #new-function-picture div {
+    left: 128px;
+}
+
+#loterry-tip {
+    background: url(../../../img/PC/FZS/memberCenter.png) -283px 0px no-repeat;
+    top: -30px;
+    left: -35px;
+    width: 29px;
+    height: 90px;
+    z-index: 12;
+    cursor: pointer;
+    -webkit-transition: top .2s;
+}
+
+#loterry-tip:hover {
+    background-position: -247px 0;
+    top: -20px;
+}
+
+body.isLogin #loterry-tip {
+    display: block;
+}
+
+#user-info-tip {
+    position: absolute;
+    background: #fff;
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #D5D5D5;
+    overflow: visible;
+    top: 34px;
+    left: -146px;
+    height: 80px;
+    width: 220px;
+    z-index: 13;
+    display: none;
+}
+
+#user-info-tip > div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px #ccc solid;
+    left: -60px;
+    top: -11px;
+    box-shadow: 1px 1px 2px #DDD;
+}
+
+#user-info-tip > div p {
+    height: 80px;
+    width: 40px;
+    background: #fff;
+    position: absolute;
+    right: -4px;
+    bottom: 10px;
+}
+
+#user-info-tip > div img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+#user-info-tip ul {
+    padding-left: 45px;
+}
+
+#user-info-tip li {
+    float: none;
+}
+
+#user-info-tip li span {
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+#user-info-tip span.name {
+    color: #7C7C7C;
+    font-size: 1.2em;
+    width: 90px;
+    margin-right: 15px;
+}
+
+#user-info-tip ul span.icon {
+    background: url(../../../img/PC/FZS/memberCenter.png) -2px -157px no-repeat;
+    vertical-align: top;
+}
+
+#user-info-tip span.gold {
+    vertical-align: top;
+}
+
+#user-info-tip li.progress {
+    height: 15px;
+    margin: 3px 20px;
+    margin-left: 0px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px #ccc solid;
+    background: #F0F0F0;
+    position: relative;
+}
+
+#user-info-tip li.progress span {
+    height: 100%;
+    background: #5FC33F;
+    border-radius: 2px;
+    display: block;
+}
+
+#user-info-tip li.progress p {
+    position: absolute;
+    width: 153px;
+    color: #777;
+    top: 0;
+    text-align: center;
+    line-height: 14px;
+    font-size: 0.9em;
+}
+
+#user-info-tip li:last-child {
+    color: #8F8F8F;
+    font-size: 0.9em;
+    line-height: 25px;
+}
+
+#user-info-tip > span {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid #ccc;
+    border-color: transparent #fff #fff transparent;
+    top: -6px;
+    right: 35px;
+    box-shadow: 1px 1px 1px #ccc;
+    -webkit-transform: rotate(-136deg);
+}
+
+.isLogin .win-op menu li.option .menu-sub #userLogout {
+    display: block;
+}
+
+.keyroot .phoneIcon {
+    height: 328px;
+}
+
+.keyroot .doIcon {
+    height: 190px;
+    margin-bottom: 15px;
+}
+
+.wrap-app .slider ul.scroll {
+    height: 540px;
+    padding: 0 2%;
+}
+
+div.bmfw {
+    height: 645px;
+}
+
+section[data-path*='appSearchPackage'] .wrap-app .slider ul li dl dd {
+    margin: 6.2% 0% 0 6.2%;
+}
+
+.wrap-app .slider ul li.selected dl dt button, .wrap-app .slider ul li dl dt button, .wrap-app .slider ul li:hover dl dt button {
+    margin-top: 4px;
+    padding: 4px 10px;
+}
+
+section[data-path*="#bmfw"] header.bar div.bar-tab li.bar-tab-tool a.reload {
+    margin-top: -5px ! important;
+}
+
+.home .moblie-info-iPhone-img .mobile-screen-show {
+    width: 185px;
+    margin-left: 117px;
+}
+
+.home .mobile-control.moblie-info-iPhone-img figure#mobileScreen img {
+    margin-top: 90px;
+}
+
+.wrap-app div.tip:not(.unlink_i) {
+    left: 40%;
+    top: 30%;
+}
+
+body.isLink .userapps div.tip {
+    padding-top: 220px;
+}
+
+#sysApps div.tip:not(.unlink_i) {
+    left: 40%;
+    padding-top: 220px;
+}

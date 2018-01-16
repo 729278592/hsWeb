@@ -1,0 +1,236 @@
+@charset "utf-8";
+html {
+    margin: 0;
+    padding: 0;
+    /*height: 960px;*/
+    /*height: 1105px;*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    /*overflow-x: hidden;*/
+    /*font-family: "Microsoft YaHei", SimSun, Verdana, Arial, Tahoma;*/
+}
+
+body {
+    /*overflow-y: hidden;*/
+    /*width: 978px;*/
+    /*max-width: 978px;*/
+    /*min-width: 978px;*/
+    /*overflow-y: hidden;*/
+    /*height: 688px;*/
+    font: 12px "微软正黑体", "Microsoft Yahei", "Lantinghei SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    /*height: 1350px;*/
+    overflow: hidden;
+    bottom: 0;
+    /*background-color: #dfdfdf;*/
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #c2c2c2;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #c2c2c2;
+    width: 10px;
+}
+
+.nav {
+    background: #FF620D;
+}
+
+.title_div {
+    height: 47px;
+    border-bottom: solid;
+    border-bottom-color: #ff813d;
+    border-bottom-width: 1px;
+
+}
+
+.title_div > .title {
+    position: relative;
+    /* top: 15px; */
+    left: 22px;
+    font-size: 15px;
+    color: #ffffff;
+    display: inline-block;
+    height: 100%;
+    line-height: 47px;
+}
+
+#refresh_btn {
+    display: inline-block;
+    width: 21px;
+    height: 19px;
+    background: url("../img/icon_tab.png");
+    background-position: 0 -81px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    right: 20px;
+    margin: 14px 0;
+    -webkit-transition: all 0.5s;
+
+}
+
+span.refresh:hover {
+    -webkit-transform: Rotate(-180deg);
+}
+
+.menu_div {
+    height: 108px;
+}
+
+.signIn_total_div {
+    float: left;
+    position: relative;
+    top: 17px;
+    left: 22px
+}
+
+.signIn_total_title {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.signIn_total {
+    font-size: 39px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.signIn_income_div {
+    color: #ffffff;
+    float: right;
+    margin-top: 68px;
+    margin-right: 86px;
+}
+
+.signIn_income_title {
+    font-size: 14px;
+    float: left;
+    margin-top: 5px;
+}
+
+.signIn_income_count {
+    font-size: 20px;
+    float: left;
+    display: inline-block;
+    /*margin-top: -2px;*/
+}
+
+.defeat_rate_div {
+    color: #ffffff;
+    float: right;
+    margin-top: 68px;
+    margin-right: 22px;
+}
+
+.defeat_rate_title {
+    font-size: 14px;
+    float: left;
+    margin-top: 5px;
+}
+
+.defeat_rate_count {
+    font-size: 20px;
+    float: left;
+    display: inline-block;
+    /*margin-top: -2px;*/
+}
+
+.main {
+    width: 100%;
+    /*height: 513px;*/
+    height:100%;
+    overflow-y: scroll;
+    background: #ffffff;
+}
+
+#sign_in_progress {
+    height: 422px;
+}
+
+#sign_in_progress_chart {
+    position: relative;
+    top: 20px;
+    /*left: 300px;*/
+    /*transform: rotate(180deg);*/
+    -webkit-transform: Rotate(180deg);
+}
+
+#sign_in_progress_content {
+    text-align: center;
+    margin-top: -200px;
+}
+
+#sign_in_progress_chart_date {
+    font-size: 61px;
+    color: #FF620D;
+    position: relative;
+    left: -5px;
+    /*font-weight: bold;*/
+}
+
+#sign_in_progress_chart_unit {
+    font-size: 21px;
+    color: #FF620D;
+}
+
+#sign_in_progress_description {
+    font-size: 17px;
+}
+
+#sign_in_btm_div {
+    display: block;
+    text-align: center;
+}
+
+/*#sign_in_btn_a {*/
+/*width: 100%;*/
+/*display: block;*/
+
+/*}*/
+
+#sign_in_btn {
+    background: url("../img/btn_checkin_normal.png");
+    border-style: none;
+    background-repeat: round;
+    width: 183px;
+    height: 40px;
+    font-size: 17px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+

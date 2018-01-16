@@ -1,0 +1,504 @@
+@charset "utf-8";
+html {
+    margin: 0;
+    padding: 0;
+    /*height: 960px;*/
+    /*height: 1105px;*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    /*font-family: "Microsoft YaHei", SimSun, Verdana, Arial, Tahoma;*/
+    /*font-family: "微软正黑体";*/
+}
+
+body {
+    /*width: 978px;*/
+    /*max-width: 978px;*/
+    /*min-width: 978px;*/
+    /*overflow-y: hidden;*/
+    /*height: 688px;*/
+    font: 12px "微软正黑体", "Microsoft Yahei", "Lantinghei SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    /*height: 1350px;*/
+    /*overflow: hidden;*/
+    bottom: 0;
+    background-color: #dfdfdf;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #c2c2c2;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #c2c2c2;
+    width: 10px;
+}
+
+.nav {
+    background: #FF620D;
+    position: fixed;
+}
+
+.title_div {
+    height: 47px;
+    border-bottom: solid;
+    border-bottom-color: #ff813d;
+    border-bottom-width: 1px;
+
+}
+
+.title {
+    position: relative;
+    /* top: 15px; */
+    left: 22px;
+    font-size: 15px;
+    color: #ffffff;
+    display: inline-block;
+    height: 100%;
+    line-height: 47px;
+}
+
+#refresh_btn {
+    display: inline-block;
+    width: 21px;
+    height: 19px;
+    background: url("../img/icon_tab.png");
+    background-position: 0 -81px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    right: 20px;
+    margin: 14px 0;
+    -webkit-transition: all 0.5s;
+
+}
+
+span.refresh:hover {
+    -webkit-transform: Rotate(-180deg);
+}
+
+.menu_div {
+    height: 108px;
+}
+
+.point_possess_div {
+    float: left;
+    position: relative;
+    top: 17px;
+    left: 22px;
+}
+
+.point_possess {
+    position: relative;
+    top: 21px;
+}
+
+.point_possess_title {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.point_possess_count {
+    float: left;
+    font-size: 39px;
+    color: #ffffff;
+    margin-top: -5px
+}
+
+.point_possess_icon {
+    float: left;
+    position: relative;
+    top: 14px;
+    left: 10px;
+}
+
+.point_used_div {
+    color: #ffffff;
+    float: right;
+    margin-top: 68px;
+    margin-right: 27px;
+    cursor: pointer;
+}
+
+.point_used_title {
+    font-size: 14px;
+    float: left;
+    margin-top: 5px;
+}
+
+.point_used_count {
+    font-size: 20px;
+    float: left;
+    display: inline-block;
+    /*margin-top: -2px;*/
+}
+
+.main {
+    width: 100%;
+    /*height: 532px;*/
+    overflow-y: scroll;
+}
+
+.income_rank_div {
+    float: left;
+    width: 235px;
+    /*width: 258px;*/
+    height: 500px;
+    padding-top: 13px;
+    padding-left: 12px;
+    padding-right: 11px;
+}
+
+.personal_income_info_div {
+    width: 100%;
+    /*height: 178px;*/
+    background: #ffffff;
+    color: #FF620D;
+
+}
+
+.personal_income_info {
+    width: 100%;
+    height: 58px;
+    border-bottom: solid 1px #e7e7e7;
+}
+
+.personal_income_type {
+    float: left;
+    margin-top: 30px;
+    margin-left: 12px;
+    font-size: 13px;
+}
+
+.personal_income_total {
+    float: right;
+    margin-top: 25px;
+    font-size: 18px;
+    margin-right: 11px;
+}
+
+.personal_income_total_count {
+    float: left;
+}
+
+.personal_income_total_icon {
+    float: left;
+    width: 17px;
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+.personal_income_rank_div {
+    width: 100%;
+}
+
+.personal_income_rank_head {
+
+    height: 48px;
+}
+
+.personal_income_rank_title {
+    font-size: 14px;
+    margin-top: 23px;
+    display: inline-block;
+}
+
+.personal_income_rank_type_btn {
+    /*cursor: pointer;*/
+    /*font-size: 12px;*/
+    /*color: #ffffff;*/
+    background: url("../img/btn_top_normal.png");
+    background-repeat: round;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 16px;
+}
+
+.personal_income_rank_type_hover {
+    /*cursor: pointer;*/
+    /*font-size: 12px;*/
+    /*color: #ffffff;*/
+    /*background: url("../img/btn_top_press.png");*/
+    background-repeat: round;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 28px;
+    margin-top: -28px;
+}
+
+.personal_income_rank_type_text {
+    cursor: pointer;
+    font-size: 12px;
+    color: #ffffff;
+    /*cursor: pointer;*/
+    /*font-size: 12px;*/
+    /*color: #ffffff;*/
+    /*background: url();*/
+    /*background-repeat: round;*/
+    /*background-size: 100%;*/
+    /*background-position: center;*/
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 28px;
+    margin-top: -45px;
+}
+
+#totally {
+    margin-left: 67px;
+}
+
+#totally_hover {
+    margin-left: 127px;
+}
+
+#totally_text {
+    margin-left: 127px;
+}
+
+#monthly {
+    margin-left: 8px;
+}
+
+#monthly_hover {
+    margin-left: 8px;
+}
+
+#monthly_text {
+    margin-left: 8px;
+}
+
+#weekly {
+    margin-left: 8px;
+}
+
+#weekly_hover {
+    margin-left: 8px;
+}
+
+#weekly_text {
+    margin-left: 8px;
+}
+
+#personal_income_rank_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 885px;
+    background: #fff;
+    border-bottom: solid 9px #dfdfdf;
+}
+
+.personal_income_rank_item {
+    width: 100%;
+    height: 58px;
+    background: #ffffff;
+    border-bottom: solid 1px #e7e7e7;
+}
+
+.no_data {
+    border-bottom: none;
+}
+
+.personal_income_rank_item_icon {
+    height: 47px;
+    width: 47px;
+    margin-top: 6px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+.personal_income_rank_item_info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.info_title {
+    margin: 0;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+    color: #919191;
+}
+
+.income_total {
+    display: block;
+    margin-top: 7px;
+}
+
+.income_total_icon {
+    height: 17px;
+}
+
+.income_total_count {
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-top: 0px;
+
+}
+
+.personal_income_rank_item_num {
+    font-size: 18px;
+    /*color: #e60012;*/
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-top: 19px;
+    margin-right: 16px;
+}
+
+.num1 {
+    color: #e60012;
+}
+
+.num2 {
+    color: #ffae11
+}
+
+.num3 {
+    color: #15a6ef;
+}
+
+.personal_income_record_div {
+    float: left;
+    width: 675px;
+    height: 1123px;
+    background: #ffffff;
+    padding-left: 15px;
+    padding-right: 13px;
+}
+
+.personal_income_record_head {
+    height: 47px;
+    /*border-bottom: solid 1px #e7e7e7;*/
+}
+
+.personal_income_record_title {
+    font-size: 13px;
+    margin-top: 24px;
+    display: inline-block;
+}
+
+.personal_income_record_total {
+    float: right;
+    margin-top: 20px;
+}
+
+.personal_income_record_total_icon {
+    height: 18px;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+.personal_income_record_total_count {
+    font-size: 18px;
+    color: #FF620D;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: -2px;
+}
+
+.personal_income_record_main {
+
+}
+
+.personal_income_record_item_title {
+    /* margin-top: 13px; */
+    font-size: 13px;
+    color: #919191;
+    /*display: block;*/
+    /* margin-bottom: 13px; */
+    border-top: solid 1px #e7e7e7;
+    height: 42px;
+    width: 100%;
+    display: inline-block;
+    line-height: 42px;
+}
+
+.personal_income_record_item_detail {
+    display: block;
+    margin-bottom: 13px;
+    margin-left: 16px;
+    font-size: 13px;
+}
+
+.personal_income_record_item_detail_title {
+
+}
+
+.personal_income_record_item_detail_date {
+    margin-left: 12px;
+}
+
+.personal_income_record_item_detail_income {
+    float: right;
+    margin-right: 16px;
+    color: #FF620D;
+}
+
+.personal_income_record_default_page {
+    border-top: solid 1px #e7e7e7;
+    font-size: 13px;
+    /*color: #585858;*/
+    display: block;
+    text-align: center;
+}
+
+.personal_income_rank_no_data {
+    font-size: 13px;
+    display: block;
+    text-align: center;
+}
+

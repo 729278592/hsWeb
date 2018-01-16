@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<link rel="stylesheet" href="../skins/personcenter/css/orderlist.css">
+	<link rel="stylesheet" href="../skins/css/nomsg.css">
+	<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+	
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+	<script type="text/javascript" src="../js/wx/wxshare.js"></script>
+	<script type="text/javascript" src="../personcenter/orderlist.js"></script>
+	<script type="text/javascript" src="../personcenter/commlist.js"></script>
+<title>我的订单</title>
+</head>
+<body>
+<!--/viewbox整个可视窗口-->
+<div class="viewbox">
+ <!--/header头部-->
+
+<header>
+<div class="head-warptop">
+				<ul>
+					<li class="li-lt"><a href="../goodml/mine.do" id="backPage">
+							<span>
+								<img  src="../skins/personcenter/img/nav_return_b.png" class="back"/>
+							</span></a>
+					</li>
+					<span style="font-size:1.8rem; line-height:50px; float:left;color:#505050;">订单</span>
+					<li class="li-rt" id="list-m">
+						<span><img src="../skins/personcenter/img/gdetails_list.png"></span>
+						  <ul class="menu-list">
+						    <li id="firstpage"><img src="../skins/personcenter/img/tab_home_g.png"><p>首页</p></li>
+						    <li id="zhoubian"><img src="../skins/personcenter/img/tab_compass_g.png"><p>订单</p></li>
+						    <li id="wanzhuan"><img src="../skins/personcenter/img/tab_z_g.png"><p>玩赚</p></li>
+						    <li id="mine"><img src="../skins/personcenter/img/tab_user_g.png"><p>我的</p></li>
+						 </ul>
+					</li>
+				</ul>
+			</div>
+
+
+    <div class="head-warp">
+    <ul>
+      <li id="place8"><a onclick="changePlace(8)">全部</a></li>
+      <li id="place1"><a onclick="changePlace(1)">待付款</a></li>
+      <li id="place2"><a onclick="changePlace('2,1.1')">待收货</a></li>
+      <li id="place3"><a onclick="changePlace(3)">待评论</a></li>
+      <!-- <li id="place5"><a onclick="changePlace(5)">售后</a></li> -->
+    </ul>
+  </div>
+</header>
+<!--/header头部-->
+<div class="clear"></div>
+<!--/section内容-->
+<section id="orderlist">
+
+
+<!-- <div class="content">
+  <div class="olderId">
+    <ul>
+      <li class="older">订单号:</li>
+      <li class="number">8024783742</li>
+      <li class="suction"><a href="#">等待付款</a></li>
+    </ul>
+  </div>
+  <div class="produce">
+     <div class="produce_show"><img src="../skins/orderform/img/icon_user_grae.png"></div>
+      <div class="produce_detail">
+        <p>HC手机电神5000 Zenfone Max((白色)</p>
+        <p class="data"><img src="../skins/orderform/img/gray_m.png"><span>699.00</span></p>
+      </div>
+  </div>
+  <div class="monthday">
+    <ul>
+      <li class="monthday-lt">2016-03-18</li>
+      <li class="monthday-rt">
+      <div class="eveb"><dd>共1件</dd><dd>应付金额</dd> <dd style="color:#e60012;">￥699.00</dd></div>
+          </div>    
+      </li>
+    </ul> 
+        <div class="input-choic">
+         <a href="##"><input type="button" class="lost" value="取消订单" name="取消订单" style="width:7rem;height:2.5em;line-height:2.5em;border-radius:35px;color:#505050;margin-left:1.5em;border:1px solid #868686;"></a>
+         <a href="##"><input type="button" class="paymoney" value="去支付" name="去支付" style="width:7rem;height:2.5em;line-height:2.5em;background:#ff620d;border-radius:35px;color:#fff;margin-left:1.5em;"></a>
+    
+       </div> 
+       </div>-->
+
+
+
+
+</section>
+<!--/section内容-->
+</div>
+<!--/viewbox整个可视窗口-->
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>HC服务号</title>
+<link rel="stylesheet" href="../js/Swiper-3.3.0/dist/css/swiper.min.css">
+<link rel="stylesheet" href="../skins/css/util.css">
+<link rel="stylesheet" href="../skins/effect/css/effect.css">
+<script type="text/javascript" src="../js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/AlertMessage-1.3.js"></script>
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../js/jumppage.js"></script>
+<script type="text/javascript" src="../js/Swiper-3.3.0/dist/js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/echarts.js"></script>
+<script type="text/javascript" src="../effect/effect.js"></script>
+
+<style type="text/css">
+.PopContainer {
+	width: 300px;
+	height: 200px;
+	background-color: Yellow;
+	text-align: center;
+}
+</style>
+
+<body>
+	<div style="height: 100%;">
+		<div style="height: 100%; padding-bottom: 60px;">
+			<div class="menu_title">
+				<div class="headtitle" style="z-index:0;">
+					<span
+						style="margin-top: 1%; font-size: 1.2rem; display: block; line-height: 1.5rem;">
+						<img id="return2" src="../skins/effect/img/nav_return.png"
+						style="width: 1.2rem; height: 1.2rem; vertical-align: middle; position: relative; top: -0.2em;"></img>
+						&nbsp;&nbsp;&nbsp;我的影响力 </span>
+				</div>
+		
+				
+				<div class="swiper-wrapper" >
+					<canvas id="vip" style="display: none" class="swiper-slide"></canvas>
+				
+					<div id="main" class="swiper-slide main_main_css_01" ></div>
+
+					<div class="effectcount">
+					<a href="../effect/goToLevel.do">
+						<span id="effectnum"></span> <br /> <span>影响力</span></a>
+					</div>
+					<span class="btn"> <span id="vipl"></span> <br /> <span
+						id="min"> </span> </span> <span class="btn1"> <span id="vipr">
+					</span><br /> <span id="max"> </span> </span>
+
+					<div id="img1" class="radar_top"></div>
+					<div id="img2" class="radar_left_top"></div>
+					<div id="img3" class="radar_left_bottom"></div>
+					<div id="img4" class="radar_right_bottom"></div>
+					<div id="img5" class="radar_right_top"></div>
+					<div id="center" style="position: absolute; top: 52%;right:-70%;color:#ff620d;font-weight:900;width: 40%;font-size:1.4rem;text-align:center;">
+					</div>
+
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<!--影响了排名-->
+			<div class="effectrank">
+				<div class="effect_left">我的合伙人</div>
+				<div class="effect_middle">(按影响力排名)</div>
+				<div class="effect_right"><span>全部合伙人</span> <img alt="" src="../skins/personcenter/img/arr_rt1.png" width="13px" style="position:relative;top:0.1em;"></div>
+			</div>
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper" id="FirstPartner"></div>
+				<!-- <div class="swiper-scrollbar" style="z-index: 0;"></div> -->
+			</div>
+
+
+			<div class="desc_why" id="effectforme">
+				<span>影响力跟我有什么关系?</span><span style="float: right;"><img alt="" src="../skins/personcenter/img/arr_rt1.png" width="13px"></span>
+			</div>
+			<div class="desc_why" id="partenerforme">
+				<span>为什么要邀请合伙人注册?</span><span style="float: right;"><img alt="" src="../skins/personcenter/img/arr_rt1.png" width="13px"></span>
+			</div>
+			<div id="bg" class="bg" style="display: none;"></div>
+			<div id="pop1" class="mydiv" style="display: none;"></div>
+			<div id="pop2" class="mydiv" style="display: none;"></div>
+			<div id="pop3" class="mydiv" style="display: none;"></div>
+			<div id="pop4" class="mydiv" style="display: none;"></div>
+			<div id="pop5" class="mydiv" style="display: none;"></div>
+		</div>
+		<footer>
+			<!-- 2016.10.09 屏蔽该两个按钮 <div class="footleft" id="weixinchuxiao">
+				<a href="../effect/goToNewScan.do"> <img alt="微信扫码"
+					src="../skins/effect/img/myeffect_weixinsaoma.png">
+					<p>微信扫码</p> </a>
+			</div>
+			<div class="footmiddle" id="copylink">
+				<a> <img alt="复制链接" src="../skins/effect/img/myeffect_fuzhilianjie.png">
+					<p>复制链接</p> </a>
+			</div> -->
+			<div class="footright getCloud" id="invation">
+				<a><span>立即邀请</span></a>
+			</div>
+		</footer>
+	</div>
+	<div id="showDownInfo"
+		style="width: 100%; height: 100%; position: fixed; top: 0px; display: none;z-index: 99;">
+	</div>
+</body>
+<!--
+	2016.10.09 屏蔽云朵改成展示个性化二维码 
+	<script type="text/javascript">
+		$(function(){getCloud();})
+	</script> 
+-->
+</html>

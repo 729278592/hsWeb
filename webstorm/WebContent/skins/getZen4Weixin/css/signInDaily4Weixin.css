@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+@media screen and (orientation: portrait) {
+    /*竖屏 css*/
+    body {
+    }
+}
+@media screen and (orientation: landscape) {
+    /*横屏 css*/
+    body {
+        /*transform: rotate(90deg);*/
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 619px;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    border: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    font-family: "Microsoft YaHei", SimSun, Verdana, Arial, Tahoma;
+}
+
+
+
+header {
+    width: 100%;
+    height: 100%;
+    /*height: 1350px;*/
+    bottom: 0;
+    /*background-color: #dfdfdf;*/
+    /*overflow: hidden;*/
+}
+
+
+
+.head {
+    height: 25%;
+    /*background-image: url(../img/home_bg3.png);*/
+    /*background-size: 100%;*/
+    /*background-repeat: round;*/
+    /*overflow: hidden;*/
+    background-color: #85c83c;
+}
+
+#sign_in_total {
+    width: 95%;
+    color: white;
+    position: relative;
+    top: 48%;
+    left: 5%;
+    /*height: 100%;*/
+}
+
+#sign_in_total_num {
+    /*font-size: 8em;*/
+    font-size: 4em;
+    font-weight: 100;
+}
+
+#sign_in_total_description {
+    /*font-size: 3em;*/
+    font-size: 2em;
+    font-weight: 100;
+}
+
+#sign_in_condition {
+    height: 8%;
+    background-color: #68ae1d;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    color: white;
+}
+
+#sign_in_zen_maked {
+    float: left;
+    /*position: relative;*/
+    /*left: -31%;*/
+    width: 48%;
+    height: 100%;
+    text-align: center;
+}
+
+#sign_in_zen_maked_num {
+    font-size: 3em;
+    font-weight: 100;
+    position: relative;
+}
+
+#sign_in_zen_maked_description {
+    font-size: 2em;
+    font-weight: 100;
+    position: relative;
+    top: 12%;
+}
+
+#sign_in_rank {
+
+    border-left: solid;
+    border-left-width: 1px;
+    float: left;
+    width: 49.86%;
+    height: 100%;
+    text-align: center;
+    /*position: relative;*/
+    /*top: -100%;*/
+    /*left: 50%;*/
+
+}
+
+#sign_in_rank_num {
+    font-size: 3em;
+    font-weight: 100;
+    position: relative;
+}
+
+#sign_in_rank_description {
+    font-size: 2em;
+    font-weight: 100;
+    position: relative;
+    top: 12%;
+}
+
+#sign_in_progress {
+    width: 100%;
+    height: 48%;
+    background-color: white;
+    margin-top: 4%;
+}
+
+#sign_in_progress_chart {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*line-height: 2em;*/
+    transform: rotate(180deg);
+    margin-left: 23%;
+    position: relative;
+}
+
+#sign_in_progress_content {
+    text-align: center;
+    position: relative;
+    top: -78%;
+}
+
+#sign_in_progress_chart_date {
+    /*font-size: 15em;*/
+    color: #68ae1d;
+}
+
+
+
+#sign_in_progress_chart_unit {
+    /*font-size: 3em;*/
+    color: #68ae1d;
+}
+
+#sign_in_progress_description {
+    /*font-size: 3em;*/
+    color: #868686;
+    position: relative;
+    top: -90%;
+}
+
+#sign_in_rule {
+    position: relative;
+    top: 7%;
+    text-align: center;
+    height: 10%;
+    /*font-size: 2.5em;*/
+    color: #868686;
+    top: -56%;
+}
+
+#sign_in_bt {
+    height: 8%;
+    width: 100%;
+    /*background-color: #68ae1d;*/
+    position:relative;
+    /*text-align: center;*/
+    color: white;
+    top:0.2%;
+    /*line-height: 8.5em;*/
+}
+
+#sign_in_bt_text {
+    position: relative;
+    left: 39%;
+    height: 100%;
+    float: left;
+    /*font-size: 3em;*/
+    top: -93%;
+}
+
+#sign_in_bt_icon {
+    /*top: -8%;*/
+    top: -101%;
+    position: relative;
+    left: 37%;
+    height: 100%;
+    float: left;
+}
+
+#sign_in_bt_icon_image {
+    width: 60%;
+}
+
+#sign_in_bt_point {
+    top: -81%;
+    position: relative;
+    left: 35%;
+    height: 100%;
+    float: left;
+    /*font-size: 2em;*/
+}
+
+/*.personal_zen_count {*/
+/*font-size: 5em;*/
+/*position: relative;*/
+/*top: 10%;*/
+/*}*/
+
+/*.personal_zen_description {*/
+/*font-size: 3em;*/
+/*position: relative;*/
+/*top: 10%;*/
+/*}*/
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>华绰服务号</title>
+</head>
+<body>
+<div class="wrapper ">
+    <div class="content pb50">
+        <div class="txHd">
+            <div class="swiper-container swiper-container-horizontal withdrawals-list" id="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a>
+                            <div class="title Verdana">290</div>
+                            <p>今日收益</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a>
+                            <div class="title Verdana">290</div>
+                            <p>今日收益</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a>
+                            <div class="title Verdana">290</div>
+                            <p>今日收益</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!--<div class="swiper-button-next"></div>-->
+                <!--<div class="swiper-button-prev"></div>-->
+            </div>
+            <ul class="txList">
+                <li>
+                    <p class="title Verdana">96</p>
+                    <p>可提现金</p>
+                </li>
+                <li>
+                    <p class="title Verdana">95</p>
+                    <p>可提现金</p>
+                </li>
+                <li>
+                    <p class="title Verdana">95</p>
+                    <p>可提现金</p>
+                </li>
+            </ul>
+        </div>
+        <div class="txBd">
+            <ul class="txBtn">
+                <li class="active">现金收支</li>
+                <li>收入</li>
+                <li>支出</li>
+            </ul>
+            <ul class="wxList">
+                <li>
+                    <div class="clearfix">
+                        <span class="left">提现 <span>(审核中)</span></span>
+                        <span class="right ">+112</span>
+                    </div>
+                    <div>
+                        <span class="Verdana">2017-12-12 12:12</span>
+                        <span>No:1929348495</span>
+                        <span>客户:张三</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ft">
+        <!--申请开始-->
+        <a class="apply_btn bg">提现（922）</a>
+        <!--申请结束-->
+    </div>
+</div>
+<script src="../js_new/main.js"></script>
+<script src="../js_new/zepto.min.js"></script>
+<script src="../js_new/swiper.js"></script>
+<script>
+    $(function () {
+        /*slider*/
+        var swiper = new Swiper('#swiper-container', {
+            //        prevButton:'.swiper-button-prev',
+            //        nextButton:'.swiper-button-next',
+            slidesPerView: 1,
+            pagination:'.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop:true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false
+        });
+    })
+</script>
+</body>
+</html>

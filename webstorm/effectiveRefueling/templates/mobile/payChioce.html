@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+    <link rel="stylesheet" href="../../assets/global/plugins/font/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/weui.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/example.css"/>
+    <link rel="stylesheet" href="../../assets/mobile/css/global.css"/>
+</head>
+<body>
+    <div class="content errDailog">
+        <div class="page">
+            <div class="hd">
+                <a>
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                智油惠
+                <div class="right nav_block">
+                <a href="shoppingCat.html" class="shop_cat"></a>
+                <a class="dot_block"></a>
+                <ul class="nav_link">
+                    <li>
+                        <a href="index.html">
+                            主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shopMall.html">
+                            精选商城
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gasStationInfor.html">
+                            马上加油
+                        </a>
+                    </li>
+                    <li>
+                        <a href="personCenter.html">
+                            会员中心
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="bd absolute pd48">
+                <div class="pay_infor">
+                    <p class="title">支付金额</p>
+
+                    <p class="moneyNum">
+                        ￥<span class="verdana">300.00</span>
+                    </p>
+                </div>
+                <div class="weui_cells weui_cells_checkbox mt0 first style1">
+                    <label class="weui_cell weui_check_label" for="s12">
+                        <div class="weui_cell_hd">
+                            <input type="radio" class="weui_check" name="checkbox1" id="s12">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            会员卡支付
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cells weui_cells_checkbox mt0 first style1">
+                    <label class="weui_cell weui_check_label" for="s13">
+                        <div class="weui_cell_hd">
+                            <input type="radio" class="weui_check" name="checkbox1" id="s13">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            车队钱包支付
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cells weui_cells_checkbox mt0 first style1">
+                    <label class="weui_cell weui_check_label" for="s14">
+                        <div class="weui_cell_hd">
+                            <input type="radio" class="weui_check" name="checkbox1" id="s14">
+                            <i class="weui_icon_checked"></i>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            微信支付
+                        </div>
+                    </label>
+                </div>
+                <div class="weui_cells weui_cells_checkbox mt0 first style1 bb0" style="margin-top: 0.625rem;border-bottom: 0;color: #666;background: transparent;">
+                    <label class="weui_cell weui_check_label">
+                        <div class="weui_cell_hd">
+                            点击支付，即表示您同意
+                            <a href="" style="color: #666;">
+                                《智油惠支付协议》
+                            </a>
+                        </div>
+
+                    </label>
+                </div>
+            </div>
+            <div class="weui_dialog_confirm hide" id="dialogConfirm">
+                <div class="weui_mask"></div>
+                <div class="weui_dialog vux-dialog-transition" style="display: inline-block;">
+                    <div class="weui_dialog_hd" style="padding-left: 0;padding-right: 0;font-size:15px;">
+                        支付密码 : 
+                        <input type="number" placeholder="请输入支付密码" class="payPassword"  style="padding: 8px 0 8px 5px;border: 1px solid #dbdbdb;outline: none;-webkit-appearance: none;">
+                    </div>
+                    <div class="weui_dialog_ft">
+                        <a href="javascript:;" class="weui_btn_dialog default signCancel" id="signCancel">取消</a>
+                        <a href="javascript:;" class="weui_btn_dialog primary signSure" id="signSure">确定</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="weui_btn_area fixed">
+                <a href="paySuccess.html" class="weui_btn b0 weui_btn_primary">立即支付</a>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/global/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/mobile/js/global.js"></script>
+    <script src="../../assets/mobile/js/removeTip.js"></script>
+    <script>
+        $(function () {
+            /*取消商品删除*/
+            var page = $(".page");
+            var payPassword = $(".payPassword");
+            var number = /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/;
+            page.delegate(".signCancel","touchend",function(){
+                $("#dialogConfirm").addClass("hide");
+                $(".weui_dialog").addClass("vux-dialog-leave")
+            });
+
+            /*确定商品删除*/
+            page.delegate(".signSure","touchend",function(){
+                if(!$.trim(payPassword.val())){
+                    showErrMsg("请输入有效密码");
+                    return
+                }
+                if(!number.test(payPassword.val())){
+                    showErrMsg("请输入有效密码");
+                    return
+                }
+                $("#dialogConfirm").addClass("hide");
+
+                showErrMsg("密码设置成功");
+            });
+        })
+    </script>
+</body>
+</html>
